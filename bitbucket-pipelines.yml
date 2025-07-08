@@ -1,0 +1,29 @@
+image: atlassian/default-image:4
+image: amazon/aws-cli:latest
+
+pipelines:
+  branches:
+    main:  # Run pipeline when there is a commit to the `main` branch
+      - step:
+          name: Build and Push to ECR
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - export ECR_REPOSITORY="ai-avatar/prod/ai-avatar-landingpage"
+            - export IMAGE_TAG="latest"
+
+            - chmod +x build.prod.sh
+            - ./build.prod.sh
+      - step:
+          name: Deploy to EC2
+          script:
+            - pipe: "atlassian/ssh-run:0.8.1"
+              variables:
+                SSH_USER: ubuntu
+                SERVER: $PROD_SERVER_IP
+                SSH_KEY: $SSH_PROD_PRIVATE_KEY
+                MODE: script
+                COMMAND: deployment.prod.sh
+    

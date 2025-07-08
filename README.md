@@ -24,7 +24,7 @@ A Next.js landing page for an AI avatar platform with internationalization suppo
    ```
 
 3. **Open your browser:**
-   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+   Navigate to [http://localhost:3030](http://localhost:3030) to view the application.
 
 ## Available Scripts
 
