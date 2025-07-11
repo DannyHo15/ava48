@@ -23,7 +23,7 @@ const TermOfUse = () => {
         />
       </Link>
       <div className="hidden lg:flex flex-col items-end absolute top-8 right-12 z-10">
-        <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+        <Link href={`https://avatar48.ai/agent/${locale}`}>
           <Button>
             <PowerLight />
             {t("get_started")}
@@ -47,7 +47,7 @@ const TermOfUse = () => {
           <Link href={"/"}>
             <LogoAvatar48 className={clsx("text-[64px]")} />
           </Link>
-          <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+          <Link href={`https://avatar48.ai/agent/${locale}`}>
             <Button>
               <PowerLight />
               {t("get_started")}

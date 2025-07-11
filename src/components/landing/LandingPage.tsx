@@ -48,7 +48,7 @@ const LandingPage = () => {
         )}
       />
       <div className="hidden lg:flex flex-col items-end absolute top-8 right-12 z-10">
-        <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+        <Link href={`https://avatar48.ai/agent/${locale}`}>
           <Button>
             <PowerLight />
             {t("get_started")}
@@ -125,7 +125,7 @@ const LandingPage = () => {
       >
         <div className="lg:hidden flex justify-between mb-10 w-full">
           <LogoAvatar48 className={clsx("text-[64px]")} />
-          <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+          <Link href={`https://avatar48.ai/agent/${locale}`}>
             <Button>
               <PowerLight />
               {t("get_started")}
@@ -148,7 +148,7 @@ const LandingPage = () => {
           <Section2 />
           <Section3 />
           <Link
-            href={`https://staging.avatar48.ai/agent/${locale}`}
+            href={`https://avatar48.ai/agent/${locale}`}
             className="rounded-2xl p-2 hidden md:flex items-center gap-3 mb-10 sticky bottom-4"
             style={{
               background:
@@ -164,7 +164,7 @@ const LandingPage = () => {
           </Link>
         </div>
         <Link
-          href={`https://staging.avatar48.ai/agent/${locale}`}
+          href={`https://avatar48.ai/agent/${locale}`}
           className="rounded-2xl p-2 flex md:hidden items-center gap-3 mb-4 sticky bottom-4 mt-4 mx-auto w-fit"
           style={{
             background:
