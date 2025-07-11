@@ -8,8 +8,8 @@ aws ecr get-login-password --region ap-northeast-1 | sudo docker login --usernam
 sudo docker pull 023889582722.dkr.ecr.ap-northeast-1.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
 
 # Stop and remove old container
-sudo docker stop ai_avatar_apis_system || true
-sudo docker rm ai_avatar_apis_system || true
+sudo docker stop ai_avatar_landingpage || true
+sudo docker rm ai_avatar_landingpage || true
 
 # Run new container
 cd /usr/local/docker-composes/ai_avatar_landingpage
