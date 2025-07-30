@@ -1,6 +1,8 @@
 {
   "LandingPage": {
     "get_started": "Get started",
+    "lets_talk": "Let's talk",
+    "create_agent": "Create Agent",
     "say_hi": "Say hi!",
     "love_it": "Why You'll Love It",
     "quick_start": "Quick Start Guide",

@@ -5,6 +5,7 @@ import {
   Lightning,
   LogoAvatar48,
   PowerLight,
+  ArrowRightCircle
 } from "@/assets";
 import Section1 from "@/components/landing/Section1";
 import Section2 from "@/components/landing/Section2";
@@ -18,6 +19,7 @@ import { useParams } from "next/navigation";
 import { useState } from "react";
 import AvatarImage from "./asset/avatar_image.png";
 import Wave from "./asset/Wave.svg";
+import { ArrowRight } from "lucide-react";
 
 const LandingPage = () => {
   const t = useTranslations("LandingPage");
@@ -48,12 +50,21 @@ const LandingPage = () => {
         )}
       />
       <div className="hidden lg:flex flex-col items-end absolute top-8 right-12 z-10">
-        <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
-          <Button>
-            <PowerLight />
-            {t("get_started")}
-          </Button>
-        </Link>
+        <div className="flex gap-6">
+          <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+            <Button>
+              <PowerLight />
+              {t("lets_talk")}
+            </Button>
+          </Link>
+          <Link href={`https://staging.avatar48.ai/platform/${locale}`}>
+            <Button className="bg-white text-black hover:bg-white/80">
+              <ArrowRightCircle />
+              {t("create_agent")}
+            </Button>
+          </Link>
+        </div>
+
         <div className="flex flex-col gap-10 mt-15">
           {[
             {
@@ -125,12 +136,20 @@ const LandingPage = () => {
       >
         <div className="lg:hidden flex justify-between mb-10 w-full">
           <LogoAvatar48 className={clsx("text-[64px]")} />
-          <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
-            <Button>
-              <PowerLight />
-              {t("get_started")}
-            </Button>
-          </Link>
+          <div className="flex gap-6">
+            <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+              <Button>
+                <PowerLight />
+                {t("lets_talk")}
+              </Button>
+            </Link>
+            <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+              <Button className="bg-white text-black hover:bg-white/80 p-2">
+                <ArrowRightCircle className="!w-6 !h-6" />
+                {t("create_agent")}
+              </Button>
+            </Link>
+          </div>
         </div>
         <div
           className={clsx(

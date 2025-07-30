@@ -1,6 +1,8 @@
 {
   "LandingPage": {
     "get_started": "开始使用",
+    "lets_talk": "聊一聊",
+    "create_agent": "创建代理",
     "say_hi": "打个招呼！",
     "love_it": "为什么你会喜欢它",
     "quick_start": "快速入门指南",

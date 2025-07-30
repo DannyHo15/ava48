@@ -1,6 +1,8 @@
 {
   "LandingPage": {
     "get_started": "始める",
+    "lets_talk": "話しましょう",
+    "create_agent": "エージェントを作成",
     "say_hi": "こんにちは！",
     "love_it": "これが好きな理由",
     "quick_start": "簡易ガイド",

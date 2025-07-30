@@ -5,6 +5,7 @@ import LogoAvatar48 from "@/assets/Logo.svg";
 import PowerLight from "@/assets/PowerLight.svg";
 import Ringer_Volume from "@/assets/Ringer_Volume.svg";
 import Union from "@/assets/Union.svg";
+import ArrowRightCircle from "@/assets/ArrowRightCircle.svg";
 
 export {
   HandWaving,
@@ -14,4 +15,5 @@ export {
   PowerLight,
   Ringer_Volume,
   Union,
+  ArrowRightCircle
 };

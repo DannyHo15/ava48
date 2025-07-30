@@ -1,4 +1,4 @@
-import { LogoAvatar48, PowerLight } from "@/assets";
+import { ArrowRightCircle, LogoAvatar48, PowerLight } from "@/assets";
 import TitleCard from "@/components/landing/TitleCard";
 import TermOfUseContent from "@/components/term-of-use/TermOfUseContent";
 import { Button } from "@/components/ui/button";
@@ -23,12 +23,20 @@ const TermOfUse = () => {
         />
       </Link>
       <div className="hidden lg:flex flex-col items-end absolute top-8 right-12 z-10">
-        <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
-          <Button>
-            <PowerLight />
-            {t("get_started")}
-          </Button>
-        </Link>
+      <div className="flex gap-6">
+          <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+            <Button>
+              <PowerLight />
+              {t("lets_talk")}
+            </Button>
+          </Link>
+          <Link href={`https://staging.avatar48.ai/platform/${locale}`}>
+            <Button className="bg-white text-black hover:bg-white/80">
+              <ArrowRightCircle />
+              {t("create_agent")}
+            </Button>
+          </Link>
+        </div>
       </div>
       <div
         style={{
@@ -44,15 +52,21 @@ const TermOfUse = () => {
         className="pt-8 px-3 md:px-5 lg:px-0 [&_*]:leading-[1.3] text-lg"
       >
         <div className="lg:hidden flex justify-between mb-10 w-full">
-          <Link href={"/"}>
-            <LogoAvatar48 className={clsx("text-[64px]")} />
-          </Link>
-          <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
-            <Button>
-              <PowerLight />
-              {t("get_started")}
-            </Button>
-          </Link>
+          <LogoAvatar48 className={clsx("text-[64px]")} />
+          <div className="flex gap-6">
+            <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+              <Button>
+                <PowerLight />
+                {t("lets_talk")}
+              </Button>
+            </Link>
+            <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+              <Button className="bg-white text-black hover:bg-white/80 p-2">
+                <ArrowRightCircle className="!w-6 !h-6" />
+                {t("create_agent")}
+              </Button>
+            </Link>
+          </div>
         </div>
         <div
           style={{
