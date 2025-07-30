@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
                 {t("lets_talk")}
               </Button>
             </Link>
-            <Link href={`https://staging.avatar48.ai/agent/${locale}`}>
+            <Link href={`https://staging.avatar48.ai/platform/${locale}`}>
               <Button className="bg-white text-black hover:bg-white/80 p-2">
                 <ArrowRightCircle className="!w-6 !h-6" />
                 {t("create_agent")}
