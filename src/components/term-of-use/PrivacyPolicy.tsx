@@ -18,12 +18,12 @@ const PrivacyPolicy = () => {
         <LogoAvatar48
           className={clsx(
             "opacity-0 lg:opacity-100 block text-[98px]",
-            "absolute top-8 left-12 z-10"
+            "absolute top-8 left-6 z-10"
           )}
         />
       </Link>
-      <div className="hidden lg:flex flex-col items-end absolute top-8 right-12 z-10">
-        <div className="flex gap-6">
+      <div className="hidden lg:flex flex-col items-end absolute top-8 right-6 z-10">
+        <div className="flex gap-4 lg:gap-2">
           <Link href={`https://avatar48.ai/agent/${locale}`}>
             <Button>
               <PowerLight />
@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
       >
         <div className="lg:hidden flex justify-between mb-10 w-full">
           <LogoAvatar48 className={clsx("text-[64px]")} />
-          <div className="flex gap-6">
+          <div className="flex gap-4 lg:gap-2">
             <Link href={`https://avatar48.ai/agent/${locale}`}>
               <Button>
                 <PowerLight />
