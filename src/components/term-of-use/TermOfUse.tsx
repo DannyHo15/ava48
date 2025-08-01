@@ -55,14 +55,14 @@ const TermOfUse = () => {
           <LogoAvatar48 className={clsx("text-[64px]")} />
           <div className="flex gap-4 lg:gap-2">
             <Link href={`https://avatar48.ai/agent/${locale}`}>
-              <Button>
-                <PowerLight />
+              <Button className="sm:text-lg text-base">
+                <PowerLight className="hidden sm:block" />
                 {t("lets_talk")}
               </Button>
             </Link>
             <Link href={`https://avatar48.ai/platform/${locale}`}>
-              <Button className="bg-white text-black hover:bg-white/80 p-2">
-                <ArrowRightCircle className="!w-6 !h-6" />
+              <Button className="bg-white text-black hover:bg-white/80 p-2 sm:text-lg text-base">
+                <ArrowRightCircle className="!w-6 !h-6 hidden sm:block" />
                 {t("create_agent")}
               </Button>
             </Link>
