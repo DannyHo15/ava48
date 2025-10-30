@@ -13,8 +13,6 @@ FROM node:lts-alpine AS runner
 
 WORKDIR /app
 
-ENV HUSKY_SKIP_INSTALL=1
-
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json

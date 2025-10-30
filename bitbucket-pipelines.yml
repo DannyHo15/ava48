@@ -12,6 +12,9 @@ pipelines:
       - step:
           name: Build and Push to ECR
           image: amazon/aws-cli:latest
+          caches:
+            - node
+            - docker
           services:
             - docker
           script:
@@ -36,6 +39,9 @@ pipelines:
       - step:
           name: Build and Push to ECR
           image: amazon/aws-cli:latest
+          caches:
+            - node
+            - docker
           services:
             - docker
           script:
@@ -60,6 +66,9 @@ pipelines:
       - step:
           name: Build and Push to AWS ECR
           image: amazon/aws-cli:latest
+          caches:
+            - node
+            - docker
           services:
             - docker
           script:
