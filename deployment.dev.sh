@@ -1,4 +1,4 @@
-export ECR_REPOSITORY="avatar48/prod/landing"
+export ECR_REPOSITORY="avatar48/develop/landing"
 export IMAGE_TAG="latest"
 
 # Log in to ECR

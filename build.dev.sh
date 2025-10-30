@@ -1,4 +1,4 @@
-export ECR_REPOSITORY="avatar48/dev/landing"
+export ECR_REPOSITORY="avatar48/develop/landing"
 export IMAGE_TAG="latest"
 
 aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID_DEV
