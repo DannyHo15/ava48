@@ -1,3 +1,12 @@
+#!/bin/bash
+exec > >(tee -a script.log) 2>&1
+set -e
+set -o pipefail
+set -x
+
+trap 'echo "❌ Error at line $LINENO"; exit 1' ERR
+
+
 export ECR_REPOSITORY="avatar48/develop/landing"
 export IMAGE_TAG="latest"
 
