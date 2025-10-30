@@ -1,4 +1,4 @@
-export ECR_REPOSITORY="ai-avatar/staging/ai-avatar-landingpage"
+export ECR_REPOSITORY="avatar48/prod/landing"
 export IMAGE_TAG="latest"
 
 aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 023889582722.dkr.ecr.ap-northeast-1.amazonaws.com

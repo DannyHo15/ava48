@@ -2,10 +2,10 @@ export ECR_REPOSITORY="avatar48/prod/landing"
 export IMAGE_TAG="latest"
 
 # Log in to ECR
-aws ecr get-login-password --region ap-northeast-1 | sudo docker login --username AWS --password-stdin 023889582722.dkr.ecr.ap-northeast-1.amazonaws.com
+aws ecr get-login-password --region ap-northeast-1 | sudo docker login --username AWS --password-stdin 457442647158.dkr.ecr.ap-northeast-1.amazonaws.com
 
 # Pull latest image from ECR
-sudo docker pull 023889582722.dkr.ecr.ap-northeast-1.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
+sudo docker pull 457442647158.dkr.ecr.ap-northeast-1.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
 
 # Stop and remove old container
 sudo docker stop avatar48_landing || true

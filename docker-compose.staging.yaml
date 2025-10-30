@@ -1,19 +1,15 @@
 services:
 
   app:
-    container_name: ai_avatar_landingpage
+    container_name: avatar48_landing
     restart: always
-    image: 023889582722.dkr.ecr.ap-northeast-1.amazonaws.com/ai-avatar/staging/ai-avatar-landingpage
-    command: ["npm", "start"]
+    image: 023889582722.dkr.ecr.ap-northeast-1.amazonaws.com/avatar48/staging/avatar48_landing
+    command: ["npm", "run", "start"]
     ports:
       - $PORT:3030
     networks:
       - airstage
 
-volumes:
-  market_ai_agent_volume:
-    external: true
-
 networks:
-  airstage:
+  avatar48_network:
     driver: bridge
