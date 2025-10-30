@@ -6,6 +6,10 @@ set -x
 
 trap 'echo "❌ Error at line $LINENO"; exit 1' ERR
 
+aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID_PROD
+
+aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY_PROD
+
 export ECR_REPOSITORY="avatar48/prod/landing"
 export IMAGE_TAG="latest"
 
