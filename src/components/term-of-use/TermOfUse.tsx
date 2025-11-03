@@ -12,6 +12,7 @@ const TermOfUse = () => {
   const t = useTranslations("LandingPage");
   const params = useParams();
   const { locale } = params;
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
   return (
     <>
       <Link href={"/"}>
@@ -24,13 +25,13 @@ const TermOfUse = () => {
       </Link>
       <div className="hidden lg:flex flex-col items-end absolute top-8 right-6 z-10">
       <div className="flex gap-4 lg:gap-2">
-          <Link href={`https://avatar48.ai/agent/${locale}`}>
+          <Link href={`${baseUrl}/agent/${locale}`}>
             <Button>
               <PowerLight />
               {t("lets_talk")}
             </Button>
           </Link>
-          <Link href={`https://avatar48.ai/platform/${locale}`}>
+          <Link href={`${baseUrl}/platform/${locale}`}>
             <Button className="bg-white text-black hover:bg-white/80">
               <ArrowRightCircle />
               {t("create_agent")}
@@ -54,13 +55,13 @@ const TermOfUse = () => {
         <div className="lg:hidden flex justify-between mb-10 w-full">
           <LogoAvatar48 className={clsx("text-[64px]")} />
           <div className="flex gap-4 lg:gap-2">
-            <Link href={`https://avatar48.ai/agent/${locale}`}>
+            <Link href={`${baseUrl}/agent/${locale}`}>
               <Button className="sm:text-lg text-base">
                 <PowerLight className="hidden sm:block" />
                 {t("lets_talk")}
               </Button>
             </Link>
-            <Link href={`https://avatar48.ai/platform/${locale}`}>
+            <Link href={`${baseUrl}/platform/${locale}`}>
               <Button className="bg-white text-black hover:bg-white/80 p-2 sm:text-lg text-base">
                 <ArrowRightCircle className="!w-6 !h-6 hidden sm:block" />
                 {t("create_agent")}
