@@ -1,4 +1,4 @@
-export ECR_REPOSITORY="ai-avatar/staging/ai-avatar-landingpage"
+export ECR_REPOSITORY="avatar48/staging/landing"
 export IMAGE_TAG="latest"
 
 # Log in to ECR
@@ -8,9 +8,9 @@ aws ecr get-login-password --region ap-northeast-1 | sudo docker login --usernam
 sudo docker pull 023889582722.dkr.ecr.ap-northeast-1.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
 
 # Stop and remove old container
-sudo docker stop ai_avatar_landingpage || true
-sudo docker rm ai_avatar_landingpage || true
+sudo docker stop avatar48_landing || true
+sudo docker rm avatar48_landing || true
 
 # Run new container
-cd /usr/local/docker-composes/ai_avatar_landingpage
+cd /usr/local/docker-composes/avatar48_landing
 sudo docker compose up -d

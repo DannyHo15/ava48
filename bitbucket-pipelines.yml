@@ -1,21 +1,30 @@
-image: atlassian/default-image:4
-image: amazon/aws-cli:latest
 
+
+image: atlassian/default-image:5
+
+definitions:
+  services:
+    docker:
+      memory: 3072
 pipelines:
   branches:
     main:  # Run pipeline when there is a commit to the `main` branch
       - step:
           name: Build and Push to ECR
+          image: amazon/aws-cli:latest
+          caches:
+            - node
+            - docker
           services:
             - docker
-          caches:
-            - docker
           script:
-            - export ECR_REPOSITORY="ai-avatar/prod/ai-avatar-landingpage"
+            - export NODE_OPTIONS="--max-old-space-size=4096"
+            - export ECR_REPOSITORY="avatar48/production/landing"
             - export IMAGE_TAG="latest"
 
             - chmod +x build.prod.sh
             - ./build.prod.sh
+          deployment: production
       - step:
           name: Deploy to EC2
           script:
@@ -26,4 +35,62 @@ pipelines:
                 SSH_KEY: $SSH_PROD_PRIVATE_KEY
                 MODE: script
                 COMMAND: deployment.prod.sh
-    
+    staging:  # Run pipeline when there is a commit to the `staging` branch
+      - step:
+          name: Build and Push to ECR
+          image: amazon/aws-cli:latest
+          caches:
+            - node
+            - docker
+          services:
+            - docker
+          script:
+            - export NODE_OPTIONS="--max-old-space-size=4096"
+            - export ECR_REPOSITORY="avatar48/staging/landing"
+            - export IMAGE_TAG="latest"
+
+            - chmod +x build.staging.sh
+            - ./build.staging.sh
+          deployment: staging
+      - step:
+          name: Deploy to Staging EC2 VM (Ubuntu)
+          script:
+            - pipe: "atlassian/ssh-run:0.8.1"
+              variables:
+                SSH_USER: ubuntu
+                SERVER: $STAGING_SERVER_IP
+                SSH_KEY: $SSH_STAGING_PRIVATE_KEY
+                MODE: script
+                COMMAND: deployment.staging.sh
+    develop: # Run pipeline when there is a commit to the `develop` branch
+      - step:
+          name: Build and Push to AWS ECR
+          image: amazon/aws-cli:latest
+          caches:
+            - node
+            - docker
+          services:
+            - docker
+          script:
+            - export NODE_OPTIONS="--max-old-space-size=4096"
+            - export ECR_REPOSITORY="avatar48/develop/landing"
+            - export IMAGE_TAG="latest"
+
+            - echo "--- Start log environments ---"
+            - printenv | sort
+            - echo "--- End log ---"
+
+            - chmod +x build.dev.sh
+            - ./build.dev.sh
+          deployment: develop
+      - step:
+          name: Deploy to Development VM (Ubuntu)
+          script:
+            - pipe: "atlassian/ssh-run:0.8.1"
+              variables:
+                SSH_USER: root
+                SERVER: $DEVELOP_SERVER_IP
+                SSH_KEY: $SSH_DEVELOP_PRIVATE_KEY
+                MODE: script
+                COMMAND: deployment.dev.sh
+        
