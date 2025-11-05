@@ -25,6 +25,7 @@ const LandingPage = () => {
   const t = useTranslations("LandingPage");
   const params = useParams();
   const { locale } = params;
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
 
   const [section, setSection] = useState("section_1");
   const handleScroll = () => {
@@ -51,13 +52,13 @@ const LandingPage = () => {
       />
       <div className="hidden lg:flex flex-col items-end absolute top-8 right-6 z-10">
         <div className="flex gap-4 lg:gap-2">
-          <Link href={`https://avatar48.ai/agent/${locale}`}>
+          <Link href={`${baseUrl}/agent/${locale}`}>
             <Button>
               <PowerLight />
               {t("lets_talk")}
             </Button>
           </Link>
-          <Link href={`https://avatar48.ai/platform/${locale}`}>
+          <Link href={`${baseUrl}/platform/${locale}`}>
             <Button className="bg-white text-black hover:bg-white/80">
               <ArrowRightCircle />
               {t("create_agent")}
@@ -134,18 +135,18 @@ const LandingPage = () => {
         onScroll={handleScroll}
         className="pt-8 px-3 md:px-5 lg:px-0"
       >
-        <div className="lg:hidden flex justify-between mb-10 w-full">
+        <div className="lg:hidden flex justify-between mb-10 w-full items-center">
           <LogoAvatar48 className={clsx("text-[64px]")} />
           <div className="flex gap-4 lg:gap-2">
-            <Link href={`https://avatar48.ai/agent/${locale}`}>
-              <Button>
-                <PowerLight />
+            <Link href={`${baseUrl}/agent/${locale}`}>
+              <Button className="sm:text-lg text-base">
+                <PowerLight className="hidden sm:block" />
                 {t("lets_talk")}
               </Button>
             </Link>
-            <Link href={`https://avatar48.ai/platform/${locale}`}>
-              <Button className="bg-white text-black hover:bg-white/80 p-2">
-                <ArrowRightCircle className="!w-6 !h-6" />
+            <Link href={`${baseUrl}/platform/${locale}`}>
+              <Button className="bg-white text-black hover:bg-white/80 p-2 sm:text-lg text-base">
+                <ArrowRightCircle className="!w-6 !h-6 hidden sm:block" />
                 {t("create_agent")}
               </Button>
             </Link>
@@ -167,7 +168,7 @@ const LandingPage = () => {
           <Section2 />
           <Section3 />
           <Link
-            href={`https://avatar48.ai/agent/${locale}`}
+            href={`${baseUrl}/agent/${locale}`}
             className="rounded-2xl p-2 hidden md:flex items-center gap-3 mb-10 sticky bottom-4"
             style={{
               background:
@@ -183,7 +184,7 @@ const LandingPage = () => {
           </Link>
         </div>
         <Link
-          href={`https://avatar48.ai/agent/${locale}`}
+          href={`${baseUrl}/agent/${locale}`}
           className="rounded-2xl p-2 flex md:hidden items-center gap-3 mb-4 sticky bottom-4 mt-4 mx-auto w-fit"
           style={{
             background:

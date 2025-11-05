@@ -16,6 +16,7 @@ import utc from "dayjs/plugin/utc";
 import { Kanit } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // Day.js Configuration
 dayjs.extend(utc);
@@ -94,11 +95,12 @@ export default async function RootLayout({
           BE_FONT_600,
           BE_FONT_700.variable,
           geistSans.variable,
-          geistMono.variable
+          geistMono.variable,
         )}
       >
         {children}
       </body>
+      <GoogleAnalytics gaId={"GTM-TNX86W3S"} />
     </html>
   );
 }

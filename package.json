@@ -3,13 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3030",
-    "build": "next build",
-    "start": "next start -p 3030",
+    "dev": "dotenv -e .env -- next dev -p 3030",
+    "dev:local": "dotenv -e .env -- next dev -p 3030",
+    "dev:staging": "dotenv -e .env.staging -- next dev -p 3030",
+    "dev:production": "dotenv -e .env.prod -- next dev -p 3030",
+    "build": "dotenv -e .env.prod -- next build",
+    "build:local": "dotenv -e .env -- next build",
+    "build:staging": "dotenv -e .env.staging -- next build",
+    "build:production": "dotenv -e .env.prod -- next build",
+    "start": "dotenv -e .env.prod -- next start -p 3030",
+    "start:local": "dotenv -e .env -- next start -p 3030",
+    "start:staging": "dotenv -e .env.staging -- next start -p 3030",
+    "start:production": "dotenv -e .env.prod -- next start -p 3030",
     "check-types": "npx tsc-strict",
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "@next/third-parties": "^15.5.0",
     "@radix-ui/react-popover": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.2",
@@ -29,10 +39,12 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "dotenv-cli": "^7.4.1",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "pnpm@10.12.3+sha512.467df2c586056165580ad6dfb54ceaad94c5a30f80893ebdec5a44c5aa73c205ae4a5bb9d5ed6bb84ea7c249ece786642bbb49d06a307df218d03da41c317417"
 }

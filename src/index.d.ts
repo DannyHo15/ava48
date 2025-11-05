@@ -12,6 +12,7 @@ declare module "*.svg" {
 
 declare let process: {
   env: {
+    NEXT_PUBLIC_APP_URL: string;
     NODE_ENV: string;
     VERSION: string;
   };
