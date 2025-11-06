@@ -100,7 +100,7 @@ export default async function RootLayout({
       >
         {children}
       </body>
-      <GoogleAnalytics gaId={"GTM-TNX86W3S"} />
+      <GoogleAnalytics gaId={"GTM-TXBK8PXL"} />
     </html>
   );
 }
