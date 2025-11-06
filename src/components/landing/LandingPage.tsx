@@ -17,7 +17,6 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { useState } from "react";
-import { BASE_URL } from "@/lib/constants";
 import AvatarImage from "./asset/avatar_image.png";
 import Wave from "./asset/Wave.svg";
 import { ArrowRight } from "lucide-react";
@@ -26,7 +25,7 @@ const LandingPage = () => {
   const t = useTranslations("LandingPage");
   const params = useParams();
   const { locale } = params;
-  const baseUrl = BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
 
   const [section, setSection] = useState("section_1");
   const handleScroll = () => {

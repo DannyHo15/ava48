@@ -7,13 +7,13 @@ import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
-import { BASE_URL } from "@/lib/constants";
 
 const PrivacyPolicy = () => {
   const t = useTranslations("LandingPage");
   const params = useParams();
   const { locale } = params;
-  const baseUrl = BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
+
   return (
     <>
       <Link href={"/"}>
