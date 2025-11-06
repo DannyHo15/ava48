@@ -37,9 +37,8 @@ const LanguageDrawer = (props: Props) => {
       <PopoverTrigger asChild className="hidden">
         <Button
           variant="rounded"
-          color={"black"}
           size={"small"}
-          className={clsx("w-26.25! flex-center gap-1 uppercase", className)}
+          className={clsx("w-26.25! flex-center gap-1 uppercase bg-avatar-primary", className)}
         >
           {locale}
           <ChevronDown />
