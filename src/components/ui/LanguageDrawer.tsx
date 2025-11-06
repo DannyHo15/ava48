@@ -39,7 +39,7 @@ const LanguageDrawer = (props: Props) => {
           variant="rounded"
           color={"black"}
           size={"small"}
-          className={clsx("flex gap-1 uppercase sm:order-none", className)}
+          className={clsx("w-26.25! flex-center gap-1 uppercase", className)}
         >
           {locale}
           <ChevronDown />
