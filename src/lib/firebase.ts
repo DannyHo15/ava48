@@ -1,7 +1,9 @@
 import { FirebaseApp, getApps, initializeApp } from "firebase/app";
 import { getAnalytics, isSupported, Analytics } from "firebase/analytics";
 
-const env = process.env as any;
+// Safely read environment variables — do not assume `process` exists in all runtimes
+const env = typeof process !== "undefined" && process && process.env ? (process.env as any) : {};
+
 const firebaseConfig = {
   apiKey: env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -13,15 +15,18 @@ const firebaseConfig = {
 };
 
 let app: FirebaseApp | null = null;
-if (!getApps().length) {
-  try {
-    app = initializeApp(firebaseConfig as any);
-  } catch (e) {
-    // ignore init errors in non-browser or misconfigured envs
-    app = null;
+// Initialize Firebase only in browser runtime (window is defined)
+if (typeof window !== "undefined") {
+  if (!getApps().length) {
+    try {
+      app = initializeApp(firebaseConfig as any);
+    } catch (e) {
+      // ignore init errors in non-browser or misconfigured envs
+      app = null;
+    }
+  } else {
+    app = getApps()[0];
   }
-} else {
-  app = getApps()[0];
 }
 
 // Lazily initialize analytics (isSupported is async and only works in browsers)

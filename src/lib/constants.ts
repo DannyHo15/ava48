@@ -37,3 +37,19 @@ export const localeObject = {
     yy: "%d years",
   },
 };
+
+// Safe access to environment variables (works in server and client bundles)
+const env = typeof process !== "undefined" && process && process.env ? (process.env as any) : {};
+
+export const ENV = env.NEXT_PUBLIC_ENV ?? env.NODE_ENV ?? "development";
+
+export const BASE_URL =
+  env.NEXT_PUBLIC_APP_URL ?? env.NEXT_PUBLIC_BASE_URL ??
+  (ENV === "production"
+    ? "https://avatar48.ai"
+    : ENV === "staging"
+    ? "https://staging.avatar48.ai"
+    : "http://localhost:3000");
+
+export const agentUrl = (locale?: string) => `${BASE_URL}/agent/${locale ?? ""}`;
+export const platformUrl = (locale?: string) => `${BASE_URL}/platform/${locale ?? ""}`;
