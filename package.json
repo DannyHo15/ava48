@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "dotenv -e .env -- next dev -p 3030",
-    "dev:local": "dotenv -e .env -- next dev -p 3030",
-    "dev:staging": "dotenv -e .env.staging -- next dev -p 3030",
-    "dev:production": "dotenv -e .env.prod -- next dev -p 3030",
+    "dev": "dotenv -e .env -- next dev -p 3030 --turbopack",
+    "dev:local": "dotenv -e .env -- next dev -p 3030 --turbopack",
+    "dev:staging": "dotenv -e .env.staging -- next dev -p 3030 --turbopack",
+    "dev:production": "dotenv -e .env.prod -- next dev -p 3030 --turbopack",
     "build": "dotenv -e .env.prod -- next build",
     "build:local": "dotenv -e .env -- next build",
     "build:staging": "dotenv -e .env.staging -- next build",
@@ -48,3 +48,4 @@
   },
   "packageManager": "pnpm@10.12.3+sha512.467df2c586056165580ad6dfb54ceaad94c5a30f80893ebdec5a44c5aa73c205ae4a5bb9d5ed6bb84ea7c249ece786642bbb49d06a307df218d03da41c317417"
 }
+
