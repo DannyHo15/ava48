@@ -72,8 +72,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const randomTheme = Math.random() > 0.5 ? "dark" : "light";
   return (
-    <html>
+    <html className={randomTheme}>
       <head>
         <meta charSet="UTF-8" />
         <meta
@@ -84,19 +85,14 @@ export default async function RootLayout({
       </head>
       <body
         className={clsx(
-          "h-[100svh] overflow-hidden mobile:h-screen mobile:overflow-auto",
-          "bg-slate-900 text-white relative",
-          "flex flex-col items-center justify-center overflow-hidden relative bg-background",
-          // language === LanguageEnum.EN
-          //   ? "[&_*]:leading-[1]"
-          //   : "[&_*]:leading-[1.2]",
+          "h-screen bg-avatar-blue",
           BE_FONT_300.variable,
           BE_FONT_400.variable,
           BE_FONT_500,
           BE_FONT_600,
           BE_FONT_700.variable,
           geistSans.variable,
-          geistMono.variable,
+          geistMono.variable
         )}
       >
         {children}
