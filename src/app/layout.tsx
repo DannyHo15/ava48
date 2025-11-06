@@ -17,6 +17,7 @@ import { Kanit } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 
 // Day.js Configuration
 dayjs.extend(utc);
@@ -99,6 +100,7 @@ export default async function RootLayout({
         )}
       >
         {children}
+        <FirebaseAnalytics />
       </body>
       <GoogleAnalytics gaId={"GTM-TXBK8PXL"} />
     </html>
