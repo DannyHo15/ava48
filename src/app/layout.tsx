@@ -98,7 +98,7 @@ export default async function RootLayout({
         {children}
         <FirebaseAnalytics />
       </body>
-      <GoogleAnalytics gaId={"GTM-TXBK8PXL"} />
+      <GoogleAnalytics gaId={"GTM-MNSWPXXT"} />
     </html>
   );
 }
