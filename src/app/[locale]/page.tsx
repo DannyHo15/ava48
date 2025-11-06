@@ -1,5 +1,6 @@
-import LandingPage from "@/components/landing/LandingPage";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
-  return <LandingPage />;
+  const t = useTranslations("LandingPage");
+  return <div className=""></div>;
 }

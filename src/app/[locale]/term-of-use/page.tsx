@@ -1,8 +1,25 @@
 "use client";
 
-import TermOfUse from "@/components/term-of-use/TermOfUse";
+import TitleCard from "@/components/TitleCard";
+import TermOfUseContent from "@/components/TermOfUseContent";
+import { useTranslations } from "next-intl";
 
 function Page() {
-  return <TermOfUse />;
+  const t = useTranslations("LandingPage");
+  return (
+    <div className="py-11 h-screen overflow-y-scroll">
+      <div
+        style={{
+          background:
+            "linear-gradient(94.93deg, rgba(0, 8, 61, 0.48) 49.31%, rgba(2, 74, 85, 0.4) 94.67%)",
+          boxShadow: "0px 8px 7px 0px #01CCF566",
+        }}
+        className="lg:max-w-[690px] xl:max-w-[726px] lg:mx-auto rounded-lg p-3 md:p-10 text-white"
+      >
+        <TitleCard className="mb-4 mx-auto">{t("term_of_use")}</TitleCard>
+        <TermOfUseContent />
+      </div>
+    </div>
+  );
 }
 export default Page;

@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-async-client-component */
-"use cl";
-
+import { GlobalLayout } from "@/components/layouts/GlobalLayout";
 import ContextProvider from "@/context/ContextProvider";
 import { routing } from "@/i18n/routing";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -20,7 +18,9 @@ export default async function RootLayout({
 
   return (
     <NextIntlClientProvider>
-      <ContextProvider>{children}</ContextProvider>
+      <ContextProvider>
+        <GlobalLayout>{children}</GlobalLayout>
+      </ContextProvider>
     </NextIntlClientProvider>
   );
 }
