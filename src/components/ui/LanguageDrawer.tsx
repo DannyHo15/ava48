@@ -38,7 +38,7 @@ const LanguageDrawer = (props: Props) => {
         <Button
           variant="rounded"
           size={"small"}
-          className={clsx("w-26.25! flex-center gap-1 uppercase bg-avatar-primary", className)}
+          className={clsx("flex-center gap-1 uppercase bg-avatar-primary text-white text-xl", className)}
         >
           {locale}
           <ChevronDown />

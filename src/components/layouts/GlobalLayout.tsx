@@ -47,16 +47,16 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           <LogoAvatar48 />
         </Link>
       </div>
-      <div className="hidden lg:flex flex-col items-end fixed top-8 right-6 z-10">
+      <div className="fixed top-8 right-6 flex gap-6 text-xl z-10">
         <div className="flex gap-4 lg:gap-2">
           <Link href={`${baseUrl}/agent/${locale}`}>
-            <Button className="bg-avatar-primary">
+            <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer px-8!">
               <Power size={24} strokeWidth={2} />
               {t("lets_talk")}
             </Button>
           </Link>
           <Link href={`${baseUrl}/platform/${locale}`}>
-            <Button className="bg-white text-black hover:bg-white/80">
+            <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-8!">
               <CircleArrowRight size={24} strokeWidth={2} />
               {t("create_agent")}
             </Button>
@@ -90,7 +90,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           "fixed bottom-6.75 left-11.75 flex items-center justify-between gap-10.5 whitespace-nowrap text-white z-10"
         )}
       >
-        <LanguageDrawer className="h-12.5 w-fit" />
+        <LanguageDrawer className="w-26.25 h-12.5" />
         <Link href={"/term-of-use"} className="uppercase h-12 flex items-center font-medium">
           {t("term_of_use")}
         </Link>
