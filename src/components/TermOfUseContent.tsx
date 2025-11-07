@@ -6,7 +6,7 @@ import { Link } from "@/i18n/navigation";
 const TermOfUseContent = () => {
   const t = useTranslations("term_of_use");
   return (
-    <>
+    <div className="text-justify">
       <>
         <p dangerouslySetInnerHTML={{ __html: t.raw("DFDIs4") }} />
         <br />
@@ -297,7 +297,7 @@ const TermOfUseContent = () => {
           </a>
         </b>
       </>
-    </>
+    </div>
   );
 };
 export default TermOfUseContent;

@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type Cprops = {
@@ -32,12 +31,12 @@ const LogoAvatar48 = ({ className }: Cprops) => {
   if (!mounted) return null;
 
   return (
-    <Image
+    <img
       src={isDark ? "/assets/logo-dark.svg" : "/assets/logo-light.svg"}
       alt="Avatar48"
-      width={131}
-      height={110}
-      className={className}
+      // width={131}
+      // height={110}
+      className={cn("w-32.5 h-27.5",className)}
     />
   );
 };

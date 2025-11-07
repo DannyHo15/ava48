@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme inline {
-
   /* Define Color */
   --color-avatar-primary: var(--avatar-primary);
   --color-avatar-blue: var(--avatar-blue);
   --color-avatar-black: var(--avatar-black);
+  --color-avatar-text-color: var(--avatar-text-color);
 
   /* Define breakpoint */
   --breakpoint-xs: 320px;
@@ -32,17 +32,21 @@
 }
 
 :root {
-  --avatar-primary: #00D0F6;
+  --avatar-primary: #00d0f6;
   --avatar-blue: #001251;
   --avatar-black: #000;
-  --avatar-bg-filter: 84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%, rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 95.67%;
+  --avatar-text-color: #1a1a1a;
+  --avatar-bg-filter: 84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 95.67%;
 }
 
 .dark {
-  --avatar-primary: #D81DE2;
+  --avatar-primary: #d81de2;
   --avatar-blue: #001251;
   --avatar-black: #000;
-  --avatar-bg-filter: 90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%, rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%, rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-text-color: #fff;
+  --avatar-bg-filter: 90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%, rgba(216, 29, 226, 0.5) 99.22%;
 }
 
 .flex-center {
