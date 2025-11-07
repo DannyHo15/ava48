@@ -1,10 +1,18 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme inline {
   /* Define Color */
   --color-avatar-primary: var(--avatar-primary);
   --color-avatar-blue: var(--avatar-blue);
+  --color-avatar-blue-1: var(--avatar-blue-1);
+  --color-avatar-blue-2: var(--avatar-blue-2);
+  --color-avatar-blue-3: var(--avatar-blue-3);
+  --color-avatar-blue-4: var(--avatar-blue-4);
+  --color-avatar-violet: var(--avatar-violet);
   --color-avatar-black: var(--avatar-black);
+  --color-avatar-black-1: var(--avatar-black-1);
   --color-avatar-text-color: var(--avatar-text-color);
 
   /* Define breakpoint */
@@ -34,7 +42,13 @@
 :root {
   --avatar-primary: #00d0f6;
   --avatar-blue: #001251;
+  --avatar-mint-1: #3CFBFF;
+  --avatar-blue-2: #00d0f6;
+  --avatar-blue-3: #0083F5;
+  --avatar-blue-4: #1D4ED8;
+  --avatar-violet: #001251;
   --avatar-black: #000;
+  --avatar-black-1: #1a1a1a;
   --avatar-text-color: #1a1a1a;
   --avatar-bg-filter: 84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 95.67%;
@@ -43,22 +57,40 @@
 .dark {
   --avatar-primary: #d81de2;
   --avatar-blue: #001251;
+  --avatar-blue-1: #3CFBFF;
+  --avatar-blue-2: #00d0f6;
+  --avatar-blue-3: #0083F5;
+  --avatar-blue-4: #1D4ED8;
+  --avatar-violet: #d81de2;
   --avatar-black: #000;
+  --avatar-black-1: #1a1a1a;
   --avatar-text-color: #fff;
   --avatar-bg-filter: 90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%, rgba(216, 29, 226, 0.5) 99.22%;
 }
 
-.flex-center {
-  @apply flex justify-center items-center;
-}
+@layer utilities {
 
-.flex-center-x {
-  @apply flex justify-center;
-}
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
 
-.flex-center-y {
-  @apply flex items-center;
+  .flex-center-x {
+    @apply flex justify-center;
+  }
+
+  .flex-center-y {
+    @apply flex items-center;
+  }
+
+  .avatar-container {
+    @apply max-w-340 mx-auto px-5 md:px-10;
+  }
+
+  .text-gradient {
+    -webkit-text-fill-color: transparent;
+    @apply bg-clip-text;
+  }
 }
 
 .cs-radial {
