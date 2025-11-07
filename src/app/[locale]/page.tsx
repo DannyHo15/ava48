@@ -155,16 +155,8 @@ export default function Home() {
             <div id="outer-wrapper" className="w-full h-full overflow-hidden">
               <div id="inner-wrapper" className="w-full h-full overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center bg-transparent">
-                  <h2 id="section-heading" className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-center w-[90vw] max-w-6xl">
-                    {section.heading.split("").map((char, charIndex) => (
-                      <span
-                        key={charIndex}
-                        className="inline-block"
-                        style={{ willChange: "transform" }}
-                      >
-                        {char === " " ? "\u00A0" : char}
-                      </span>
-                    ))}
+                  <h2 id="section-heading" className="text-gradient bg-linear-to-r from-red-400 to-blue-500 text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-center w-[90vw] max-w-6xl">
+                    {section.heading}
                   </h2>
                 </div>
               </div>

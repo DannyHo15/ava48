@@ -15,6 +15,7 @@ import updateLocale from "dayjs/plugin/updateLocale";
 import utc from "dayjs/plugin/utc";
 import { Kanit } from "next/font/google";
 import localFont from "next/font/local";
+import { Karantina } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
@@ -68,6 +69,21 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const KarantinaFont_300 = Karantina({
+  variable: "--font-kanit",
+  weight: "300",
+});
+
+const KarantinaFont_400 = Karantina({
+  variable: "--font-kanit",
+  weight: "400",
+});
+
+const KarantinaFont_700 = Karantina({
+  variable: "--font-kanit",
+  weight: "700",
+});
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -93,7 +109,10 @@ export default async function RootLayout({
           BE_FONT_600,
           BE_FONT_700.variable,
           geistSans.variable,
-          geistMono.variable
+          geistMono.variable,
+          KarantinaFont_300.variable,
+          KarantinaFont_400.variable,
+          KarantinaFont_700.variable,
         )}
       >
         {/* <UniversalForceRefreshFix /> */}
