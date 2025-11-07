@@ -37,11 +37,13 @@ export default function Home() {
   const main = useRef<HTMLDivElement>(null);
   const currentIndex = useRef(-1);
   const animating = useRef(false);
-  const animationWrapper = useRef<HTMLDivElement>(null);
   const observer = useRef<Observer | null>(null);
 
   useGSAP(
     () => {
+      currentIndex.current = -1;
+      animating.current = false;
+      
       const sections = gsap.utils.toArray<HTMLElement>("#section-container");
       const outerWrappers = gsap.utils.toArray<HTMLDivElement>("#outer-wrapper");
       const innerWrappers = gsap.utils.toArray<HTMLDivElement>("#inner-wrapper");
@@ -143,7 +145,7 @@ export default function Home() {
 
   return (
     <div ref={main} className="bg-transparent text-white font-sans overflow-hidden h-screen">
-      <div ref={animationWrapper} className="relative w-full h-full">
+      <div className="relative w-full h-full">
         {sectionsData.map((section, index) => (
           <section
             key={index}
