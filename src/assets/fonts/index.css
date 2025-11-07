@@ -1,0 +1,97 @@
+/* Font Kanit*/
+@font-face {
+  font-family: "Kanit";
+  font-weight: 100;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: 200;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-ExtraLight.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: 800;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: 900;
+  font-style: normal;
+  src: local("Kanit"),
+    url(./kanit/Kanit-Black.ttf) format("truetype");
+}
+
+/* Font karantina*/
+@font-face {
+  font-family: "Karantina";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Karantina"),
+    url(./karantina/Karantina-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Karantina";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Karantina"),
+    url(./karantina/Karantina-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Karantina";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Karantina"),
+    url(./karantina/Karantina-Bold.ttf) format("truetype");
+}
