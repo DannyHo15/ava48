@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import LanguageDrawer from "../ui/LanguageDrawer";
 import AvatarImage from "../../assets/avatar_image.png";
-import LogoAvatar48 from "../LogoAvatar48";
+import ImageAvatar48 from "../ImageAvatar48";
 
 import { useRef } from "react";
 import gsap from "gsap";
@@ -44,7 +44,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
     <>
       <div className="fixed top-7.5 left-13.75 z-9">
         <Link href={"/"}>
-          <LogoAvatar48 />
+          <ImageAvatar48 lightURL={"/assets/logo-light.svg"} drakURL={"/assets/logo-dark.svg"} />
         </Link>
       </div>
       <div className="fixed top-8 right-6 flex gap-6 text-xl z-10">

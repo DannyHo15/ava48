@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 type Cprops = {
+  lightURL: string;
+  drakURL: string;
   className?: string;
 };
 
-const LogoAvatar48 = ({ className }: Cprops) => {
+const ImageAvatar48 = ({ className, drakURL, lightURL }: Cprops) => {
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -32,13 +34,11 @@ const LogoAvatar48 = ({ className }: Cprops) => {
 
   return (
     <img
-      src={isDark ? "/assets/logo-dark.svg" : "/assets/logo-light.svg"}
+      src={isDark ? drakURL : lightURL}
       alt="Avatar48"
-      // width={131}
-      // height={110}
       className={cn("w-32.5 h-27.5",className)}
     />
   );
 };
 
-export default LogoAvatar48;
+export default ImageAvatar48;

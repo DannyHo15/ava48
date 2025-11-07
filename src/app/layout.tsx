@@ -18,7 +18,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
-// import UniversalForceRefreshFix from "@/components/UniversalForceRefreshFix";
 
 // Day.js Configuration
 dayjs.extend(utc);
@@ -96,7 +95,6 @@ export default async function RootLayout({
           geistMono.variable
         )}
       >
-        {/* <UniversalForceRefreshFix /> */}
         {children}
         <FirebaseAnalytics />
       </body>
