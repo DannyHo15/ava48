@@ -19,7 +19,6 @@ import { Karantina } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
-// import UniversalForceRefreshFix from "@/components/UniversalForceRefreshFix";
 
 // Day.js Configuration
 dayjs.extend(utc);
@@ -115,7 +114,6 @@ export default async function RootLayout({
           KarantinaFont_700.variable,
         )}
       >
-        {/* <UniversalForceRefreshFix /> */}
         {children}
         <FirebaseAnalytics />
       </body>
