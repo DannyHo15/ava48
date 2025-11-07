@@ -6,9 +6,7 @@ import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import LanguageDrawer from "../ui/LanguageDrawer";
-import AvatarImage from "../../assets/avatar_image.png";
 import ImageAvatar48 from "../ImageAvatar48";
-
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -79,7 +77,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         }}
       >
         <img
-          src={AvatarImage.src}
+          src={'/assets/avatar_image.png'}
           alt={"defaultImage"}
           className="rounded-2xl w-24 h-14 object-cover object-top"
         />
@@ -97,6 +95,10 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         <Link href={"/privacy-policy"} className="uppercase h-12 flex items-center font-medium">
           {t("privacy_policy")}
         </Link>
+      </div>
+      <div className="fixed bottom-6.75 right-11.75 z-10 flex flex-col text-white">
+        <a href="https://x.com/aya_avatar48" target="blank" className="">https://x.com/aya_avatar48</a>
+        <a href="https://t.me/Avatar48_Official" target="blank" className="">https://t.me/Avatar48_Official</a>
       </div>
     </>
   );

@@ -26,15 +26,13 @@ const LanguageDrawer = (props: Props) => {
   function onSelectChange(value: LanguageEnum) {
     startTransition(() => {
       // @ts-expect-error -- TypeScript will validate that only known `params`
-      // are used in combination with a given `pathname`. Since the two will
-      // always match for the current route, we can skip runtime checks.
       replace({ pathname, params }, { locale: value });
     });
   }
 
   return (
     <Popover>
-      <PopoverTrigger asChild className="hidden">
+      <PopoverTrigger asChild>
         <Button
           variant="rounded"
           size={"small"}

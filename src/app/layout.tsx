@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-async-client-component */
 "use server";
+import "./globals.css";
 import { localeObject } from "@/lib/constants";
 import clsx from "clsx";
 import dayjs from "dayjs";
@@ -13,10 +13,6 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import timezone from "dayjs/plugin/timezone";
 import updateLocale from "dayjs/plugin/updateLocale";
 import utc from "dayjs/plugin/utc";
-import { Kanit } from "next/font/google";
-import localFont from "next/font/local";
-import { Karantina } from "next/font/google";
-import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 
@@ -27,61 +23,6 @@ dayjs.extend(relativeTime);
 dayjs.extend(updateLocale);
 dayjs.extend(localizedFormat);
 dayjs.updateLocale("en", localeObject);
-
-const BE_FONT_300 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "300",
-});
-
-const BE_FONT_400 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "400",
-});
-const BE_FONT_500 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "500",
-});
-
-const BE_FONT_600 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "600",
-});
-
-const BE_FONT_700 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "700",
-});
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-const KarantinaFont_300 = Karantina({
-  variable: "--font-kanit",
-  weight: "300",
-});
-
-const KarantinaFont_400 = Karantina({
-  variable: "--font-kanit",
-  weight: "400",
-});
-
-const KarantinaFont_700 = Karantina({
-  variable: "--font-kanit",
-  weight: "700",
-});
 
 export default async function RootLayout({
   children,
@@ -99,21 +40,7 @@ export default async function RootLayout({
         />
         <title>Avatar48</title>
       </head>
-      <body
-        className={clsx(
-          "h-screen bg-avatar-blue",
-          BE_FONT_300.variable,
-          BE_FONT_400.variable,
-          BE_FONT_500,
-          BE_FONT_600,
-          BE_FONT_700.variable,
-          geistSans.variable,
-          geistMono.variable,
-          KarantinaFont_300.variable,
-          KarantinaFont_400.variable,
-          KarantinaFont_700.variable,
-        )}
-      >
+      <body className={clsx("h-screen bg-avatar-blue")}>
         {children}
         <FirebaseAnalytics />
       </body>
