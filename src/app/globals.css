@@ -35,6 +35,7 @@
   --text-custom-82: 5.125rem;
   /* Font Weight */ /* Letter space */
   /* Line height */ /* Border radius use by rounded-* */
+  --radius-custom-20: 1.25rem;
   /* Spacing this is value in the end of p-* or h-* */ /* Shadow */
   /* Inset shadow */ /* Drop shadow */ /* Back drop blur */
 }
@@ -42,7 +43,7 @@
 :root {
   --avatar-primary: #00d0f6;
   --avatar-blue: #001251;
-  --avatar-mint-1: #3cfbff;
+  --avatar-blue-1: #3cfbff;
   --avatar-blue-2: #00d0f6;
   --avatar-blue-3: #0083f5;
   --avatar-blue-4: #1d4ed8;

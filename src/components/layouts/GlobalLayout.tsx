@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import LanguageDrawer from "../ui/LanguageDrawer";
+import LanguageDrawer from "../LanguageDrawer";
 import ImageAvatar48 from "../ImageAvatar48";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -13,6 +13,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
+import { AvatarLink } from "../AvatarLink";
 gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
 
 export function GlobalLayout({ children }: { children: React.ReactNode }) {
@@ -40,21 +41,25 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div className="fixed top-7.5 left-13.75 z-9">
+      <div className="fixed top-7.5 sm:top-15 lg:top-7.5 left-5 sm:left-10 lg:left-13.75 z-9">
         <Link href={"/"}>
-          <ImageAvatar48 lightURL={"/assets/logo-light.svg"} drakURL={"/assets/logo-dark.svg"} />
+          <ImageAvatar48
+            lightURL={"/assets/logo-light.svg"}
+            drakURL={"/assets/logo-dark.svg"}
+            className="w-16 sm:w-23.75 h-13.5 sm:h-20 lg:w-32.75 lg:h-27.5"
+          />
         </Link>
       </div>
-      <div className="fixed top-8 right-6 flex gap-6 text-xl z-10">
-        <div className="flex gap-4 lg:gap-2">
+      <div className="fixed top-7.5 sm:top-15 lg:top-8 right-5 sm:right-10 lg:right-16.5 flex gap-6 text-xl z-10">
+        <div className="flex gap-4 lg:gap-6">
           <Link href={`${baseUrl}/agent/${locale}`}>
-            <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer px-8!">
+            <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer">
               <Power size={24} strokeWidth={2} />
               {t("lets_talk")}
             </Button>
           </Link>
           <Link href={`${baseUrl}/platform/${locale}`}>
-            <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-8!">
+            <Button className="bg-white text-black hover:opacity-80 cursor-pointer">
               <CircleArrowRight size={24} strokeWidth={2} />
               {t("create_agent")}
             </Button>
@@ -69,37 +74,39 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center mix-blend-plus-lighter opacity-21" />
         <div className="fixed inset-0 cs-radial" />
       </div>
-      <Link
-        href={`${baseUrl}/agent/${locale}`}
-        className="rounded-2xl p-2 flex items-center gap-3 mb-4 fixed bottom-4 left-1/2 -translate-x-1/2 mt-4 mx-auto w-fit z-10"
-        style={{
-          background: "linear-gradient(90.82deg, #00D0F6 56.17%, #0083F5 102.09%)",
-        }}
-      >
-        <img
-          src={'/assets/avatar_image.png'}
-          alt={"defaultImage"}
-          className="rounded-2xl w-24 h-14 object-cover object-top"
-        />
-        <p className="font-medium text-xl">{t("chat_now")}</p>
-      </Link>
       <div
         className={cn(
-          "fixed bottom-6.75 left-11.75 flex items-center justify-between gap-10.5 whitespace-nowrap text-white z-10"
+          "fixed bottom-7.75 sm:bottom-15 lg:bottom-6.75 left-5 sm:left-10 lg:left-11.75 flex sm:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 sm:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10"
         )}
       >
-        <LanguageDrawer className="w-26.25 h-12.5" />
-        <Link href={"/term-of-use"} className="uppercase h-12 flex items-center font-medium">
+        <LanguageDrawer className="sm:w-26.25 h-7 sm:h-12.5 rounded-[0.625rem] px-2 sm:px-6" />
+        <Link
+          href={"/term-of-use"}
+          className="uppercase h-7 sm:h-12.5 flex-center font-medium text-sm sm:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md px-2 sm:px-6"
+        >
           {t("term_of_use")}
         </Link>
-        <Link href={"/privacy-policy"} className="uppercase h-12 flex items-center font-medium">
+        <Link
+          href={"/privacy-policy"}
+          className="uppercase h-7 sm:h-12.5 flex-center font-medium text-sm sm:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md px-2 sm:px-6"
+        >
           {t("privacy_policy")}
         </Link>
       </div>
-      <div className="fixed bottom-6.75 right-11.75 z-10 flex flex-col text-white">
-        <a href="https://x.com/aya_avatar48" target="blank" className="">https://x.com/aya_avatar48</a>
-        <a href="https://t.me/Avatar48_Official" target="blank" className="">https://t.me/Avatar48_Official</a>
+      <div className="w-max fixed bottom-19 sm:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10">
+        <Link
+          href={`${baseUrl}/agent/${locale}`}
+          className="rounded-custom-20 p-2.5 flex items-center gap-3 bg-linear-120 from-9% from-avatar-blue-1 via-78% via-avatar-blue-4 to-99% dark:to-avatar-violet to-avatar-blue-3"
+        >
+          <img
+            src={"/assets/avatar_image.png"}
+            alt={"defaultImage"}
+            className="rounded-xl w-22.5 sm:w-31.25 h-14.75 sm:h-20.5"
+          />
+          <p className="font-medium text-white text-base sm:text-xl">{t("chat_now")}</p>
+        </Link>
       </div>
+      <AvatarLink />
     </>
   );
 }
