@@ -18,7 +18,7 @@ const buttonVariants = cva(
         outline: "border border-border bg-background hover:bg-accent hover:text-accent-foreground",
       },
       size: {
-        default: "text-lg lg:text-xl gap-2 px-8 h-10 md:h-13.5 lg:gap-2",
+        default: "text-base sm:text-lg lg:text-xl gap-1.5 lg:gap-2 px-2 sm:px-4 md:px-8 h-10 md:h-12 lg:h-13.5 lg:gap-2",
         icon: "size-13 sm:size-14 mobile:size-15 md:size-20 lg:size-24 shrink-0",
         small: "h-10 shrink-0",
       },

@@ -36,7 +36,7 @@ const ImageAvatar48 = ({ className, drakURL, lightURL }: Cprops) => {
     <img
       src={isDark ? drakURL : lightURL}
       alt="Avatar48"
-      className={cn("w-32.5 h-27.5",className)}
+      className={cn(className)}
     />
   );
 };
