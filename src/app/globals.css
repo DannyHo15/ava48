@@ -11,6 +11,7 @@
   --color-avatar-blue-2: var(--avatar-blue-2);
   --color-avatar-blue-3: var(--avatar-blue-3);
   --color-avatar-blue-4: var(--avatar-blue-4);
+  --color-avatar-blue-5: var(--avatar-blue-5);
   --color-avatar-violet: var(--avatar-violet);
   --color-avatar-black: var(--avatar-black);
   --color-avatar-black-1: var(--avatar-black-1);
@@ -36,8 +37,12 @@
   /* Font Weight */ /* Letter space */
   /* Line height */ /* Border radius use by rounded-* */
   --radius-custom-20: 1.25rem;
-  /* Spacing this is value in the end of p-* or h-* */ /* Shadow */
-  /* Inset shadow */ /* Drop shadow */ /* Back drop blur */
+  /* Spacing this is value in the end of p-* or h-* */ 
+  /* Shadow */
+  /* Inset shadow */ 
+  /* Drop shadow */
+  --drop-shadow-text: drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4));
+  /* Back drop blur */
 }
 
 :root {
@@ -47,6 +52,7 @@
   --avatar-blue-2: #00d0f6;
   --avatar-blue-3: #0083f5;
   --avatar-blue-4: #1d4ed8;
+  --avatar-blue-5: #49FFF0;
   --avatar-violet: #001251;
   --avatar-black: #000;
   --avatar-black-1: #1a1a1a;
@@ -105,6 +111,10 @@
     -webkit-text-fill-color: transparent;
     @apply bg-clip-text;
   }
+  
+  .drop-shadow-text {
+    filter: var(--drop-shadow-text);
+  }
 }
 
 @layer components {
@@ -122,6 +132,7 @@
   }
 }
 
+
 .gradient-border {
   border-radius: 8px;
   padding: 1px;
@@ -130,4 +141,120 @@
   mask-composite: xor;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+}
+
+.font-karantina {
+  font-family: var(--font-karantina);
+}
+
+.textShadow {
+  text-shadow: 1.70285px 2.55428px 1.53257px rgba(0, 0, 0, 0.4);
+}
+
+.glasscard {
+  --border-size: 1px;
+  --chamfer-size: min(40px);
+  --box-border--border: linear-gradient(
+    135deg,
+    rgba(255,255,255,.85),
+    rgba(255,255,255,.25) 70%,
+    rgba(255,255,255,0)
+  );
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  border-radius: 10px;
+  clip-path: polygon(
+    var(--chamfer-size) 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 var(--chamfer-size)
+  );
+}
+
+.glasscard::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: var(--chamfer-size);
+  height: var(--chamfer-size);
+  background: #fff;
+  pointer-events: none;
+  z-index: 1;
+
+  mask-image: linear-gradient(
+    to bottom right,
+    transparent calc(50% - var(--border-size) / 1.414),
+    black       calc(50% - var(--border-size) / 1.414),
+    black       calc(50% + var(--border-size) / 1.414),
+    transparent calc(50% + var(--border-size) / 1.414)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom right,
+    transparent calc(50% - var(--border-size) / 1.414),
+    black       calc(50% - var(--border-size) / 1.414),
+    black       calc(50% + var(--border-size) / 1.414),
+    transparent calc(50% + var(--border-size) / 1.414)
+  );
+}
+
+.glasscard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--box-border--border);
+  pointer-events: none;
+  z-index: 1;
+
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;    
+  -webkit-mask-composite: xor;
+
+  padding: var(--border-size);
+
+  clip-path: polygon(
+    var(--chamfer-size) 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 var(--chamfer-size),
+    var(--chamfer-size) 0
+  );
+}
+
+.glasscard-rectangle {
+  --border-size: 1px;
+  --chamfer-size: min(40px);
+  --box-border--border: linear-gradient(
+    135deg,
+    rgba(255,255,255,.85),
+    rgba(255,255,255,.25) 70%,
+    rgba(255,255,255,0)
+  );
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  border-radius: 10px;
+}
+
+.glasscard-rectangle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--box-border--border);
+  pointer-events: none;
+  z-index: 1;
+
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;    
+  -webkit-mask-composite: xor;
+
+  padding: var(--border-size);
 }
