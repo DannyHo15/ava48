@@ -24,7 +24,7 @@ const FloatButton = forwardRef<HTMLButtonElement, FloatButtonProps>(
         size="icon"
         className={cn(
           positionClasses[position],
-          "z-50 shadow-lg hover:shadow-xl transition-shadow duration-200",
+          "z-9999! shadow-lg hover:shadow-xl transition-shadow duration-200",
           className,
         )}
         ref={ref}
@@ -39,4 +39,3 @@ const FloatButton = forwardRef<HTMLButtonElement, FloatButtonProps>(
 FloatButton.displayName = "FloatButton";
 
 export { FloatButton };
-

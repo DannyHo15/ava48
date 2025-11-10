@@ -34,6 +34,8 @@
   --text-custom-56: 3.5rem;
   --text-custom-70: 4.375rem;
   --text-custom-82: 5.125rem;
+  --text-custom-106: 6.625rem;
+  --text-custom-123: 7.688rem;
   /* Font Weight */ /* Letter space */
   /* Line height */ /* Border radius use by rounded-* */
   --radius-custom-20: 1.25rem;
@@ -145,6 +147,19 @@
   mask-composite: xor;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+.example {
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  position: relative;
+  z-index: 1;
 }
 
 .border-gradient-border::before {
