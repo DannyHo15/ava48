@@ -14,6 +14,7 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
 import { AvatarLink } from "../AvatarLink";
+import BorderGradientWrapper from "../BorderGradientWrapper";
 gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
 
 export function GlobalLayout({ children }: { children: React.ReactNode }) {
@@ -51,7 +52,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         </Link>
       </div>
       <div className="fixed top-7.5 sm:top-15 lg:top-8 right-5 sm:right-10 lg:right-16.5 flex gap-6 text-xl z-10">
-        <div className="flex gap-4 lg:gap-6">
+        <div className="flex gap-2 md:gap-4 lg:gap-6">
           <Link href={`${baseUrl}/agent/${locale}`}>
             <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer">
               <Power size={24} strokeWidth={2} />
@@ -72,7 +73,9 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         </div>
         <div className="fixed inset-0 bg-avatar-black" />
         <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center mix-blend-plus-lighter opacity-21" />
-        <div className="fixed inset-0 cs-radial" />
+        <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
+        <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
+        <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
       </div>
       <div
         className={cn(
@@ -88,23 +91,25 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         </Link>
         <Link
           href={"/privacy-policy"}
-          className="uppercase h-7 sm:h-12.5 flex-center font-medium text-sm sm:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md px-2 sm:px-6"
+          className="uppercase h-7 sm:h-12.5 flex-center font-medium text-sm sm:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md v px-2 sm:px-6"
         >
           {t("privacy_policy")}
         </Link>
       </div>
-      <div className="w-max fixed bottom-19 sm:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10">
-        <Link
-          href={`${baseUrl}/agent/${locale}`}
-          className="rounded-custom-20 p-2.5 flex items-center gap-3 bg-linear-120 from-9% from-avatar-blue-1 via-78% via-avatar-blue-4 to-99% dark:to-avatar-violet to-avatar-blue-3"
-        >
-          <img
-            src={"/assets/avatar_image.png"}
-            alt={"defaultImage"}
-            className="rounded-xl w-22.5 sm:w-31.25 h-14.75 sm:h-20.5"
-          />
-          <p className="font-medium text-white text-base sm:text-xl">{t("chat_now")}</p>
-        </Link>
+      <div className="w-max fixed bottom-19 sm:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10 gradient-border">
+        <BorderGradientWrapper>
+          <Link
+            href={`${baseUrl}/agent/${locale}`}
+            className="rounded-custom-20 p-2.5 flex items-center gap-3 bg-linear-120 from-9% from-avatar-blue-1 via-78% via-avatar-blue-4 to-99% dark:to-avatar-violet to-avatar-blue-3"
+          >
+            <img
+              src={"/assets/avatar_image.png"}
+              alt={"defaultImage"}
+              className="rounded-xl w-22.5 sm:w-31.25 h-14.75 sm:h-20.5"
+            />
+            <p className="font-medium text-white text-base sm:text-xl">{t("chat_now")}</p>
+          </Link>
+        </BorderGradientWrapper>
       </div>
       <AvatarLink />
     </>

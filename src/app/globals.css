@@ -19,7 +19,7 @@
   /* Define breakpoint */
   --breakpoint-xs: 320px;
   --breakpoint-pr: 375px;
-  --breakpoint-prm: 435px;
+  --breakpoint-prm: 400px;
   --breakpoint-3xl: 1920px;
   --breakpoint-4xl: 1920px;
   --breakpoint-5xl: 2560px;
@@ -51,9 +51,12 @@
   --avatar-black: #000;
   --avatar-black-1: #1a1a1a;
   --avatar-text-color: #1a1a1a;
-  --avatar-bg-filter:
-    84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
+  --avatar-bg-filter-lg: 84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 95.67%;
+  --avatar-bg-filter-md: 76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 88.4%;
+  --avatar-bg-filter-sm: 87.19% 156.67% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 96.46%, rgba(216, 29, 226, 0.5) 99.22%;
 }
 
 .dark {
@@ -67,10 +70,12 @@
   --avatar-black: #000;
   --avatar-black-1: #1a1a1a;
   --avatar-text-color: #fff;
-  --avatar-bg-filter:
-    90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
-    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%,
-    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-bg-filter-lg: 90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%, rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-bg-filter-md: 76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%, rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-bg-filter-sm: 84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%, rgba(216, 29, 226, 0.5) 99.22%;
 }
 
 @layer base {
@@ -106,21 +111,23 @@
   .background-blur {
     @apply bg-[linear-gradient(180deg,rgba(0,0,0,0.3)_0%,rgba(0,0,0,0)_106.11%)] border-none backdrop-blur-[50px];
   }
+  .cs-radial-lg {
+    background: radial-gradient(var(--avatar-bg-filter-lg));
+  }
+  .cs-radial-md {
+    background: radial-gradient(var(--avatar-bg-filter-md));
+  }
+  .cs-radial-sm {
+    background: radial-gradient(var(--avatar-bg-filter-sm));
+  }
 }
 
-.cs-radial {
-  background: radial-gradient(var(--avatar-bg-filter));
-}
 .gradient-border {
   border-radius: 8px;
   padding: 1px;
   background: transparent;
-  mask:
-    linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
 }
