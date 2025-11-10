@@ -96,19 +96,33 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           {t("privacy_policy")}
         </Link>
       </div>
-      <div className="w-max fixed bottom-19 sm:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10 gradient-border">
-        <BorderGradientWrapper>
-          <Link
-            href={`${baseUrl}/agent/${locale}`}
-            className="rounded-custom-20 p-2.5 flex items-center gap-3 bg-linear-120 from-9% from-avatar-blue-1 via-78% via-avatar-blue-4 to-99% dark:to-avatar-violet to-avatar-blue-3"
+      <div className="w-max fixed bottom-19 sm:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10">
+        <BorderGradientWrapper
+          gradientType="linear"
+          className="p-2.5"
+          rounded="25px"
+          borderColor="--avatar-chat-border"
+          strokeWidth="3px"
+        >
+          <BorderGradientWrapper
+            gradientType="linear"
+            className="p-px"
+            rounded="21px"
+            borderColor="--avatar-chat-border"
+            strokeWidth="1px"
           >
-            <img
-              src={"/assets/avatar_image.png"}
-              alt={"defaultImage"}
-              className="rounded-xl w-22.5 sm:w-31.25 h-14.75 sm:h-20.5"
-            />
-            <p className="font-medium text-white text-base sm:text-xl">{t("chat_now")}</p>
-          </Link>
+            <Link
+              href={`${baseUrl}/agent/${locale}`}
+              className="rounded-custom-20 p-2.5 flex items-center gap-3 bg-linear-120 from-9% from-avatar-blue-1 via-78% via-avatar-blue-4 to-99% dark:to-avatar-violet to-avatar-blue-3"
+            >
+              <img
+                src={"/assets/avatar_image.png"}
+                alt={"defaultImage"}
+                className="rounded-xl w-22.5 sm:w-31.25 h-14.75 sm:h-20.5"
+              />
+              <p className="font-medium text-white text-base sm:text-xl">{t("chat_now")}</p>
+            </Link>
+          </BorderGradientWrapper>
         </BorderGradientWrapper>
       </div>
       <AvatarLink />
