@@ -7,7 +7,12 @@ import { SectionWrapper } from "../SectionWrapper";
 
 const RiseTogether = () => {
   return (
-    <div className="">
+    <SectionWrapper>
+      <div className="fixed inset-0 bg-avatar-black" />
+      <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center mix-blend-plus-lighter opacity-21" />
+      <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
+      <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
+      <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
       <div className="grid grid-cols-1 px-5 w-full h-screen">
         {/* SLOGAN */}
         <div className="relative size-full flex-col flex justify-center">
@@ -31,19 +36,6 @@ const RiseTogether = () => {
                 RISE TOGETHER !
               </div>
             </div>
-          </div>
-          {/* Character */}
-          <div className="flex-center gap-4 mt-24">
-            <ImageAvatar48
-              className="w-36 h-52"
-              lightURL={"/assets/aya-fujimoto-dark.png"}
-              drakURL={"/assets/aya-fujimoto-dark.png"}
-            ></ImageAvatar48>
-            <ImageAvatar48
-              className="w-36 h-52"
-              lightURL={"/assets/eimi-fukada-dark.png"}
-              drakURL={"/assets/eimi-fukada-dark.png"}
-            ></ImageAvatar48>
           </div>
         </div>
         {/* Character */}
@@ -73,7 +65,7 @@ const RiseTogether = () => {
           </div>
         </div>
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 
