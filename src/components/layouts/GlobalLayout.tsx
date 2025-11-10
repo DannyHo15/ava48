@@ -71,11 +71,6 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         <div className="relative z-1" id="smooth-content">
           {children}
         </div>
-        <div className="fixed inset-0 bg-avatar-black" />
-        <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center mix-blend-plus-lighter opacity-21" />
-        <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
-        <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
-        <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
       </div>
       <div
         className={cn(

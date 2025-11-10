@@ -8,13 +8,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
 import RiseTogether from "@/components/home/RiseTogether";
 import Aya from "@/components/home/Aya";
-import { Section } from "lucide-react";
-import { Test } from "@/components/home/Test";
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin, ScrollTrigger, Observer);
 
 const sections = [
-  // { Component: RiseTogether },
+  { Component: RiseTogether },
   { Component: Aya },
 ];
 
