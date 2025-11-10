@@ -33,13 +33,11 @@ const RiseTogether = () => {
           </h1>
           <DiamondDots className="absolute bottom-[61%] left-[57%] sm:left-[63%] sm:bottom-[58%] 2xl:bottom-[62%] 2xl:left-[70%] -translate-x-1/2 z-30" />
         </div>
-        <div className="relative max-w-6xl flex justify-center h-full mb-0 pt-28 sm:pt-0 2xl:pt-[118px]">
+        <div className="relative max-w-6xl flex justify-center mb-0 pt-28 sm:pt-0 2xl:pt-[118px]">
           <ImageAvatar48
-            className="max-w-[107%] sm:w-[640px] max-h-[100%] left-2 object-contain z-10 relative"
+            className="max-w-[107%] sm:w-[640px] max-h-screen w-auto h-auto left-2 object-contain z-10 relative"
             lightURL={"/assets/aya-bg.webp"}
             drakURL={"/assets/aya-bg-dark.webp"}
-            lightURL2xl={"/assets/aya-bg-2xl.webp"}
-            drakURL2xl={"/assets/aya-bg-dark-2xl.webp"}
           ></ImageAvatar48>
         </div>
         <div className="absolute right-7 sm:right-[7%] bottom-7/25 sm:bottom-[20%] 2xl:bottom-[34%] z-10 ">
