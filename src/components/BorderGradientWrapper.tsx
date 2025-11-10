@@ -1,24 +1,40 @@
 import { cn } from "@/lib/utils";
+import clsx from "clsx";
 import React from "react";
 type Cprops = {
   children: React.ReactNode;
   strokeWidth?: string;
   rounded?: string;
+  borderColor?: string;
+  gradientType: 'linear' | 'radial';
   className?: string;
-  beforeClassName?: string;
 };
 const BorderGradientWrapper: React.FC<Cprops> = ({
   children,
-  strokeWidth="1px",
+  strokeWidth = "4px",
   rounded = "12px",
-  className = "",
-  beforeClassName = "",
+  borderColor = '--avatar-bg-filter-md',
+  gradientType = 'radial',
+  className = "p-2",
 }) => {
-  const baseBeforeClass = `before:absolute before:inset-0 before:rounded-[${rounded}] before:p-[${strokeWidth}] before:bg-white before:content-['']! before:-z-1 before:mask-[linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]! before:[-webkit-mask-composite:xor]! before:[mask-composite:exclude]!`;
-  const baseClass = "relative z-1 flex flex-center p-2.5";
+  const baseClass = "border-gradient-border flex-center relative z-1";
+
+  const dynamicStyles = {
+    '--before-rounded': rounded,
+    '--before-stroke-width': strokeWidth,
+    '--before-stroke-color': gradientType === 'linear'? `linear-gradient(var(${borderColor}))`: `radial-gradient(var(${borderColor}))`,
+  };
 
   return (
-    <div className={cn(baseClass, baseBeforeClass, className, beforeClassName)}>{children}</div>
+    <div
+      className={clsx(
+        baseClass,
+        className,
+      )}
+      style={dynamicStyles as React.CSSProperties}
+    >
+      {children}
+    </div>
   );
 };
 
