@@ -9,9 +9,9 @@ interface IFloatInformationProps {
 const FloatInformation = ({ content }: IFloatInformationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="relative size-full">
-      <div className="hidden lg:block">
-        <div className="px-4 size-full min-h-56 backdrop-blur-sm py-4 rounded-lg bg-linear-to-b from-black/10 to-black/10 text-white flex-center">
+    <div className="relative h-full flex items-center">
+      <div className="hidden lg:block min-h-75">
+        <div className="p-5 size-full backdrop-blur-sm bg-linear-to-b from-white/10 to-white/10 text-white flex justify-center items-start rounded-t-custom-20 text-xl">
           {content}
         </div>
       </div>
@@ -29,7 +29,7 @@ const FloatInformation = ({ content }: IFloatInformationProps) => {
         </FloatButton>
         {isOpen && (
           <div className="fixed left-0 px-8 bottom-48.5 w-screen  z-999!">
-            <div className="px-5 size-full min-h-56 backdrop-blur-sm py-4 rounded-lg bg-linear-to-b from-black/10 to-black/10 text-white flex-center">
+            <div className="px-5 size-full min-h-36 backdrop-blur-sm py-4 rounded-lg bg-linear-to-b from-black/10 to-black/10 text-white flex-center text-base">
               {content}
             </div>
           </div>
