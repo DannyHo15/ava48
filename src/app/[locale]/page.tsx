@@ -42,12 +42,12 @@ export default function Home() {
         wheelSpeed: -1,
         onDown: () => {
           if (!animating.current) {
-            slider.current?.next();
+            slider.current?.prev();
           }
         },
         onUp: () => {
           if (!animating.current) {
-            slider.current?.prev();
+            slider.current?.next();
           }
         },
         tolerance: 10,
