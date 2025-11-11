@@ -2,82 +2,52 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
 import RiseTogether from "@/components/home/RiseTogether";
 import Aya from "@/components/home/Aya";
-gsap.registerPlugin(useGSAP, ScrollToPlugin, ScrollTrigger, Observer);
+gsap.registerPlugin(useGSAP, Observer);
+
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 const sections = [{ Component: RiseTogether }, { Component: Aya }];
 
 export default function Home() {
   const main = useRef<HTMLDivElement>(null);
-  const currentIndex = useRef(-1);
   const animating = useRef(false);
   const observer = useRef<Observer | null>(null);
 
+  const [container, slider] = useKeenSlider<HTMLDivElement>({
+    loop: false,
+    slides: {
+      origin: "center",
+      perView: 1,
+      spacing: 0,
+    },
+    defaultAnimation: {
+      duration: 1000,
+    },
+    drag: false,
+    animationStarted: () => (animating.current = true),
+    animationEnded: () => setTimeout(() => (animating.current = false)),
+    vertical: true,
+  });
+
   useGSAP(
     () => {
-      currentIndex.current = -1;
       animating.current = false;
-      const sections = gsap.utils.toArray<HTMLElement>(".section-container");
-      const outerWrappers = gsap.utils.toArray<HTMLDivElement>(".outer-wrapper");
-      const innerWrappers = gsap.utils.toArray<HTMLDivElement>(".inner-wrapper");
-      const headings = gsap.utils.toArray<HTMLHeadingElement>(".section-heading");
-
-      gsap.set(outerWrappers, { yPercent: 100 });
-      gsap.set(innerWrappers, { yPercent: -100 });
-
-      const gotoSection = (index: number, direction: number) => {
-        animating.current = true;
-        const fromTop = direction === -1;
-        const dFactor = fromTop ? -1 : 1;
-        const tl = gsap.timeline({
-          defaults: { duration: 1.25, ease: "power1.inOut" },
-          onComplete: () => {
-            animating.current = false;
-          },
-        });
-        if (currentIndex.current >= 0) {
-          gsap.set(sections[currentIndex.current], { zIndex: 0 });
-          tl.to(headings[currentIndex.current], {
-            yPercent: -15 * dFactor,
-          }).set(sections[currentIndex.current], { autoAlpha: 0 });
-        }
-        gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-        tl.fromTo(
-          [outerWrappers[index], innerWrappers[index]],
-          {
-            yPercent: (i: number) => (i ? -100 * dFactor : 100 * dFactor),
-          },
-          { yPercent: 0 },
-          0
-        ).fromTo(
-          headings[index],
-          { autoAlpha: 0, yPercent: 150 * dFactor },
-          {
-            autoAlpha: 1,
-            yPercent: 0,
-            duration: 1,
-            ease: "power2",
-          },
-          0.2
-        );
-        currentIndex.current = index;
-      };
 
       observer.current = Observer.create({
         type: "wheel,touch,pointer",
         wheelSpeed: -1,
         onDown: () => {
-          if (!animating.current && currentIndex.current > 0) {
-            gotoSection(currentIndex.current - 1, -1);
+          if (!animating.current) {
+            slider.current?.next();
           }
         },
         onUp: () => {
-          if (!animating.current && currentIndex.current < sections.length - 1) {
-            gotoSection(currentIndex.current + 1, 1);
+          if (!animating.current) {
+            slider.current?.prev();
           }
         },
         tolerance: 10,
@@ -87,25 +57,19 @@ export default function Home() {
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === "ArrowDown" || e.key === " ") {
           e.preventDefault();
-          if (currentIndex.current < sections.length - 1 && !animating.current) {
-            gotoSection(currentIndex.current + 1, 1);
+          if (!animating.current) {
+            slider.current?.next();
           }
         } else if (e.key === "ArrowUp") {
           e.preventDefault();
-          if (currentIndex.current > 0 && !animating.current) {
-            gotoSection(currentIndex.current - 1, -1);
+          if (!animating.current) {
+            slider.current?.prev();
           }
         }
       };
 
       window.addEventListener("keydown", handleKeyDown);
-      if (currentIndex.current === -1) {
-        currentIndex.current = 0;
-        gsap.set(sections[0], { autoAlpha: 1, zIndex: 1 });
-        gsap.set(outerWrappers[0], { yPercent: 0 });
-        gsap.set(innerWrappers[0], { yPercent: 0 });
-        gsap.set(headings[0], { autoAlpha: 1, yPercent: 0 });
-      }
+
       return () => {
         window.removeEventListener("keydown", handleKeyDown);
         observer.current?.kill();
@@ -115,12 +79,10 @@ export default function Home() {
   );
 
   return (
-    <div ref={main} className="bg-transparent text-white font-sans overflow-hidden h-screen">
-      <div className="relative w-full h-full">
-        {sections.map((item, index) => (
-          <item.Component key={index} />
-        ))}
-      </div>
+    <div ref={container} className="relative size-full keen-slider">
+      {sections.map((item, index) => (
+        <item.Component key={index} />
+      ))}
     </div>
   );
 }
