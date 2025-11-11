@@ -138,7 +138,6 @@
   }
 }
 
-
 .gradient-border {
   border-radius: 8px;
   padding: 1px;
@@ -289,4 +288,8 @@
   -webkit-mask-composite: xor;
 
   padding: var(--border-size);
+}
+
+.cs-clip-path {
+ clip-path: path("M 10,50 L 90,50 A 10,10 0,0,0 100, 40 L 100,10 L 110,0 L100,0 L 190,0 L 200,10 L 200,190 L 190,200 L 10,200 L 0,190 L 0,60 L 10,50 Z")
 }

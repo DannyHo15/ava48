@@ -54,14 +54,14 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       <div className="fixed top-7.5 sm:top-15 lg:top-8 right-5 sm:right-10 lg:right-16.5 flex gap-6 text-xl z-10">
         <div className="flex gap-2 md:gap-4 lg:gap-6">
           <Link href={`${baseUrl}/agent/${locale}`}>
-            <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer">
-              <Power size={24} strokeWidth={2} />
+            <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer px-3 prm:px-2">
+              <Power size={24} strokeWidth={2} className="hidden prm:block" />
               {t("lets_talk")}
             </Button>
           </Link>
           <Link href={`${baseUrl}/platform/${locale}`}>
-            <Button className="bg-white text-black hover:opacity-80 cursor-pointer">
-              <CircleArrowRight size={24} strokeWidth={2} />
+            <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-3 prm:px-2">
+              <CircleArrowRight size={24} strokeWidth={2} className="hidden prm:block" />
               {t("create_agent")}
             </Button>
           </Link>
