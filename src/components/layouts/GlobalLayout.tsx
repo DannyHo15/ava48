@@ -74,7 +74,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       </div>
       <div
         className={cn(
-          "fixed bottom-7.75 sm:bottom-15 lg:bottom-6.75 left-5 sm:left-10 lg:left-11.75 flex sm:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 sm:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10"
+          "fixed bottom-7.75 sm:bottom-15 lg:bottom-6.75 left-5 sm:left-10 lg:left-11.75 flex sm:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 sm:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10",
         )}
       >
         <LanguageDrawer className="sm:w-26.25 h-7 sm:h-12.5 rounded-[0.625rem] px-2 sm:px-6" />
@@ -115,7 +115,9 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
                 alt={"defaultImage"}
                 className="rounded-xl w-22.5 sm:w-31.25 h-14.75 sm:h-20.5"
               />
-              <p className="font-medium text-white text-base sm:text-xl">{t("chat_now")}</p>
+              <p className="font-medium text-white text-base sm:text-xl">
+                {t("chat_now")}
+              </p>
             </Link>
           </BorderGradientWrapper>
         </BorderGradientWrapper>

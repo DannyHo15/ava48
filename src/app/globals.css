@@ -22,9 +22,8 @@
   --breakpoint-pr: 375px;
   --breakpoint-prm: 400px;
   --breakpoint-3xl: 1920px;
-  --breakpoint-4xl: 1920px;
-  --breakpoint-5xl: 2560px;
-  --breakpoint-6xl: 2560px;
+  --breakpoint-4xl: 2560px;
+  --breakpoint-5xl: 3840px;
 
   /* Define font family */
   --font-kanit: "Kanit", sans-serif;
@@ -39,9 +38,9 @@
   /* Font Weight */ /* Letter space */
   /* Line height */ /* Border radius use by rounded-* */
   --radius-custom-20: 1.25rem;
-  /* Spacing this is value in the end of p-* or h-* */ 
+  /* Spacing this is value in the end of p-* or h-* */
   /* Shadow */
-  /* Inset shadow */ 
+  /* Inset shadow */
   /* Drop shadow */
   --drop-shadow-text: drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4));
   /* Back drop blur */
@@ -54,19 +53,27 @@
   --avatar-blue-2: #00d0f6;
   --avatar-blue-3: #0083f5;
   --avatar-blue-4: #1d4ed8;
-  --avatar-blue-5: #49FFF0;
-  --avatar-violet: #001251;
+  --avatar-blue-5: #49fff0;
+  --avatar-violet: #d81de2;
   --avatar-black: #000;
   --avatar-black-1: #1a1a1a;
   --avatar-text-color: #1a1a1a;
-  --avatar-bg-filter-lg: 84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
+  --avatar-bg-filter-lg:
+    84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 95.67%;
-  --avatar-bg-filter-md: 76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+  --avatar-bg-filter-md:
+    76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 88.4%;
-  --avatar-bg-filter-sm: 87.19% 156.67% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
-    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 96.46%, rgba(216, 29, 226, 0.5) 99.22%;
-  --avatar-chat-border: -60deg, #00d0f6 3.35%, rgba(81, 249, 255, 0) 33.5%,
+  --avatar-bg-filter-sm:
+    87.19% 156.67% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 96.46%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-chat-border:
+    -60deg, #00d0f6 3.35%, rgba(81, 249, 255, 0) 33.5%,
     rgba(81, 249, 255, 0) 80.85%, #00d0f6 91.75%;
+  --avatar-info-border:
+    90deg, #fff, rgba(255, 255, 255, 0) 33.5%, rgba(81, 249, 255, 0) 80.85%,
+    #fff 122.75%;
 }
 
 .dark {
@@ -80,13 +87,20 @@
   --avatar-black: #000;
   --avatar-black-1: #1a1a1a;
   --avatar-text-color: #fff;
-  --avatar-bg-filter-lg: 90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
-    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%, rgba(216, 29, 226, 0.5) 99.22%;
-  --avatar-bg-filter-md: 76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
-    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%, rgba(216, 29, 226, 0.5) 99.22%;
-  --avatar-bg-filter-sm: 84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
-    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%, rgba(216, 29, 226, 0.5) 99.22%;
-  --avatar-chat-border: 120deg, #ffffff 2.51%, rgba(255, 255, 255, 0) 37.74%,
+  --avatar-bg-filter-lg:
+    90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-bg-filter-md:
+    76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-bg-filter-sm:
+    84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-chat-border:
+    120deg, #ffffff 2.51%, rgba(255, 255, 255, 0) 37.74%,
     rgba(255, 255, 255, 0) 85.25%, #ffffff 101.14%;
 }
 
@@ -117,7 +131,7 @@
     -webkit-text-fill-color: transparent;
     @apply bg-clip-text;
   }
-  
+
   .drop-shadow-text {
     filter: var(--drop-shadow-text);
   }
@@ -142,9 +156,13 @@
   border-radius: 8px;
   padding: 1px;
   background: transparent;
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
   mask-composite: xor;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
@@ -171,8 +189,12 @@
   border-radius: var(--before-rounded);
   padding: var(--before-stroke-width);
   background: var(--before-stroke-color);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
@@ -187,9 +209,9 @@
   --chamfer-size: min(40px);
   --box-border--border: linear-gradient(
     135deg,
-    rgba(255,255,255,.85),
-    rgba(255,255,255,.25) 70%,
-    rgba(255,255,255,0)
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.25) 70%,
+    rgba(255, 255, 255, 0)
   );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -207,7 +229,8 @@
 .glasscard::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: var(--chamfer-size);
   height: var(--chamfer-size);
   background: #fff;
@@ -217,15 +240,15 @@
   mask-image: linear-gradient(
     to bottom right,
     transparent calc(50% - var(--border-size) / 1.414),
-    black       calc(50% - var(--border-size) / 1.414),
-    black       calc(50% + var(--border-size) / 1.414),
+    black calc(50% - var(--border-size) / 1.414),
+    black calc(50% + var(--border-size) / 1.414),
     transparent calc(50% + var(--border-size) / 1.414)
   );
   -webkit-mask-image: linear-gradient(
     to bottom right,
     transparent calc(50% - var(--border-size) / 1.414),
-    black       calc(50% - var(--border-size) / 1.414),
-    black       calc(50% + var(--border-size) / 1.414),
+    black calc(50% - var(--border-size) / 1.414),
+    black calc(50% + var(--border-size) / 1.414),
     transparent calc(50% + var(--border-size) / 1.414)
   );
 }
@@ -239,10 +262,14 @@
   pointer-events: none;
   z-index: 1;
 
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
 
-  mask-composite: exclude;    
+  mask-composite: exclude;
   -webkit-mask-composite: xor;
 
   padding: var(--border-size);
@@ -262,9 +289,9 @@
   --chamfer-size: min(40px);
   --box-border--border: linear-gradient(
     135deg,
-    rgba(255,255,255,.85),
-    rgba(255,255,255,.25) 70%,
-    rgba(255,255,255,0)
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.25) 70%,
+    rgba(255, 255, 255, 0)
   );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -281,15 +308,15 @@
   pointer-events: none;
   z-index: 1;
 
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
 
-  mask-composite: exclude;    
+  mask-composite: exclude;
   -webkit-mask-composite: xor;
 
   padding: var(--border-size);
-}
-
-.cs-clip-path {
- clip-path: path("M 10,50 L 90,50 A 10,10 0,0,0 100, 40 L 100,10 L 110,0 L100,0 L 190,0 L 200,10 L 200,190 L 190,200 L 10,200 L 0,190 L 0,60 L 10,50 Z")
 }
