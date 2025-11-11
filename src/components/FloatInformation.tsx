@@ -12,7 +12,7 @@ const FloatInformation = ({ content }: IFloatInformationProps) => {
   return (
     <div className="relative h-full flex items-center z-50">
       <div className="hidden sm:block min-h-75 sm:min-h-full">
-        <div className="p-5 size-full backdrop-blur-sm bg-linear-to-b from-white/30 to-white/0 text-white flex justify-center items-start rounded-t-custom-20 text-xl">
+        <div className="p-5 size-full backdrop-blur-sm bg-linear-to-b from-white/30 to-white/0 text-white flex justify-center items-start rounded-t-custom-20 text-xl whitespace-pre-line">
           {content}
         </div>
       </div>

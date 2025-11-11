@@ -5,12 +5,19 @@ import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/Observer";
 import RiseTogether from "@/components/home/RiseTogether";
 import Aya from "@/components/home/Aya";
+import AIConnection from "@/components/home/AIConnection";
+import EarnAyaConnection from "@/components/home/EarnAyaConnection";
 gsap.registerPlugin(useGSAP, Observer);
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-const sections = [{ Component: RiseTogether }, { Component: Aya }];
+const sections = [
+  { Component: RiseTogether },
+  { Component: Aya },
+  { Component: AIConnection },
+  { Component: EarnAyaConnection },
+];
 
 export default function Home() {
   const main = useRef<HTMLDivElement>(null);
