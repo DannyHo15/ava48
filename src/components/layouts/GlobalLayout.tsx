@@ -68,7 +68,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <div className="h-screen overflow-hidden" id="smooth-wrapper">
-        <div className="relative z-1" id="smooth-content">
+        <div className="relative z-1 h-full" id="smooth-content">
           {children}
         </div>
       </div>
