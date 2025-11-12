@@ -17,6 +17,7 @@ const AIConnection = () => {
           <div className="relative w-fit h-screen pt-[179px] sm:pt-[225px] xl:pt-[160px] flex flex-col items-center justify-end">
             <div className="relative w-full h-full lg:pr-35 xl:pr-0 flex items-end justify-center">
               <div className="z-30 w-full max-w-[755px] absolute -top-1/12 translate-y-1/12 sm:top-[30%] lg:-left-[290px] lg:top-[22%] xl:-left-[600px] xl:top-[40%] xl:-translate-y-[40%]">
+                <div className="absolute rounded-full w-[794.69px] h-[552px] top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[77%] sm:left-0  bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-20% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[120px] -rotate-[4.54deg] opacity-56 mix-blend-screen"></div>
                 <div className="absolute top-1 left-1/2 -translate-x-1/2 sm:-top-70 lg:left-[40%] xl:left-[75%] whitespace-nowrap font-bold">
                   <DiamondDots className="flex absolute -top-3 right-0 md:left-1 md:-top-10" />
                   <div className="w-full flex flex-col gap-1 lg:gap-5 xl:gap-[11px]">
