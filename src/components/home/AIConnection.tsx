@@ -15,7 +15,7 @@ const AIConnection = () => {
         <div className="size-full relative mx-auto max-w-full lg:max-w-[1093px] flex items-center justify-center gap-[35px] xl:gap-[118px]">
           <div className="hidden lg:block relative flex-1 size-full"></div>
           <div className="relative w-fit h-screen pt-[179px] sm:pt-[225px] xl:pt-[160px] flex flex-col items-center justify-end">
-            <div className="relative w-full h-full md:pr-35 xl:pr-0 flex items-end justify-center">
+            <div className="relative w-full h-full lg:pr-35 xl:pr-0 flex items-end justify-center">
               <div className="z-30 w-full max-w-[755px] absolute -top-1/12 translate-y-1/12 sm:top-[30%] lg:-left-[290px] lg:top-[22%] xl:-left-[600px] xl:top-[40%] xl:-translate-y-[40%]">
                 <div className="absolute top-1 left-1/2 -translate-x-1/2 sm:-top-70 lg:left-[40%] xl:left-[75%] whitespace-nowrap font-bold">
                   <DiamondDots className="flex absolute -top-3 right-0 md:left-1 md:-top-10" />
@@ -49,6 +49,7 @@ const AIConnection = () => {
                     }
                   />
                 </div>
+                {/* <div className="absolute rounded-full w-[794.69px] prm:w-[1160px] 2xl:w-[1310px] h-[552px] prm:h-[807px] 2xl:h-[911px] top-[24%] prm:top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[6%] 2xl:top-[165%] sm:left-[33%] sm:opacity-[0.45] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-27% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[94px] -rotate-[4.54deg] opacity-60 mix-blend-screen"></div> */}
               </div>
               <ImageAvatar48
                 className="hidden xl:block w-auto h-full object-contain"
