@@ -18,12 +18,12 @@ const RiseTogether = () => {
         <div className="flex items-end justify-center min-h-screen">
           <div className="absolute rounded-full w-[794.69px] prm:w-[1160px] 2xl:w-[1310px] h-[552px] prm:h-[807px] 2xl:h-[911px] top-[24%] prm:top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[6%] 2xl:top-[21%] sm:left-[2%] sm:opacity-[0.56] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-27% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[120px] -rotate-[4.54deg] opacity-60 mix-blend-screen"></div>
           <DiamondDots
-            className="mix-blend-soft-light absolute bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[63%] 2xl:left-[31%] -translate-x-1/2 z-30"
+            className="absolute bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[63%] 2xl:left-[31%] -translate-x-1/2 z-30"
             color="bg-white"
           />
           <div className="absolute left-[12%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3%] sm:top-[21%] 2xl:top-[30%] 2xl:left-[13%]">
             <h1
-              className="font-karantina text-[55px] sm:text-[120px] font-black drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15"
+              className="font-karantina text-custom-55 sm:text-custom-120 font-black drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15"
               style={{
                 filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
               }}

@@ -23,7 +23,7 @@ const DiamondDots = ({
   gap = { base: "gap-2", prm:"prm:gap-2.5", sm: "sm:gap-6" },
 }: DiamondDotsProps) => {
   return (
-    <div className={`flex ${gap.base} ${gap.prm} ${gap.sm} ${className}`}>
+    <div className={`flex ${gap.base} ${gap.prm} ${gap.sm} ${className} mix-blend-soft-light`}>
       {Array.from({ length: count }).map((_, index) => (
         <div
           key={index}
