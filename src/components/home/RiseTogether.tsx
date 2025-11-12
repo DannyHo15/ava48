@@ -13,7 +13,7 @@ const RiseTogether = () => {
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
-      <div className="grid grid-cols-1 px-5 w-full h-screen mx-auto lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10">
+      <div className="grid grid-cols-1 px-5 w-full h-screen mx-auto gap-4 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10">
         {/* SLOGAN */}
         <div className="relative size-full flex-col flex justify-center z-10 sm:justify-end lg:justify-center">
           <div className="w-full lg:w-fit lg:h-185 lg:items-start">
@@ -45,14 +45,14 @@ const RiseTogether = () => {
               <div className="flex justify-end gap-2 w-1/2">
                 <ImageAvatar48
                   className="max-w-full h-full object-contain"
-                  lightURL={"/assets/aya-fujimoto-dark.png"}
+                  lightURL={"/assets/aya-fujimoto-light.png"}
                   drakURL={"/assets/aya-fujimoto-dark.png"}
                 ></ImageAvatar48>
               </div>
               <div className="flex-center justify-start gap-2 w-1/2">
                 <ImageAvatar48
                   className="max-w-full h-full object-contain"
-                  lightURL={"/assets/eimi-fukada-dark.png"}
+                  lightURL={"/assets/eimi-fukada-light.png"}
                   drakURL={"/assets/eimi-fukada-dark.png"}
                 ></ImageAvatar48>
               </div>

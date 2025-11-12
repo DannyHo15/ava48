@@ -10,6 +10,7 @@ import AIConnection from "@/components/home/AIConnection";
 import EarnAyaConnection from "@/components/home/EarnAyaConnection";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import Vision from "@/components/home/Vision";
 
 gsap.registerPlugin(useGSAP, Observer, ScrollTrigger);
 
@@ -18,6 +19,7 @@ const sections = [
   { Component: Aya },
   { Component: AIConnection },
   { Component: EarnAyaConnection },
+  { Component: Vision },
 ];
 
 export default function Home() {
