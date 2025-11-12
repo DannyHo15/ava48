@@ -16,7 +16,7 @@ import utc from "dayjs/plugin/utc";
 import { Kanit } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 
 // Day.js Configuration
@@ -98,7 +98,8 @@ export default async function RootLayout({
         {children}
         <FirebaseAnalytics />
       </body>
-      <GoogleAnalytics gaId={"GTM-MNSWPXXT"} />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}/>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM}/>
     </html>
   );
 }
