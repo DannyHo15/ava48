@@ -6,6 +6,7 @@ import { Observer } from "gsap/Observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import RiseTogether from "@/components/home/RiseTogether";
 import Aya from "@/components/home/Aya";
+import Eimi from "@/components/home/EimiFukaka";
 import AIConnection from "@/components/home/AIConnection";
 import EarnAyaConnection from "@/components/home/EarnAyaConnection";
 import { useKeenSlider } from "keen-slider/react";
@@ -17,6 +18,7 @@ gsap.registerPlugin(useGSAP, Observer, ScrollTrigger);
 const sections = [
   { Component: RiseTogether },
   { Component: Aya },
+  { Component: Eimi },
   { Component: AIConnection },
   { Component: EarnAyaConnection },
   { Component: Vision },
