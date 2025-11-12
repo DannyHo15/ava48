@@ -113,7 +113,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
               <img
                 src={"/assets/avatar_image.png"}
                 alt={"defaultImage"}
-                className="rounded-xl w-22.5 sm:w-31.25 h-14.75 sm:h-20.5"
+                className="rounded-xl w-22.5 lg:w-31.25 h-14.75 lg:h-20.5"
               />
               <p className="font-medium text-white text-base sm:text-xl">
                 {t("chat_now")}

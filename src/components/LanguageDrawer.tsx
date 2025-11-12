@@ -42,7 +42,7 @@ const LanguageDrawer = (props: Props) => {
           <ChevronDown />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="flex flex-col w-30 text-white p-2">
+      <PopoverContent className="flex flex-col w-30 text-white bg-white/10 backdrop-blur-md p-2">
         {[
           {
             value: LanguageEnum.EN,
