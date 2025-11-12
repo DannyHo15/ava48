@@ -72,7 +72,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const randomTheme = Math.random() > 0.5 ? "dark" : "light";
+  const randomTheme = Math.random() > 0.5 ? "violet_kiss_mode" : "royal_dark_mode";
   return (
     <html className={randomTheme}>
       <head>
@@ -96,7 +96,7 @@ export default async function RootLayout({
         )}
       >
         {children}
-        <FirebaseAnalytics />
+        <FirebaseAnalytics theme={randomTheme} />
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}/>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM}/>
