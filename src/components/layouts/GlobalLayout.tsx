@@ -7,38 +7,15 @@ import { useParams } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import LanguageDrawer from "../LanguageDrawer";
 import ImageAvatar48 from "../ImageAvatar48";
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
 import { AvatarLink } from "../AvatarLink";
 import BorderGradientWrapper from "../BorderGradientWrapper";
-gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
 
 export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const t = useTranslations("LandingPage");
   const params = useParams();
   const { locale } = params;
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
-
-  const smoother = useRef<ScrollSmoother | null>(null);
-  useGSAP(() => {
-    smoother.current = ScrollSmoother.create({
-      content: "#smooth-content",
-      smooth: 1,
-      effects: true,
-      smoothTouch: 0.1,
-    });
-
-    return () => {
-      if (smoother.current) {
-        smoother.current.kill();
-        smoother.current = null;
-      }
-    };
-  }, []);
 
   return (
     <>
@@ -68,13 +45,11 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <div className="h-screen overflow-hidden" id="smooth-wrapper">
-        <div className="relative z-1 h-full" id="smooth-content">
-          {children}
-        </div>
+        {children}
       </div>
       <div
         className={cn(
-          "fixed bottom-7.75 sm:bottom-15 lg:bottom-6.75 left-5 sm:left-10 lg:left-11.75 flex sm:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 sm:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10",
+          "fixed bottom-7.75 sm:bottom-15 lg:bottom-6.75 left-5 sm:left-10 lg:left-11.75 flex sm:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 sm:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10"
         )}
       >
         <LanguageDrawer className="sm:w-26.25 h-7 sm:h-12.5 rounded-[0.625rem] px-2 sm:px-6" />
@@ -115,9 +90,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
                 alt={"defaultImage"}
                 className="rounded-xl w-22.5 lg:w-31.25 h-14.75 lg:h-20.5"
               />
-              <p className="font-medium text-white text-base sm:text-xl">
-                {t("chat_now")}
-              </p>
+              <p className="font-medium text-white text-base sm:text-xl">{t("chat_now")}</p>
             </Link>
           </BorderGradientWrapper>
         </BorderGradientWrapper>

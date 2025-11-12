@@ -3,14 +3,15 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/Observer";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import RiseTogether from "@/components/home/RiseTogether";
 import Aya from "@/components/home/Aya";
 import AIConnection from "@/components/home/AIConnection";
 import EarnAyaConnection from "@/components/home/EarnAyaConnection";
-gsap.registerPlugin(useGSAP, Observer);
-
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+
+gsap.registerPlugin(useGSAP, Observer, ScrollTrigger);
 
 const sections = [
   { Component: RiseTogether },
@@ -20,7 +21,6 @@ const sections = [
 ];
 
 export default function Home() {
-  const main = useRef<HTMLDivElement>(null);
   const animating = useRef(false);
   const observer = useRef<Observer | null>(null);
 
@@ -40,53 +40,50 @@ export default function Home() {
     vertical: true,
   });
 
-  useGSAP(
-    () => {
-      animating.current = false;
+  useGSAP(() => {
+    animating.current = false;
 
-      observer.current = Observer.create({
-        type: "wheel,touch,pointer",
-        wheelSpeed: -1,
-        onDown: () => {
-          if (!animating.current) {
-            slider.current?.prev();
-          }
-        },
-        onUp: () => {
-          if (!animating.current) {
-            slider.current?.next();
-          }
-        },
-        tolerance: 10,
-        preventDefault: true,
-      });
-
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === "ArrowDown" || e.key === " ") {
-          e.preventDefault();
-          if (!animating.current) {
-            slider.current?.next();
-          }
-        } else if (e.key === "ArrowUp") {
-          e.preventDefault();
-          if (!animating.current) {
-            slider.current?.prev();
-          }
+    observer.current = Observer.create({
+      type: "wheel,touch,pointer",
+      wheelSpeed: -1,
+      onDown: () => {
+        if (!animating.current) {
+          slider.current?.prev();
         }
-      };
+      },
+      onUp: () => {
+        if (!animating.current) {
+          slider.current?.next();
+        }
+      },
+      tolerance: 10,
+      preventDefault: true,
+    });
 
-      window.addEventListener("keydown", handleKeyDown);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowDown" || e.key === " ") {
+        e.preventDefault();
+        if (!animating.current) {
+          slider.current?.next();
+        }
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (!animating.current) {
+          slider.current?.prev();
+        }
+      }
+    };
 
-      return () => {
-        window.removeEventListener("keydown", handleKeyDown);
-        observer.current?.kill();
-      };
-    },
-    { scope: main }
-  );
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      observer.current?.kill();
+    };
+  });
 
   return (
-    <div ref={container} className="relative size-full keen-slider">
+    <div ref={container} className="relative size-full keen-slider z-1">
       {sections.map((item, index) => (
         <item.Component key={index} />
       ))}

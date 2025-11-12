@@ -13,6 +13,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import timezone from "dayjs/plugin/timezone";
 import updateLocale from "dayjs/plugin/updateLocale";
 import utc from "dayjs/plugin/utc";
+import NextTopLoader from 'nextjs-toploader';
 import { GoogleAnalytics } from "@next/third-parties/google";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 
@@ -41,6 +42,17 @@ export default async function RootLayout({
         <title>Avatar48</title>
       </head>
       <body className={clsx("h-screen bg-avatar-blue")}>
+        <NextTopLoader
+          color="var(--avatar-primary)"
+          initialPosition={0.3}
+          crawlSpeed={300}
+          height={2}
+          crawl={true}
+          showSpinner={false}
+          speed={300}
+          zIndex={999}
+          shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+        />
         {children}
         <FirebaseAnalytics />
       </body>
