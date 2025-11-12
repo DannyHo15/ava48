@@ -5,11 +5,11 @@ import { SectionWrapper } from "../SectionWrapper";
 const EarnAyaConnection = () => {
   return (
     <SectionWrapper>
-      <div className="fixed inset-0 bg-avatar-black" />
+      <div className="hidden lg:block xl:hidden bg-cover bg-center fixed inset-0 bg-[url(/assets/bg-earn-aya-tablet-light.png)] dark:bg-[url(/assets/bg-earn-aya-tablet-dark.png)]" />
       <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center mix-blend-plus-lighter opacity-21" />
-      <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
+      <div className="fixed hidden xl:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
-      <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
+      {/* <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" /> */}
       <div className="size-full relative flex flex-col items-center justify-between">
         <div className="h-[35%] lg:hidden w-full flex flex-col items-center justify-end relative z-10 -mb-10 sm:-mb-6">
           <div className="w-full flex justify-start">
@@ -46,18 +46,24 @@ const EarnAyaConnection = () => {
             </div>
             <div className="h-full lg:h-auto">
               <ImageAvatar48
-                className="w-auto h-full object-cover object-top lg:object-contain lg:col-span-1 transform-gpu lg:scale-[1.1] lg:origin-bottom"
+                className="hidden lg:block w-auto h-full object-cover object-top lg:object-contain lg:col-span-1 transform-gpu lg:scale-[1.2] lg:origin-bottom"
                 lightURL="/assets/earn-aya-connection-dark-1920.png"
                 drakURL="/assets/earn-aya-connection-light-1920.png"
+              />
+              <ImageAvatar48
+                className="block lg:hidden w-full h-auto object-contain"
+                lightURL="/assets/earn-aya-mobile-light.png"
+                drakURL="/assets/earn-aya-mobile-dark.png"
               />
             </div>
             <div className="hidden lg:block lg:col-span-1 w-full mb-50 xl:mb-0 xl:flex xl:justify-end">
               <div className="w-full flex flex-col gap-2 items-center justify-end max-w-[485px]">
                 <ImageAvatar48
-                  className="w-full h-auto object-contain"
+                  className="hidden lg:block w-full h-auto object-contain"
                   lightURL="/assets/aya-earn-heart-dark.png"
                   drakURL="/assets/aya-earn-heart-light.png"
                 />
+
                 <p className="text-white text-lg text-justify font-kanit leading-[117%] xl:leading-[142%] font-normal">
                   Every chat, every connection earns you Hearts. Use them to
                   unlock premium features, collect exclusive content, and many
