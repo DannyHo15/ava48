@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-async-client-component */
-"use server";
+// "use server";
+import "./globals.css";
 import { localeObject } from "@/lib/constants";
 import clsx from "clsx";
 import dayjs from "dayjs";
@@ -17,7 +17,11 @@ import { Kanit } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import NextTopLoader from "nextjs-toploader";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
+
+import { getThemeCookie } from "@/lib/theme-actions";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 // Day.js Configuration
 dayjs.extend(utc);
@@ -27,76 +31,36 @@ dayjs.extend(updateLocale);
 dayjs.extend(localizedFormat);
 dayjs.updateLocale("en", localeObject);
 
-const BE_FONT_300 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "300",
-});
-
-const BE_FONT_400 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "400",
-});
-const BE_FONT_500 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "500",
-});
-
-const BE_FONT_600 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "600",
-});
-
-const BE_FONT_700 = Kanit({
-  subsets: ["vietnamese"],
-  variable: "--font-kanit",
-  weight: "700",
-});
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const randomTheme = Math.random() > 0.5 ? "violet_kiss_mode" : "royal_dark_mode";
+  let initialTheme = await getThemeCookie();
+  if (!initialTheme) {
+    initialTheme = Math.random() > 0.5 ? "violet-kiss-mode" : "royal-dark-mode";
+  }
   return (
-    <html className={randomTheme}>
+    <html lang="en" className={initialTheme}>
       <head>
         <meta charSet="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-        />
+        <meta name="viewport" content="initial-scale=1.0" />
         <title>Avatar48</title>
       </head>
-      <body
-        className={clsx(
-          "h-screen bg-avatar-blue",
-          BE_FONT_300.variable,
-          BE_FONT_400.variable,
-          BE_FONT_500,
-          BE_FONT_600,
-          BE_FONT_700.variable,
-          geistSans.variable,
-          geistMono.variable
-        )}
-      >
-        {children}
-        <FirebaseAnalytics theme={randomTheme} />
+      <body className={clsx("h-dvh bg-avatar-blue")}>
+        <NextTopLoader
+          color="var(--avatar-primary)"
+          initialPosition={0.3}
+          crawlSpeed={300}
+          height={2}
+          crawl={true}
+          showSpinner={false}
+          speed={300}
+          zIndex={999}
+          shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+        />
+        <ThemeProvider initialTheme={initialTheme as "royal-dark-mode" | "violet-kiss-mode"}>{children}</ThemeProvider>
+        <FirebaseAnalytics theme={initialTheme}/>
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}/>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM}/>

@@ -1,23 +1,24 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type Cprops = {
+  lightURL: string;
+  drakURL: string;
   className?: string;
 };
 
-const LogoAvatar48 = ({ className }: Cprops) => {
+const ImageAvatar48 = ({ className, drakURL, lightURL }: Cprops) => {
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
+    const isDarkMode = document.documentElement.classList.contains("violet-kiss-mode");
     setIsDark(isDarkMode);
     setMounted(true);
 
     const observer = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains("dark");
+      const isDark = document.documentElement.classList.contains("violet-kiss-mode");
       setIsDark(isDark);
     });
 
@@ -32,14 +33,12 @@ const LogoAvatar48 = ({ className }: Cprops) => {
   if (!mounted) return null;
 
   return (
-    <Image
-      src={isDark ? "/assets/logo-dark.svg" : "/assets/logo-light.svg"}
+    <img
+      src={isDark ? drakURL : lightURL}
       alt="Avatar48"
-      width={131}
-      height={110}
-      className={className}
+      className={cn(className)}
     />
   );
 };
 
-export default LogoAvatar48;
+export default ImageAvatar48;

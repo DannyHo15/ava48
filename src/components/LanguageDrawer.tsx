@@ -26,26 +26,23 @@ const LanguageDrawer = (props: Props) => {
   function onSelectChange(value: LanguageEnum) {
     startTransition(() => {
       // @ts-expect-error -- TypeScript will validate that only known `params`
-      // are used in combination with a given `pathname`. Since the two will
-      // always match for the current route, we can skip runtime checks.
       replace({ pathname, params }, { locale: value });
     });
   }
 
   return (
     <Popover>
-      <PopoverTrigger asChild className="hidden">
+      <PopoverTrigger asChild>
         <Button
           variant="rounded"
-          color={"black"}
           size={"small"}
-          className={clsx("w-26.25! flex-center gap-1 uppercase", className)}
+          className={clsx("flex-center gap-1 uppercase bg-avatar-primary text-white text-base sm:text-xl", className)}
         >
           {locale}
           <ChevronDown />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="flex flex-col w-30 text-white p-2">
+      <PopoverContent className="flex flex-col w-30 text-white bg-white/10 backdrop-blur-md p-2">
         {[
           {
             value: LanguageEnum.EN,

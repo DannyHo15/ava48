@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 const PrivacyPolicyContent = () => {
   const t = useTranslations("privacy_policy");
   return (
-    <>
+    <div className="text-justify">
       <>
         <p>{t("uE5UCw")}</p>
         <br />
@@ -191,7 +191,7 @@ const PrivacyPolicyContent = () => {
           </a>
         </b>
       </>
-    </>
+    </div>
   );
 };
 export default PrivacyPolicyContent;

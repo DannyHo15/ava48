@@ -1,62 +1,334 @@
 @import "tailwindcss";
+@import "../assets/fonts/index.css";
 
+@custom-variant dark (&:is(.violet-kiss-mode *));
+/* Extend backdrop blur utilities */
+@source inline("{hover:,focus:,}backdrop-blur-{2xs,xs,sm,md,lg,xl,2xl,3xl}");
 @theme inline {
-
   /* Define Color */
   --color-avatar-primary: var(--avatar-primary);
   --color-avatar-blue: var(--avatar-blue);
+  --color-avatar-blue-1: var(--avatar-blue-1);
+  --color-avatar-blue-2: var(--avatar-blue-2);
+  --color-avatar-blue-3: var(--avatar-blue-3);
+  --color-avatar-blue-4: var(--avatar-blue-4);
+  --color-avatar-blue-5: var(--avatar-blue-5);
+  --color-avatar-violet: var(--avatar-violet);
   --color-avatar-black: var(--avatar-black);
+  --color-avatar-black-1: var(--avatar-black-1);
+  --color-avatar-text-color: var(--avatar-text-color);
 
   /* Define breakpoint */
   --breakpoint-xs: 320px;
   --breakpoint-pr: 375px;
-  --breakpoint-prm: 435px;
+  --breakpoint-prm: 400px;
   --breakpoint-3xl: 1920px;
-  --breakpoint-4xl: 1920px;
-  --breakpoint-5xl: 2560px;
-  --breakpoint-6xl: 2560px;
+  --breakpoint-4xl: 2560px;
+  --breakpoint-5xl: 3840px;
 
   /* Define font family */
-
+  --font-kanit: "Kanit", sans-serif;
+  --font-karantina: "Karantina", sans-serif;
   /* Font size */
   --text-xs: 0.75rem;
-  /* Font Weight */
-  /* Letter space */
-  /* Line height */
-  /* Border radius use by rounded-* */
+  --text-custom-46: 2.875rem;
+  --text-custom-55: 3.4375rem;
+  --text-custom-56: 3.5rem;
+  --text-custom-59: 3.6875rem;
+  --text-custom-70: 4.375rem;
+  --text-custom-72: 4.5rem;
+  --text-custom-82: 5.125rem;
+  --text-custom-110: 6.875rem;
+  --text-custom-120: 7.5rem;
+  --text-custom-125: 7.8125rem;
+  --text-custom-106: 6.625rem;
+  --text-custom-123: 7.688rem;
+  --text-custom-125: 7.813rem;
+  --text-custom-145: 9.125rem;
+  /* Font Weight */ /* Letter space */
+  /* Line height */ /* Border radius use by rounded-* */
+  --radius-custom-20: 1.25rem;
   /* Spacing this is value in the end of p-* or h-* */
   /* Shadow */
   /* Inset shadow */
   /* Drop shadow */
+  --drop-shadow-text: drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4));
   /* Back drop blur */
+  --blur-cs-6: 6px;
+  --blur-2xs: 2px;
 }
 
 :root {
-  --avatar-primary: #00D0F6;
+  --avatar-primary: #00d0f6;
   --avatar-blue: #001251;
+  --avatar-blue-1: #3cfbff;
+  --avatar-blue-2: #00d0f6;
+  --avatar-blue-3: #0083f5;
+  --avatar-blue-4: #1d4ed8;
+  --avatar-blue-5: #49fff0;
+  --avatar-violet: #d81de2;
   --avatar-black: #000;
-  --avatar-bg-filter: 84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%, rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 95.67%;
+  --avatar-black-1: #1a1a1a;
+  --avatar-text-color: #1a1a1a;
+  --avatar-bg-filter-lg:
+    84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 95.67%;
+  --avatar-bg-filter-md:
+    76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(41, 41, 140, 0.5) 88.4%;
+  --avatar-bg-filter-sm:
+    87.19% 156.67% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 96.46%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-chat-border:
+    -60deg, #00d0f6 3.35%, rgba(81, 249, 255, 0) 33.5%,
+    rgba(81, 249, 255, 0) 80.85%, #00d0f6 91.75%;
+  --avatar-info-border:
+    90deg, #fff, rgba(255, 255, 255, 0) 33.5%, rgba(81, 249, 255, 0) 80.85%,
+    #fff 122.75%;
 }
 
 .violet_kiss_mode {
   --avatar-primary: #D81DE2;
   --avatar-blue: #001251;
+  --avatar-blue-1: #3cfbff;
+  --avatar-blue-2: #00d0f6;
+  --avatar-blue-3: #0083f5;
+  --avatar-blue-4: #1d4ed8;
+  --avatar-violet: #d81de2;
   --avatar-black: #000;
-  --avatar-bg-filter: 90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%, rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%, rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-black-1: #1a1a1a;
+  --avatar-text-color: #fff;
+  --avatar-bg-filter-lg:
+    90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-bg-filter-md:
+    76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-bg-filter-sm:
+    84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+  --avatar-chat-border:
+    120deg, #ffffff 2.51%, rgba(255, 255, 255, 0) 37.74%,
+    rgba(255, 255, 255, 0) 85.25%, #ffffff 101.14%;
 }
 
-.flex-center {
-  @apply flex justify-center items-center;
+@layer base {
+  * {
+    font-family: var(--font-kanit);
+  }
 }
 
-.flex-center-x {
-  @apply flex justify-center;
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-center-x {
+    @apply flex justify-center;
+  }
+
+  .flex-center-y {
+    @apply flex items-center;
+  }
+
+  .avatar-container {
+    @apply max-w-340 mx-auto px-5 md:px-10;
+  }
+
+  .text-gradient {
+    -webkit-text-fill-color: transparent;
+    @apply bg-clip-text;
+  }
+
+  .drop-shadow-text {
+    filter: var(--drop-shadow-text);
+  }
 }
 
-.flex-center-y {
-  @apply flex items-center;
+@layer components {
+  .background-blur {
+    @apply bg-[linear-gradient(180deg,rgba(0,0,0,0.3)_0%,rgba(0,0,0,0)_106.11%)] border-none backdrop-blur-[50px];
+  }
+  .cs-radial-lg {
+    background: radial-gradient(var(--avatar-bg-filter-lg));
+  }
+  .cs-radial-md {
+    background: radial-gradient(var(--avatar-bg-filter-md));
+  }
+  .cs-radial-sm {
+    background: radial-gradient(var(--avatar-bg-filter-sm));
+  }
 }
 
-.cs-radial {
-  background: radial-gradient(var(--avatar-bg-filter));
+.gradient-border {
+  border-radius: 8px;
+  padding: 1px;
+  background: transparent;
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+.example {
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+.border-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--before-rounded);
+  padding: var(--before-stroke-width);
+  background: var(--before-stroke-color);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.textShadow {
+  text-shadow: 1.70285px 2.55428px 1.53257px rgba(0, 0, 0, 0.4);
+}
+
+.glasscard {
+  --border-size: 1px;
+  --chamfer-size: min(40px);
+  --box-border--border: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.25) 70%,
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  border-radius: 10px;
+  clip-path: polygon(
+    var(--chamfer-size) 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 var(--chamfer-size)
+  );
+}
+
+.glasscard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--chamfer-size);
+  height: var(--chamfer-size);
+  background: #fff;
+  pointer-events: none;
+  z-index: 1;
+
+  mask-image: linear-gradient(
+    to bottom right,
+    transparent calc(50% - var(--border-size) / 1.414),
+    black calc(50% - var(--border-size) / 1.414),
+    black calc(50% + var(--border-size) / 1.414),
+    transparent calc(50% + var(--border-size) / 1.414)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom right,
+    transparent calc(50% - var(--border-size) / 1.414),
+    black calc(50% - var(--border-size) / 1.414),
+    black calc(50% + var(--border-size) / 1.414),
+    transparent calc(50% + var(--border-size) / 1.414)
+  );
+}
+
+.glasscard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--box-border--border);
+  pointer-events: none;
+  z-index: 1;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+
+  padding: var(--border-size);
+
+  clip-path: polygon(
+    var(--chamfer-size) 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 var(--chamfer-size),
+    var(--chamfer-size) 0
+  );
+}
+
+.glasscard-rectangle {
+  --border-size: 1px;
+  --chamfer-size: min(40px);
+  --box-border--border: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.25) 70%,
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  border-radius: 10px;
+}
+
+.glasscard-rectangle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--box-border--border);
+  pointer-events: none;
+  z-index: 1;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+
+  padding: var(--border-size);
 }
