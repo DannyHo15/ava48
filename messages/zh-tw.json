@@ -39,6 +39,17 @@
       "step_5": "購買以繼續對話。",
       "step_content_5": "連接後，只需點擊“購買”即可保持深入的討論。"
     },
+      "section_aya": {
+      "avatar_ultimate_top": "終極的",
+      "ultimate_bottom": "",
+      "avatar_experience_top": "虛擬化身",
+      "experience_bottom": "體驗"
+    },
+    "section_eimi": {
+      "name_top": "深田",
+      "name_bottom": "詠美",
+      "coming_soon": "即將登場"
+    },
     "section_ai_connection": {
       "title": "AIがつなぐ",
       "subtitle": "新しい世界へ",
