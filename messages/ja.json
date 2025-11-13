@@ -39,6 +39,17 @@
       "step_5": "購入して会話を続ける。",
       "step_content_5": "接続が完了したら、「購入」をクリックするだけで、洞察に満ちた会話を続けることができます。"
     },
+    "section_aya": {
+      "avatar_ultimate_top": "究極の",
+      "ultimate_bottom": "",
+      "avatar_experience_top": "アバター",
+      "experience_bottom": "体験"
+    },
+    "section_eimi": {
+      "name_top": "深田",
+      "name_bottom": "えいみ",
+      "coming_soon": "やってくる"
+    },
     "section_ai_connection": {
       "title": "ENAIがつなぐ",
       "subtitle": "新しい世界へ",
@@ -48,7 +59,8 @@
     "section_earn_aya_connection": {
       "title": "ゲームをプレイ",
       "subtitle": "AYAのハートをGET",
-      "content": "チャットするたび、つながるたびに「ハート」が貯まります。ハートを使ってプレミアム機能を解放し、限定コンテンツを集め、これから続々登場するサプライズを楽しみましょう。",
+      "content": "チャットするたび、つながるたびに「ハート」が貯まります。ハートを使ってプレミアム機能を解放し、限定コンテンツを集め、これから続々登場するサプライズを楽しみましょう。"
+      },
       "section_5": {
         "join": "JOIN",
         "rank": "RANK",
@@ -341,5 +353,4 @@
         "moderate": "適度"
       }
     }
-  }
 }

@@ -39,6 +39,17 @@
       "step_5": "Purchase to Continue the Conversation.",
       "step_content_5": "Once connected, simply click \"Purchase\" to keep the insightful discussions flowing."
     },
+      "section_aya": {
+      "avatar_ultimate_top": "THE",
+      "ultimate_bottom": "ULTIMATE",
+      "avatar_experience_top": "AVATAR",
+      "experience_bottom": "EXPERIENCE"
+    },
+    "section_eimi": {
+      "name_top": "Eimi",
+      "name_bottom": "Fukada",
+      "coming_soon": "is coming"
+    },
     "section_5": {
       "join": "JOIN",
       "rank": "RANK",

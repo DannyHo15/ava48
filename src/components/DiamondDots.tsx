@@ -19,8 +19,8 @@ const DiamondDots = ({
   className = "",
   count = 3,
   color = "bg-white",
-  dotSize = { base: "w-1.5 h-1.5", prm: "prm:w-2 prm:h-2", sm: "sm:w-6 sm:h-6" },
-  gap = { base: "gap-2", prm:"prm:gap-2.5", sm: "sm:gap-6" },
+  dotSize = { base: "w-[7px] h-[7px]", prm: "prm:w-2 prm:h-2", sm: "sm:w-5.75 sm:h-5.75" },
+  gap = { base: "gap-2.5", prm:"prm:gap-2.5", sm: "sm:gap-8" },
 }: DiamondDotsProps) => {
   return (
     <div className={`flex ${gap.base} ${gap.prm} ${gap.sm} ${className} mix-blend-soft-light`}>

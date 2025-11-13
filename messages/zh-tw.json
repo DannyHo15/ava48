@@ -48,7 +48,8 @@
     "section_earn_aya_connection": {
       "title": "ゲームをプレイして",
       "subtitle": "AYAのハートを手に入れよう",
-      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come.",
+      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
+    },
       "section_5": {
         "join": "JOIN",
         "rank": "RANK",
@@ -341,5 +342,4 @@
         "moderate": "適度"
       }
     }
-  }
 }
