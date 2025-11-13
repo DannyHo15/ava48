@@ -34,7 +34,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   let initialTheme = await getThemeCookie();
-console.log(initialTheme)
   if (!initialTheme) {
     initialTheme = Math.random() > 0.5 ? "violet-kiss-mode" : "royal-dark-mode";
   }
