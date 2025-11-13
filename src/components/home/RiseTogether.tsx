@@ -4,8 +4,10 @@ import FloatInformation from "../FloatInformation";
 import Image from "next/image";
 import ImageAvatar48 from "../ImageAvatar48";
 import { SectionWrapper } from "../SectionWrapper";
+import { useTranslations } from "next-intl";
 
 const RiseTogether = () => {
+  const t = useTranslations("LandingPage.section_5");
   return (
     <SectionWrapper>
       <div className="fixed inset-0 bg-avatar-black" />
@@ -24,16 +26,16 @@ const RiseTogether = () => {
             ></ImageAvatar48>
             <div className="leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-20.5 pr-12 z-20 lg:bottom-15 mx-auto">
               <div className="w-full max-w-95 lg:max-w-107.5 pr-5 text-custom-56 lg:text-custom-70 font-karantina font-bold bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient">
-                JOIN{" "}
+                {t("join")}{" "}
                 <label className="font-karantina text-custom-70 lg:text-custom-106">
-                  RANK
+                  {t("rank")}
                 </label>
                 <label className="font-karantina text-custom-82 lg:text-custom-123">
-                  48
+                  48,
                 </label>
               </div>
               <div className="text-custom-56 lg:text-custom-70 font-karantina text-right lg:text-left w-full text-white">
-                RISE TOGETHER !
+                {t("rise_together")}
               </div>
             </div>
           </div>
@@ -58,11 +60,7 @@ const RiseTogether = () => {
               </div>
             </div>
             <div className="sm:w-2/5 w-0 h-full flex-center z-50 lg:w-121.25">
-              <FloatInformation
-                content={
-                  "Inspired by the legendary AKB48 elections, RANK48 turns fandom into power. Every chat, every Heart, every show of support pushes your favorite Avatar higher on the leaderboard. The more you engage, the more they shine — and the more you both earn."
-                }
-              />
+              <FloatInformation content={t("description")} />
             </div>
           </div>
         </div>
