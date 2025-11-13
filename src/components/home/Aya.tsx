@@ -27,8 +27,8 @@ const Aya = () => {
           <div className="absolute rounded-full w-[794.69px] prm:w-[1160px] 2xl:w-[1310px] h-[552px] prm:h-[807px] 2xl:h-[911px] top-[24%] prm:top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[6%] 2xl:top-[21%] sm:left-[2%] sm:opacity-[0.56] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-27% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[120px] -rotate-[4.54deg] opacity-60 mix-blend-screen"></div>
           <DiamondDots
             className={cn("absolute", {
-              "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[63%] 2xl:left-[30.6%] -translate-x-1/2 z-5": locale === "en",
-              "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[64%] 2xl:left-[36%] -translate-x-1/2 z-5": locale === "ja",
+              "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[63%] 2xl:left-[30.6%] -translate-x-1/2 z-5": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+              "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[74.5%] 2xl:bottom-[64%] 2xl:left-[36%] -translate-x-1/2 z-5": locale === "ja",
             })}
             color="bg-white"
           />
@@ -36,7 +36,7 @@ const Aya = () => {
             className={cn(
               "absolute",
               {
-                "left-[9%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3%] sm:top-[21%] 2xl:top-[29.5%] 2xl:left-[14.5%]": locale === "en",
+                "left-[9%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3%] sm:top-[21%] 2xl:top-[29.5%] 2xl:left-[14.5%]": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
                 "left-[9%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3.5%] sm:top-[27%] 2xl:top-[37.6%] 2xl:left-[15%]": locale === "ja",
               }
             )}
@@ -60,7 +60,7 @@ const Aya = () => {
               shapeWidth={195}
               shapeHeight={100}
               className={cn("absolute", {
-                "sm:top-[72%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden 2xl:block": locale === "en",
+                "sm:top-[72%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden 2xl:block": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
                 "sm:top-[80%] 2xl:top-[65%] sm:left-[-4%] 2xl:left-[-19%] z-20 hidden 2xl:block": locale === "ja",
               })}
               strokeColor={[
@@ -80,7 +80,10 @@ const Aya = () => {
               index={"tab-1"}
               shapeWidth={195}
               shapeHeight={87}
-              className="sm:top-[75%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden"
+              className={cn("absolute", {
+                "sm:top-[75%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+                "sm:top-[59%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden": locale === "ja",
+              })}
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -142,7 +145,7 @@ const Aya = () => {
               shapeWidth={146}
               shapeHeight={203}
               className={cn("absolute", {
-                "2xl:bottom-[44%] 2xl:right-[4.5%] z-0 hidden 2xl:block": locale === "en",
+                "2xl:bottom-[44%] 2xl:right-[4.5%] z-0 hidden 2xl:block": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
                 "2xl:bottom-[49%] 2xl:right-[-0.5%] z-0 hidden 2xl:block": locale === "ja",
               })}
               strokeColor={[
@@ -194,15 +197,15 @@ const Aya = () => {
             />
           </div>
           <div className={cn("absolute", {
-              "absolute right-7 prm:right-9 sm:right-[8%] bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] 2xl:bottom-[32%] 2xl:right-[9%]": locale === "en",
-              "absolute right-7 prm:right-9 sm:right-[8%] bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] 2xl:bottom-[37.5%] 2xl:right-[14%]": locale === "ja",
+              "absolute right-7 prm:right-9 sm:right-[8%] bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] 2xl:bottom-[32%] 2xl:right-[9%]": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+              "absolute right-7 prm:right-9 sm:right-[7%] bottom-[32%] prm:bottom-[27%] sm:bottom-[21%] 2xl:bottom-[37.5%] 2xl:right-[14%]": locale === "ja",
             })}>
             <h2
               className={cn(
                 "relative whitespace-nowrap",
                 {
-                  "font-karantina text-[42px] prm:text-custom-55 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-10": locale === "en",
-                  "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-black text-white uppercase leading-[86%] text-right absolute top-[-87%] right-[-18%] z-5": locale === "ja",
+                  "font-karantina text-[42px] prm:text-custom-55 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-10": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+                  "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-black text-white uppercase leading-[86%] text-right absolute top-[-87%] right-[3%] z-10 2xl:z-5": locale === "ja",
                 }
               )}
               style={{
@@ -215,7 +218,7 @@ const Aya = () => {
               className={cn(
                 "relative",
                 {
-                  "font-karantina text-[58px] prm:text-custom-70 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-15": locale === "en",
+                  "font-karantina text-[58px] prm:text-custom-70 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-15": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
                   "font-karantina text-[58px] prm:text-custom-70 sm:text-[180px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-15": locale === "ja",
                 }
               )}
@@ -233,8 +236,31 @@ const Aya = () => {
               shapeWidth={224}
               shapeHeight={104}
               className={cn("absolute", {
-                "sm:top-[36%] sm:right-[-21%] z-10 hidden sm:block": locale === "en",
-                "sm:top-[62%] sm:right-[-43%] z-10 hidden sm:block": locale === "ja",
+                "sm:top-[36%] sm:right-[-21%] z-15 hidden sm:block": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+                "sm:top-[62%] sm:right-[-43%] z-15 hidden 2xl:block": locale === "ja",
+              })
+              }
+              strokeColor={[
+                { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
+                { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
+              ]}
+              strokeDirection="to-l"
+              strokeWidth={1}
+              bgColor="sm:bg-linear-to-b sm:from-white/35 sm:to-white/5 2xl:bg-white/0"
+              path={
+                "M 0,10 A 10,10 0,0,1 10,0 L 173,0 A 10,10 0,0,1 183,5 L 219,47 A 20,20 0,0,1 224,57 L 224,94 A 10,10 0,0,1 214,104 L 10,104 A 10,10 0,0,1 0,94 Z"
+              }
+            />
+
+            {/* Tablet */}
+            <ShapeGradientWrapper
+              index={"tab-3"}
+              blurSize={"2xs"}
+              shapeWidth={153}
+              shapeHeight={78}
+              className={cn("absolute", {
+                "sm:top-[36%] sm:right-[-21%] z-15 hidden": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+                "sm:top-[79%] sm:right-[-16%] z-15 hidden sm:block 2xl:hidden": locale === "ja",
               })
               }
               strokeColor={[
@@ -244,7 +270,7 @@ const Aya = () => {
               strokeDirection="to-l"
               strokeWidth={1}
               path={
-                "M 0,10 A 10,10 0,0,1 10,0 L 173,0 A 10,10 0,0,1 183,5 L 219,47 A 20,20 0,0,1 224,57 L 224,94 A 10,10 0,0,1 214,104 L 10,104 A 10,10 0,0,1 0,94 Z"
+                "M 0,10 A 10,10 0,0,1 10,0 L 115,0 A 10,10 0,0,1 119,2 L 151,33 A 3,7 0,0,1 153,37 L 153,68 A 10,10 0,0,1 143,78 L 10,78 A 10,10 0,0,1 0,68 Z"
               }
             />
 
@@ -291,7 +317,7 @@ const Aya = () => {
               shapeWidth={104}
               shapeHeight={61}
               className={cn("absolute", {
-                "sm:bottom-[-5%] sm:right-[87%] z-15 hidden sm:block": locale === "en",
+                "sm:bottom-[-5%] sm:right-[87%] z-15 hidden sm:block": locale === "en" || locale === "zh-cn" || locale === "zh-tw",
                 "sm:bottom-[-11%] sm:right-[86%] z-15 hidden sm:block": locale === "ja",
               })}
               strokeColor={[
@@ -300,6 +326,7 @@ const Aya = () => {
               ]}
               strokeDirection="to-br"
               strokeWidth={1}
+              bgColor="bg-linear-to-t from-white/55 to-white/20"
               path={
                 "M 0 ,10 A 10,10 0,0,1 10,0 L 94 ,0 A 10,10 0,0,1 104,10 L 104,51 A 10,10 0,0,1 94,61 L 10,61 A 10,10 0,0,1 0,51 Z"
               }

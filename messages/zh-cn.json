@@ -39,6 +39,17 @@
       "step_5": "购买以继续对话。",
       "step_content_5": "连接后，只需点击“购买”即可继续进行有见地的讨论。"
     },
+    "section_aya": {
+      "avatar_ultimate_top": "终极的",
+      "ultimate_bottom": "",
+      "avatar_experience_top": "虚拟化身",
+      "experience_bottom": "体验"
+    },
+    "section_eimi": {
+      "name_top": "深田",
+      "name_bottom": "咏美",
+      "coming_soon": "即将登场"
+    },
     "section_ai_connection": {
       "title": "ゲームをプレイして",
       "subtitle": "AYAのハートを手に入れよう",
