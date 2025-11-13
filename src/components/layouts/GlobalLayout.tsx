@@ -52,7 +52,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       </div>
       <div
         className={cn(
-          "fixed bottom-7.75 md:bottom-15 lg:bottom-6.75 left-5 md:left-10 lg:left-11.75 flex md:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 md:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10"
+          "fixed bottom-7.75 md:bottom-15 lg:bottom-6.75 left-5 md:left-10 lg:left-11.75 hidden min-[500px]:flex md:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 md:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10"
         )}
       >
         <LanguageDrawer className="md:w-26.25 h-7 md:h-12.5 rounded-[0.625rem] px-2 md:px-6" />
@@ -69,10 +69,10 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           {t("privacy_policy")}
         </Link>
       </div>
-      <div className="w-max fixed bottom-19 md:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10">
+      <div className="w-max fixed bottom-2.5 min-[500px]:bottom-19 md:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10">
         <BorderGradientWrapper
           gradientType="linear"
-          className="p-2.5"
+          className="p-2 min-[500px]:p-2.5"
           rounded="25px"
           borderColor="--avatar-chat-border"
           strokeWidth="3px"
@@ -86,12 +86,12 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           >
             <Link
               href={`${baseUrl}/agent/${locale}?mode=${theme}`}
-              className="rounded-custom-20 p-2.5 flex items-center gap-3 bg-linear-120 from-9% from-avatar-blue-1 via-78% via-avatar-blue-4 to-99% dark:to-avatar-violet to-avatar-blue-3"
+              className="rounded-custom-20 p-2 min-[500px]:p-2.5 flex items-center gap-3 bg-linear-120 from-9% from-avatar-blue-1 via-78% via-avatar-blue-4 to-99% dark:to-avatar-violet to-avatar-blue-3"
             >
               <img
                 src={"/assets/avatar_image.png"}
                 alt={"defaultImage"}
-                className="rounded-xl w-22.5 lg:w-31.25 h-14.75 lg:h-20.5"
+                className="rounded-xl w-14.75 lg:w-31.25 h-14.75 lg:h-20.5 object-cover"
               />
               <p className="font-medium text-white text-base md:text-xl">{t("chat_now")}</p>
             </Link>
