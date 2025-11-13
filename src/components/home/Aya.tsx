@@ -4,8 +4,16 @@ import DiamondDots from "../DiamondDots";
 import GlassCard from "../common/GlassCard";
 import { SectionWrapper } from "../SectionWrapper";
 import ShapeGradientWrapper from "../ShapeGradientWrapper";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { relative } from "path";
 
 const RiseTogether = () => {
+  const t = useTranslations("LandingPage.section_aya");
+  const params = useParams();
+  const locale = params.locale as string;
+
   return (
     <SectionWrapper>
       <div className="fixed inset-0 bg-avatar-black" />
@@ -13,31 +21,47 @@ const RiseTogether = () => {
       <div className="fixed inset-0 bg-[url(/assets/bg-texture-2.webp)] bg-cover bg-center mix-blend-overlay" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
-      <div className="avatar-container relative h-dvh overflow-hidden">
-      <div className="absolute w-[1342px] h-[496px] prm:w-[1643px] sm:w-[1568px] sm:h-[552px] prm:[657px] bottom-0 right-[-219%] prm:right-[-215%] prm:bottom-[10%] sm:right-[-20%] sm:bottom-0  2xl:w-[1984px] 2xl:h-[794px] 2xl:right-[-22%] 2xl:bottom-[10%]  bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom  z-10 bg-no-repeat" />
-        <div className="flex items-end justify-center h-dvh">
+      <div className="avatar-container relative">
+        <div className="absolute w-[1342px] h-[496px] prm:w-[1643px] sm:w-[1568px] sm:h-[552px] prm:[657px] bottom-0 right-[-219%] prm:right-[-215%] prm:bottom-[10%] sm:right-[-20%] sm:bottom-0  2xl:w-[1984px] 2xl:h-[794px] 2xl:right-[-22%] 2xl:bottom-[3%]  bg-[url(/assets/bg-texture.png)] bg-contain bg-bottom mix-blend-plus-lighter z-10 bg-no-repeat" />
+        <div className="flex items-end justify-center min-h-dvh">
           <div className="absolute rounded-full w-[794.69px] prm:w-[1160px] 2xl:w-[1310px] h-[552px] prm:h-[807px] 2xl:h-[911px] top-[24%] prm:top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[6%] 2xl:top-[21%] sm:left-[2%] sm:opacity-[0.56] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-27% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[120px] -rotate-[4.54deg] opacity-60 mix-blend-screen"></div>
           <DiamondDots
-            className="absolute bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[63%] 2xl:left-[31%] -translate-x-1/2 z-30"
+            className={cn("absolute", {
+              "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[63%] 2xl:left-[30.6%] -translate-x-1/2 z-5": locale === "en",
+              "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[64%] 2xl:left-[36%] -translate-x-1/2 z-5": locale === "ja",
+            })}
             color="bg-white"
           />
-          <div className="absolute left-[12%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3%] sm:top-[21%] 2xl:top-[30%] 2xl:left-[13%]">
+          <div
+            className={cn(
+              "absolute",
+              {
+                "left-[9%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3%] sm:top-[21%] 2xl:top-[29.5%] 2xl:left-[14.5%]": locale === "en",
+                "left-[9%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3.5%] sm:top-[27%] 2xl:top-[37.6%] 2xl:left-[15%]": locale === "ja",
+              }
+            )}
+          >
             <h1
-              className="font-karantina text-custom-55 sm:text-custom-120 font-black drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15"
+              className={cn(
+                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-black drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15"
+              )}
               style={{
                 filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
               }}
             >
-              THE
+              {t("avatar_ultimate_top")}
               <br />
-              ULTIMATE
+              {t("ultimate_bottom")}
             </h1>
             {/* laptop */}
             <ShapeGradientWrapper
               index={"lap-1"}
               shapeWidth={195}
               shapeHeight={100}
-              className="sm:top-[72%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden 2xl:block"
+              className={cn("absolute", {
+                "sm:top-[72%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden 2xl:block": locale === "en",
+                "sm:top-[80%] 2xl:top-[65%] sm:left-[-4%] 2xl:left-[-19%] z-20 hidden 2xl:block": locale === "ja",
+              })}
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -100,9 +124,9 @@ const RiseTogether = () => {
               }
             />
           </div>
-          <div className="relative max-w-6xl flex justify-center mb-0 pt-28 sm:pt-0 2xl:pt-[118px]">
+          <div className="relative max-w-6xl flex justify-center mb-0 pt-28 sm:pt-[225px] 2xl:pt-[118px]">
             <ImageAvatar48
-              className="max-w-[107%] sm:w-[640px] h-dvh w-auto left-2 object-contain z-10 relative"
+              className="max-w-[107%] w-[331px] sm:w-[640px] max-h-dvh prm:w-auto h-auto left-0 prm:left-2 object-contain z-10 relative"
               lightURL={"/assets/aya-bg.webp"}
               drakURL={"/assets/aya-bg-dark.webp"}
             ></ImageAvatar48>
@@ -112,7 +136,10 @@ const RiseTogether = () => {
               index={"lap-2"}
               shapeWidth={146}
               shapeHeight={203}
-              className="2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden 2xl:block"
+              className={cn("absolute", {
+                "2xl:bottom-[44%] 2xl:right-[4.5%] z-0 hidden 2xl:block": locale === "en",
+                "2xl:bottom-[49%] 2xl:right-[-0.5%] z-0 hidden 2xl:block": locale === "ja",
+              })}
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -130,7 +157,7 @@ const RiseTogether = () => {
               index={"tab-2"}
               shapeWidth={164}
               shapeHeight={281}
-              className="sm:bottom-[41%] sm:right-[-1%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden"
+              className="sm:bottom-[34%] sm:right-[-1%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden"
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -159,16 +186,37 @@ const RiseTogether = () => {
               }
             />
           </div>
-          <div className="absolute right-6 prm:right-9 sm:right-[8%] bottom-[33%] prm:bottom-[27%] sm:bottom-[20%] 2xl:bottom-[32%] 2xl:right-[10%] z-10 ">
+          <div className={cn("absolute", {
+              "absolute right-7 prm:right-9 sm:right-[8%] bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] 2xl:bottom-[32%] 2xl:right-[9%]": locale === "en",
+              "absolute right-7 prm:right-9 sm:right-[8%] bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] 2xl:bottom-[37.5%] 2xl:right-[14%]": locale === "ja",
+            })}>
             <h2
-              className="font-karantina text-custom-70 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right"
+              className={cn(
+                "relative whitespace-nowrap",
+                {
+                  "font-karantina text-[42px] prm:text-custom-55 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-10": locale === "en",
+                  "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-black text-white uppercase leading-[86%] text-right absolute top-[-87%] right-[-18%] z-5": locale === "ja",
+                }
+              )}
               style={{
                 filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
               }}
             >
-              AVATAR
-              <br />
-              EXPERIENCE
+              {t("avatar_experience_top")}
+            </h2>
+            <h2
+              className={cn(
+                "relative",
+                {
+                  "font-karantina text-[58px] prm:text-custom-70 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-15": locale === "en",
+                  "font-karantina text-[58px] prm:text-custom-70 sm:text-[180px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-10": locale === "ja",
+                }
+              )}
+              style={{
+                filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
+              }}
+            >
+              {t("experience_bottom")}
             </h2>
 
             {/* Laptop */}
@@ -176,7 +224,11 @@ const RiseTogether = () => {
               index={"lap-3"}
               shapeWidth={224}
               shapeHeight={104}
-              className="sm:top-[36%] sm:right-[-21%] z-10 hidden sm:block"
+              className={cn("absolute", {
+                "sm:top-[36%] sm:right-[-21%] z-10 hidden sm:block": locale === "en",
+                "sm:top-[62%] sm:right-[-43%] z-10 hidden sm:block": locale === "ja",
+              })
+              }
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -227,7 +279,10 @@ const RiseTogether = () => {
               index={"lap-4"}
               shapeWidth={104}
               shapeHeight={61}
-              className="sm:bottom-[-5%] sm:right-[87%] z-15 hidden sm:block"
+              className={cn("absolute", {
+                "sm:bottom-[-5%] sm:right-[87%] z-15 hidden sm:block": locale === "en",
+                "sm:bottom-[-11%] sm:right-[86%] z-15 hidden sm:block": locale === "ja",
+              })}
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
