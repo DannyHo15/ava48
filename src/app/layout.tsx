@@ -13,8 +13,9 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import timezone from "dayjs/plugin/timezone";
 import updateLocale from "dayjs/plugin/updateLocale";
 import utc from "dayjs/plugin/utc";
+import "./globals.css";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import NextTopLoader from "nextjs-toploader";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 
 import { getThemeCookie } from "@/lib/theme-actions";
@@ -34,9 +35,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   let initialTheme = await getThemeCookie();
-  if (!initialTheme) {
+  // if (!initialTheme) {
     initialTheme = Math.random() > 0.5 ? "violet-kiss-mode" : "royal-dark-mode";
-  }
+  // }
   return (
     <html lang="en" className={initialTheme}>
       <head>
@@ -59,7 +60,8 @@ export default async function RootLayout({
         <ThemeProvider initialTheme={initialTheme as "royal-dark-mode" | "violet-kiss-mode"}>{children}</ThemeProvider>
         <FirebaseAnalytics />
       </body>
-      <GoogleAnalytics gaId={"GTM-MNSWPXXT"} />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID ?? ""}/>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM ?? ""}/>
     </html>
   );
 }
