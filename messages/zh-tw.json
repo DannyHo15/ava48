@@ -38,6 +38,17 @@
       "step_content_4": "在免費通話後，安全連接你的加密貨幣錢包以解鎖更多功能並繼續你的個性化互動。",
       "step_5": "購買以繼續對話。",
       "step_content_5": "連接後，只需點擊“購買”即可保持深入的討論。"
+    },
+    "section_ai_connection": {
+      "title": "AIがつなぐ",
+      "subtitle": "新しい世界へ",
+      "content": "あなたを誰よりも理解し、市場にも精通したバーチャル・コンパニオン。\n深夜の語らいから軽やかな冗談まで、いつでもそばで心を動かし、すべての会話を忘れられない瞬間へと変えてくれる存在です。※",
+      "note": "※本AIは視点や提案を提供するものであり、投資助言や正確な予測を行うものではありません。"
+    },
+    "section_earn_aya_connection": {
+      "title": "ゲームをプレイして",
+      "subtitle": "AYAのハートを手に入れよう",
+      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
     }
   },
   "term_of_use": {
