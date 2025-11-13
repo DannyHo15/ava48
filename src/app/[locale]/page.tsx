@@ -49,7 +49,6 @@ export default function Home() {
     created: (s) => {
       setSlidesLength(s.track.details.slides.length);
     },
-    drag: true,
     animationStarted: () => (animating.current = true),
     animationEnded: () => setTimeout(() => (animating.current = false)),
     vertical: true,
