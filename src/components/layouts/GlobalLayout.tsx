@@ -22,26 +22,26 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div className="fixed top-7.5 sm:top-15 lg:top-7.5 left-5 sm:left-10 lg:left-13.75 z-9">
+      <div className="fixed top-7.5 left-5 sm:left-10 lg:left-13.75 z-9">
         <Link href={"/"}>
           <ImageAvatar48
             lightURL={"/assets/logo-light.svg"}
             drakURL={"/assets/logo-dark.svg"}
-            className="w-16 sm:w-23.75 h-13.5 sm:h-20 lg:w-32.75 lg:h-27.5"
+            className="w-16 h-13.5 sm:w-24.5 sm:h-20.5"
           />
         </Link>
       </div>
-      <div className="fixed top-7.5 sm:top-15 lg:top-8 right-5 sm:right-10 lg:right-16.5 flex gap-6 text-xl z-10">
+      <div className="fixed top-7.5 right-5 sm:right-10 lg:right-16.5 flex gap-6 text-xl z-10">
         <div className="flex gap-2 md:gap-4 lg:gap-6">
           <Link href={`${baseUrl}/agent/${locale}?mode=${theme}`}>
-            <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer px-3 prm:px-2">
-              <Power size={24} strokeWidth={2} className="hidden prm:block" />
+            <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer px-3 sm:px-2">
+              <Power size={24} strokeWidth={2} className="hidden sm:block" />
               {t("lets_talk")}
             </Button>
           </Link>
           <Link href={`${baseUrl}/platform/${locale}/sentient?mode=${theme}`}>
-            <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-3 prm:px-2">
-              <CircleArrowRight size={24} strokeWidth={2} className="hidden prm:block" />
+            <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-3 sm:px-2">
+              <CircleArrowRight size={24} strokeWidth={2} className="hidden sm:block" />
               {t("create_agent")}
             </Button>
           </Link>
@@ -52,24 +52,24 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       </div>
       <div
         className={cn(
-          "fixed bottom-7.75 sm:bottom-15 lg:bottom-6.75 left-5 sm:left-10 lg:left-11.75 flex sm:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 sm:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10"
+          "fixed bottom-7.75 md:bottom-15 lg:bottom-6.75 left-5 md:left-10 lg:left-11.75 flex md:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 md:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10"
         )}
       >
-        <LanguageDrawer className="sm:w-26.25 h-7 sm:h-12.5 rounded-[0.625rem] px-2 sm:px-6" />
+        <LanguageDrawer className="md:w-26.25 h-7 md:h-12.5 rounded-[0.625rem] px-2 md:px-6" />
         <Link
           href={"/term-of-use"}
-          className="uppercase h-7 sm:h-12.5 flex-center font-medium text-sm sm:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md px-2 sm:px-6"
+          className="uppercase h-7 md:h-12.5 flex-center font-medium text-sm md:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md px-2 md:px-6"
         >
           {t("term_of_use")}
         </Link>
         <Link
           href={"/privacy-policy"}
-          className="uppercase h-7 sm:h-12.5 flex-center font-medium text-sm sm:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md v px-2 sm:px-6"
+          className="uppercase h-7 md:h-12.5 flex-center font-medium text-sm md:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md v px-2 md:px-6"
         >
           {t("privacy_policy")}
         </Link>
       </div>
-      <div className="w-max fixed bottom-19 sm:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10">
+      <div className="w-max fixed bottom-19 md:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10">
         <BorderGradientWrapper
           gradientType="linear"
           className="p-2.5"
@@ -93,7 +93,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
                 alt={"defaultImage"}
                 className="rounded-xl w-22.5 lg:w-31.25 h-14.75 lg:h-20.5"
               />
-              <p className="font-medium text-white text-base sm:text-xl">{t("chat_now")}</p>
+              <p className="font-medium text-white text-base md:text-xl">{t("chat_now")}</p>
             </Link>
           </BorderGradientWrapper>
         </BorderGradientWrapper>

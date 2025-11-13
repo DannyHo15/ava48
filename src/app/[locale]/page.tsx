@@ -54,8 +54,6 @@ export default function Home() {
     vertical: true,
   });
 
-  const scrollBarProgress = slidesLength > 1 ? (currentIndex / (slidesLength - 1)) * 100 : 0;
-
   useGSAP(() => {
     animating.current = false;
 
@@ -63,12 +61,12 @@ export default function Home() {
       type: "wheel,touch,pointer",
       wheelSpeed: -1,
       onDown: () => {
-        if (!animating.current) {
+        if (!animating.current && window.innerWidth > 1024) {
           slider.current?.prev();
         }
       },
       onUp: () => {
-        if (!animating.current) {
+        if (!animating.current && window.innerWidth > 1024) {
           slider.current?.next();
         }
       },
@@ -79,12 +77,12 @@ export default function Home() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowDown" || e.key === " ") {
         e.preventDefault();
-        if (!animating.current) {
+        if (!animating.current && window.innerWidth > 1024) {
           slider.current?.next();
         }
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
-        if (!animating.current) {
+        if (!animating.current && window.innerWidth > 1024) {
           slider.current?.prev();
         }
       }
