@@ -1,33 +1,36 @@
-"use client";
-import { useLayoutEffect, useState } from "react";
+"use client"
 
-type Theme = "light" | "dark";
+import { useEffect, useState } from "react"
+import { setThemeCookie } from "@/lib/theme-actions"
+
+type Theme = "royal-dark-mode" | "violet-kiss-mode"
+
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<Theme>("royal-dark-mode")
+  const [mounted, setMounted] = useState(false)
 
-  useLayoutEffect(() => {
-    const randomTheme = Math.random() > 0.5 ? "dark" : "light";
-    setTheme(randomTheme);
-    applyTheme(randomTheme);
-
-    setMounted(true);
-  }, []);
+  useEffect(() => {
+    const isDark = document.documentElement.classList.contains("violet-kiss-mode")
+    const currentTheme = isDark ? "violet-kiss-mode" : "royal-dark-mode"
+    setTheme(currentTheme)
+    setMounted(true)
+  }, [])
 
   const applyTheme = (selectedTheme: Theme) => {
-    const htmlElement = document.documentElement;
-    if (selectedTheme === "dark") {
-      htmlElement.classList.add("dark");
+    const htmlElement = document.documentElement
+    if (selectedTheme === "violet-kiss-mode") {
+      htmlElement.classList.add("violet-kiss-mode")
     } else {
-      htmlElement.classList.remove("dark");
+      htmlElement.classList.remove("violet-kiss-mode")
     }
-  };
+  }
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    applyTheme(newTheme);
-  };
+  const toggleTheme = async () => {
+    const newTheme = theme === "royal-dark-mode" ? "violet-kiss-mode" : "royal-dark-mode"
+    setTheme(newTheme)
+    applyTheme(newTheme)
+    await setThemeCookie(newTheme)
+  }
 
-  return { theme, toggleTheme, mounted };
+  return { theme, toggleTheme, mounted }
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/use-theme";
 
 type Cprops = {
   lightURL: string;
@@ -11,14 +12,15 @@ type Cprops = {
 const ImageAvatar48 = ({ className, drakURL, lightURL }: Cprops) => {
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
+    const isDarkMode = theme === 'violet-kiss-mode';
     setIsDark(isDarkMode);
     setMounted(true);
 
     const observer = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains("dark");
+      const isDark = theme === "violet-kiss-mode";
       setIsDark(isDark);
     });
 
