@@ -9,7 +9,7 @@ import { useParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { relative } from "path";
 
-const RiseTogether = () => {
+const Aya = () => {
   const t = useTranslations("LandingPage.section_aya");
   const params = useParams();
   const locale = params.locale as string;
@@ -55,6 +55,7 @@ const RiseTogether = () => {
             </h1>
             {/* laptop */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"lap-1"}
               shapeWidth={195}
               shapeHeight={100}
@@ -75,6 +76,7 @@ const RiseTogether = () => {
 
             {/* Tablet */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"tab-1"}
               shapeWidth={195}
               shapeHeight={87}
@@ -92,6 +94,7 @@ const RiseTogether = () => {
 
             {/* Mobile */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"mob-1"}
               shapeWidth={80}
               shapeHeight={40}
@@ -109,6 +112,7 @@ const RiseTogether = () => {
 
             {/* Mini Mobile */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"mini-mob-1"}
               shapeWidth={60}
               shapeHeight={31}
@@ -133,6 +137,7 @@ const RiseTogether = () => {
 
             {/* laptop */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"lap-2"}
               shapeWidth={146}
               shapeHeight={203}
@@ -154,6 +159,7 @@ const RiseTogether = () => {
 
             {/* Tablet */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"tab-2"}
               shapeWidth={164}
               shapeHeight={281}
@@ -171,6 +177,7 @@ const RiseTogether = () => {
 
             {/* Mobile */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"mob-2"}
               shapeWidth={101}
               shapeHeight={140}
@@ -209,7 +216,7 @@ const RiseTogether = () => {
                 "relative",
                 {
                   "font-karantina text-[58px] prm:text-custom-70 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-15": locale === "en",
-                  "font-karantina text-[58px] prm:text-custom-70 sm:text-[180px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-10": locale === "ja",
+                  "font-karantina text-[58px] prm:text-custom-70 sm:text-[180px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-15": locale === "ja",
                 }
               )}
               style={{
@@ -221,7 +228,8 @@ const RiseTogether = () => {
 
             {/* Laptop */}
             <ShapeGradientWrapper
-              index={"lap-3"}
+              index={"3"}
+              blurSize={"2xs"}
               shapeWidth={224}
               shapeHeight={104}
               className={cn("absolute", {
@@ -242,10 +250,11 @@ const RiseTogether = () => {
 
             {/* Mobile */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"mob-3"}
               shapeWidth={94}
               shapeHeight={44}
-              className="prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-10 hidden prm:block sm:hidden"
+              className="prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 hidden prm:block sm:hidden"
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -259,6 +268,7 @@ const RiseTogether = () => {
 
             {/* Mini Mobile */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"mini-mob-2"}
               shapeWidth={78}
               shapeHeight={36}
@@ -276,6 +286,7 @@ const RiseTogether = () => {
 
             {/* Laptop */}
             <ShapeGradientWrapper
+              blurSize={"2xs"}
               index={"lap-4"}
               shapeWidth={104}
               shapeHeight={61}
@@ -300,4 +311,4 @@ const RiseTogether = () => {
   );
 };
 
-export default RiseTogether;
+export default Aya;
