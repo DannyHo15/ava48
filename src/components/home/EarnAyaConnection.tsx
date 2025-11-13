@@ -8,7 +8,7 @@ const EarnAyaConnection = () => {
   return (
     <SectionWrapper>
       <div className="hidden lg:block xl:hidden bg-cover bg-center fixed inset-0 bg-[url(/assets/bg-earn-aya-tablet-light.png)] dark:bg-[url(/assets/bg-earn-aya-tablet-dark.png)]" />
-      <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center mix-blend-plus-lighter opacity-21" />
+      <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center  opacity-21" />
       <div className="fixed hidden xl:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />

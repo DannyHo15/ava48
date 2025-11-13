@@ -2,7 +2,8 @@
 @import "../assets/fonts/index.css";
 
 @custom-variant dark (&:is(.violet-kiss-mode *));
-
+/* Extend backdrop blur utilities */
+@source inline("{hover:,focus:,}backdrop-blur-{2xs,xs,sm,md,lg,xl,2xl,3xl}");
 @theme inline {
   /* Define Color */
   --color-avatar-primary: var(--avatar-primary);
@@ -43,6 +44,7 @@
   --text-custom-106: 6.625rem;
   --text-custom-123: 7.688rem;
   --text-custom-125: 7.813rem;
+  --text-custom-145: 9.125rem;
   /* Font Weight */ /* Letter space */
   /* Line height */ /* Border radius use by rounded-* */
   --radius-custom-20: 1.25rem;
@@ -52,6 +54,8 @@
   /* Drop shadow */
   --drop-shadow-text: drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4));
   /* Back drop blur */
+  --blur-cs-6: 6px;
+  --blur-2xs: 2px;
 }
 
 :root {
@@ -112,8 +116,12 @@
     rgba(255, 255, 255, 0) 85.25%, #ffffff 101.14%;
 }
 
-html, body, *, *::before, *::after {
-  -webkit-touch-callout: none;   
+html,
+body,
+*,
+*::before,
+*::after {
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -121,7 +129,8 @@ html, body, *, *::before, *::after {
   user-select: none;
 }
 
-img, svg {
+img,
+svg {
   -webkit-user-drag: none;
 }
 

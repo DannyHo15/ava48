@@ -8,6 +8,7 @@ export type ColorStopProps = {
 
 type Cprops = {
   index: string;
+  blurSize?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | string;
   shapeWidth: number;
   shapeHeight: number;
   path?: string;
@@ -35,7 +36,7 @@ const getLinearDirection = (
     | "to-bl"
     | "to-br"
     | "to-tr"
-    | "to-tl"
+    | "to-tl",
 ) => {
   switch (direction) {
     case "to-b":
@@ -63,6 +64,7 @@ const ShapeGradientWrapper: React.FC<Cprops> = ({
   path = "M 0,10 A 10,10 0,0,1 10,0 L 90,0 A 10,10 0,0,1 100,10 L 100,90 A 10,10 0,0,1 90,100 L10,100 A 10,10 0,0,1 0,90 Z",
   shapeWidth = 100,
   shapeHeight = 100,
+  blurSize = "3.6px",
   strokeColor = [
     { offset: "0%", stopColor: "#fff" },
     { offset: "100%", stopColor: "#fff0" },
@@ -84,8 +86,8 @@ const ShapeGradientWrapper: React.FC<Cprops> = ({
       >
         <div
           className={cn(
-            "absolute top-0 left-0 size-full backdrop-blur-[3.6px]",
-            bgColor
+            `absolute top-0 left-0 size-full backdrop-blur-${blurSize}`,
+            bgColor,
           )}
           style={{
             clipPath: `path("${path}")`,

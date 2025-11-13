@@ -11,7 +11,7 @@ const FloatInformation = ({ content }: IFloatInformationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="relative z-[99999] h-full flex items-center">
-      <div className="hidden sm:block min-h-75 sm:min-h-full">
+      <div className="hidden lg:block sm:flex min-h-75 sm:min-h-full">
         <div className="p-5 size-full backdrop-blur-sm bg-linear-to-b from-white/30 to-white/0 text-white flex justify-center items-start rounded-t-custom-20 text-xl whitespace-pre-line">
           {content}
         </div>
@@ -47,4 +47,3 @@ const FloatInformation = ({ content }: IFloatInformationProps) => {
 };
 
 export default FloatInformation;
-
