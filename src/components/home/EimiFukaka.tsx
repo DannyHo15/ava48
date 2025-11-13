@@ -5,7 +5,7 @@ import { SectionWrapper } from "../SectionWrapper";
 import ShapeGradientWrapper from "../ShapeGradientWrapper";
 import { useTranslations } from "next-intl";
 
-const RiseTogether = () => {
+const EimiFukada = () => {
   const t = useTranslations("LandingPage.section_eimi");
 
   return (
@@ -38,6 +38,7 @@ const RiseTogether = () => {
             </h1>
             {/* laptop */}
             <ShapeGradientWrapper
+              blurSize="2xs"
               index={"lap-1"}
               shapeWidth={199}
               shapeHeight={111}
@@ -55,6 +56,7 @@ const RiseTogether = () => {
 
             {/* Tablet */}
             <ShapeGradientWrapper
+              blurSize="2xs"
               index={"tab-1"}
               shapeWidth={165}
               shapeHeight={92}
@@ -72,6 +74,7 @@ const RiseTogether = () => {
 
             {/* Mobile */}
             <ShapeGradientWrapper
+              blurSize="2xs"
               index={"mob-1"}
               shapeWidth={80}
               shapeHeight={40}
@@ -89,6 +92,7 @@ const RiseTogether = () => {
 
             {/* Mini Mobile */}
             <ShapeGradientWrapper
+              blurSize="2xs"
               index={"mini-mob-1"}
               shapeWidth={60}
               shapeHeight={31}
@@ -122,6 +126,7 @@ const RiseTogether = () => {
             </h2>
             {/* Laptop */}
             <ShapeGradientWrapper
+              blurSize="2xs"
               index={"lap-3"}
               // shapeWidth={184} 31
               // shapeHeight={85} 15
@@ -141,6 +146,7 @@ const RiseTogether = () => {
 
             {/* Tablet */}
             <ShapeGradientWrapper
+              blurSize="2xs"
               index={"tab-1"}
               shapeWidth={153}
               shapeHeight={71}
@@ -159,6 +165,7 @@ const RiseTogether = () => {
 
             {/* Mobile */}
             <ShapeGradientWrapper
+              blurSize="2xs"
               index={"mob-3"}
               // shapeWidth={64}
               // shapeHeight={29}
@@ -179,6 +186,7 @@ const RiseTogether = () => {
 
             {/* Mini Mobile */}
             <ShapeGradientWrapper
+              blurSize="2xs"
               index={"mini-mob-3"}
               shapeWidth={64}
               shapeHeight={29}
@@ -201,4 +209,4 @@ const RiseTogether = () => {
   );
 };
 
-export default RiseTogether;
+export default EimiFukada;
