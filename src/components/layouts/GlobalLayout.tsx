@@ -10,12 +10,15 @@ import ImageAvatar48 from "../ImageAvatar48";
 import { cn } from "@/lib/utils";
 import { AvatarLink } from "../AvatarLink";
 import BorderGradientWrapper from "../BorderGradientWrapper";
+import { useTheme } from "@/hooks/use-theme";
 
 export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const t = useTranslations("LandingPage");
   const params = useParams();
   const { locale } = params;
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
+
+  const { theme } = useTheme();
 
   return (
     <>
@@ -30,13 +33,13 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       </div>
       <div className="fixed top-7.5 sm:top-15 lg:top-8 right-5 sm:right-10 lg:right-16.5 flex gap-6 text-xl z-10">
         <div className="flex gap-2 md:gap-4 lg:gap-6">
-          <Link href={`${baseUrl}/agent/${locale}`}>
+          <Link href={`${baseUrl}/agent/${locale}?mode=${theme}`}>
             <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer px-3 prm:px-2">
               <Power size={24} strokeWidth={2} className="hidden prm:block" />
               {t("lets_talk")}
             </Button>
           </Link>
-          <Link href={`${baseUrl}/platform/${locale}`}>
+          <Link href={`${baseUrl}/platform/${locale}/sentient?mode=${theme}`}>
             <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-3 prm:px-2">
               <CircleArrowRight size={24} strokeWidth={2} className="hidden prm:block" />
               {t("create_agent")}
@@ -44,7 +47,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           </Link>
         </div>
       </div>
-      <div className="h-screen overflow-hidden" id="smooth-wrapper">
+      <div className="h-dvh overflow-hidden" id="smooth-wrapper">
         {children}
       </div>
       <div
@@ -82,7 +85,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
             strokeWidth="1px"
           >
             <Link
-              href={`${baseUrl}/agent/${locale}`}
+              href={`${baseUrl}/agent/${locale}?mode=${theme}`}
               className="rounded-custom-20 p-2.5 flex items-center gap-3 bg-linear-120 from-9% from-avatar-blue-1 via-78% via-avatar-blue-4 to-99% dark:to-avatar-violet to-avatar-blue-3"
             >
               <img

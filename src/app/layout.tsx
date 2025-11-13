@@ -1,4 +1,4 @@
-"use server";
+// "use server";
 import "./globals.css";
 import { localeObject } from "@/lib/constants";
 import clsx from "clsx";
@@ -13,9 +13,12 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import timezone from "dayjs/plugin/timezone";
 import updateLocale from "dayjs/plugin/updateLocale";
 import utc from "dayjs/plugin/utc";
-import NextTopLoader from 'nextjs-toploader';
+import NextTopLoader from "nextjs-toploader";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import FirebaseAnalytics from "@/components/FirebaseAnalytics";
+
+import { getThemeCookie } from "@/lib/theme-actions";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 // Day.js Configuration
 dayjs.extend(utc);
@@ -30,18 +33,19 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const randomTheme = Math.random() > 0.5 ? "dark" : "light";
+  let initialTheme = await getThemeCookie();
+console.log(initialTheme)
+  if (!initialTheme) {
+    initialTheme = Math.random() > 0.5 ? "violet-kiss-mode" : "royal-dark-mode";
+  }
   return (
-    <html className={randomTheme}>
+    <html lang="en" className={initialTheme}>
       <head>
         <meta charSet="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-        />
+        <meta name="viewport" content="initial-scale=1.0" />
         <title>Avatar48</title>
       </head>
-      <body className={clsx("h-screen bg-avatar-blue")}>
+      <body className={clsx("h-dvh bg-avatar-blue")}>
         <NextTopLoader
           color="var(--avatar-primary)"
           initialPosition={0.3}
@@ -53,7 +57,7 @@ export default async function RootLayout({
           zIndex={999}
           shadow="0 0 10px #2299DD,0 0 5px #2299DD"
         />
-        {children}
+        <ThemeProvider initialTheme={initialTheme as "royal-dark-mode" | "violet-kiss-mode"}>{children}</ThemeProvider>
         <FirebaseAnalytics />
       </body>
       <GoogleAnalytics gaId={"GTM-MNSWPXXT"} />

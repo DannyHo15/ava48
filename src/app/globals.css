@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "../assets/fonts/index.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:is(.violet-kiss-mode *));
 
 @theme inline {
   /* Define Color */
@@ -82,7 +82,7 @@
     #fff 122.75%;
 }
 
-.dark {
+.violet-kiss-mode {
   --avatar-primary: #d81de2;
   --avatar-blue: #001251;
   --avatar-blue-1: #3cfbff;
