@@ -1,8 +1,12 @@
 import FloatInformation from "../FloatInformation";
 import ImageAvatar48 from "../ImageAvatar48";
 import { SectionWrapper } from "../SectionWrapper";
+import { useTranslations } from "next-intl";
+import GlassCard from "../common/GlassCard";
+import ShapeGradientWrapper from "../ShapeGradientWrapper";
 
 const Vision = () => {
+  const t = useTranslations();
   return (
     <SectionWrapper>
       <div className="fixed inset-0 bg-avatar-black" />
@@ -34,19 +38,26 @@ const Vision = () => {
             <div className="absolute hidden sm:block -bottom-15 left-25 lg:left-0 w-full max-w-82.5 sm:max-w-4/5 lg:max-w-160 lg:bottom-5">
               <div className="text-white font-karantina leading-none">
                 <span className="bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet text-gradient text-custom-70  tracking-wide font-bold drop-shadow-text font-karantina lg:text-custom-125">
-                  YOUR <span className="font-karantina">VISION,</span>
+                  {t("LandingPage.section_6.your_vision")}
                 </span>
               </div>
               <div className="font-karantina text-custom-56 tracking-wide font-bold text-white leading-none mt-2 drop-shadow-text text-right lg:text-custom-82">
-                YOUR TOKEN
+                <ShapeGradientWrapper
+                  className="absolute right-64 -bottom-5"
+                  key={""}
+                  shapeWidth={108}
+                  shapeHeight={57}
+                  path={
+                    "M 0,10 A 10,10 0,0,1 10,0 L 98,0 A 10,10 0,0,1 108,10 L 108,47 A 10,10 0,0,1 98,57 L10,57 A 10,10 0,0,1 0,47 Z"
+                  }
+                ></ShapeGradientWrapper>
+                {t("LandingPage.section_6.your_token")}
               </div>
             </div>
           </div>
           <div className="sm:block hidden w-1/3 pt-7 lg:pt-50">
             <span className="text-white text-xl">
-              Dive into a live trading experience built for speed and
-              excitement. Instantly trading, track performance in real time, and
-              launch your own token to make your mark in the AVATAR48 ecosystem.
+              {t("LandingPage.section_6.description")}
             </span>
             <div className="w-full flex mt-4 ">
               <ImageAvatar48
@@ -63,9 +74,7 @@ const Vision = () => {
           </div>
           <div className="block sm:hidden sm:w-1/3 size-full relative z-50">
             <FloatInformation
-              content={
-                "Dive into a live trading experience built for speed and excitement. Instantly trading, track performance in real time, and launch your own token to make your mark in the AVATAR48 ecosystem."
-              }
+              content={t("LandingPage.section_6.description")}
             ></FloatInformation>
           </div>
         </div>
@@ -75,11 +84,11 @@ const Vision = () => {
           <div className="absolute w-full max-w-82.5">
             <div className="text-white font-karantina leading-none">
               <span className="bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet text-gradient text-custom-70  tracking-wide font-bold drop-shadow-text font-karantina">
-                YOUR <span className="font-karantina">VISION,</span>
+                {t("LandingPage.section_6.your_vision")}
               </span>
             </div>
             <div className="font-karantina text-custom-56 tracking-wide font-bold text-white leading-none mt-2 drop-shadow-text text-right">
-              YOUR TOKEN
+              {t("LandingPage.section_6.your_token")}
             </div>
           </div>
           <div className="w-full flex justify-end">
@@ -107,3 +116,4 @@ const Vision = () => {
 };
 
 export default Vision;
+
