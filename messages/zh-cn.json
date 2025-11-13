@@ -38,6 +38,16 @@
       "step_content_4": "在免费通话后，安全地连接你的加密货币钱包，以解锁更多功能并继续个性化互动。",
       "step_5": "购买以继续对话。",
       "step_content_5": "连接后，只需点击“购买”即可继续进行有见地的讨论。"
+    },
+    "section_ai_connection": {
+      "title": "ゲームをプレイして",
+      "subtitle": "AYAのハートを手に入れよう",
+      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
+    },
+    "section_earn_aya_connection": {
+      "title": "ゲームをプレイして",
+      "subtitle": "AYAのハートを手に入れよう",
+      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
     }
   },
   "term_of_use": {

@@ -44,7 +44,7 @@ const Vision = () => {
               <div className="font-karantina text-custom-56 tracking-wide font-bold text-white leading-none mt-2 drop-shadow-text text-right lg:text-custom-82">
                 <ShapeGradientWrapper
                   className="absolute right-64 -bottom-5"
-                  key={""}
+                  index="vision-shape-1"
                   shapeWidth={108}
                   shapeHeight={57}
                   path={

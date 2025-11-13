@@ -49,6 +49,17 @@
       "your_vision": "YOUR VISION,",
       "your_token": "YOUR TOKEN",
       "description": "Dive into a live trading experience built for speed and excitement. Instantly trading, track performance in real time, and launch your own token to make your mark in the AVATAR48 ecosystem."
+    }, 
+    "section_ai_connection": {
+      "title": "ENTER THE WORLD OF",
+      "subtitle": "AI CONNECTION",
+      "content": "Your virtual companion who knows the markets as well as she knows you. From late-night chats to playful banter, she’s always there to share insights, spark emotion, and turn every conversation into something worth remembering*",
+      "note": "*Please note: Our AI offers perspectives and suggestions, not financial advice or precise predictions."
+    }, 
+    "section_earn_aya_connection": {
+      "title": "PLAY THE GAME",
+      "subtitle": "Earn Aya’s Heart",
+      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
     }
   },
   "term_of_use": {
