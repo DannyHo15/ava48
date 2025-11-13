@@ -48,6 +48,16 @@
       "title": "ゲームをプレイして",
       "subtitle": "AYAのハートを手に入れよう",
       "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
+    "section_5": {
+      "join": "JOIN",
+      "rank": "RANK",
+      "rise_together": "RISE TOGETHER !",
+      "description": "Inspired by the legendary AKB48 elections, RANK48 turns fandom into power. Every chat, every Heart, every show of support pushes your favorite Avatar higher on the leaderboard. The more you engage, the more they shine — and the more you both earn."
+    },
+    "section_6": {
+      "your_vision": "YOUR VISION,",
+      "your_token": "YOUR TOKEN",
+      "description": "Dive into a live trading experience built for speed and excitement. Instantly trading, track performance in real time, and launch your own token to make your mark in the AVATAR48 ecosystem."
     }
   },
   "term_of_use": {
