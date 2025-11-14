@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/Observer";
@@ -9,7 +9,7 @@ import Eimi from "@/components/home/EimiFukaka";
 import AIConnection from "@/components/home/AIConnection";
 import EarnAyaConnection from "@/components/home/EarnAyaConnection";
 import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
+// import "keen-slider/keen-slider.min.css";
 import Vision from "@/components/home/Vision";
 import { cn } from "@/lib/utils";
 
@@ -53,6 +53,12 @@ export default function Home() {
     animationEnded: () => setTimeout(() => (animating.current = false)),
     vertical: true,
   });
+
+  useEffect(() => {
+    return () => {
+      slider.current?.destroy();
+    };
+  }, [slider]);
 
   useGSAP(() => {
     animating.current = false;
@@ -116,17 +122,20 @@ export default function Home() {
       ))}
       <div
         ref={scrollBarRef}
-        className={cn("absolute right-0 w-0.5 rounded-full bg-white/40 z-99999", {
-          "h-1/2": slidesLength === 2,
-          "h-1/3": slidesLength === 3,
-          "h-1/4": slidesLength === 4,
-          "h-1/5": slidesLength === 5,
-          "h-1/6": slidesLength === 6,
-          "h-1/7": slidesLength === 7,
-          "h-1/8": slidesLength === 8,
-          "h-1/9": slidesLength === 9,
-          "h-1/10": slidesLength === 10,
-        })}
+        className={cn(
+          "absolute right-0 w-0.5 rounded-full bg-white/40 z-99999",
+          {
+            "h-1/2": slidesLength === 2,
+            "h-1/3": slidesLength === 3,
+            "h-1/4": slidesLength === 4,
+            "h-1/5": slidesLength === 5,
+            "h-1/6": slidesLength === 6,
+            "h-1/7": slidesLength === 7,
+            "h-1/8": slidesLength === 8,
+            "h-1/9": slidesLength === 9,
+            "h-1/10": slidesLength === 10,
+          },
+        )}
       ></div>
     </div>
   );

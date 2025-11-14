@@ -26,6 +26,19 @@
   --breakpoint-4xl: 2560px;
   --breakpoint-5xl: 3840px;
 
+  /*Define max-screen of container*/
+  --max-screen-xs: 320px;
+  --max-screen-pr: 375px;
+  --max-screen-prm: 400px;
+  --max-screen-sm: 640px;
+  --max-screen-md: 768px;
+  --max-screen-lg: 1024px;
+  --max-screen-xl: 1280px;
+  --max-screen-2xl: 1536px;
+  --max-screen-3xl: 1920px;
+  --max-screen-4xl: 2560px;
+  --max-screen-5xl: 3840px;
+
   /* Define font family */
   --font-kanit: "Kanit", sans-serif;
   --font-karantina: "Karantina", sans-serif;
@@ -38,6 +51,7 @@
   --text-custom-70: 4.375rem;
   --text-custom-72: 4.5rem;
   --text-custom-82: 5.125rem;
+  --text-custom-90: 5.625rem;
   --text-custom-110: 6.875rem;
   --text-custom-120: 7.5rem;
   --text-custom-125: 7.8125rem;
@@ -140,6 +154,31 @@
 
   .avatar-container {
     @apply max-w-340 mx-auto px-5 md:px-10;
+  }
+
+  /* Custom container classes using your variables */
+  .container-responsive {
+    max-width: var(--max-screen-xl);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .container-tight {
+    max-width: var(--max-screen-lg);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .container-wide {
+    max-width: var(--max-screen-3xl);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .container-ultra-wide {
+    max-width: var(--max-screen-5xl);
+    margin: 0 auto;
+    padding: 0 2rem;
   }
 
   .text-gradient {
@@ -400,3 +439,4 @@
 
   padding: var(--border-size);
 }
+

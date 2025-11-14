@@ -3,7 +3,7 @@
 import { CircleArrowRight, Power } from "lucide-react";
 import { Button } from "../ui/button";
 import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import LanguageDrawer from "../LanguageDrawer";
 import ImageAvatar48 from "../ImageAvatar48";
@@ -15,6 +15,7 @@ import { useTheme } from "@/hooks/use-theme";
 export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const t = useTranslations("LandingPage");
   const params = useParams();
+  const pathname = usePathname()
   const { locale } = params;
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
 
@@ -41,7 +42,11 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           </Link>
           <Link href={`${baseUrl}/platform/${locale}/sentient?mode=${theme}`}>
             <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-3 sm:px-2">
-              <CircleArrowRight size={24} strokeWidth={2} className="hidden sm:block" />
+              <CircleArrowRight
+                size={24}
+                strokeWidth={2}
+                className="hidden sm:block"
+              />
               {t("create_agent")}
             </Button>
           </Link>
@@ -52,7 +57,11 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       </div>
       <div
         className={cn(
-          "fixed bottom-7.75 md:bottom-15 lg:bottom-6.75 left-5 md:left-10 lg:left-11.75 hidden min-[500px]:flex md:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between gap-2 md:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10"
+          "fixed bottom-7.75 md:bottom-15 lg:bottom-6.75 left-5 md:left-10 lg:left-11.75 hidden gap-2 md:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10",
+          {
+            "min-[500px]:flex md:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between": pathname === `/${locale}`,
+            "min-[500px]:flex flex-row items-center": pathname !== `/${locale}`,
+          }
         )}
       >
         <LanguageDrawer className="md:w-26.25 h-7 md:h-12.5 rounded-[0.625rem] px-2 md:px-6" />
@@ -69,19 +78,21 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           {t("privacy_policy")}
         </Link>
       </div>
-      <div className="w-max fixed bottom-2.5 min-[500px]:bottom-19 md:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10">
+      <div className={cn("w-max fixed bottom-2.5 min-[500px]:bottom-19 md:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10", {
+        hidden: pathname !== `/${locale}`
+      })}>
         <BorderGradientWrapper
           gradientType="linear"
           className="p-2 min-[500px]:p-2.5"
           rounded="25px"
-          borderColor="--avatar-chat-border"
+          borderColor="--avatar-info-border"
           strokeWidth="3px"
         >
           <BorderGradientWrapper
             gradientType="linear"
             className="p-px"
             rounded="21px"
-            borderColor="--avatar-chat-border"
+            borderColor="--avatar-info-border"
             strokeWidth="1px"
           >
             <Link
@@ -93,7 +104,9 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
                 alt={"defaultImage"}
                 className="rounded-xl w-14.75 lg:w-31.25 h-14.75 lg:h-20.5 object-cover"
               />
-              <p className="font-medium text-white text-base md:text-xl">{t("chat_now")}</p>
+              <p className="font-medium text-white text-base md:text-xl">
+                {t("chat_now")}
+              </p>
             </Link>
           </BorderGradientWrapper>
         </BorderGradientWrapper>
