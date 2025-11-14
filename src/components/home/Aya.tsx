@@ -17,7 +17,7 @@ const Aya = () => {
     <SectionWrapper>
       <div className="fixed inset-0 bg-avatar-black" />
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
-      <div className="fixed inset-0 bg-[url(/assets/bg-texture-2.webp)] bg-cover bg-center mix-blend-overlay" />
+      <div className="fixed inset-0 bg-[url(/assets/bg-texture-2.webp)] bg-cover bg-center mix-blend-overlay z-5" />
       <div className="fixed inset-0 bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom mix-blend-plus-lighter bg-no-repeat hidden 2xl:block" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
@@ -26,23 +26,27 @@ const Aya = () => {
         <div className="flex items-end justify-center min-h-dvh">
           <DiamondDots
             className={cn("absolute 2xl:hidden", {
-              "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] 2xl:bottom-[63%] 2xl:left-[30.6%] -translate-x-1/2 z-5":
-                locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+              "bottom-[59%] prm:bottom-[63%] left-[23%] prm:left-[25%] sm:left-[24%] sm:bottom-[72.5%] md:left-[27%] md:bottom-[67%] lg:left-[24%] lg:bottom-[72.5%] 2xl:bottom-[63%] 2xl:left-[30.6%] -translate-x-1/2 z-5":
+                locale === "en",
+              "bottom-[61%] prm:bottom-[63%] left-[23%] prm:left-[25%] sm:left-[25%] sm:bottom-[68.5%] 2xl:bottom-[67%] 2xl:left-[33.6%] -translate-x-1/2 z-5":
+                locale === "zh-cn",
+              "bottom-[61%] prm:bottom-[63%] left-[23%] prm:left-[25%] sm:left-[25%] sm:bottom-[67.5%] 2xl:bottom-[67%] 2xl:left-[32.6%] -translate-x-1/2 z-5":
+                locale === "zh-tw",
               "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[74.5%] 2xl:bottom-[64%] 2xl:left-[36%] -translate-x-1/2 z-5":
                 locale === "ja",
-              "bottom-[61%] prm:bottom-[57%] left-[30%] prm:left-[25%] sm:left-[24%] sm:bottom-[74.5%] 2xl:bottom-[67%] 2xl:left-[33.6%] -translate-x-1/2 z-5":
-                locale === "zh-cn",
             })}
             color="bg-white"
           />
           <div
             className={cn("absolute 2xl:hidden", {
-              "left-[9%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3%] sm:top-[21%] 2xl:top-[29.5%] 2xl:left-[14.5%]":
-                locale === "en" || locale === "zh-tw",
+              "left-[3%] top-[37%] prm:top-[32%] z-5 sm:left-[3%] md:left-[1%] sm:top-[21%]  lg:left-[3%] lg:top-[21%] md:top-[26%] 2xl:top-[29.5%] 2xl:left-[14.5%]":
+                locale === "en",
+              "left-[3%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[0%] sm:top-[33.6%] 2xl:top-[35.5%] 2xl:left-[13.5%]":
+                locale === "zh-cn",
+              "left-[3%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[0%] sm:top-[34%] 2xl:top-[35.5%] 2xl:left-[13.5%]":
+                locale === "zh-tw",
               "left-[3%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[3.5%] sm:top-[27%] 2xl:top-[37.6%] 2xl:left-[15%]":
                 locale === "ja",
-              "left-[9%] prm:left-[4%] top-[35%] prm:top-[39%] z-5 sm:left-[3%] sm:top-[21%] 2xl:top-[35.5%] 2xl:left-[13.5%]":
-                locale === "zh-cn",
             })}
           >
             <h1
@@ -60,7 +64,7 @@ const Aya = () => {
             {/* laptop */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"a1"}
+              index={"qwert"}
               shapeWidth={195}
               shapeHeight={100}
               className={cn("absolute", {
@@ -83,7 +87,7 @@ const Aya = () => {
             {/* Tablet */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"a2"}
+              index={"asdfg"}
               shapeWidth={195}
               shapeHeight={87}
               className={cn("absolute", {
@@ -106,7 +110,7 @@ const Aya = () => {
             {/* Mobile */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"a3"}
+              index={"zxcvb"}
               shapeWidth={80}
               shapeHeight={40}
               className="prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden prm:block sm:hidden"
@@ -124,7 +128,7 @@ const Aya = () => {
             {/* Mini Mobile */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"ahnsds"}
+              index={"hjklp"}
               shapeWidth={60}
               shapeHeight={31}
               className="top-[72%] left-[-7%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
@@ -139,7 +143,7 @@ const Aya = () => {
               }
             />
           </div>
-          <div className="relative max-w-6xl flex justify-center mb-0 pt-28 sm:pt-[225px] 2xl:pt-[118px]">
+          <div className="relative max-w-6xl flex justify-center mb-0 pt-28 md:pt-[94px] sm:pt-[225px] 2xl:pt-[118px]">
             <div className="absolute rounded-full w-[794.69px] prm:w-[1160px] 2xl:w-[1310px] h-[552px] prm:h-[807px] 2xl:h-[911px] top-[24%] prm:top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[6%] 2xl:top-[21%] sm:left-[-49%] sm:opacity-[0.56] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-27% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[120px] -rotate-[4.54deg] opacity-60 mix-blend-screen"></div>
             <ImageAvatar48
               className="fixed left-0 bottom-0 z-0 opacity-80 hidden dark:2xl:block"
@@ -184,7 +188,7 @@ const Aya = () => {
               {/* laptop */}
               <ShapeGradientWrapper
                 blurSize={"2xs"}
-                index={"sxasd"}
+                index={"uiopa"}
                 shapeWidth={195}
                 shapeHeight={100}
                 className={cn("absolute", {
@@ -211,7 +215,7 @@ const Aya = () => {
               {/* Tablet */}
               <ShapeGradientWrapper
                 blurSize={"2xs"}
-                index={"tab-1"}
+                index={"mnbvc"}
                 shapeWidth={195}
                 shapeHeight={87}
                 className={cn("absolute", {
@@ -234,7 +238,7 @@ const Aya = () => {
               {/* Mobile */}
               <ShapeGradientWrapper
                 blurSize={"2xs"}
-                index={"mob-1"}
+                index={"lkjhg"}
                 shapeWidth={80}
                 shapeHeight={40}
                 className="prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden prm:block sm:hidden"
@@ -252,7 +256,7 @@ const Aya = () => {
               {/* Mini Mobile */}
               <ShapeGradientWrapper
                 blurSize={"2xs"}
-                index={"mini-mob-1"}
+                index={"poiuy"}
                 shapeWidth={60}
                 shapeHeight={31}
                 className="top-[72%] left-[-7%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
@@ -270,11 +274,11 @@ const Aya = () => {
             <div
               className={cn("absolute hidden 2xl:block", {
                 "absolute 2xl:bottom-[32%] 2xl:right-[-42%]": locale === "en",
-                "absolute 2xl:bottom-[39.5%] 2xl:right-[-29%]":
+                "absolute 2xl:bottom-[37.2%] 2xl:right-[-29%]":
                   locale === "zh-cn",
                 "absolute 2xl:bottom-[41.5%] 2xl:right-[-28%]":
                   locale === "zh-tw",
-                "absolute 2xl:bottom-[37.5%] 2xl:right-[-31%]": locale === "ja",
+                "absolute 2xl:bottom-[37.5%] 2xl:right-[-29%]": locale === "ja",
               })}
             >
               <h2
@@ -310,14 +314,14 @@ const Aya = () => {
 
               {/* Laptop */}
               <ShapeGradientWrapper
-                index={"3"}
+                index={"trewq"}
                 blurSize={"2xs"}
                 shapeWidth={224}
                 shapeHeight={104}
                 className={cn("absolute", {
                   "sm:top-[36%] sm:right-[-21%] z-15 hidden sm:block":
                     locale === "en",
-                  "sm:top-[59%] sm:right-[-41%] z-15 hidden 2xl:block":
+                  "sm:top-[59%] sm:right-[-42%] z-15 hidden 2xl:block":
                     locale === "zh-cn",
                   "sm:top-[62%] sm:right-[-44%] z-15 hidden 2xl:block":
                     locale === "zh-tw",
@@ -338,7 +342,7 @@ const Aya = () => {
 
               {/* Tablet */}
               <ShapeGradientWrapper
-                index={"tab-3"}
+                index={"gfdsa"}
                 blurSize={"2xs"}
                 shapeWidth={153}
                 shapeHeight={78}
@@ -362,7 +366,7 @@ const Aya = () => {
               {/* Mobile */}
               <ShapeGradientWrapper
                 blurSize={"2xs"}
-                index={"mob-3"}
+                index={"bvcxz"}
                 shapeWidth={94}
                 shapeHeight={44}
                 className="prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 hidden prm:block sm:hidden"
@@ -380,7 +384,7 @@ const Aya = () => {
               {/* Mini Mobile */}
               <ShapeGradientWrapper
                 blurSize={"2xs"}
-                index={"mini-mob-2"}
+                index={"plokm"}
                 shapeWidth={78}
                 shapeHeight={36}
                 className="bottom-[-16%] right-[-5%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-10 prm:hidden"
@@ -398,7 +402,7 @@ const Aya = () => {
               {/* Laptop */}
               <ShapeGradientWrapper
                 blurSize={"2xs"}
-                index={"lap-4"}
+                index={"yhnuj"}
                 shapeWidth={104}
                 shapeHeight={61}
                 className={cn("absolute", {
@@ -432,7 +436,7 @@ const Aya = () => {
             {/* laptop */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"lap-2"}
+              index={"mkopl"}
               shapeWidth={146}
               shapeHeight={203}
               className={cn("absolute", {
@@ -456,7 +460,7 @@ const Aya = () => {
             {/* Tablet */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"tab-2"}
+              index={"vbhyn"}
               shapeWidth={164}
               shapeHeight={281}
               className="sm:bottom-[34%] sm:right-[-1%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden"
@@ -474,7 +478,7 @@ const Aya = () => {
             {/* Mobile */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"mob-2"}
+              index={"cftgb"}
               shapeWidth={101}
               shapeHeight={140}
               className="prm:bottom-[42%] prm:right-[4%] sm:bottom-[41%] sm:right-[-1%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden prm:block sm:hidden"
@@ -491,17 +495,25 @@ const Aya = () => {
           </div>
           <div
             className={cn("absolute 2xl:hidden", {
-              "absolute right-7 prm:right-9 sm:right-[8%] bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] 2xl:bottom-[32%] 2xl:right-[9%]":
+              "absolute right-7 prm:right-9 bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] sm:right-[8%] md:bottom-[24%] md:right-[2%] lg:bottom-[20%] lg:right-[8%] 2xl:bottom-[32%] 2xl:right-[9%]":
                 locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+              "absolute right-7 prm:right-9 bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] sm:right-[8%] md:bottom-[24%] md:right-[2%] lg:bottom-[20.1%] lg:right-[8.1%] 2xl:bottom-[32%] 2xl:right-[9%]":
+                locale === "zh-cn",
+              "absolute right-7 prm:right-9 bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] sm:right-[8%] md:bottom-[24%] md:right-[2%] lg:bottom-[25%] lg:right-[7%] 2xl:bottom-[32%] 2xl:right-[9%]":
+                locale === "zh-tw",
               "absolute right-7 prm:right-9 sm:right-[7%] bottom-[32%] prm:bottom-[27%] sm:bottom-[21%] 2xl:bottom-[37.5%] 2xl:right-[14%]":
                 locale === "ja",
             })}
           >
             <h2
               className={cn("relative whitespace-nowrap", {
-                "font-karantina text-[42px] prm:text-custom-55 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-10":
-                  locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-black text-white uppercase leading-[86%] text-right absolute top-[-87%] right-[3%] z-10 2xl:z-5":
+                "font-karantina text-[55px] prm:text-custom-55 sm:text-[160px] font-black bg-linear-to-r from-[#00F6FF] to-white bg-clip-text text-transparent uppercase leading-[86%] text-right z-10":
+                  locale === "en",
+                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-black bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.1%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                  locale === "zh-cn",
+                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-black bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.2%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                  locale === "zh-tw",
+                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-black bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.3%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_47%,#D81DE2_150%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "ja",
               })}
               style={{
@@ -526,7 +538,7 @@ const Aya = () => {
 
             {/* Laptop */}
             <ShapeGradientWrapper
-              index={"3"}
+              index={"xdcfv"}
               blurSize={"2xs"}
               shapeWidth={224}
               shapeHeight={104}
@@ -554,7 +566,7 @@ const Aya = () => {
 
             {/* Tablet */}
             <ShapeGradientWrapper
-              index={"tab-3"}
+              index={"qazws"}
               blurSize={"2xs"}
               shapeWidth={153}
               shapeHeight={78}
@@ -569,6 +581,7 @@ const Aya = () => {
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
               ]}
               strokeDirection="to-l"
+              bgColor="sm:bg-linear-to-b sm:from-white/50 sm:to-white/5 2xl:bg-white/0"
               strokeWidth={1}
               path={
                 "M 0,10 A 10,10 0,0,1 10,0 L 115,0 A 10,10 0,0,1 119,2 L 151,33 A 3,7 0,0,1 153,37 L 153,68 A 10,10 0,0,1 143,78 L 10,78 A 10,10 0,0,1 0,68 Z"
@@ -578,7 +591,7 @@ const Aya = () => {
             {/* Mobile */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"mob-3"}
+              index={"edcrv"}
               shapeWidth={94}
               shapeHeight={44}
               className="prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 hidden prm:block sm:hidden"
@@ -596,10 +609,19 @@ const Aya = () => {
             {/* Mini Mobile */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"mini-mob-2"}
+              index={"rfvtg"}
               shapeWidth={78}
               shapeHeight={36}
-              className="bottom-[-16%] right-[-5%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-10 prm:hidden"
+              className={cn({
+                "bottom-[-9%] right-[-8%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 prm:hidden":
+                  locale === "en",
+                "bottom-[-29%] right-[-16%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 prm:hidden":
+                  locale === "zh-cn",
+                "bottom-[-31%] right-[-16%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 prm:hidden":
+                  locale === "zh-tw",
+                "bottom-[-42%] right-[-15%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 prm:hidden":
+                  locale === "ja",
+              })}
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -614,7 +636,7 @@ const Aya = () => {
             {/* Laptop */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
-              index={"lap-4"}
+              index={"tgbyh"}
               shapeWidth={104}
               shapeHeight={61}
               className={cn("absolute", {

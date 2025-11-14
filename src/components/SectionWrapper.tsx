@@ -6,5 +6,5 @@ interface SectionWrapperProps {
 }
 
 export function SectionWrapper({ children,  }: SectionWrapperProps) {
-  return <section className={cn("size-full keen-slider__slide")}>{children}</section>;
+  return <section className={cn("size-full overflow-hidden keen-slider__slide")}>{children}</section>;
 }

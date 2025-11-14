@@ -16,7 +16,7 @@ const EimiFukada = () => {
     <SectionWrapper>
       <div className="fixed inset-0 bg-avatar-black" />
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
-      <div className="fixed inset-0 bg-[url(/assets/bg-texture-2.webp)] bg-cover bg-center mix-blend-overlay" />
+      <div className="fixed inset-0 bg-[url(/assets/bg-texture-2.webp)] bg-cover bg-center mix-blend-overlay z-5"/>
       <div className="fixed inset-0 bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom mix-blend-plus-lighter bg-no-repeat hidden 2xl:block" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
@@ -42,7 +42,7 @@ const EimiFukada = () => {
             {/* laptop */}
             <ShapeGradientWrapper
               blurSize="2xs"
-              index={"1"}
+              index={"wqasz"}
               shapeWidth={199}
               shapeHeight={111}
               className="sm:top-[72%] sm:left-[-4%] 2xl:left-[-15%] 2xl:top-[75%] z-20 hidden 2xl:block"
@@ -60,7 +60,7 @@ const EimiFukada = () => {
             {/* Tablet */}
             <ShapeGradientWrapper
               blurSize="2xs"
-              index={"tab-1"}
+              index={"xedcr"}
               shapeWidth={165}
               shapeHeight={92}
               className="sm:top-[75%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden"
@@ -77,7 +77,7 @@ const EimiFukada = () => {
             {/* Mobile */}
             <ShapeGradientWrapper
               blurSize="2xs"
-              index={"mob-1"}
+              index={"cfvtg"}
               shapeWidth={80}
               shapeHeight={40}
               className="prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden prm:block sm:hidden"
@@ -95,7 +95,7 @@ const EimiFukada = () => {
             {/* Mini Mobile */}
             <ShapeGradientWrapper
               blurSize="2xs"
-              index={"mini-mob-1"}
+              index={"vbgyn"}
               shapeWidth={60}
               shapeHeight={31}
               className="top-[72%] left-[-7%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
@@ -135,7 +135,13 @@ const EimiFukada = () => {
             <div className="absolute rounded-full w-[794.69px] h-[552px] top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[22%] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-20% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[120px] -rotate-[4.54deg] opacity-56 mix-blend-screen"></div>
             <div className="absolute left-[9%] top-[50%] prm:left-[8%] prm:top-[54%] z-15 sm:left-[5%] sm:top-[49%] 2xl:top-[40%] 2xl:left-[-41%] sm:z-15 md:z-10 2xl:z-20 hidden 2xl:block">
               <h1
-                className="font-karantina text-[60px] prm:text-custom-70 sm:text-custom-120 2xl:text-[160px] font-black drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] 2xl:leading-[100%]"
+                className={cn(
+                  "font-karantina text-[160px] font-black drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase ",
+                  {
+                    "leading-[86%]": locale === "en",
+                    "leading-[100%]": locale === "zh-cn" || locale === "zh-tw" || locale === "ja",
+                  }
+                )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
                 }}
@@ -147,7 +153,7 @@ const EimiFukada = () => {
               {/* laptop */}
               <ShapeGradientWrapper
                 blurSize="2xs"
-                index={"lap-1"}
+                index={"bhnuj"}
                 shapeWidth={199}
                 shapeHeight={111}
                 className={cn(
@@ -176,7 +182,7 @@ const EimiFukada = () => {
               {/* Tablet */}
               <ShapeGradientWrapper
                 blurSize="2xs"
-                index={"tab-1"}
+                index={"nmkio"}
                 shapeWidth={165}
                 shapeHeight={92}
                 className="sm:top-[75%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden"
@@ -194,7 +200,7 @@ const EimiFukada = () => {
               {/* Mobile */}
               <ShapeGradientWrapper
                 blurSize="2xs"
-                index={"mob-1"}
+                index={"plqaz"}
                 shapeWidth={80}
                 shapeHeight={40}
                 className="prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden prm:block sm:hidden"
@@ -212,7 +218,7 @@ const EimiFukada = () => {
               {/* Mini Mobile */}
               <ShapeGradientWrapper
                 blurSize="2xs"
-                index={"mini-mob-1"}
+                index={"okwsx"}
                 shapeWidth={60}
                 shapeHeight={31}
                 className="top-[72%] left-[-7%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
@@ -245,13 +251,13 @@ const EimiFukada = () => {
             {/* Laptop */}
             <ShapeGradientWrapper
               blurSize="2xs"
-              index={"lap-3"}
+              index={"ijned"}
               shapeWidth={184}
               shapeHeight={85}
               className={cn({
                 "sm:top-[54%] sm:right-[-8%] z-10 hidden 2xl:block":
                   locale === "en",
-                "sm:top-[60%] sm:right-[6%] z-10 hidden 2xl:block":
+                "sm:top-[72%] sm:right-[6%] z-10 hidden 2xl:block":
                   locale === "zh-cn",
                 "sm:top-[73%] sm:right-[5%] z-10 hidden 2xl:block":
                   locale === "zh-tw",
@@ -272,7 +278,7 @@ const EimiFukada = () => {
             {/* Tablet */}
             <ShapeGradientWrapper
               blurSize="2xs"
-              index={"tab-1"}
+              index={"uhbvc"}
               shapeWidth={153}
               shapeHeight={71}
               className="sm:top-[65%] sm:right-[-9%] z-10 hidden sm:block 2xl:hidden"
@@ -291,7 +297,7 @@ const EimiFukada = () => {
             {/* Mobile */}
             <ShapeGradientWrapper
               blurSize="2xs"
-              index={"mob-3"}
+              index={"ygftd"}
               // shapeWidth={64}
               // shapeHeight={29}
               shapeWidth={76}
@@ -312,7 +318,7 @@ const EimiFukada = () => {
             {/* Mini Mobile */}
             <ShapeGradientWrapper
               blurSize="2xs"
-              index={"mini-mob-3"}
+              index={"trfes"}
               shapeWidth={64}
               shapeHeight={29}
               className="bottom-[-35%] right-[-9%] z-10 prm:hidden"
