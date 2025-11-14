@@ -39,7 +39,7 @@
       "step_5": "Purchase to Continue the Conversation.",
       "step_content_5": "Once connected, simply click \"Purchase\" to keep the insightful discussions flowing."
     },
-      "section_aya": {
+    "section_aya": {
       "avatar_ultimate_top": "THE",
       "ultimate_bottom": "ULTIMATE",
       "avatar_experience_top": "AVATAR",
@@ -60,17 +60,67 @@
       "your_vision": "YOUR VISION,",
       "your_token": "YOUR TOKEN",
       "description": "Dive into a live trading experience built for speed and excitement. Instantly trading, track performance in real time, and launch your own token to make your mark in the AVATAR48 ecosystem."
-    }, 
+    },
     "section_ai_connection": {
       "title": "ENTER THE WORLD OF",
       "subtitle": "AI CONNECTION",
       "content": "Your virtual companion who knows the markets as well as she knows you. From late-night chats to playful banter, she’s always there to share insights, spark emotion, and turn every conversation into something worth remembering*",
       "note": "*Please note: Our AI offers perspectives and suggestions, not financial advice or precise predictions."
-    }, 
+    },
     "section_earn_aya_connection": {
       "title": "PLAY THE GAME",
       "subtitle": "Earn Aya’s Heart",
       "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
+    },
+    "home": {
+      "term_of_use": "Terms of Use",
+      "privacy_policy": "Privacy Policy"
+    },
+    "purchase": {
+      "purchased": "Purchased",
+      "purchase": "Purchase",
+      "purchase_error": "Purchase Error",
+      "transaction_processing": "Transaction is processing!",
+      "purchase_title": "Purchase now and keep the conversation going! 🚀",
+      "purchase_content": "We’re processing your order. Please try again later."
+    },
+    "wallet": {
+      "connect": "Choose one wallet to connect",
+      "wallets": "Wallets",
+      "expires": "Expires",
+      "disconnect": "Disconnect",
+      "connect_2": "Connect wallet"
+    },
+    "expired_dialog": {
+      "time_up": "Time's up",
+      "title": "⏳ Your free trial or purchased package has expired.\nTo continue chatting with our avatar, \nplease connect your wallet and purchase. 🔗💳",
+      "processing": "We’re processing your order. Please try again later.",
+      "purchase": "Purchase"
+    },
+    "greeting": {
+      "welcome": "Welcome",
+      "content": "Welcome to live chat with our avatar!\nEnjoy a <b>3-minute</b> free trial chatting with our avatar\n—ask her anything, explore any topic, and see where the conversation takes you before any charges apply! 🚀",
+      "start_now": "Start now"
+    },
+    "video_call": {
+      "canceled": "Canceled",
+      "no_answer": "No Answer",
+      "connecting": "Connecting",
+      "you": "You",
+      "audio_call": "Audio call",
+      "video_call": "Video Call",
+      "typing": "Type something..."
+    },
+    "setting": {
+      "label": "Settings",
+      "confirm": "Confirm",
+      "language": "Language",
+      "intimacy_level": "Intimacy Level",
+      "intimacy": {
+        "normal": "Normal",
+        "mild": "Mild",
+        "moderate": "Moderate"
+      }
     }
   },
   "term_of_use": {
@@ -302,55 +352,5 @@
     "zV3o4M": "Pseudonymity of Wallets:",
     "zZOJYW": "We collect the following types of data depending on how you use the Service:",
     "ziKDng": "5. Blockchain and Wallet Privacy"
-  },
-  "home": {
-    "term_of_use": "Terms of Use",
-    "privacy_policy": "Privacy Policy"
-  },
-  "purchase": {
-    "purchased": "Purchased",
-    "purchase": "Purchase",
-    "purchase_error": "Purchase Error",
-    "transaction_processing": "Transaction is processing!",
-    "purchase_title": "Purchase now and keep the conversation going! 🚀",
-    "purchase_content": "We’re processing your order. Please try again later."
-  },
-  "wallet": {
-    "connect": "Choose one wallet to connect",
-    "wallets": "Wallets",
-    "expires": "Expires",
-    "disconnect": "Disconnect",
-    "connect_2": "Connect wallet"
-  },
-  "expired_dialog": {
-    "time_up": "Time's up",
-    "title": "⏳ Your free trial or purchased package has expired.\nTo continue chatting with our avatar, \nplease connect your wallet and purchase. 🔗💳",
-    "processing": "We’re processing your order. Please try again later.",
-    "purchase": "Purchase"
-  },
-  "greeting": {
-    "welcome": "Welcome",
-    "content": "Welcome to live chat with our avatar!\nEnjoy a <b>3-minute</b> free trial chatting with our avatar\n—ask her anything, explore any topic, and see where the conversation takes you before any charges apply! 🚀",
-    "start_now": "Start now"
-  },
-  "video_call": {
-    "canceled": "Canceled",
-    "no_answer": "No Answer",
-    "connecting": "Connecting",
-    "you": "You",
-    "audio_call": "Audio call",
-    "video_call": "Video Call",
-    "typing": "Type something..."
-  },
-  "setting": {
-    "label": "Settings",
-    "confirm": "Confirm",
-    "language": "Language",
-    "intimacy_level": "Intimacy Level",
-    "intimacy": {
-      "normal": "Normal",
-      "mild": "Mild",
-      "moderate": "Moderate"
-    }
   }
 }
