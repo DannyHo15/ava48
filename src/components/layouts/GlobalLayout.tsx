@@ -76,7 +76,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
         <Link
           href={"/privacy-policy"}
           className={cn(
-            "uppercase h-7 md:h-12.5 flex-center font-medium text-sm md:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md v px-2 md:px-6 order-2",
+            "uppercase h-7 md:h-12.5 flex-center font-medium text-sm md:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md px-2 md:px-6",
             {
               "order-3 md:order-2 2xl:order-3": pathname === `/${locale}`,
             }
