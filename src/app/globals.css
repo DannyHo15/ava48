@@ -81,10 +81,10 @@
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 96.46%,
     rgba(216, 29, 226, 0.5) 99.22%;
   --avatar-chat-border:
-    -60deg, #00d0f6 3.35%, rgba(81, 249, 255, 0) 33.5%,
+    #00d0f6 3.35%, rgba(81, 249, 255, 0) 33.5%,
     rgba(81, 249, 255, 0) 80.85%, #00d0f6 91.75%;
   --avatar-info-border:
-    90deg, #fff, rgba(255, 255, 255, 0) 33.5%, rgba(81, 249, 255, 0) 80.85%,
+    #fff, rgba(255, 255, 255, 0) 33.5%, rgba(81, 249, 255, 0) 80.85%,
     #fff 122.75%;
 }
 
@@ -112,8 +112,11 @@
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
     rgba(216, 29, 226, 0.5) 99.22%;
   --avatar-chat-border:
-    120deg, #ffffff 2.51%, rgba(255, 255, 255, 0) 37.74%,
+    #ffffff 2.51%, rgba(255, 255, 255, 0) 37.74%,
     rgba(255, 255, 255, 0) 85.25%, #ffffff 101.14%;
+  --avatar-info-border:
+    #fff, rgba(255, 255, 255, 0) 33.5%, rgba(81, 249, 255, 0) 80.85%,
+    #fff 122.75%;
 }
 
 @layer base {
@@ -191,7 +194,7 @@
   z-index: 1;
 }
 
-.border-gradient-border::before {
+.border-gradient-border-linear::before {
   content: "";
   position: absolute;
   top: 0;
@@ -200,7 +203,7 @@
   bottom: 0;
   border-radius: var(--before-rounded);
   padding: var(--before-stroke-width);
-  background: var(--before-stroke-color);
+  background: linear-gradient(var(--direction-linear), var(--before-stroke-color));
   mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -210,6 +213,71 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
+  animation: var(--rotate-duration) cs-border-rotate-linear  linear infinite;
+}
+
+.border-gradient-border-radial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--before-rounded);
+  padding: var(--before-stroke-width);
+  background: radial-gradient(var(--direction-linear), var(--before-stroke-color));
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  animation: var(--rotate-duration) pan-radial  linear infinite;
+}
+
+@keyframes cs-border-rotate-linear {
+  0% {
+    --direction-linear: 0deg;
+  }
+  100% {
+    --direction-linear: 360deg;
+  }
+}
+
+@property --direction-linear {
+  syntax: "<angle>";
+  initial-value: 60deg;
+  inherits: false;
+}
+
+@keyframes pan-radial {
+  0% {
+    --x-pos: 30%;
+    --y-pos: 0%;
+  }
+  50% {
+    --x-pos: 75%;
+    --y-pos: 100%;
+  }
+  100% {
+    --x-pos: 30%;
+    --y-pos: 0%;
+  }
+}
+
+@property --x-pos {
+  syntax: "<percentage>";
+  initial-value: 34.27%;
+  inherits: false;
+}
+
+@property --y-pos {
+  syntax: "<percentage>";
+  initial-value: -2.68%;
+  inherits: false;
 }
 
 .textShadow {

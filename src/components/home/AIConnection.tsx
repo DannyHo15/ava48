@@ -10,7 +10,7 @@ const AIConnection = () => {
   return (
     <SectionWrapper>
       <div className="fixed inset-0 bg-avatar-black" />
-      <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center  opacity-21" />
+      <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center mix-blend-plus-lighter opacity-70" />
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
@@ -31,10 +31,10 @@ const AIConnection = () => {
                 <div className="absolute top-1 left-1/2 max-w-[330px] w-full lg:w-fit lg:max-w-none -translate-x-1/2 sm:-top-70 lg:left-[40%] xl:left-[75%] whitespace-nowrap font-bold">
                   <div className="w-full flex flex-col gap-1 lg:gap-5 xl:gap-[11px]">
                     <div className="relative w-fit">
-                    <DiamondDots className="flex absolute -top-3 right-0 md:right-1 md:-top-10" />
-                    <p className="text-white whitespace-nowrap text-custom-46 lg:text-custom-72 xl:text-custom-82 leading-[86%] font-karantina text-left w-full">
-                      {t("title")}
-                    </p>
+                      <DiamondDots className="flex absolute -top-3 right-0 md:right-1 md:-top-10" />
+                      <p className="text-white whitespace-nowrap text-custom-46 lg:text-custom-72 xl:text-custom-82 leading-[86%] font-karantina text-left w-full">
+                        {t("title")}
+                      </p>
                     </div>
                     <p className="relative text-right whitespace-nowrap leading-[86%] w-full sm:pl-16 md:pl-23 xl:pl-[175px] text-custom-59 lg:text-custom-110 xl:text-custom-125 font-karantina bg-linear-to-r from-[#00D0F6] dark:from-[#D81DE2] via-white to-white text-gradient">
                       {t("subtitle")}
@@ -44,10 +44,13 @@ const AIConnection = () => {
                       index="desktop-shape-left"
                       shapeWidth={90}
                       shapeHeight={75}
-                      className="hidden lg:block top-[28%] left-[8%] xl:top-[25%] xl:left-[10.5%] -rotate-90 rounded-[10px] border border-white"
+                      className="hidden lg:block top-[28%] left-[8%] xl:top-[25%] xl:left-[10.5%] -rotate-90"
                       strokeColor={[
-                        { offset: "0%", stopColor: "rgba(255, 255, 255, 0.3)" },
-                        { offset: "100%", stopColor: "rgba(255, 255, 255, 1)" },
+                        { offset: "0%", stopColor: "rgba(255, 255, 255, 0.2)" },
+                        {
+                          offset: "100%",
+                          stopColor: "rgba(255, 255, 255, 0.8)",
+                        },
                       ]}
                       strokeDirection="to-b"
                       strokeWidth={1}
@@ -61,13 +64,16 @@ const AIConnection = () => {
                       index="mobile-shape-left"
                       shapeWidth={50}
                       shapeHeight={35}
-                      className="lg:hidden top-[20%] left-[3%] -rotate-90 rounded-[10px] border border-white"
+                      className="lg:hidden top-[20%] left-[3%] -rotate-90"
                       strokeColor={[
-                        { offset: "0%", stopColor: "rgba(255, 255, 255, 0.3)" },
-                        { offset: "100%", stopColor: "rgba(255, 255, 255, 1)" },
+                        { offset: "0%", stopColor: "rgba(255, 255, 255, 0.2)" },
+                        {
+                          offset: "100%",
+                          stopColor: "rgba(255, 255, 255, 0.9)",
+                        },
                       ]}
                       strokeDirection="to-b"
-                      strokeWidth={0.2}
+                      strokeWidth={1}
                       path={
                         "M 4,0 L 46,0 A 4,4 0,0,1 50,4 L 50,31 A 4,4 0,0,1 46,35 L 4,35 A 4,4 0,0,1 0,31 L 0,4 A 4,4 0,0,1 4,0 Z"
                       }
@@ -89,7 +95,6 @@ const AIConnection = () => {
                         "M0.5 94L0.499996 10C0.5 4.7533 4.75329 0.5 10 0.5L166.081 0.499993C168.474 0.499993 170.78 1.4033 172.536 3.02929L220.454 47.3984C222.396 49.1964 223.5 51.7228 223.5 54.3691L223.5 94C223.5 99.2467 219.247 103.5 214 103.5L10 103.5C4.7533 103.5 0.5 99.2467 0.5 94Z"
                       }
                     />
-
 
                     {/* Tablet shape right */}
                     <ShapeGradientWrapper
