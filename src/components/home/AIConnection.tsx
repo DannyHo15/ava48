@@ -41,9 +41,10 @@ const AIConnection = () => {
                     </p>
                     {/* Desktop shape left */}
                     <ShapeGradientWrapper
-                      index="desktop-shape-left"
+                      index="desktop-shape-left-93812903"
                       shapeWidth={90}
                       shapeHeight={75}
+                      blurSize="2xs"
                       className="hidden lg:block top-[28%] left-[8%] xl:top-[25%] xl:left-[10.5%] -rotate-90"
                       strokeColor={[
                         { offset: "0%", stopColor: "rgba(255, 255, 255, 0.2)" },
@@ -61,10 +62,11 @@ const AIConnection = () => {
 
                     {/* Mobile shape left */}
                     <ShapeGradientWrapper
-                      index="mobile-shape-left"
+                      index="mobile-shape-left-85379893"
                       shapeWidth={50}
                       shapeHeight={35}
-                      className="lg:hidden top-[20%] left-[3%] -rotate-90"
+                      blurSize="2xs"
+                      className="lg:hidden top-[20%] left-[3%] -rotate-90 z-10"
                       strokeColor={[
                         { offset: "0%", stopColor: "rgba(255, 255, 255, 0.2)" },
                         {
@@ -81,10 +83,11 @@ const AIConnection = () => {
 
                     {/* Desktop shape right */}
                     <ShapeGradientWrapper
-                      index="desktop-shape-right"
+                      index="desktop-shape-right-87648952"
                       shapeWidth={224}
                       shapeHeight={104}
-                      className="absolute hidden lg:block bottom-[25%] -right-[23%] xl:bottom-[20%] xl:-right-[5%] z-10"
+                      blurSize="2xs"
+                      className="absolute hidden lg:block bottom-[25%] -right-[23%] xl:bottom-[20%] xl:-right-[5%] z-50"
                       strokeColor={[
                         { offset: "0%", stopColor: "rgba(255, 255, 255, 1)" },
                         { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -98,10 +101,11 @@ const AIConnection = () => {
 
                     {/* Tablet shape right */}
                     <ShapeGradientWrapper
-                      index="mobile-shape-right"
+                      index="mobile-shape-right-983709"
                       shapeWidth={83}
                       shapeHeight={45}
-                      className="absolute lg:hidden -bottom-[16%] -right-[6.7%] z-10"
+                      blurSize="2xs"
+                      className="absolute lg:hidden -bottom-[16%] -right-[6.7%] z-50"
                       strokeColor={[
                         { offset: "0%", stopColor: "rgba(255, 255, 255, 1)" },
                         { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -143,7 +147,7 @@ const AIConnection = () => {
           </div>
         </div>
 
-        <div className="sm:w-2/5 w-0 h-full flex-center z-50 lg:w-121.25">
+        <div className="sm:w-2/5 md:hidden w-0 h-full flex-center z-50 lg:w-121.25">
           <FloatInformation
             content={
               "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
