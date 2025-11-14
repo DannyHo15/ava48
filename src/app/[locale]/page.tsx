@@ -16,7 +16,6 @@ import { cn } from "@/lib/utils";
 gsap.registerPlugin(useGSAP, Observer);
 
 const sections = [
-  { Component: RiseTogether },
   { Component: Eimi },
   { Component: Aya },
   { Component: AIConnection },
@@ -141,4 +140,3 @@ export default function Home() {
     </div>
   );
 }
-
