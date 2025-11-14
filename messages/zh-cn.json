@@ -50,6 +50,18 @@
       "name_bottom": "咏美",
       "coming_soon": "即将登场"
     },
+    "section_5": {
+      "join": "参与",
+      "rank": "RANK",
+      "rise_together": "一起登顶！",
+      "description": "受传奇 AKB48 总选举启发的 RANK48，是一种将粉丝热情转化为力量的新机制。聊天、送心、应援——每一次参与都能让你支持的虚拟角色升至榜单前列。投入越深，她越闪耀，而你也能获得奖励。"
+    },
+    "section_6": {
+      "your_vision": "你的愿景",
+      "your_token": "你的代币",
+      "description": "体验充满速度与激情的真实交易。实时追踪表现与市场变化，发行属于你自己的代币，在 AVATAR48 生态系统中留下个人印记。"
+    },
+
     "section_ai_connection": {
       "title": "ゲームをプレイして",
       "subtitle": "AYAのハートを手に入れよう",
@@ -59,18 +71,6 @@
       "title": "ゲームをプレイして",
       "subtitle": "AYAのハートを手に入れよう",
       "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
-      },
-      "section_5": {
-        "join": "JOIN",
-        "rank": "RANK",
-        "rise_together": "RISE TOGETHER !",
-        "description": "Inspired by the legendary AKB48 elections, RANK48 turns fandom into power. Every chat, every Heart, every show of support pushes your favorite Avatar higher on the leaderboard. The more you engage, the more they shine — and the more you both earn."
-      },
-      "section_6": {
-        "your_vision": "YOUR VISION,",
-        "your_token": "YOUR TOKEN",
-        "description": "Dive into a live trading experience built for speed and excitement. Instantly trading, track performance in real time, and launch your own token to make your mark in the AVATAR48 ecosystem."
-      }
     },
     "term_of_use": {
       "+W0SyO": "品牌元素，包括名称、标志、视觉设计和商业外观",
@@ -353,3 +353,4 @@
       }
   }
 }
+

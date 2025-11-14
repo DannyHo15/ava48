@@ -50,6 +50,18 @@
       "name_bottom": "詠美",
       "coming_soon": "即將登場"
     },
+    "section_5": {
+      "join": "參加",
+      "rank": "RANK",
+      "rise_together": "一起登上巔峰！",
+      "description": "受傳奇 AKB48 總選舉啟發的 RANK48，是一個把粉絲情感轉化為力量的新系統。聊天、贈送心、應援——一切都能讓你最愛的虛擬角色衝上排行榜。        投入越多，她就越閃耀，你也能獲得專屬回饋"
+    },
+    "section_6": {
+      "your_vision": "你的願景",
+      "your_token": "你的代幣",
+      "description": "體驗充滿速度與刺激的真實交易。即時追蹤表現與市場變化，發行你自己的代幣，在 AVATAR48 生態系中留下你的印記。"
+    },
+
     "section_ai_connection": {
       "title": "AIがつなぐ",
       "subtitle": "新しい世界へ",

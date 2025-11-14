@@ -50,6 +50,18 @@
       "name_bottom": "えいみ",
       "coming_soon": "やってくる"
     },
+    "section_5": {
+      "join": "に参加して",
+      "rank": "RANK",
+      "rise_together": "一緒に上へ！",
+      "description": "伝説のAKB48総選挙にインスパイアされたRANK48は、ファンの想いを力に変える新しい仕組み。チャット、ハート、応援のすべてが、あなたの推しアバターをランキング上位へと押し上げます。関わるほどに、彼女は輝き、あなたも報酬を得られます。"
+    },
+    "section_6": {
+      "your_vision": "あなたのビジョン",
+      "your_token": "あなたのトークン",
+      "description": "スピードとスリルに満ちたリアルトレーディング体験へ。リアルタイムで取引とパフォーマンスを追跡し、自分のトークンを発行してAVATAR48エコシステムに足跡を残しましょう。"
+    },
+
     "section_ai_connection": {
       "title": "ENAIがつなぐ",
       "subtitle": "新しい世界へ",
@@ -60,18 +72,6 @@
       "title": "ゲームをプレイ",
       "subtitle": "AYAのハートをGET",
       "content": "チャットするたび、つながるたびに「ハート」が貯まります。ハートを使ってプレミアム機能を解放し、限定コンテンツを集め、これから続々登場するサプライズを楽しみましょう。"
-      },
-      "section_5": {
-        "join": "JOIN",
-        "rank": "RANK",
-        "rise_together": "RISE TOGETHER !",
-        "description": "Inspired by the legendary AKB48 elections, RANK48 turns fandom into power. Every chat, every Heart, every show of support pushes your favorite Avatar higher on the leaderboard. The more you engage, the more they shine — and the more you both earn."
-      },
-      "section_6": {
-        "your_vision": "YOUR VISION,",
-        "your_token": "YOUR TOKEN",
-        "description": "Dive into a live trading experience built for speed and excitement. Instantly trading, track performance in real time, and launch your own token to make your mark in the AVATAR48 ecosystem."
-      }
     },
     "term_of_use": {
       "+W0SyO": "名前、ロゴ、ビジュアルデザイン、トレードドレスを含むブランディング要素",
@@ -353,4 +353,5 @@
         "moderate": "適度"
       }
     }
+  }
 }
