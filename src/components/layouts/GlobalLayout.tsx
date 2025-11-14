@@ -78,14 +78,14 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           gradientType="linear"
           className="p-2 min-[500px]:p-2.5"
           rounded="25px"
-          borderColor="--avatar-chat-border"
+          borderColor="--avatar-info-border"
           strokeWidth="3px"
         >
           <BorderGradientWrapper
             gradientType="linear"
             className="p-px"
             rounded="21px"
-            borderColor="--avatar-chat-border"
+            borderColor="--avatar-info-border"
             strokeWidth="1px"
           >
             <Link
