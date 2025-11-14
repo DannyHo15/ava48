@@ -1,22 +1,23 @@
 "use client";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { initAnalytics } from "@/lib/firebase";
+import { addAnalyticsCustomProperty, initAnalytics } from "@/lib/firebase";
 import { logEvent, Analytics } from "firebase/analytics";
 
-export default function FirebaseAnalytics() {
+export default function FirebaseAnalytics({ theme }: { theme: string }) {
   const pathname = usePathname();
   const [analytics, setAnalytics] = useState<Analytics | null>(null);
 
   useEffect(() => {
     let mounted = true;
+    addAnalyticsCustomProperty("theme_preference", theme);
     initAnalytics().then((a) => {
       if (mounted && a) setAnalytics(a);
     });
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [theme]);
 
   useEffect(() => {
     if (!analytics) return;

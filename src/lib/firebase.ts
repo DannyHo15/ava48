@@ -39,4 +39,13 @@ export async function initAnalytics(): Promise<Analytics | null> {
   }
 }
 
+export async function addAnalyticsCustomProperty(
+  name: string,
+  value: string | number) {
+  if (typeof window === "undefined") return;
+  window.dataLayer = window.dataLayer || [];
+  let data = {};
+  data[name] = value;
+  window.dataLayer.push(data);
+}
 export default app;
