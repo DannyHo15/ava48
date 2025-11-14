@@ -41,7 +41,11 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           </Link>
           <Link href={`${baseUrl}/platform/${locale}/sentient?mode=${theme}`}>
             <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-3 sm:px-2">
-              <CircleArrowRight size={24} strokeWidth={2} className="hidden sm:block" />
+              <CircleArrowRight
+                size={24}
+                strokeWidth={2}
+                className="hidden sm:block"
+              />
               {t("create_agent")}
             </Button>
           </Link>
@@ -93,7 +97,9 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
                 alt={"defaultImage"}
                 className="rounded-xl w-14.75 lg:w-31.25 h-14.75 lg:h-20.5 object-cover"
               />
-              <p className="font-medium text-white text-base md:text-xl">{t("chat_now")}</p>
+              <p className="font-medium text-white text-base md:text-xl">
+                {t("chat_now")}
+              </p>
             </Link>
           </BorderGradientWrapper>
         </BorderGradientWrapper>

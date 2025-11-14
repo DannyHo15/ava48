@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type Cprops = {
   lightURL: string;
@@ -13,12 +14,14 @@ const ImageAvatar48 = ({ className, drakURL, lightURL }: Cprops) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("violet-kiss-mode");
+    const isDarkMode =
+      document.documentElement.classList.contains("violet-kiss-mode");
     setIsDark(isDarkMode);
     setMounted(true);
 
     const observer = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains("violet-kiss-mode");
+      const isDark =
+        document.documentElement.classList.contains("violet-kiss-mode");
       setIsDark(isDark);
     });
 
@@ -42,3 +45,4 @@ const ImageAvatar48 = ({ className, drakURL, lightURL }: Cprops) => {
 };
 
 export default ImageAvatar48;
+

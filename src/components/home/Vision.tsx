@@ -4,9 +4,13 @@ import { SectionWrapper } from "../SectionWrapper";
 import { useTranslations } from "next-intl";
 import GlassCard from "../common/GlassCard";
 import ShapeGradientWrapper from "../ShapeGradientWrapper";
+import { cn } from "@/lib/utils";
+import clsx from "clsx";
+import { useParams } from "next/navigation";
 
 const Vision = () => {
   const t = useTranslations();
+  const { locale } = useParams();
   return (
     <SectionWrapper>
       <div className="fixed inset-0 bg-avatar-black" />
@@ -49,11 +53,27 @@ const Vision = () => {
                     "M 0,43 A 15,15 0,0,1 5,33 L 45,5 A 15,15 0,0,1 55,0 L 130,0 A 16,16 0,0,1 142,12 L 142,74 A 16,16 0,0,1 130,86 L 12,86 A 15,15 0,0,1 0,74 Z"
                   }
                 ></ShapeGradientWrapper>
-                <span className="relative bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet text-gradient drop-shadow-text text-custom-70 font-karantina sm:text-custom-110 lg:text-custom-125 tracking-wide font-bold ">
+                <span
+                  className={cn(
+                    "relative bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet text-gradient drop-shadow-text text-custom-70 font-karantina sm:text-custom-110 lg:text-custom-125 tracking-wide font-bold ",
+                    locale === "ja"
+                      ? "lg:text-custom-82 sm:text-custom-70 text-gradient text-nowrap"
+                      : "",
+                    "text-gradient",
+                  )}
+                >
                   {t("LandingPage.section_6.your_vision")}
                 </span>
               </div>
-              <div className="relative font-karantina text-custom-56 tracking-wide font-bold text-white leading-none mt-2 drop-shadow-text text-right sm:text-custom-82">
+              <div
+                className={cn(
+                  "relative font-karantina text-custom-56 tracking-wide font-bold leading-none mt-2 drop-shadow-text text-right sm:text-custom-82",
+                  locale === "ja"
+                    ? "sm:text-custom-70 text-custom-59 text-white text-nowrap"
+                    : "",
+                  "text-white",
+                )}
+              >
                 <ShapeGradientWrapper
                   index={"section6_token"}
                   blurSize={"2xs"}
@@ -149,7 +169,7 @@ const Vision = () => {
           />
         </div>
         {/*Radient*/}
-        <div className="w-150 h-100 top-6  sm:w-[96vw] sm:h-[50vh] bg-linear-to-b sm:bg-linear-120 dark:from-avatar-violet/60 from-avatar-primary/50 via-avatar-blue-5/30 to-avatar-blue-4/50 absolute -rotate-17 rounded-[100%] overflow-hidden bottom-100 left-50 sm:left-0 sm:top-60 lg:left-30 z-0 blur-3xl"></div>
+        <div className="w-150 h-100 top-6  sm:w-[80vw] sm:h-[50vh] bg-linear-to-b sm:bg-linear-90 lg:bg-linear-175 dark:from-avatar-violet/30  from-avatar-primary/50 from-20% via-avatar-blue-5/30 to-avatar-blue-4/50 absolute -rotate-17 rounded-[100%] overflow-hidden bottom-100 left-50 sm:left-0 sm:top-30 lg:left-30 z-0 blur-3xl"></div>
       </div>
     </SectionWrapper>
   );

@@ -6,9 +6,12 @@ import ImageAvatar48 from "../ImageAvatar48";
 import { SectionWrapper } from "../SectionWrapper";
 import { useTranslations } from "next-intl";
 import ShapeGradientWrapper from "../ShapeGradientWrapper";
+import { cn } from "@/lib/utils";
+import { useParams } from "next/navigation";
 
 const RiseTogether = () => {
   const t = useTranslations("LandingPage.section_5");
+  const { locale } = useParams();
   return (
     <SectionWrapper>
       <div className="fixed inset-0 bg-avatar-black" />
@@ -21,15 +24,23 @@ const RiseTogether = () => {
         <div className="relative size-full flex-col flex justify-center z-10 sm:justify-end lg:justify-center">
           <div className="w-full lg:w-fit lg:h-185 lg:items-start">
             <ImageAvatar48
-              className="h-71.5 w-92.5 sm:w-130.5 sm:h-102 lg:w-177.75 lg:h-137 object-contain mx-auto"
+              className="h-71.5 w-92.5 sm:w-130.5 sm:h-102 lg:w-177.75 lg:h-137 min-h-137 object-contain mx-auto"
               lightURL={"/assets/rank48-light.png"}
-              drakURL={"assets/rank48-dark.png"}
+              drakURL={"/assets/rank48-dark.png"}
             ></ImageAvatar48>
-            <div className="relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-20.5 pr-12 z-20 lg:-bottom-20 mx-auto">
-              <div className="w-full max-w-95 sm:max-w-107.5 lg:max-w-122.5 pr-5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient">
+            <div className="relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-20.5 z-20 lg:-bottom-20 mx-auto">
+              <div
+                className={cn(
+                  "w-full max-w-95 sm:max-w-107.5 lg:max-w-122.5 pr-5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient",
+                  locale === "ja" ? "sm:max-w-130 lg:max-w-full" : "",
+                )}
+              >
                 <ShapeGradientWrapper
                   index={"section5_rank48"}
-                  className="absolute sm:-left-2 sm:top-1 -left-8 -top-6 z-10 scale-75"
+                  className={cn(
+                    "absolute sm:-left-2 sm:top-1 -left-8 -top-6 z-10 sm:scale-100 scale-75",
+                    locale === "ja" ? "lg:-top-6" : "",
+                  )}
                   strokeWidth={1}
                   blurSize={"xs"}
                   key={""}
@@ -39,20 +50,48 @@ const RiseTogether = () => {
                     "M 0 58 A 15 15 0 0 1 3 47 L 36 29 A 15 15 0 0 1 45 27 L 85 27 A 16 16 0 0 1 91 33 L 91 77 A 16 16 0 0 1 87 86 L 4 86 A 15 15 0 0 1 0 81 Z"
                   }
                 ></ShapeGradientWrapper>
-                <span className="text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina font-bold z-1">
-                  {t("join")}{" "}
+                <span
+                  className={cn(
+                    "text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina font-bold z-1",
+                    locale === "ja" ? "lg:text-custom-82" : "",
+                  )}
+                >
+                  {t(locale === "ja" ? "rank" : "join")}{" "}
                 </span>
-                <label className="font-karantina text-custom-70 sm:text-custom-106 lg:text-custom-125">
-                  {t("rank")}
+                <label
+                  className={cn(
+                    "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold",
+                    locale === "ja" ? "lg:text-custom-106" : "hidden",
+                  )}
+                >
+                  48
                 </label>
-                <label className="font-karantina text-custom-82 sm:text-custom-123 lg:text-custom-145">
+                <label
+                  className={cn(
+                    "font-karantina text-custom-70 sm:text-custom-106 lg:text-custom-125 font-bold",
+                    locale === "ja" ? "lg:text-custom-90" : "",
+                  )}
+                >
+                  {t(locale === "ja" ? "join" : "rank")}
+                </label>
+                <label
+                  className={cn(
+                    "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123",
+                    locale === "ja" ? "hidden" : "",
+                  )}
+                >
                   48,
                 </label>
               </div>
-              <div className="relative text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina text-right sm:text-left w-full text-white">
+              <div className="relative text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina text-right sm:text-left w-full text-white font-bold">
                 <ShapeGradientWrapper
                   index={"section5_rise_together"}
-                  className="absolute lg:right-20 sm:right-15 -bottom-14 -right-10 z-10 scale-75"
+                  className={cn(
+                    "absolute lg:right-20 sm:right-15 -bottom-14 -right-10 z-10 scale-75 sm:scale-100",
+                    locale === "ja"
+                      ? "lg:-bottom-10 lg:right-50 sm:right-20"
+                      : "",
+                  )}
                   strokeWidth={1}
                   strokeDirection="to-l"
                   blurSize={"2xs"}

@@ -10,16 +10,16 @@ interface IFloatInformationProps {
 const FloatInformation = ({ content }: IFloatInformationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="relative z-[99999] h-full flex items-center">
+    <div className="relative z-999 h-full flex items-center">
       <div className="hidden lg:block sm:flex min-h-75 sm:min-h-full">
         <div className="p-5 size-full backdrop-blur-sm bg-linear-to-b from-white/30 to-white/0 text-white flex justify-center items-start rounded-t-custom-20 text-xl whitespace-pre-line">
           {content}
         </div>
       </div>
-      <div className="sm:hidden block relative z-[99999]">
+      <div className="sm:hidden block relative z-999">
         <FloatButton
           position="bottom-right"
-          className="size-fit! bottom-42.5 right-5"
+          className="size-fit! sm:bottom-42.5 bottom:28 right-5"
           onClick={() => setIsOpen(!isOpen)}
         >
           <BorderGradientWrapper
