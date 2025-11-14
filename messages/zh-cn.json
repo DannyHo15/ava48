@@ -64,12 +64,13 @@
     "section_ai_connection": {
       "title": "ゲームをプレイして",
       "subtitle": "AYAのハートを手に入れよう",
-      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
+      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come.",
+      "note": "本AI旨在提供观点和建议，而非财务建议或精确预测。"
     },
     "section_earn_aya_connection": {
-      "title": "ゲームをプレイして",
-      "subtitle": "AYAのハートを手に入れよう",
-      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
+      "title": "玩游戏",
+      "subtitle": "收集 AYA 的心",
+      "content": "每一次聊天、每一次互动，都会累积“心”。使用这些心可解锁高级功能，获取限定内容，并探索未来陆续推出的惊喜体验。"
     },
     "home": {
       "term_of_use": "使用条款",
