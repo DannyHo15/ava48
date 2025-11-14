@@ -113,11 +113,16 @@ const ShapeGradientWrapper: React.FC<Cprops> = memo(
       );
     }
 
-    // Optimized blur for regular mobile
-    const optimizedBlurSize = useMemo(() => {
-      const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-      if (isMobile && blurSize === "3.6px") return "2px";
-      return blurSize;
+    // Optimized blur for regular mobile - use useEffect to avoid hydration mismatch
+    const [optimizedBlurSize, setOptimizedBlurSize] = React.useState(blurSize);
+
+    React.useEffect(() => {
+      const isMobile = window.innerWidth < 768;
+      if (isMobile && blurSize === "3.6px") {
+        setOptimizedBlurSize("2px");
+      } else {
+        setOptimizedBlurSize(blurSize);
+      }
     }, [blurSize]);
 
     return (

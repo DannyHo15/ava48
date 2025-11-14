@@ -43,7 +43,6 @@ export default function Home() {
     },
     slideChanged: (s) => {
       setCurrentIndex(s.track.details.rel);
-      console.log(s.track.details.rel);
     },
     drag: true,
     created: (s) => {
