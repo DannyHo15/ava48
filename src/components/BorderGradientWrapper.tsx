@@ -29,8 +29,8 @@ const BorderGradientWrapper: React.FC<Cprops> = ({
     "--before-stroke-width": strokeWidth,
     "--before-stroke-color": `var(${borderColor})`,
     "--rotate-duration": `${duration}s`,
-    "--before-linear-direction-start": `${duration}s`,
-    "--before-linear-direction-end": `${duration}s`,
+    "--before-linear-direction-start": linearDirectionStart,
+    "--before-linear-direction-end": linearDirectionEnd,
   };
 
   return (
