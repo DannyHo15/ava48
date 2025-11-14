@@ -72,6 +72,56 @@
       "title": "ゲームをプレイして",
       "subtitle": "AYAのハートを手に入れよう",
       "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
+    },
+    "home": {
+      "term_of_use": "使用條款",
+      "privacy_policy": "隱私政策"
+    },
+    "purchase": {
+      "purchased": "已購買",
+      "purchase": "購買",
+      "purchase_error": "購買錯誤",
+      "transaction_processing": "交易正在處理！",
+      "purchase_title": "立即購買，繼續對話！🚀",
+      "purchase_content": "我們正在處理你的訂單。請稍後再試。"
+    },
+    "wallet": {
+      "connect": "選擇一個錢包進行連接",
+      "wallets": "錢包",
+      "expires": "過期",
+      "disconnect": "斷開連接",
+      "connect_2": "連接錢包"
+    },
+    "expired_dialog": {
+      "time_up": "時間到",
+      "title": "⏳ 你的免費試用或購買的套餐已過期。\n要繼續與我們的頭像聊天，\n請連接你的錢包並購買。🔗💳",
+      "processing": "我們正在處理你的訂單。請稍後再試。",
+      "purchase": "購買"
+    },
+    "greeting": {
+      "welcome": "歡迎",
+      "content": "歡迎體驗與我們頭像的實時聊天！\n享受與我們的頭像進行<b>3分鐘</b>免費試用聊天\n——問她任何問題，探索任何主題，在任何費用適用前看看對話會帶你到哪裡！🚀",
+      "start_now": "立即開始"
+    },
+    "video_call": {
+      "canceled": "已取消",
+      "no_answer": "無應答",
+      "connecting": "正在連接",
+      "you": "你",
+      "audio_call": "語音通話",
+      "video_call": "視頻通話",
+      "typing": "輸入一些內容..."
+    },
+    "setting": {
+      "label": "設置",
+      "confirm": "確認",
+      "language": "語言",
+      "intimacy_level": "親密程度",
+      "intimacy": {
+        "normal": "正常",
+        "mild": "輕度",
+        "moderate": "適度"
+      }
     }
   },
   "term_of_use": {
@@ -303,55 +353,5 @@
     "zV3o4M": "錢包的匿名性：",
     "zZOJYW": "我們根據你使用服務的方式收集以下類型的數據：",
     "ziKDng": "5. 區塊鏈和錢包隱私"
-  },
-  "home": {
-    "term_of_use": "使用條款",
-    "privacy_policy": "隱私政策"
-  },
-  "purchase": {
-    "purchased": "已購買",
-    "purchase": "購買",
-    "purchase_error": "購買錯誤",
-    "transaction_processing": "交易正在處理！",
-    "purchase_title": "立即購買，繼續對話！🚀",
-    "purchase_content": "我們正在處理你的訂單。請稍後再試。"
-  },
-  "wallet": {
-    "connect": "選擇一個錢包進行連接",
-    "wallets": "錢包",
-    "expires": "過期",
-    "disconnect": "斷開連接",
-    "connect_2": "連接錢包"
-  },
-  "expired_dialog": {
-    "time_up": "時間到",
-    "title": "⏳ 你的免費試用或購買的套餐已過期。\n要繼續與我們的頭像聊天，\n請連接你的錢包並購買。🔗💳",
-    "processing": "我們正在處理你的訂單。請稍後再試。",
-    "purchase": "購買"
-  },
-  "greeting": {
-    "welcome": "歡迎",
-    "content": "歡迎體驗與我們頭像的實時聊天！\n享受與我們的頭像進行<b>3分鐘</b>免費試用聊天\n——問她任何問題，探索任何主題，在任何費用適用前看看對話會帶你到哪裡！🚀",
-    "start_now": "立即開始"
-  },
-  "video_call": {
-    "canceled": "已取消",
-    "no_answer": "無應答",
-    "connecting": "正在連接",
-    "you": "你",
-    "audio_call": "語音通話",
-    "video_call": "視頻通話",
-    "typing": "輸入一些內容..."
-  },
-  "setting": {
-    "label": "設置",
-    "confirm": "確認",
-    "language": "語言",
-    "intimacy_level": "親密程度",
-    "intimacy": {
-      "normal": "正常",
-      "mild": "輕度",
-      "moderate": "適度"
-    }
   }
 }
