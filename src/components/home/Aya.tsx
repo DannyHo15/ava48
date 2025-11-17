@@ -37,7 +37,7 @@ const Aya = () => {
           >
             <h1
               className={cn(
-                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15"
+                "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15"
               )}
               style={{
                 filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -146,7 +146,7 @@ const Aya = () => {
             >
               <h1
                 className={cn(
-                  "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15",
+                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15",
                   {
                     "dark:bg-[linear-gradient(158deg,#FFFFFF_64%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)]": locale === "ja" || locale === "zh-cn" || locale === "zh-tw",
                   }
@@ -257,13 +257,13 @@ const Aya = () => {
             >
               <h2
                 className={cn("relative whitespace-nowrap", {
-                  "font-karantina text-[42px] prm:text-custom-55 sm:text-[160px] font-bold bg-[linear-gradient(107deg,#00F6FF_17%,#FFFFFF_66%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
+                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-160 font-bold bg-[linear-gradient(107deg,#00F6FF_17%,#FFFFFF_66%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
                     locale === "en",
-                  "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-bold text-white uppercase leading-[86%] text-right absolute top-[-110%] right-[-28%] z-10 2xl:z-5":
+                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold text-white uppercase leading-[86%] text-right absolute top-[-110%] right-[-28%] z-10 2xl:z-5":
                     locale === "zh-cn",
-                  "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-bold text-white uppercase leading-[86%] text-right absolute top-[-89%] right-[-28%] z-10 2xl:z-5":
+                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold text-white uppercase leading-[86%] text-right absolute top-[-89%] right-[-28%] z-10 2xl:z-5":
                     locale === "zh-tw",
-                  "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-bold text-white uppercase leading-[86%] text-right absolute top-[-99%] right-[-13%] dark:sm:bg-[linear-gradient(160deg,#FFFFFF_55%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold text-white uppercase leading-[86%] text-right absolute top-[-99%] right-[-13%] dark:sm:bg-[linear-gradient(160deg,#FFFFFF_55%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                     locale === "ja",
                 })}
                 style={{
@@ -274,9 +274,9 @@ const Aya = () => {
               </h2>
               <h2
                 className={cn("relative", {
-                  "font-karantina text-[58px] prm:text-custom-70 sm:text-[160px] font-bold bg-[linear-gradient(107deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
+                  "font-karantina text-custom-58 prm:text-custom-70 sm:text-custom-160 font-bold bg-[linear-gradient(107deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
                     locale === "en",
-                  "font-karantina text-[58px] prm:text-custom-70 sm:text-[180px] font-bold bg-[linear-gradient(107deg,#00F6FF_0%,#FFFFFF_68%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
+                  "font-karantina text-custom-58 prm:text-custom-70 sm:text-custom-180 font-bold bg-[linear-gradient(107deg,#00F6FF_0%,#FFFFFF_68%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
                     locale === "ja" || locale === "zh-cn" || locale === "zh-tw",
                 })}
                 style={{
@@ -447,24 +447,6 @@ const Aya = () => {
                 "M 0,10 A 10,10 0,0,1 10,0 L 92,0 A 15,15 0,0,1 100,5 L 160,70 A 15,15 0,0,1 164,79 L 164,271 A 10,10 0,0,1 157,281 L 10,281 A 10,10 0,0,1 0,271 Z"
               }
             />
-
-            {/* Mobile */}
-            <ShapeGradientWrapper
-              blurSize={"2xs"}
-              index={"cftgb"}
-              shapeWidth={101}
-              shapeHeight={140}
-              className="prm:bottom-[42%] prm:right-[4%] sm:bottom-[41%] sm:right-[-1%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden prm:block sm:hidden"
-              strokeColor={[
-                { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
-                { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
-              ]}
-              strokeDirection="to-br"
-              strokeWidth={1}
-              path={
-                "M 0,10 A 10,10 0,0,1 10,0 L 65,0 A 15,15 0,0,1 73,5 L 99,30 A 15,15 0,0,1 101,36 L 101,130 A 10,10 0,0,1 139,140 L 10,140 A 10,10 0,0,1 0,130 Z"
-              }
-            />
           </div>
           <div
             className={cn("absolute 2xl:hidden", {
@@ -480,13 +462,13 @@ const Aya = () => {
           >
             <h2
               className={cn("relative whitespace-nowrap", {
-                "font-karantina text-[55px] prm:text-custom-55 sm:text-[160px] font-bold bg-[linear-gradient(127deg,#00F6FF_3%,#FFFFFF_73%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-10":
+                "font-karantina text-custom-55 prm:text-custom-55 sm:text-custom-160 font-bold bg-[linear-gradient(127deg,#00F6FF_3%,#FFFFFF_73%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-10":
                   locale === "en",
-                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.1%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.1%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "zh-cn",
-                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.2%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.2%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "zh-tw",
-                "font-karantina text-[42px] prm:text-custom-55 sm:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.3%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_47%,#D81DE2_150%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] text-right absolute top-[-87.3%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_47%,#D81DE2_150%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "ja",
               })}
               style={{
@@ -497,9 +479,9 @@ const Aya = () => {
             </h2>
             <h2
               className={cn("relative", {
-                "font-karantina text-[58px] prm:text-custom-70 sm:text-[160px] font-bold bg-[linear-gradient(127deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
+                "font-karantina text-custom-58 prm:text-custom-70 sm:text-custom-160 font-bold bg-[linear-gradient(127deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
                   locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                "font-karantina text-[58px] prm:text-custom-70 sm:text-[180px] font-bold bg-[linear-gradient(107deg,#00F6FF_0%,#FFFFFF_68%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
+                "font-karantina text-custom-58 prm:text-custom-70 sm:text-custom-180 font-bold bg-[linear-gradient(107deg,#00F6FF_0%,#FFFFFF_68%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
                   locale === "ja",
               })}
               style={{
