@@ -1,4 +1,13 @@
 {
+  "meta": {
+    "title": "Avatar48｜AI與浪漫的交會之處",
+    "description": "與深田詠美與藤本彩聊天、互動並賺取獎勵——她們是你的撩人AI夥伴，透過科技重新定義情感連結。",
+    "keywords": [
+      "Avatar48","AI夥伴","AI女友","情感AI","虛擬聊天","撩人AI","藤本彩","深田詠美","加密AI","AI關係","心動兌代幣","聊天賺取","通話賺取","AI獎勵","Web3 AI","AI加密","AI虛擬助理","數位化","加密新聞","AI親密連結"        
+    ],
+    "open_graph_description":"在Avatar48與彩與詠美連結。她們是結合加密科技的聰慧、撩人AI夥伴，讓每一次互動都化為代幣。",
+    "ogAlt": "Avatar48｜AI與浪漫的交會之處"
+  },
   "LandingPage": {
     "get_started": "開始使用",
     "lets_talk": "聊一聊",

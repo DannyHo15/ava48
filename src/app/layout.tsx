@@ -34,6 +34,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const publishedTime = "2024-08-21T00:00:00Z";
+  const modifiedTime = new Date().toISOString();
+
   let initialTheme = await getThemeCookie();
   // if (!initialTheme) {
     initialTheme = Math.random() > 0.5 ? "violet-kiss-mode" : "royal-dark-mode";
@@ -43,7 +46,9 @@ export default async function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0" />
-        <title>Avatar48</title>
+        <meta property="article:author" content="Avatar48" />
+        <meta property="article:published_time" content={publishedTime} />
+        <meta property="article:modified_time" content={modifiedTime} />
       </head>
       <body className={clsx("h-dvh bg-avatar-blue")}>
         <NextTopLoader
