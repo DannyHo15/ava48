@@ -16,12 +16,12 @@ import { cn } from "@/lib/utils";
 gsap.registerPlugin(useGSAP, Observer);
 
 const sections = [
-  { Component: Eimi },
+  // { Component: Eimi },
   { Component: Aya },
-  { Component: AIConnection },
-  { Component: EarnAyaConnection },
-  { Component: RiseTogether },
-  { Component: Vision },
+  // { Component: AIConnection },
+  // { Component: EarnAyaConnection },
+  // { Component: RiseTogether },
+  // { Component: Vision },
 ];
 
 export default function Home() {
