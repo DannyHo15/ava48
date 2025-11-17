@@ -18,7 +18,7 @@ const Vision = () => {
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
-      <div className="lg:container lg:m-auto h-full flex flex-col relative px-5 pt-24 sm:pt-48 lg:pt-36">
+      <div className="lg:container lg:m-auto h-full flex flex-col relative px-5 pt-24 sm:pt-48 lg:pt-36" id="section-platform">
         <div className=" w-full max-w-64 ml-auto sm:flex sm:max-w-full sm:h-fit sm:ml-0 gap-4 z-50  sm:mx-auto justify-center">
           <div className="relative sm:w-2/3 size-full gap-4 flex sm:flex-col lg:justify-center justify-end mb-5 sm:mb-0 lg:w-fit">
             <ImageAvatar48

@@ -14,7 +14,7 @@ const AIConnection = () => {
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
-      <div className="size-full md:mx-10">
+      <div className="size-full md:mx-10" id="section-robotic">
         <div className="size-full relative mx-auto max-w-full lg:max-w-[1093px] flex items-center justify-center gap-[35px] xl:gap-[118px]">
           {/* blur trên >= tablet */}
           <div className="absolute hidden lg:block lg:-top-[45%] xl:-top-[60%] lg:-right-[40%] xl:right-0 z-10 w-[1310.69px] h-[911.807px] shrink-0 rounded-[1310.69px] rotate-[-16.775deg] blur-[174.75px] bg-[linear-gradient(144deg,rgba(0,131,245,0.50)_29.99%,rgba(73,255,240,0.50)_49.39%,rgba(29,78,216,0.50)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.75)_29.99%,rgba(73,255,240,0.75)_49.39%,rgba(29,78,216,0.75)_83.09%)]" />
