@@ -19,7 +19,7 @@ const RiseTogether = () => {
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
-      <div className="grid grid-cols-1 px-5 size-full mx-auto gap-4 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10">
+      <div className="grid grid-cols-1 px-5 size-full mx-auto gap-4 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10" id="section-rank48">
         {/* SLOGAN */}
         <div className="relative size-full flex-col flex justify-center z-10 sm:justify-end lg:justify-center">
           <div className="w-full lg:w-fit lg:h-185 lg:items-start">

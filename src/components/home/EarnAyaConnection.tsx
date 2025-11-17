@@ -15,7 +15,7 @@ const EarnAyaConnection = () => {
 
   return (
     <WrapperSectionPlayAndEarn>
-      <div className="h-[35%] md:hidden w-full flex flex-col items-center justify-end relative z-10 -mb-3 sm:-mb-6">
+      <div className="h-[35%] md:hidden w-full flex flex-col items-center justify-end relative z-10 -mb-3 sm:-mb-6" id="section-heart">
         <div
           className={clsx(
             "absolute z-20 w-full sm:mx-0 max-w-[310px] flex flex-col gap-[3px]",
