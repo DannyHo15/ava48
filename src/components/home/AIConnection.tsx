@@ -148,11 +148,11 @@ const AIConnection = () => {
         </div>
 
         <div className="sm:w-2/5 md:hidden w-0 h-full flex-center z-50 lg:w-121.25">
-          <FloatInformation
+          {/* <FloatInformation
             content={
               "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come."
             }
-          />
+          /> */}
         </div>
       </div>
     </SectionWrapper>

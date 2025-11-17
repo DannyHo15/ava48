@@ -169,7 +169,7 @@ const Vision = () => {
           />
         </div>
         {/*Radient*/}
-        <div className="w-150 h-100 top-6  sm:w-[80vw] sm:h-[50vh] bg-linear-to-b sm:bg-linear-90 lg:bg-linear-175 dark:from-avatar-violet/30  from-avatar-primary/50 from-20% via-avatar-blue-5/30 to-avatar-blue-4/50 absolute -rotate-17 rounded-[100%] overflow-hidden bottom-100 left-50 sm:left-0 sm:top-30 lg:left-30 z-0 blur-3xl"></div>
+        <div className="w-150 h-100 top-6 hidden sm:block sm:w-[80vw] sm:h-[50vh] bg-linear-to-b sm:bg-linear-90 lg:bg-linear-175 dark:from-avatar-violet/30  from-avatar-primary/50 from-20% via-avatar-blue-5/30 to-avatar-blue-4/50 absolute -rotate-17 rounded-[100%] overflow-hidden bottom-100 left-50 sm:left-0 sm:top-30 lg:left-30 z-0 blur-3xl"></div>
       </div>
     </SectionWrapper>
   );

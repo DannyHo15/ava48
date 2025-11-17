@@ -139,7 +139,7 @@ const EarnAyaConnection = () => {
               />
             </div>
             <div className="md:col-span-7 relative h-full md:h-auto flex items-center justify-center">
-              <div className="hidden lg:block absolute top-[65%] md:top-[50%] w-[1310.69px] h-[911.807px] blur-[174.75px] -rotate-[16.775deg] rounded-[1310.69px] bg-[linear-gradient(144deg,rgba(0,131,245,0.5)_29.99%,rgba(73,255,240,0.5)_49.39%,rgba(29,78,216,0.5)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.9)_29.99%,rgba(73,255,240,0.5)_49.39%,rgba(29,78,216,0.5)_83.09%)]" />
+              <div className="z-99 hidden lg:block absolute top-[65%] md:top-[50%] w-[1310.69px] h-[911.807px] blur-[174.75px] -rotate-[16.775deg] rounded-[1310.69px] bg-[linear-gradient(144deg,rgba(0,131,245,0.5)_29.99%,rgba(73,255,240,0.5)_49.39%,rgba(29,78,216,0.5)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.9)_29.99%,rgba(73,255,240,0.5)_49.39%,rgba(29,78,216,0.5)_83.09%)]" />
               <ImageAvatar48
                 className="w-full h-auto object-contain scale-130 md:scale-100 md:block md:w-auto md:h-full md:object-contain md:transform-gpu md:origin-center md:mx-auto"
                 lightURL="/assets/earn-aya-connection-light-1920.png"
