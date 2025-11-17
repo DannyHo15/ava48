@@ -161,16 +161,16 @@ const EarnAyaConnection = () => {
             <div className="hidden md:block absolute top-[65%] lg:top-[50%] w-[1310.69px] h-[911.807px] blur-[174.75px] -rotate-[16.775deg] rounded-[1310.69px] bg-[linear-gradient(144deg,rgba(0,131,245,0.5)_29.99%,rgba(73,255,240,0.5)_49.39%,rgba(29,78,216,0.5)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.9)_29.99%,rgba(73,255,240,0.5)_49.39%,rgba(29,78,216,0.5)_83.09%)]" />
             <ImageAvatar48
               className="w-full h-auto object-contain scale-130 md:scale-100 md:block md:w-auto md:h-full md:object-contain md:transform-gpu md:origin-center md:mx-auto"
-              lightURL="/assets/play-the-game-light.webp"
-              drakURL="/assets/play-the-game-dark.webp"
+              lightURL="/assets/play-the-game-light.png"
+              drakURL="/assets/play-the-game-dark.png"
             />
           </div>
           <div className="hidden md:col-span-5 w-full xl:mb-0 md:flex md:justify-end">
             <div className="w-full flex flex-col gap-8 items-center justify-end max-w-[391px] xl:max-w-[485px]">
               <ImageAvatar48
                 className="hidden md:block scale-150 w-full h-auto object-contain"
-                lightURL="/assets/play-earn-heart-light.webp"
-                drakURL="/assets/play-earn-heart-dark.webp"
+                lightURL="/assets/play-earn-heart-light.png"
+                drakURL="/assets/play-earn-heart-dark.png"
               />
 
               <p className="text-white text-lg text-left font-kanit tracking-[0%] text-[18px] xl:text-[20px] leading-[117%] xl:leading-[142%] font-normal whitespace-no">
