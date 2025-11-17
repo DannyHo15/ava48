@@ -1,6 +1,5 @@
 import AyaAvt from "@/assets/AYA/aya-bg.webp";
 import ImageAvatar48 from "../ImageAvatar48";
-import DiamondDots from "../DiamondDots";
 import { SectionWrapper } from "../SectionWrapper";
 import ShapeGradientWrapper from "../ShapeGradientWrapper";
 import { useTranslations } from "next-intl";
@@ -23,10 +22,6 @@ const EimiFukada = () => {
       <div className="avatar-container relative">
         <div className="absolute w-[1342px] h-[496px] prm:w-[1643px] sm:w-[1568px] sm:h-[552px] prm:[657px] bottom-0 right-[-219%] prm:right-[-215%] prm:bottom-[0%] sm:right-[-20%] sm:bottom-0  2xl:w-[1984px] 2xl:h-[794px] 2xl:right-[-22%] 2xl:bottom-[0%]  bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom mix-blend-plus-lighter z-10 bg-no-repeat max-h-dvh 2xl:hidden" />
         <div className="flex items-end justify-center min-h-dvh">
-          <DiamondDots
-            className="mix-blend-soft-light absolute bottom-[50.5%] left-[14%] prm:left-[17%] sm:left-[27.5%] sm:bottom-[45%] 2xl:bottom-[52%] 2xl:left-[34%] -translate-x-1/2 2xl:hidden"
-            color="bg-white"
-          />
           <div className="absolute rounded-full w-[204px] prm:w-[256px] h-[204px] prm:h-64 top-[18%] right-[56%] prm:top-[19%] prm:right-[52%] prm:hidden sm:w-[554px] sm:h-[781px] sm:top-[21%] sm:right-[10%] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] to-avatar-blue-6 blur-2xl opacity-[0.01] z-15 -rotate-48 prm:-rotate-[-24deg]"></div>
           <div className="absolute left-[9%] top-[50%] prm:left-[8%] prm:top-[54%] z-15 sm:left-[5%] sm:top-[49%] 2xl:top-[38%] 2xl:left-[11%] sm:z-15 md:z-10 2xl:z-20 2xl:hidden">
             <h1
@@ -116,21 +111,6 @@ const EimiFukada = () => {
               lightURL={"/assets/light-bot-left.png"}
               drakURL={"/assets/light-bot-left.png"}
             ></ImageAvatar48>
-            <div className="hidden 2xl:block">
-              <DiamondDots
-                className={cn({
-                  "mix-blend-soft-light absolute bottom-[50.5%] left-[14%] prm:left-[17%] sm:left-[27.5%] sm:bottom-[45%] 2xl:bottom-[51.5%] 2xl:left-[2%] -translate-x-1/2":
-                    locale === "en",
-                  "mix-blend-soft-light absolute bottom-[50.5%] left-[14%] prm:left-[17%] sm:left-[27.5%] sm:bottom-[45%] 2xl:bottom-[50.5%] 2xl:left-[13%] -translate-x-1/2":
-                    locale === "zh-cn",
-                  "mix-blend-soft-light absolute bottom-[50.5%] left-[13%] prm:left-[17%] sm:left-[27.5%] sm:bottom-[45%] 2xl:bottom-[50.5%] 2xl:left-[13%] -translate-x-1/2":
-                    locale === "zh-tw",
-                  "mix-blend-soft-light absolute bottom-[50.5%] left-[14%] prm:left-[17%] sm:left-[27.5%] sm:bottom-[45%] 2xl:bottom-[50.5%] 2xl:left-[14%] -translate-x-1/2":
-                    locale === "ja",
-                })}
-                color="bg-white"
-              />
-            </div>
             <div className="absolute rounded-full w-[321px] prm:w-[403px] h-[453px] prm:h-[569px] top-[12%] right-[-30%] prm:top-[19%] prm:right-[-39%] sm:w-[554px] sm:h-[781px] sm:top-[29%] 2xl:top-[24%] 2xl:right-[-24%] sm:right-[0%] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] to-avatar-blue-6 blur-2xl opacity-30 z-15"></div>
             <div className="absolute rounded-full w-[794.69px] h-[552px] top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[22%] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-20% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[120px] -rotate-[4.54deg] opacity-56 mix-blend-screen"></div>
             <div className="absolute left-[9%] top-[50%] prm:left-[8%] prm:top-[54%] z-15 sm:left-[5%] sm:top-[49%] 2xl:top-[40%] 2xl:left-[-41%] sm:z-15 md:z-10 2xl:z-20 hidden 2xl:block">
