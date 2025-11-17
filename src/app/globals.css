@@ -55,6 +55,7 @@
   --text-custom-80: 5rem;
   --text-custom-85: 5.3125rem;
   --text-custom-90: 5.625rem;
+  --text-custom-98: 6.125rem;
   --text-custom-110: 6.875rem;
   --text-custom-120: 7.5rem;
   --text-custom-125: 7.8125rem;
@@ -122,10 +123,19 @@
     90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%,
     rgba(216, 29, 226, 0.5) 99.22%;
+
+    --avatar-bg-filter-lg-earn-connection:
+    84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0) 49.41%, rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%, rgba(216, 29, 226, 0.5) 99.22%;
   --avatar-bg-filter-md:
     76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
     rgba(216, 29, 226, 0.5) 99.22%;
+
+    --avatar-bg-filter-md-earn-connection:
+    76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+
   --avatar-bg-filter-sm:
     84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
@@ -210,6 +220,12 @@
   }
   .cs-radial-sm {
     background: radial-gradient(var(--avatar-bg-filter-sm));
+  }
+  .cs-radial-lg-earn-connection {
+    background: radial-gradient(var(--avatar-bg-filter-lg-earn-connection));
+  }
+  .cs-radial-md-earn-connection {
+    background: radial-gradient(var(--avatar-bg-filter-md-earn-connection));
   }
 }
 

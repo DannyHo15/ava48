@@ -20,10 +20,10 @@ const AIConnection = () => {
           <div className="absolute hidden lg:block lg:-top-[45%] xl:-top-[60%] lg:-right-[40%] xl:right-0 z-10 w-[1310.69px] h-[911.807px] shrink-0 rounded-[1310.69px] rotate-[-16.775deg] blur-[174.75px] bg-[linear-gradient(144deg,rgba(0,131,245,0.50)_29.99%,rgba(73,255,240,0.50)_49.39%,rgba(29,78,216,0.50)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.75)_29.99%,rgba(73,255,240,0.75)_49.39%,rgba(29,78,216,0.75)_83.09%)]" />
 
           {/* blur trên >= mobile */}
-          <div className="absolute lg:hidden top-0 -right-[30%] z-10 w-[387.769px] h-[269.759px] shrink-0 rounded-[387.769px] rotate-[-16.775deg] blur-[51.7px] bg-[linear-gradient(144deg,rgba(0,131,245,0.50)_29.99%,rgba(73,255,240,0.50)_49.39%,rgba(29,78,216,0.50)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.75)_29.99%,rgba(73,255,240,0.75)_49.39%,rgba(29,78,216,0.75)_83.09%)]" />
+          {/* <div className="absolute lg:hidden top-0 -right-[30%] z-10 w-[387.769px] h-[269.759px] shrink-0 rounded-[387.769px] rotate-[-16.775deg] blur-[51.7px] bg-[linear-gradient(144deg,rgba(0,131,245,0.50)_29.99%,rgba(73,255,240,0.50)_49.39%,rgba(29,78,216,0.50)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.75)_29.99%,rgba(73,255,240,0.75)_49.39%,rgba(29,78,216,0.75)_83.09%)]" /> */}
 
           {/* blur dưới */}
-          <div className="z-10 absolute -bottom-[60%] lg:-bottom-[40%] xl:-bottom-[60%] lg:left-0 w-[1310.69px] h-[911.807px] shrink-0 rounded-[1310.69px] rotate-[-16.775deg] blur-[110.3px] bg-[linear-gradient(144deg,rgba(0,131,245,0.50)_29.99%,rgba(73,255,240,0.50)_49.39%,rgba(29,78,216,0.50)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.64)_29.99%,rgba(73,255,240,0.64)_49.39%,rgba(29,78,216,0.64)_83.09%)]" />
+          {/* <div className="z-10 absolute -bottom-[60%] lg:-bottom-[40%] xl:-bottom-[60%] lg:left-0 w-[1310.69px] h-[911.807px] shrink-0 rounded-[1310.69px] rotate-[-16.775deg] blur-[110.3px] bg-[linear-gradient(144deg,rgba(0,131,245,0.50)_29.99%,rgba(73,255,240,0.50)_49.39%,rgba(29,78,216,0.50)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.64)_29.99%,rgba(73,255,240,0.64)_49.39%,rgba(29,78,216,0.64)_83.09%)]" /> */}
           <div className="hidden lg:block relative flex-1 size-full"></div>
           <div className="relative w-fit h-dvh pt-[179px] sm:pt-[225px] xl:pt-40 flex flex-col items-center justify-end">
             <div className="relative w-full h-full lg:pr-35 xl:pr-0 flex items-end justify-center">
