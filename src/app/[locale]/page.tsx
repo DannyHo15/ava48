@@ -6,19 +6,19 @@ import { Observer } from "gsap/Observer";
 import RiseTogether from "@/components/home/RiseTogether";
 import Aya from "@/components/home/Aya";
 import Eimi from "@/components/home/EimiFukaka";
-import AIConnection from "@/components/home/AIConnection";
 import EarnAyaConnection from "@/components/home/EarnAyaConnection";
 import { useKeenSlider } from "keen-slider/react";
 // import "keen-slider/keen-slider.min.css";
 import Vision from "@/components/home/Vision";
 import { cn } from "@/lib/utils";
+import Robotic from "@/components/home/Robotic";
 
 gsap.registerPlugin(useGSAP, Observer);
 
 const sections = [
   { Component: Eimi },
   { Component: Aya },
-  { Component: AIConnection },
+  { Component: Robotic },
   { Component: EarnAyaConnection },
   { Component: RiseTogether },
   { Component: Vision },
@@ -133,7 +133,7 @@ export default function Home() {
             "h-1/8": slidesLength === 8,
             "h-1/9": slidesLength === 9,
             "h-1/10": slidesLength === 10,
-          },
+          }
         )}
       ></div>
     </div>
