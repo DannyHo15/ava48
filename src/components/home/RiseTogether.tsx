@@ -19,23 +19,30 @@ const RiseTogether = () => {
       <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center " />
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
-      <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
+      <div className="fixed md:hidden h-full  top-0 -right-64 cs-radial-sm" />
       <div
-        className="grid grid-cols-1 px-5 size-full mx-auto gap-4 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-20 lg:-mt-10"
+        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-20 lg:-mt-10 3xl:scale-130 4xl:scale-150"
         id="section-rank48"
       >
         {/* SLOGAN */}
-        <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center">
-          <div className="w-full lg:w-fit lg:h-185 lg:items-start">
+        <div className=" relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center 3xl:justify-center-safe">
+          <div className="w-full lg:w-fit lg:h-185 2xl:h-200 lg:items-start">
             <ImageAvatar48
-              className="h-60! w-92.5! sm:w-130.5! sm:h-102! lg:w-177.75! lg:h-137! object-contain mx-auto pt-10"
+              className="h-60 w-92.5 sm:w-130.5 sm:h-102 lg:max-w-170.75 lg:h-120 object-contain mx-auto pt-10 2xl:w-250 2xl:h-160"
               lightURL={"/assets/rank48-light.png"}
               drakURL={"/assets/rank48-dark.png"}
             ></ImageAvatar48>
-            <div className="relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-40! z-20 lg:-bottom-20 mx-auto">
+            <div
+              className={clsx(
+                "relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-25! z-20 lg:-bottom-20 3xl:bottom-2 mx-auto",
+                {
+                  "": locale === "ja",
+                },
+              )}
+            >
               <div
                 className={clsx(
-                  "w-full max-w-95 sm:max-w-130.5 lg:max-w-150.5 pr-5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap",
+                  "w-full max-w-95 sm:max-w-130.5 lg:max-w-150.5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap",
                   locale === "ja" ? "sm:max-w-130 lg:max-w-full" : "",
                 )}
               >
@@ -44,7 +51,7 @@ const RiseTogether = () => {
                   className={clsx(
                     "absolute sm:-left-2 sm:top-1 -left-8 -top-6 z-10 sm:scale-100 scale-75",
                     {
-                      "lg:-top-6": locale === "ja",
+                      "lg:-top-6 sm:-top-9 -top-10": locale === "ja",
                       "lg:-top-7": locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
@@ -61,8 +68,8 @@ const RiseTogether = () => {
                   className={clsx(
                     "text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina font-bold z-1",
                     {
-                      "lg:text-custom-82": locale === "ja",
-                      "sm:text-custom-90 lg:text-custom-125":
+                      "text-custom-46! lg:text-custom-70!": locale === "ja",
+                      "sm:text-custom-90! xl:text-custom-125!":
                         locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
@@ -72,7 +79,9 @@ const RiseTogether = () => {
                 <label
                   className={clsx(
                     "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold",
-                    locale === "ja" ? "lg:text-custom-106" : "hidden",
+                    locale === "ja"
+                      ? "lg:text-custom-90! sm:text-custom-106! text-custom-62!"
+                      : "hidden",
                   )}
                 >
                   48
@@ -80,27 +89,41 @@ const RiseTogether = () => {
                 <label
                   className={clsx(
                     "font-karantina text-custom-70 sm:text-custom-106 lg:text-custom-125 font-bold",
-                    locale === "ja" ? "lg:text-custom-90" : "",
+                    {
+                      "sm:text-custom-62! lg:text-custom-70! text-custom-46! text-wrap!":
+                        locale === "ja",
+                    },
                   )}
                 >
                   {t(locale === "ja" ? "join" : "rank")}
                 </label>
+
+                {/* Comma for 48 */}
                 <label
                   className={clsx(
-                    "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123",
+                    "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold",
                     locale === "ja" ? "hidden" : "",
                   )}
                 >
                   48,
                 </label>
               </div>
-              <div className="relative text-custom-40 sm:text-custom-70 lg:text-custom-82 font-karantina text-center  w-full text-white font-bold">
+              <div
+                className={clsx(
+                  "relative text-custom-40 sm:text-custom-70 lg:text-custom-82 font-karantina text-center  w-full text-white font-bold",
+                  {
+                    "lg:text-custom-70! sm:text-custom-62!": locale === "ja",
+                  },
+                )}
+              >
                 <ShapeGradientWrapper
                   index={"section5_rise_together"}
                   className={clsx(
-                    "absolute lg:right-20 sm:right-15 -bottom-14 -right-10 z-10 scale-75 sm:scale-100",
+                    "absolute lg:right-10 sm:right-9 -bottom-16 -right-9 z-10 scale-75 sm:scale-100",
                     {
-                      "lg:-bottom-10 lg:right-50 sm:right-20": locale === "ja",
+                      "lg:-bottom-16 lg:right-14 sm:right-18 right-8":
+                        locale === "ja",
+                      "lg:right-25": locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
                   strokeWidth={1}
@@ -121,9 +144,9 @@ const RiseTogether = () => {
         </div>
         {/* Character */}
         <div className="size-full flex justify-center z-10 items-start lg:items-center lg:w-min">
-          <div className="gap-8 sm:gap-2 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91 lg:max-h-145.75 lg:min-w-fit">
-            <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-91 sm:pb-10 lg:size-full size-full">
-              <div className="flex justify-end gap-2 w-1/2">
+          <div className="gap-8 sm:gap-2 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91 lg:max-h-110 lg:min-w-fit xl:min-w-fit! 2xl:min-w-180 2xl:max-h-220">
+            <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-91 sm:pb-10 lg:size-full size-full lg:max-h-full">
+              <div className="flex justify-end gap-2 w-1/2 min-h-full">
                 <ImageAvatar48
                   className="max-w-full h-full object-contain"
                   lightURL={"/assets/aya-fujimoto-light.png"}
@@ -138,7 +161,7 @@ const RiseTogether = () => {
                 ></ImageAvatar48>
               </div>
             </div>
-            <div className="sm:w-2/5 w-0 h-full flex-center z-50 lg:w-121.25">
+            <div className="sm:w-2/5 w-0 h-full flex-center z-50 lg:min-w-80! 2xl:min-w-180! 2xl:max-h-60">
               <FloatInformation content={t("description")} />
             </div>
           </div>
