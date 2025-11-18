@@ -57,7 +57,8 @@
     "section_eimi": {
       "name_top": "深田",
       "name_bottom": "えいみ",
-      "coming_soon": "やってくる"
+      "coming_soon_top": "IS ON",
+      "coming_soon_bottom": "AVATAR"
     },
     "section_5": {
       "join": "に参加して",

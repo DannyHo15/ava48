@@ -57,7 +57,8 @@
     "section_eimi": {
       "name_top": "Eimi",
       "name_bottom": "Fukada",
-      "coming_soon": "is coming"
+      "coming_soon_top": "IS ON",
+      "coming_soon_bottom": "AVATAR"
     },
     "section_5": {
       "join": "JOIN",
