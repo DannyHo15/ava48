@@ -36,8 +36,6 @@ export const viewport: Viewport = {
   initialScale: 1.0,
 };
 
-// Force dynamic rendering so `generateMetadata` runs at request time
-// and can read server runtime environment variables (e.g. SITE_URL).
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -86,9 +84,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const canonical = `${siteUrl}/${locale}`;
 
-// const publishedTime = "2024-08-21T00:00:00Z";
-//   const modifiedTime = new Date().toISOString();
-
   const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
     title: {
@@ -112,9 +107,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ],
       type: "website",
       locale: localeOgLocaleMap[locale] ?? undefined,
-      // articleAuthor: "Avatar48",
-      // articlePublishedTime: publishedTime,
-      // articleModifiedTime: modifiedTime,
     },
     alternates: {
       canonical,
@@ -144,13 +136,6 @@ export default async function RootLayout({
   // }
   return (
     <html lang="en" className={initialTheme}>
-      {/* <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="initial-scale=1.0" />
-        <meta property="article:author" content="Avatar48" />
-        <meta property="article:published_time" content={publishedTime} />
-        <meta property="article:modified_time" content={modifiedTime} />
-      </head> */}
       <body className={clsx("h-dvh bg-avatar-blue")}>
         <NextTopLoader
           color="var(--avatar-primary)"
@@ -166,9 +151,9 @@ export default async function RootLayout({
         <ThemeProvider initialTheme={initialTheme as "royal-dark-mode" | "violet-kiss-mode"}>{children}</ThemeProvider>
         <FirebaseAnalytics theme={initialTheme}/>
 
-      </body>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID ?? ""}/>
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM ?? ""}/>
+      </body>
     </html>
   );
 }
