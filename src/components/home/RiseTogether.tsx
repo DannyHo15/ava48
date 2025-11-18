@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import ShapeGradientWrapper from "../ShapeGradientWrapper";
 import { cn } from "@/lib/utils";
 import { useParams } from "next/navigation";
+import clsx from "clsx";
 
 const RiseTogether = () => {
   const t = useTranslations("LandingPage.section_5");
@@ -33,16 +34,19 @@ const RiseTogether = () => {
             ></ImageAvatar48>
             <div className="relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-40! z-20 lg:-bottom-20 mx-auto">
               <div
-                className={cn(
-                  "w-full max-w-95 sm:max-w-107.5 lg:max-w-122.5 pr-5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap",
+                className={clsx(
+                  "w-full max-w-95 sm:max-w-130.5 lg:max-w-150.5 pr-5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap",
                   locale === "ja" ? "sm:max-w-130 lg:max-w-full" : "",
                 )}
               >
                 <ShapeGradientWrapper
                   index={"section5_rank48"}
-                  className={cn(
+                  className={clsx(
                     "absolute sm:-left-2 sm:top-1 -left-8 -top-6 z-10 sm:scale-100 scale-75",
-                    locale === "ja" ? "lg:-top-6" : "",
+                    {
+                      "lg:-top-6": locale === "ja",
+                      "lg:-top-7": locale === "zh-cn" || locale === "zh-tw",
+                    },
                   )}
                   strokeWidth={1}
                   blurSize={"xs"}
@@ -54,15 +58,19 @@ const RiseTogether = () => {
                   }
                 ></ShapeGradientWrapper>
                 <span
-                  className={cn(
+                  className={clsx(
                     "text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina font-bold z-1",
-                    locale === "ja" ? "lg:text-custom-82" : "",
+                    {
+                      "lg:text-custom-82": locale === "ja",
+                      "sm:text-custom-90 lg:text-custom-125":
+                        locale === "zh-cn" || locale === "zh-tw",
+                    },
                   )}
                 >
                   {t(locale === "ja" ? "rank" : "join")}{" "}
                 </span>
                 <label
-                  className={cn(
+                  className={clsx(
                     "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold",
                     locale === "ja" ? "lg:text-custom-106" : "hidden",
                   )}
@@ -70,7 +78,7 @@ const RiseTogether = () => {
                   48
                 </label>
                 <label
-                  className={cn(
+                  className={clsx(
                     "font-karantina text-custom-70 sm:text-custom-106 lg:text-custom-125 font-bold",
                     locale === "ja" ? "lg:text-custom-90" : "",
                   )}
@@ -78,7 +86,7 @@ const RiseTogether = () => {
                   {t(locale === "ja" ? "join" : "rank")}
                 </label>
                 <label
-                  className={cn(
+                  className={clsx(
                     "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123",
                     locale === "ja" ? "hidden" : "",
                   )}
@@ -86,14 +94,14 @@ const RiseTogether = () => {
                   48,
                 </label>
               </div>
-              <div className="relative text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina text-right sm:text-left w-full text-white font-bold">
+              <div className="relative text-custom-40 sm:text-custom-70 lg:text-custom-82 font-karantina text-center  w-full text-white font-bold">
                 <ShapeGradientWrapper
                   index={"section5_rise_together"}
-                  className={cn(
+                  className={clsx(
                     "absolute lg:right-20 sm:right-15 -bottom-14 -right-10 z-10 scale-75 sm:scale-100",
-                    locale === "ja"
-                      ? "lg:-bottom-10 lg:right-50 sm:right-20"
-                      : "",
+                    {
+                      "lg:-bottom-10 lg:right-50 sm:right-20": locale === "ja",
+                    },
                   )}
                   strokeWidth={1}
                   strokeDirection="to-l"
@@ -143,4 +151,3 @@ const RiseTogether = () => {
 };
 
 export default RiseTogether;
-
