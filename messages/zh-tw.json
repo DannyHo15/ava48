@@ -3,9 +3,28 @@
     "title": "Avatar48｜AI與浪漫的交會之處",
     "description": "與深田詠美與藤本彩聊天、互動並賺取獎勵——她們是你的撩人AI夥伴，透過科技重新定義情感連結。",
     "keywords": [
-      "Avatar48","AI夥伴","AI女友","情感AI","虛擬聊天","撩人AI","藤本彩","深田詠美","加密AI","AI關係","心動兌代幣","聊天賺取","通話賺取","AI獎勵","Web3 AI","AI加密","AI虛擬助理","數位化","加密新聞","AI親密連結"        
+      "Avatar48",
+      "AI夥伴",
+      "AI女友",
+      "情感AI",
+      "虛擬聊天",
+      "撩人AI",
+      "藤本彩",
+      "深田詠美",
+      "加密AI",
+      "AI關係",
+      "心動兌代幣",
+      "聊天賺取",
+      "通話賺取",
+      "AI獎勵",
+      "Web3 AI",
+      "AI加密",
+      "AI虛擬助理",
+      "數位化",
+      "加密新聞",
+      "AI親密連結"
     ],
-    "open_graph_description":"在Avatar48與彩與詠美連結。她們是結合加密科技的聰慧、撩人AI夥伴，讓每一次互動都化為代幣。",
+    "open_graph_description": "在Avatar48與彩與詠美連結。她們是結合加密科技的聰慧、撩人AI夥伴，讓每一次互動都化為代幣。",
     "ogAlt": "Avatar48｜AI與浪漫的交會之處"
   },
   "LandingPage": {
@@ -58,12 +77,13 @@
       "name_top": "深田",
       "name_bottom": "詠美",
       "coming_soon_top": "即將登場",
-      "coming_soon_bottom": "AVATAR"},
+      "coming_soon_bottom": "AVATAR"
+    },
     "section_5": {
       "join": "參加",
       "rank": "RANK",
       "rise_together": "一起登上巔峰！",
-      "description": "受傳奇 AKB48 總選舉啟發的 RANK48，是一個把粉絲情感轉化為力量的新系統。聊天、贈送心、應援——一切都能讓你最愛的虛擬角色衝上排行榜。        投入越多，她就越閃耀，你也能獲得專屬回饋"
+      "description": "受傳奇 AKB48 總選舉啟發的 RANK48，是一個把粉絲情感轉化為力量的新系統。聊天、贈送心、應援——一切都能讓你最愛的虛擬角色衝上排行榜。        投入越多，她就越閃耀，你也能獲得專屬回饋。"
     },
     "section_6": {
       "your_vision": "你的願景",
