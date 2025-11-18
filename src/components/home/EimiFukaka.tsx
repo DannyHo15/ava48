@@ -23,9 +23,9 @@ const EimiFukada = () => {
         <div className="absolute  2xl:w-[1984px] 2xl:h-[794px] 2xl:right-[-22%] 2xl:bottom-[0%]  bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom mix-blend-plus-lighter z-10 bg-no-repeat max-h-dvh hidden 2xl:block" />
         <div className="flex items-end justify-center min-h-dvh">
           <div className="relative max-w-6xl flex justify-center mb-0 2xl:pt-[97px]">
-            <div className="absolute left-0 top-[-3%] z-15 sm:left-[1%] sm:top-[-8%] sm:z-15 lg:left-[-10%] lg:top-[-14%] 2xl:top-[38%] 2xl:left-[11%] md:z-10 2xl:z-20 2xl:hidden">
+            <div className="absolute left-0 top-[-3%] z-15 sm:left-[-12%] sm:top-[-13%] lg:left-[-10%] lg:top-[-15%] 2xl:top-[38%] 2xl:left-[11%] sm:z-5 2xl:z-20 2xl:hidden">
               <h1
-                className="font-karantina text-custom-55 sm:text-custom-140 2xl:text-custom font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(336deg,#FFFFFF_25%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%]"
+                className="font-karantina text-custom-55 sm:text-custom-92 lg:text-custom-140 2xl:text-custom font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(313deg,#FFFFFF_30%,#3EF8FF_150%)] sm:text-white bg-clip-text text-transparent uppercase leading-[86%]"
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
                 }}
@@ -33,7 +33,7 @@ const EimiFukada = () => {
                 {t("name_top")}
               </h1>
               <h1
-                className="font-karantina text-custom-55 sm:text-custom-120 2xl:text-custom-160 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(328deg,#FFFFFF_66%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%]"
+                className="font-karantina text-custom-55 sm:text-custom-103 lg:text-custom-140 2xl:text-custom-160 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(328deg,#FFFFFF_53%,#3EF8FF_150%)] sm:bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%]"
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
                 }}
@@ -111,9 +111,9 @@ const EimiFukada = () => {
                 }
               />
             </div>
-            <div className="absolute right-[-1] bottom-[28%] md:right-[-1%] md:bottom-[22%] lg:right-[-9%] lg:bottom-[26%] 2xl:bottom-[16%] 2xl:right-[-27%] z-20 ">
+            <div className="absolute right-[-1] bottom-[28%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-9%] lg:bottom-[26%] 2xl:bottom-[16%] 2xl:right-[-27%] z-20 ">
               <h2
-                className="font-karantina text-custom-40 font-bold sm:text-custom-88 2xl:text-custom-120 sm:font-bold bg-[linear-gradient(160deg,#FFFFFF_70%,#3EF8FF_150%)] dark:bg-[linear-gradient(160deg,#FFFFFF_70%,#D81DE2_200%)] bg-clip-text text-transparent uppercase leading-[86%] sm:leading-[86%] text-right"
+                className="font-karantina text-custom-40 font-bold sm:text-custom-72 lg:text-custom-88 2xl:text-custom-120 sm:font-bold bg-[linear-gradient(160deg,#FFFFFF_70%,#3EF8FF_150%)] dark:bg-[linear-gradient(160deg,#FFFFFF_70%,#D81DE2_200%)] bg-clip-text text-transparent uppercase leading-[86%] sm:leading-[86%] text-right"
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
                 }}
@@ -121,7 +121,7 @@ const EimiFukada = () => {
                 {t("coming_soon_top")}
               </h2>
               <h2
-                className="font-karantina text-custom-54 font-bold prm:text-custom-55 sm:text-custom-130 2xl:text-custom-160 sm:font-bold bg-[linear-gradient(147deg,#FFFFFF_23%,#3EF8FF_150%)] dark:bg-[linear-gradient(145deg,#FFFFFF_26%,#D81DE2_200%)] bg-clip-text text-transparent uppercase leading-[86%] sm:leading-[86%] text-right"
+                className="font-karantina text-custom-54 font-bold sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 sm:font-bold bg-[linear-gradient(147deg,#FFFFFF_23%,#3EF8FF_150%)] dark:bg-[linear-gradient(165deg,#FFFFFF_34%,#D81DE2_185%)] bg-clip-text text-transparent uppercase leading-[86%] sm:leading-[86%] text-right"
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
                 }}
@@ -129,7 +129,7 @@ const EimiFukada = () => {
                 {t("coming_soon_bottom")}
                 <span
                   className={cn(
-                    "font-karantina text-custom-62 lg:text-custom-185 sm:text-custom-153 font-bold"
+                    "font-karantina text-custom-62 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 font-bold"
                   )}
                 >
                   48
@@ -167,7 +167,7 @@ const EimiFukada = () => {
             <div className="absolute left-[9%] top-[50%] prm:left-[8%] prm:top-[54%] z-15 sm:left-[5%] sm:top-[49%] 2xl:top-[42%] 2xl:left-[-34%] sm:z-15 md:z-10 2xl:z-20 hidden 2xl:block">
               <h1
                 className={cn(
-                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(336deg,#FFFFFF_25%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%]",
+                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs text-white uppercase leading-[86%]",
                   {
                     "2xl:text-custom-160 leading-[86%]": locale === "en",
                     "leading-[100%]": locale === "zh-cn" || locale === "zh-tw",
@@ -182,7 +182,7 @@ const EimiFukada = () => {
               </h1>
               <h1
                 className={cn(
-                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(328deg,#FFFFFF_66%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%]",
+                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%]",
                   {
                     "2xl:text-custom-160 leading-[86%]": locale === "en",
                     "leading-[100%]": locale === "zh-cn" || locale === "zh-tw",
@@ -279,14 +279,14 @@ const EimiFukada = () => {
             <div className="relative flex items-end z-5 2xl:z-10">
               <div className="z-10 relative bottom-0 right-[-20%] sm:right-[-27%] 2xl:right-[-31%]">
                 <ImageAvatar48
-                  className="2xl:w-[752px] sm:w-[737px] max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
+                  className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
                   lightURL={"/assets/eimi-bg-ai.webp"}
                   drakURL={"/assets/eimi-bg-ai.webp"}
                 ></ImageAvatar48>
               </div>
               <div className="z-10 absolute bottom-0 left-[-42%] sm:left-[-44%] 2xl:left-[-51%]">
                 <ImageAvatar48
-                  className="sm:w-[941px] 2xl:w-[974px] max-h-dvh w-[432px] h-auto object-contain"
+                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] max-h-dvh w-[432px] h-auto object-contain"
                   lightURL={"/assets/eimi-bg.webp"}
                   drakURL={"/assets/eimi-bg.webp"}
                 ></ImageAvatar48>
