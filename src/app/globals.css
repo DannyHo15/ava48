@@ -49,10 +49,13 @@
   --font-karantina: "Karantina", sans-serif;
   /* Font size */
   --text-xs: 0.75rem;
+  --text-custom-32: 2rem;
   --text-custom-40: 2.5rem;
   --text-custom-42: 2.625rem;
   --text-custom-45: 2.75rem;
   --text-custom-46: 2.875rem;
+  --text-custom-48: 3rem;
+  --text-custom-50: 3.125rem;
   --text-custom-54: 3.375rem;
   --text-custom-55: 3.4375rem;
   --text-custom-56: 3.5rem;
@@ -62,8 +65,10 @@
   --text-custom-62: 3.875rem;
   --text-custom-70: 4.375rem;
   --text-custom-72: 4.5rem;
+  --text-custom-75: 4.6875rem;
   --text-custom-82: 5.125rem;
   --text-custom-80: 5rem;
+  --text-custom-82: 5.125rem;
   --text-custom-85: 5.3125rem;
   --text-custom-88: 5.5rem;
   --text-custom-90: 5.625rem;
@@ -81,6 +86,7 @@
   --text-custom-130: 8.125rem;
   --text-custom-140: 8.75rem;
   --text-custom-145: 9.125rem;
+  --text-custom-151: 9.4375rem;
   --text-custom-153: 9.5625rem;
   --text-custom-160: 10rem;
   --text-custom-176: 11rem;
