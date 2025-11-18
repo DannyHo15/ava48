@@ -23,7 +23,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div className="fixed top-7.5 left-5 sm:left-10 lg:left-13.75 z-9">
+      <div className="fixed top-7.5 min-[2000px]:top-10! left-3 sm:left-10 lg:left-13.75 min-[2000px]:left-20! z-9">
         <Link href={"/"}>
           <ImageAvatar48
             lightURL={"/assets/logo-light.svg"}
@@ -32,7 +32,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           />
         </Link>
       </div>
-      <div className="fixed top-7.5 right-5 sm:right-10 lg:right-16.5 flex gap-6 text-xl z-10">
+      <div className="fixed top-7.5 min-[2000px]:top-10! right-3 sm:right-10 lg:right-16.5 min-[2000px]:right-20! flex gap-6 text-xl z-10">
         <div className="flex gap-2 md:gap-4 lg:gap-6">
           <Link href={`${baseUrl}/agent/${locale}?mode=${theme}`}>
             <Button className="bg-avatar-primary text-avatar-text-color hover:opacity-80 cursor-pointer px-3 sm:px-2">
@@ -53,7 +53,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       </div>
       <div
         className={cn(
-          "fixed bottom-7.75 md:bottom-15 lg:bottom-6.75 left-5 md:left-10 lg:left-11.75 hidden gap-2 md:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10",
+          "fixed bottom-7.75 md:bottom-15 lg:bottom-6.75 min-[2000px]:bottom-10! left-3 md:left-10 lg:left-11.75 min-[2000px]:left-20! hidden gap-2 md:gap-6 2xl:gap-10.5 whitespace-nowrap text-white z-10",
           {
             "min-[500px]:flex md:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between":
               pathname === `/${locale}`,
@@ -87,7 +87,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       </div>
       <div
         className={cn(
-          "w-max fixed bottom-2.5 min-[500px]:bottom-19 md:bottom-15 lg:bottom-7.75 left-1/2 -translate-x-1/2 z-10",
+          "w-max fixed bottom-2.5 min-[500px]:bottom-19 md:bottom-15 lg:bottom-7.75 min-[2000px]:bottom-10! left-1/2 -translate-x-1/2 z-10",
           {
             hidden: pathname !== `/${locale}`,
           }
