@@ -19,19 +19,22 @@ const RiseTogether = () => {
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
-      <div className="grid grid-cols-1 px-5 size-full mx-auto gap-4 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10" id="section-rank48">
+      <div
+        className="grid grid-cols-1 px-5 size-full mx-auto gap-4 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-20 lg:-mt-10"
+        id="section-rank48"
+      >
         {/* SLOGAN */}
-        <div className="relative size-full flex-col flex justify-center z-10 sm:justify-end lg:justify-center">
+        <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center">
           <div className="w-full lg:w-fit lg:h-185 lg:items-start">
             <ImageAvatar48
-              className="h-71.5 w-92.5 sm:w-130.5 sm:h-102 lg:w-177.75 lg:h-137 min-h-137 object-contain mx-auto"
+              className="h-60! w-92.5! sm:w-130.5! sm:h-102! lg:w-177.75! lg:h-137! object-contain mx-auto pt-10"
               lightURL={"/assets/rank48-light.png"}
               drakURL={"/assets/rank48-dark.png"}
             ></ImageAvatar48>
-            <div className="relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-20.5 z-20 lg:-bottom-20 mx-auto">
+            <div className="relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-40! z-20 lg:-bottom-20 mx-auto">
               <div
                 className={cn(
-                  "w-full max-w-95 sm:max-w-107.5 lg:max-w-122.5 pr-5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient",
+                  "w-full max-w-95 sm:max-w-107.5 lg:max-w-122.5 pr-5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap",
                   locale === "ja" ? "sm:max-w-130 lg:max-w-full" : "",
                 )}
               >
@@ -110,8 +113,8 @@ const RiseTogether = () => {
         </div>
         {/* Character */}
         <div className="size-full flex justify-center z-10 items-start lg:items-center lg:w-min">
-          <div className=" gap-8 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91 lg:max-h-145.75 lg:min-w-fit">
-            <div className="flex justify-center sm:justify-between sm:w-3/5 sm: lg:size-full size-full">
+          <div className="gap-8 sm:gap-2 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91 lg:max-h-145.75 lg:min-w-fit">
+            <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-91 sm:pb-10 lg:size-full size-full">
               <div className="flex justify-end gap-2 w-1/2">
                 <ImageAvatar48
                   className="max-w-full h-full object-contain"
@@ -140,3 +143,4 @@ const RiseTogether = () => {
 };
 
 export default RiseTogether;
+
