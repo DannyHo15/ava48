@@ -35,7 +35,7 @@ export const viewport: Viewport = {
   ],
 };
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ locale: string }>;
