@@ -38,7 +38,7 @@ const EimiFukada = () => {
                 className={clsx(
                   "font-karantina font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(313deg,#FFFFFF_30%,#3EF8FF_150%)] sm:text-white bg-clip-text text-transparent uppercase",
                   {
-                    "text-custom-55 sm:text-custom-92 lg:text-custom-140 2xl:text-custom leading-[86%]":
+                    "text-custom-55 sm:text-custom-92 lg:text-custom-140 2xl:text-custom leading-none":
                       locale === "en",
                     "text-custom-48 sm:text-custom-75 lg:text-custom-110 leading-[100%]":
                       locale === "ja",
@@ -56,7 +56,7 @@ const EimiFukada = () => {
                 className={clsx(
                   "font-karantina font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(328deg,#FFFFFF_53%,#3EF8FF_150%)] sm:bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase",
                   {
-                    "text-custom-55 sm:text-custom-103 lg:text-custom-140 2xl:text-custom-160 leading-[86%]":
+                    "text-custom-55 sm:text-custom-103 lg:text-custom-140 2xl:text-custom-160 leading-none":
                       locale === "en",
                     "text-custom-48 sm:text-custom-75 lg:text-custom-110 leading-[110%]":
                       locale === "ja",
@@ -158,11 +158,11 @@ const EimiFukada = () => {
                 className={clsx(
                   "font-karantina font-bold bg-white dark:bg-[linear-gradient(160deg,#FFFFFF_70%,#D81DE2_200%)] bg-clip-text text-transparent uppercase text-right",
                   {
-                    "text-custom-40 sm:text-custom-72 lg:text-custom-88 2xl:text-custom-120 leading-[86%] 4xl:text-custom-200!":
+                    "text-custom-40 sm:text-custom-72 lg:text-custom-88 2xl:text-custom-120 leading-none 4xl:text-custom-200!":
                       locale === "en",
-                    "text-custom-40 sm:text-custom-72 lg:text-custom-120 2xl:text-custom-130 leading-[86%] sm:leading-[115%] 2xl:leading-[110%] 4xl:text-custom-256!":
+                    "text-custom-40 sm:text-custom-72 lg:text-custom-120 2xl:text-custom-130 leading-none sm:leading-[115%] 2xl:leading-[110%] 4xl:text-custom-256!":
                       locale === "ja",
-                    "text-custom-32 sm:text-custom-72 lg:text-custom-75 2xl:text-custom-90 leading-[86%] sm:leading-none 2xl:leading-[77%] 4xl:text-custom-152!":
+                    "text-custom-32 sm:text-custom-72 lg:text-custom-75 2xl:text-custom-90 leading-none sm:leading-none 2xl:leading-[77%] 4xl:text-custom-152!":
                       locale === "zh-cn" || locale === "zh-tw",
                   }
                 )}
@@ -172,7 +172,7 @@ const EimiFukada = () => {
               >
                 {t("coming_soon_top")}
                 {locale === "ja" ? (
-                  <span className="font-karantina text-custom-46 sm:text-custom-82 lg:text-custom-140 2xl:text-custom-151 font-bold leading-[86%] sm:leading-[115%] 2xl:leading-[110%] 4xl:text-custom-288!">
+                  <span className="font-karantina text-custom-46 sm:text-custom-82 lg:text-custom-140 2xl:text-custom-151 font-bold leading-none sm:leading-[115%] 2xl:leading-[110%] 4xl:text-custom-288!">
                     48
                   </span>
                 ) : null}
@@ -181,9 +181,9 @@ const EimiFukada = () => {
                 className={clsx(
                   "font-karantina font-bold bg-white dark:bg-[linear-gradient(165deg,#FFFFFF_34%,#D81DE2_185%)] bg-clip-text text-transparent uppercase text-right",
                   {
-                    "text-custom-54 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-[86%] 4xl:text-custom-272!":
+                    "text-custom-54 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-none 4xl:text-custom-272!":
                       locale === "en",
-                    "text-custom-50 sm:text-custom-50 lg:text-custom-70 2xl:text-custom-100 leading-[110%] sm:leading-[86%] 2xl:leading-[86%] 4xl:text-custom-200!":
+                    "text-custom-50 sm:text-custom-50 lg:text-custom-70 2xl:text-custom-100 leading-[110%] sm:leading-none 2xl:leading-none 4xl:text-custom-200!":
                       locale === "ja",
                     "text-custom-50 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-[90%] sm:leading-[77%] 2xl:leading-[77%] 4xl:text-custom-272!":
                       locale === "zh-cn" || locale === "zh-tw",
@@ -256,9 +256,9 @@ const EimiFukada = () => {
             >
               <h1
                 className={clsx(
-                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs text-white uppercase leading-[86%]",
+                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs text-white uppercase leading-none",
                   {
-                    "2xl:text-custom-160 leading-[86%] 4xl:text-custom-272!": locale === "en",
+                    "2xl:text-custom-160 leading-none 4xl:text-custom-272!": locale === "en",
                     "leading-[100%] 4xl:text-custom-232!": locale === "zh-cn" || locale === "zh-tw",
                     "2xl:text-custom-130 leading-[100%] 4xl:text-custom-232!": locale === "ja",
                   }
@@ -271,9 +271,9 @@ const EimiFukada = () => {
               </h1>
               <h1
                 className={cn(
-                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%]",
+                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-none",
                   {
-                    "2xl:text-custom-160 leading-[86%] 4xl:text-custom-272!": locale === "en",
+                    "2xl:text-custom-160 leading-none 4xl:text-custom-272!": locale === "en",
                     "leading-[100%] 4xl:text-custom-232!": locale === "zh-cn" || locale === "zh-tw",
                     "2xl:text-custom-130 leading-[100%] 4xl:text-custom-232!": locale === "ja",
                   }
