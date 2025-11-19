@@ -163,7 +163,7 @@ const RiseTogether = () => {
                   darkURL={"/assets/aya-fujimoto-dark.png"}
                   width={400}
                   height={500}
-                  quality={100}
+                  quality={90}
                   priority={false}
                   placeholder="blur"
                   alt="Aya Fujimoto"
@@ -176,7 +176,7 @@ const RiseTogether = () => {
                   darkURL={"/assets/eimi-fukada-dark.png"}
                   width={400}
                   height={500}
-                  quality={100}
+                  quality={90}
                   priority={false}
                   placeholder="blur"
                   alt="Eimi Fukada"
@@ -196,4 +196,3 @@ const RiseTogether = () => {
 };
 
 export default RiseTogether;
-
