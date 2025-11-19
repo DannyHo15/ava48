@@ -3,9 +3,28 @@
     "title": "Avatar48 | Where Intimacy Meets AI",
     "description": "Chat, call, and earn with Eimi Fukada and Aya Fujimoto - your flirty AI companions redefining emotional connection through technology.",
     "keywords": [
-      "Avatar48", "AI companion", "AI girlfriend", "emotional AI", "virtual chat", "flirty AI", "Aya Fujimoto", "Eimi Fukada", "crypto AI", "AI relationship", "Heart to Token", "chat to earn", "call to earn", "AI rewards", "Web3 AI", "AI crypto", "AI virtual assistant", "digital twin", "crypto news", "AI intimacy"
+      "Avatar48",
+      "AI companion",
+      "AI girlfriend",
+      "emotional AI",
+      "virtual chat",
+      "flirty AI",
+      "Aya Fujimoto",
+      "Eimi Fukada",
+      "crypto AI",
+      "AI relationship",
+      "Heart to Token",
+      "chat to earn",
+      "call to earn",
+      "AI rewards",
+      "Web3 AI",
+      "AI crypto",
+      "AI virtual assistant",
+      "digital twin",
+      "crypto news",
+      "AI intimacy"
     ],
-    "open_graph_description":"Connect with Aya and Eimi on Avatar48. Your flirty, intelligent AI companions powered by crypto, turning every call into tokens.",
+    "open_graph_description": "Connect with Aya and Eimi on Avatar48. Your flirty, intelligent AI companions powered by crypto, turning every call into tokens.",
     "ogAlt": "Avatar48 | Where Intimacy Meets AI"
   },
   "LandingPage": {
@@ -70,12 +89,6 @@
       "your_vision": "YOUR VISION,",
       "your_token": "YOUR TOKEN",
       "description": "The $AYA Token powers AVATAR48’s Heart Economy, enabling creators and users to earn, trade, and unlock experiences through meaningful interaction. It fuels the ecosystem’s AI companionship, digital twin creation, and on‑chain reward system that connects emotion, creativity, and value."
-    },
-    "section_ai_connection": {
-      "title": "ENTER THE WORLD OF",
-      "subtitle": "AI CONNECTION",
-      "content": "Your virtual companion who knows the markets as well as she knows you. From late-night chats to playful banter, she’s always there to share insights, spark emotion, and turn every conversation into something worth remembering*",
-      "note": "*Please note: Our AI offers perspectives and suggestions, not financial advice or precise predictions."
     },
     "section_robotic": {
       "title": "THE ULTIMATE AI ROBOTIC",

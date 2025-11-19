@@ -3,9 +3,28 @@
     "title": "Avatar48｜AI与浪漫的交汇之地",
     "description": "与深田咏美和藤本绫聊天、互动并赚取奖励——她们是你的调情AI伙伴，通过科技重新定义情感连接。",
     "keywords": [
-      "Avatar48","AI伙伴","AI女友","情感AI","虚拟聊天","调情AI","藤本绫","深田咏美","加密AI","AI关系","心动兑代币","聊天赚取","通话赚取","AI奖励","Web3 AI","AI加密","AI虚拟助理","数字化身","加密新闻","AI亲密连接"
+      "Avatar48",
+      "AI伙伴",
+      "AI女友",
+      "情感AI",
+      "虚拟聊天",
+      "调情AI",
+      "藤本绫",
+      "深田咏美",
+      "加密AI",
+      "AI关系",
+      "心动兑代币",
+      "聊天赚取",
+      "通话赚取",
+      "AI奖励",
+      "Web3 AI",
+      "AI加密",
+      "AI虚拟助理",
+      "数字化身",
+      "加密新闻",
+      "AI亲密连接"
     ],
-    "open_graph_description":"在Avatar48与AYA和咏美连接。她们是由加密技术驱动的聪慧、调情AI伙伴，让每一次互动都化为代币。",
+    "open_graph_description": "在Avatar48与AYA和咏美连接。她们是由加密技术驱动的聪慧、调情AI伙伴，让每一次互动都化为代币。",
     "ogAlt": "Avatar48｜AI与浪漫的交汇之地"
   },
   "LandingPage": {
@@ -58,7 +77,8 @@
       "name_top": "深田",
       "name_bottom": "咏美",
       "coming_soon_top": "现已加入",
-      "coming_soon_bottom": "AVATAR"},
+      "coming_soon_bottom": "AVATAR"
+    },
     "section_5": {
       "join": "参与",
       "rank": "RANK",
@@ -70,12 +90,6 @@
       "your_token": "你的代币",
       "description": "$AYA Token 驱动 AVATAR48 的「心动经济」，让创作者与用户通过有意义的互动获得收益、交易并解锁全新体验。它为生态系统中的 AI 陪伴、数字分身创造与链上奖励机制提供能量，将情感、创造力与价值紧密相连。"
     },
-    "section_ai_connection": {
-      "title": "ゲームをプレイして",
-      "subtitle": "AYAのハートを手に入れよう",
-      "content": "Every chat, every connection earns you Hearts. Use them to unlock premium features, collect exclusive content, and many more surprises to come.",
-      "note": "本AI旨在提供观点和建议，而非财务建议或精确预测。"
-    },
     "section_robotic": {
       "title": "终极 AI",
       "subtitle": "机器人陪伴平台",
@@ -84,7 +98,7 @@
     "section_earn_aya_connection": {
       "title": "玩游戏",
       "subtitle": "收集 AYA 的心",
-      "content": "每一次聊天、每一次互动，都会累积“心”。使用这些心可解锁高级功能，获取限定内容，并探索未来陆续推出的惊喜体验。"
+      "content": "每一次聊天、每一次互动，都会累积“心”。使用这些心可解锁高级功能，获取限定内容，并探索未来陆续推出的惊喜体验。将你的心意化为 $AYA。"
     },
     "home": {
       "term_of_use": "使用条款",

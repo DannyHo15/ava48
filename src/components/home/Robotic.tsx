@@ -1,6 +1,5 @@
 import { useState } from "react";
 import BorderGradientWrapper from "../BorderGradientWrapper";
-import WrapperSectionPlayAndEarn from "../common/WrapperSectionPlayAndEarn";
 import { FloatButton } from "../ui/float-button";
 import { Info } from "lucide-react";
 import ImageAvatar48 from "../ImageAvatar48";
@@ -24,7 +23,7 @@ const Robotic = () => {
         >
           <div
             className={clsx(
-              "relative size-full mx-auto flex flex-col items-end justify-end md:gap-9.5 xl:max-w-[1281px] 3xl:max-w-[1750px]! 4xl:max-w-[2140px]! xl:mx-auto xl:flex-row xl:gap-0",
+              "relative size-full mx-auto flex flex-col items-end justify-end md:gap-9.5 xl:max-w-[1040px] 2xl:max-w-[1281px] xl:pt-[130px] 3xl:pt-0! 3xl:max-w-[1570px]! xl:mx-auto xl:flex-row xl:gap-0",
               locale === "ja" && "md:gap-18!"
             )}
           >
@@ -86,7 +85,7 @@ const Robotic = () => {
               </p>
             </div>
             {/* Summary Tablet */}
-            <div className="hidden md:block xl:hidden fixed left-0 top-1/2 -translate-y-1/2 z-10 px-10">
+            <div className="hidden md:block xl:hidden absolute left-0 top-1/2 -translate-y-1/2 z-10 px-10">
               <div className="max-w-[301px] px-4.5 py-4 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)] text-white font-kanit flex-center text-lg leading-[135%]">
                 <p>
                   <span className="font-medium">AVATAR48</span> {t("content")}
@@ -95,7 +94,7 @@ const Robotic = () => {
             </div>
 
             {/* Summary Desktop */}
-            <div className="xl:block text-white font-kanit flex-center text-xl 3xl:text-3xl 4xl:text-4xl leading-[142%] absolute left-0 top-1/2 -translate-y-2/6 z-10 hidden max-w-[485px] 3xl:max-w-[680px] 4xl:max-w-[780px] px-4.5 3xl:px-7 4xl:px-9 3xl:py-6 4xl:py-8 py-3 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)]">
+            <div className="xl:block text-white font-kanit flex-center text-sm 2xl:text-xl 3xl:text-2xl! 4xl:hidden! leading-[142%] absolute left-0 top-1/2 -translate-y-2/9 2xl:-translate-y-2/6 3xl:translate-y-[20%]! 4xl:-translate-y-1/12! z-10 hidden max-w-[485px] 3xl:max-w-[600px] px-4.5 py-3 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)]">
               <p className="">
                 <span className="font-medium">AVATAR48</span> {t("content")}
               </p>
@@ -163,10 +162,17 @@ const Robotic = () => {
             />
 
             {/* Desktop title and image */}
-            <div className="hidden xl:flex xl:items-end xl:justify-end relative w-full h-auto">
+            <div className="hidden xl:flex xl:items-end xl:justify-end relative size-full 3xl:w-full 3xl:h-auto">
+              {/* Summary Desktop */}
+              <div className="hidden 4xl:block absolute text-white font-kanit flex-center text-2xl! leading-[142%] left-0 top-1/2 -translate-y-1/2 z-10 max-w-[600px] px-4.5 py-3 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)]">
+                <p className="">
+                  <span className="font-medium">AVATAR48</span> {t("content")}
+                </p>
+              </div>
+
               <div
                 className={clsx(
-                  "absolute top-7 left-0 w-full flex flex-col gap-[15px]",
+                  "absolute top-7 left-0 w-full flex flex-col gap-1 2xl:gap-[15px]",
                   locale === "ja" && "gap-[31px]"
                 )}
               >
@@ -175,10 +181,11 @@ const Robotic = () => {
                   blurSize="2xs"
                   shapeWidth={104}
                   shapeHeight={95}
-                  className={clsx(
-                    "absolute z-50 top-37 3xl:top-45 4xl:top-60 left-82 -rotate-90",
-                    locale === "ja" && "-left-5! top-8!"
-                  )}
+                  className={clsx("absolute z-50 -rotate-90", {
+                    "top-15 left-82": locale === "en",
+                    "-left-5 top-18": locale === "ja",
+                    "top-17": locale === "zh-cn" || locale === "zh-tw",
+                  })}
                   strokeColor={[
                     { offset: "0%", stopColor: "rgba(255, 255, 255, 0.3)" },
                     { offset: "100%", stopColor: "rgba(255, 255, 255, 1)" },
@@ -192,11 +199,12 @@ const Robotic = () => {
                   blurSize="2xs"
                   shapeWidth={224}
                   shapeHeight={104}
-                  className={clsx(
-                    "absolute z-50 top-10 3xl:top-17 right-55 3xl:right-130 4xl:right-160",
-                    locale === "ja" && "right-97! top-8",
-                    (locale === "zh-cn" || locale === "zh-tw") && "hidden"
-                  )}
+                  className={clsx("absolute z-50", {
+                    "top-10 right-55 3xl:right-80 3xl:top-15 4xl:right-70 4xl:top-15":
+                      locale === "en",
+                    "right-100 top-10": locale === "ja",
+                    "left-100 top-17": locale === "zh-cn" || locale === "zh-tw",
+                  })}
                   strokeColor={[
                     { offset: "0%", stopColor: "rgba(255, 255, 255, 1)" },
                     { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -209,9 +217,15 @@ const Robotic = () => {
                 />
                 <p
                   className={clsx(
-                    "text-custom-125 3xl:text-custom-145 4xl:text-custom-180! leading-[86%] tracking-[1.25px] 3xl:tracking-[2px] font-bold font-karantina text-left w-full bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)] text-gradient",
-                    locale === "ja" &&
-                      "3xl:text-custom-123! 4xl:text-custom-145!"
+                    "leading-[86%] tracking-[1.25px] font-bold font-karantina text-left w-full bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)] text-gradient",
+                    {
+                      "xl:text-custom-82 3xl:text-custom-123! 4xl:text-custom-145! leading-none!":
+                        locale === "ja",
+                      "leading-none! text-custom-130":
+                        locale === "zh-cn" || locale === "zh-tw",
+                      "text-custom-98 2xl:text-custom-125 3xl:text-custom-153!":
+                        locale === "en",
+                    }
                   )}
                 >
                   {t("title")}
@@ -219,16 +233,22 @@ const Robotic = () => {
 
                 <p
                   className={clsx(
-                    "text-white uppercase text-left font-bold text-custom-82 3xl:text-custom-120 4xl:text-custom-160 leading-[75%] 3xl:leading-[80%] tracking-[1.64px] 3xl:tracking-[2%] font-karantina",
-                    locale === "ja" &&
-                      "3xl:text-custom-110! 4xl:text-custom-145!"
+                    "text-white uppercase text-left font-bold leading-[75%] tracking-[1.64px] font-karantina",
+                    {
+                      "xl:text-custom-82 3xl:text-custom-110 4xl:text-custom-145 leading-none!":
+                        locale === "ja",
+                      "leading-none! xl:text-custom-85":
+                        locale === "zh-cn" || locale === "zh-tw",
+                      "text-custom-56 2xl:text-custom-82 3xl:text-custom-106 leading-[75%] tracking-[1.64px] font-karantina!":
+                        locale === "en",
+                    }
                   )}
                 >
                   {t("subtitle")}
                 </p>
               </div>
               <ImageAvatar48
-                className="hidden xl:block w-full max-w-[918px] 3xl:max-w-[70%] 4xl:max-w-[75%] h-auto object-contain"
+                className="hidden xl:block w-auto h-full 3xl:h-auto 3xl:w-[918px] 4xl:w-[1024px] object-contain"
                 lightURL="/assets/robotic-desktop-light.png"
                 drakURL="/assets/robotic-desktop-dark.png"
               />
@@ -253,7 +273,7 @@ const Robotic = () => {
             </BorderGradientWrapper>
           </FloatButton>
           {isOpen && (
-            <div className="fixed left-0 px-8 bottom-28 w-screen z-999!">
+            <div className="fixed md:hidden left-0 px-8 bottom-28 w-screen z-999!">
               <div className="p-4.5 font-kanit font-normal leading-[121%] tracking-[0%] size-full min-h-36 backdrop-blur-sm rounded-lg bg-linear-to-b from-black/10 to-black/10 text-white flex-center text-base">
                 AVATAR48 {t("content")}
               </div>
