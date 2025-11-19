@@ -15,26 +15,25 @@ const RiseTogether = () => {
   const { locale } = useParams();
   return (
     <SectionWrapper>
-      <div className="fixed inset-0 bg-avatar-black" />
-      <div className="fixed inset-0 bg-[url(/assets/bg-base.png)] bg-cover bg-center " />
-      <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
-      <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
+      <div className="fixed inset-0 hidden min-[1025px]:block! bg-[url(/assets/bg-section-6-lg.png)] bg-cover bg-center" />
+      <div className="fixed inset-0 hidden sm:block min-[1025px]:hidden! bg-[url(/assets/bg-section-6-md.png)] bg-cover bg-center" />
+      <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-6-sm.png)] bg-cover bg-center" />{" "}
       <div className="fixed md:hidden h-full  top-0 -right-64 cs-radial-sm" />
       <div
-        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-20 lg:-mt-10 3xl:scale-130 4xl:scale-150"
+        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 lg:scale-100! xl:scale-100 2xl:scale-125 3xl:scale-130! 4xl:scale-150!"
         id="section-rank48"
       >
         {/* SLOGAN */}
-        <div className=" relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center 3xl:justify-center-safe">
-          <div className="w-full lg:w-fit lg:h-185 2xl:h-200 lg:items-start">
+        <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center 3xl:justify-center-safe">
+          <div className="w-full lg:w-fit! lg:h-185! lg:items-start">
             <ImageAvatar48
-              className="h-60 w-92.5 sm:w-130.5 sm:h-102 lg:max-w-170.75 lg:h-120 object-contain mx-auto pt-10 2xl:w-250 2xl:h-160"
+              className="h-60 w-92.5 sm:w-130.5! sm:h-102! lg:max-w-178! lg:h-134! object-contain mx-auto"
               lightURL={"/assets/rank48-light.png"}
               drakURL={"/assets/rank48-dark.png"}
             ></ImageAvatar48>
             <div
               className={clsx(
-                "relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-25! z-20 lg:-bottom-20 3xl:bottom-2 mx-auto",
+                "relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-48! z-20 lg:-bottom-20 mx-auto",
                 {
                   "": locale === "ja",
                 },
@@ -144,9 +143,9 @@ const RiseTogether = () => {
         </div>
         {/* Character */}
         <div className="size-full flex justify-center z-10 items-start lg:items-center lg:w-min">
-          <div className="gap-8 sm:gap-2 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91 lg:max-h-110 lg:min-w-fit xl:min-w-fit! 2xl:min-w-180 2xl:max-h-220">
-            <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-91 sm:pb-10 lg:size-full size-full lg:max-h-full">
-              <div className="flex justify-end gap-2 w-1/2 min-h-full">
+          <div className="gap-8 sm:gap-2 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91! lg:max-h-fit! justify-center lg:min-w-fit! pt-5 lg:pt-20">
+            <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-fit lg:size-fit size-full lg:max-h-full">
+              <div className="flex justify-end gap-2 w-1/2 min-h-fit">
                 <ImageAvatar48
                   className="max-w-full h-full object-contain"
                   lightURL={"/assets/aya-fujimoto-light.png"}
@@ -161,7 +160,7 @@ const RiseTogether = () => {
                 ></ImageAvatar48>
               </div>
             </div>
-            <div className="sm:w-2/5 w-0 h-full flex-center z-50 lg:min-w-80! 2xl:min-w-180! 2xl:max-h-60">
+            <div className="sm:w-2/5 w-0 h-full flex-center z-50 lg:min-w-80! max-h-fit  2xl:min-w-130!">
               <FloatInformation content={t("description")} />
             </div>
           </div>
