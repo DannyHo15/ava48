@@ -65,7 +65,7 @@ const LanguageDrawer = (props: Props) => {
             <button
               key={item.value}
               className={clsx(
-                locale === item.value ? "text-primary" : "",
+                locale === item.value ? "text-avatar-primary" : "",
                 "px-2 py-2"
               )}
               disabled={isPending}
