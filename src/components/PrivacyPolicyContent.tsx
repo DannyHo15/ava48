@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 const PrivacyPolicyContent = () => {
   const t = useTranslations("privacy_policy");
   return (
-    <div className="text-justify">
+    <div className="text-sm sm:text-base text-justify">
       <>
         <p>{t("uE5UCw")}</p>
         <br />
@@ -13,7 +13,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("bYEHu4")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("bYEHu4")}</h1>
         <br />
         <p>{t("zZOJYW")}</p>
         <br />
@@ -44,7 +44,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("i2t87R")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("i2t87R")}</h1>
         <br />
         <p>{t("YzJ1oq")}</p>
         <ul>
@@ -59,7 +59,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("vVdO8V")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("vVdO8V")}</h1>
         <br />
         <p dangerouslySetInnerHTML={{ __html: t.raw("IE+fSz") }} />
         <ul>
@@ -76,7 +76,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("RgmnYT")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("RgmnYT")}</h1>
         <br />
         <p>{t("zLWOaG")}</p>
         <br />
@@ -99,7 +99,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("ziKDng")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("ziKDng")}</h1>
         <br />
         <p>{t("HWFJxT")}</p>
         <ul>
@@ -120,7 +120,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("VHtygU")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("VHtygU")}</h1>
         <br />
         <p>{t("tpHOai")}</p>
         <br />
@@ -148,7 +148,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("a1FV5z")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("a1FV5z")}</h1>
         <br />
         <p>{t("JK1bnE")}</p>
         <br />
@@ -158,7 +158,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("nkRLiE")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("nkRLiE")}</h1>
         <br />
         <p>{t("2yG9O6")}</p>
         <br />
@@ -168,7 +168,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("MVk4RH")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("MVk4RH")}</h1>
         <br />
         <p>{t("ygW4ep")}</p>
         <br />
@@ -178,7 +178,7 @@ const PrivacyPolicyContent = () => {
       </>
       <>
         <br />
-        <h1>{t("a5VGif")}</h1>
+        <h1  className="text-xl sm:text-2xl font-bold">{t("a5VGif")}</h1>
         <br />
         <p>{t("1G1p14")}</p>
         <b>

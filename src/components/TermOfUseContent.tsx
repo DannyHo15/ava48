@@ -6,7 +6,7 @@ import { Link } from "@/i18n/navigation";
 const TermOfUseContent = () => {
   const t = useTranslations("term_of_use");
   return (
-    <div className="text-justify">
+    <div className="text-sm sm:text-base text-justify">
       <>
         <p dangerouslySetInnerHTML={{ __html: t.raw("DFDIs4") }} />
         <br />
@@ -14,7 +14,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("B0MJ8Z")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("B0MJ8Z")}</h1>
         <br />
         <p>{t("oRkimG")}</p>
         <ul>
@@ -28,7 +28,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("6RppCv")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("6RppCv")}</h1>
         <br />
         <p>{t("WtCli0")}</p>
         <ul>
@@ -47,7 +47,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("4r5o1k")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("4r5o1k")}</h1>
         <br />
         <p>{t("gLFmKi")}</p>
         <br />
@@ -62,7 +62,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("pa4shm")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("pa4shm")}</h1>
         <br />
         <p>{t("71GZEs")}</p>
         <ul>
@@ -92,7 +92,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("wVmORr")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("wVmORr")}</h1>
         <br />
         <p>{t("LV4onk")}</p>
         <br />
@@ -121,7 +121,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("ljzPXW")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("ljzPXW")}</h1>
         <br />
         <p>{t("9Xm5Ra")}</p>
         <br />
@@ -135,7 +135,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("BUbK13")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("BUbK13")}</h1>
         <br />
         <p>
           {t.rich("wprRp+", {
@@ -180,7 +180,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("CdZs5M")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("CdZs5M")}</h1>
         <br />
         <p>{t("y/jFxo")}</p>
         <ul>
@@ -208,7 +208,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("Ezi0qh")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("Ezi0qh")}</h1>
         <br />
         <p>{t("n62Wph")}</p>
         <ul>
@@ -227,7 +227,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("/yPzb8")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("/yPzb8")}</h1>
         <br />
         <p>{t("RORj5E")}</p>
         <br />
@@ -237,7 +237,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("lbdMII")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("lbdMII")}</h1>
         <br />
         <h2>{t("e3xbJ5")}</h2>
         <br />
@@ -263,7 +263,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("7EnbBz")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("7EnbBz")}</h1>
         <br />
         <p>{t("pwDb92")}</p>
         <br />
@@ -284,7 +284,7 @@ const TermOfUseContent = () => {
       </>
       <>
         <br />
-        <h1>{t("bnuJk6")}</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">{t("bnuJk6")}</h1>
         <br />
         <p>{t("7mS6Ou")}</p>
         <b>
