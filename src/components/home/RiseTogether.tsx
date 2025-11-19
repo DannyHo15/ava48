@@ -2,7 +2,7 @@ import { Info } from "lucide-react";
 import { FloatButton } from "../ui/float-button";
 import FloatInformation from "../FloatInformation";
 import Image from "next/image";
-import ImageAvatar48 from "../ImageAvatar48";
+import OptimizedThemeImage from "../OptimizedThemeImage";
 import { SectionWrapper } from "../SectionWrapper";
 import { useTranslations } from "next-intl";
 import ShapeGradientWrapper from "../ShapeGradientWrapper";
@@ -26,11 +26,17 @@ const RiseTogether = () => {
         {/* SLOGAN */}
         <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center 3xl:justify-center-safe">
           <div className="w-full lg:w-fit! lg:h-185! lg:items-start">
-            <ImageAvatar48
+            <OptimizedThemeImage
               className="h-60 w-92.5 sm:w-130.5! sm:h-102! lg:max-w-178! lg:h-134! object-contain mx-auto"
               lightURL={"/assets/rank48-light.png"}
-              drakURL={"/assets/rank48-dark.png"}
-            ></ImageAvatar48>
+              darkURL={"/assets/rank48-dark.png"}
+              width={712} // Approximate max width (178 * 4)
+              height={536} // Approximate max height (134 * 4)
+              quality={90}
+              priority={true} // Above fold content
+              placeholder="blur"
+              alt="Rank 48 logo"
+            />
             <div
               className={clsx(
                 "relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-48! z-20 lg:-bottom-20 mx-auto",
@@ -146,18 +152,30 @@ const RiseTogether = () => {
           <div className="gap-8 sm:gap-2 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91! lg:max-h-fit! justify-center lg:min-w-fit! pt-5 lg:pt-20">
             <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-fit lg:size-fit size-full lg:max-h-full">
               <div className="flex justify-end gap-2 w-1/2 min-h-fit">
-                <ImageAvatar48
+                <OptimizedThemeImage
                   className="max-w-full h-full object-contain"
                   lightURL={"/assets/aya-fujimoto-light.png"}
-                  drakURL={"/assets/aya-fujimoto-dark.png"}
-                ></ImageAvatar48>
+                  darkURL={"/assets/aya-fujimoto-dark.png"}
+                  width={400}
+                  height={500}
+                  quality={85}
+                  priority={false}
+                  placeholder="blur"
+                  alt="Aya Fujimoto"
+                />
               </div>
               <div className="flex-center justify-start gap-2 w-1/2">
-                <ImageAvatar48
+                <OptimizedThemeImage
                   className="max-w-full h-full object-contain"
                   lightURL={"/assets/eimi-fukada-light.png"}
-                  drakURL={"/assets/eimi-fukada-dark.png"}
-                ></ImageAvatar48>
+                  darkURL={"/assets/eimi-fukada-dark.png"}
+                  width={400}
+                  height={500}
+                  quality={85}
+                  priority={false}
+                  placeholder="blur"
+                  alt="Eimi Fukada"
+                />
               </div>
             </div>
             <div className="sm:w-2/5 w-0 flex-center z-50 lg:min-w-80! max-h-fit  2xl:min-w-130!">
