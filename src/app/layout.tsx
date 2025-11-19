@@ -116,14 +116,18 @@ export default async function RootLayout({
           zIndex={999}
           shadow="0 0 10px #2299DD,0 0 5px #2299DD"
         />
-        
-        <ThemeProvider initialTheme={initialTheme as "royal-dark-mode" | "violet-kiss-mode"}>
+
+        <ThemeProvider
+          initialTheme={initialTheme as "royal-dark-mode" | "violet-kiss-mode"}
+        >
           {children}
         </ThemeProvider>
-        
+
         <FirebaseAnalytics theme={initialTheme} />
 
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID ?? ""} />
+        <GoogleAnalytics
+          gaId={process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID ?? ""}
+        />
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM ?? ""} />
       </body>
     </html>
