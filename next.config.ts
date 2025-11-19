@@ -1,12 +1,12 @@
-import { NextConfig } from 'next';
-import createNextIntlPlugin from 'next-intl/plugin';
+import { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
-
+const ONE_WEEK_IN_SECONDS = 60 * 60 * 24 * 7;
 const nextConfig: NextConfig = {
   // Enable experimental features for better performance
   experimental: {
-    optimizePackageImports: ['lucide-react'],
+    optimizePackageImports: ["lucide-react"],
     optimizeCss: true,
     scrollRestoration: true,
   },
@@ -14,40 +14,40 @@ const nextConfig: NextConfig = {
   // Image optimization configuration
   images: {
     // Enable modern image formats
-    formats: ['image/avif', 'image/webp'],
-    
+    formats: ["image/avif", "image/webp"],
+
     // Configure device sizes for responsive images
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    
+
     // Configure image sizes for art direction
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    
+
     // Configure quality settings for different use cases
-    qualities: [25, 50, 75, 85, 90, 100],
-    
+    qualities: [25, 50, 75],
+
     // Set minimum cache TTL for optimized images
-    minimumCacheTTL: 60 * 60 * 24 * 7, // 1 week
-    
+    minimumCacheTTL: ONE_WEEK_IN_SECONDS, // 1 week
+
     // Allow images from specific external domains if needed
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**',
-        port: '',
-        pathname: '/**',
-        search: '',
+        protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "/**",
+        search: "",
       },
     ],
-    
+
     // Enable dangerous SVG handling if needed (not recommended)
     dangerouslyAllowSVG: false,
-    
+
     // Set content security policy for images
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    
+
     // Set content disposition type
-    contentDispositionType: 'attachment',
-    
+    contentDispositionType: "attachment",
+
     // Configure maximum redirects for remote images
     maximumRedirects: 3,
   },
@@ -65,20 +65,20 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/_next/image(.*)',
+        source: "/_next/image(.*)",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, immutable, max-age=31536000, must-revalidate',
+            key: "Cache-Control",
+            value: "public, immutable, max-age=31536000, must-revalidate",
           },
         ],
       },
       {
-        source: '/images/(.*)',
+        source: "/images/(.*)",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
         ],
       },
@@ -95,12 +95,12 @@ const nextConfig: NextConfig = {
     // Optimize bundle size
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
-        chunks: 'all',
+        chunks: "all",
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
+            name: "vendors",
+            chunks: "all",
           },
         },
       };
