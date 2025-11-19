@@ -97,7 +97,11 @@
   --text-custom-176: 11rem;
   --text-custom-180: 11.25rem;
   --text-custom-185: 11.5625rem;
+  --text-custom-200: 12.5rem;
   --text-custom-208: 13rem;
+  --text-custom-232: 14.5rem;
+  --text-custom-272: 17rem;
+  --text-custom-297: 18.5625rem;
   /* Font Weight */ /* Letter space */
   /* Line height */ /* Border radius use by rounded-* */
   --radius-custom-20: 1.25rem;

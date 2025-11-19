@@ -142,7 +142,7 @@ const EimiFukada = () => {
               />
             </div>
             <div
-              className={cn("absolute z-20 ", {
+              className={cn("absolute z-20 4xl:right-[-60%]! 4xl:bottom-[18%]!", {
                 "right-[-1] bottom-[28%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-9%] lg:bottom-[26%] 2xl:bottom-[16%] 2xl:right-[-27%]":
                   locale === "en",
                 "bottom-[27%] right-[2%] sm:bottom-[23%] sm:right-[-16%] lg:bottom-[25%] lg:right-[-8%] 2xl:bottom-[19%] 2xl:right-[-27%]":
@@ -153,7 +153,7 @@ const EimiFukada = () => {
             >
               <h2
                 className={clsx(
-                  "font-karantina font-bold bg-white dark:bg-[linear-gradient(160deg,#FFFFFF_70%,#D81DE2_200%)] bg-clip-text text-transparent uppercase text-right",
+                  "font-karantina font-bold bg-white dark:bg-[linear-gradient(160deg,#FFFFFF_70%,#D81DE2_200%)] bg-clip-text text-transparent uppercase text-right 4xl:text-custom-200!",
                   {
                     "text-custom-40 sm:text-custom-72 lg:text-custom-88 2xl:text-custom-120 leading-[86%]":
                       locale === "en",
@@ -169,14 +169,14 @@ const EimiFukada = () => {
               >
                 {t("coming_soon_top")}
                 {locale === "ja" ? (
-                  <span className="font-karantina text-custom-46 sm:text-custom-82 lg:text-custom-140 2xl:text-custom-151 font-bold leading-[86%] sm:leading-[115%] 2xl:leading-[110%]">
+                  <span className="font-karantina text-custom-46 sm:text-custom-82 lg:text-custom-140 2xl:text-custom-151 font-bold leading-[86%] sm:leading-[115%] 2xl:leading-[110%] 4xl:text-custom-232!">
                     48
                   </span>
                 ) : null}
               </h2>
               <h2
                 className={clsx(
-                  "font-karantina font-bold bg-white dark:bg-[linear-gradient(165deg,#FFFFFF_34%,#D81DE2_185%)] bg-clip-text text-transparent uppercase text-right",
+                  "font-karantina font-bold bg-white dark:bg-[linear-gradient(165deg,#FFFFFF_34%,#D81DE2_185%)] bg-clip-text text-transparent uppercase text-right  4xl:text-custom-272!",
                   {
                     "text-custom-54 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-[86%]":
                       locale === "en",
@@ -193,7 +193,7 @@ const EimiFukada = () => {
                 {t("coming_soon_bottom")}
                 {locale === "ja" ? null : (
                   <span
-                    className={cn("font-karantina font-bold", {
+                    className={cn("font-karantina font-bold  4xl:text-custom-297!", {
                       "text-custom-62 sm:text-custom-98 lg:text-custom-153 2xl:text-custom-185":
                         locale === "en",
                       "text-custom-58 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%]":
@@ -235,9 +235,9 @@ const EimiFukada = () => {
             {/* <div className="absolute rounded-full w-[794.69px] h-[552px] top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[22%] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-20% via-avatar-blue-5 to-avatar-blue-4 dark:top-avatar blur-[120px] -rotate-[4.54deg] opacity-56 mix-blend-screen"></div> */}
             <div
               className={cn(
-                "absolute left-[9%] top-[50%] prm:left-[8%] prm:top-[54%] z-15 sm:left-[5%] sm:top-[49%] 2xl:top-[42%] 2xl:left-[-34%] sm:z-15 md:z-10 2xl:z-20 hidden 2xl:block",
+                "absolute left-[9%] top-[50%] prm:left-[8%] prm:top-[54%] z-15 sm:left-[5%] sm:top-[49%] sm:z-15 md:z-10 4xl:left-[-45%]! 4xl:top-[42%]! 2xl:z-20 hidden 2xl:block",
                 {
-                  "": locale === "en",
+                  "2xl:left-[-34%] 2xl:top-[42%]": locale === "en",
                   "2xl:left-[-35%] 2xl:top-[47%]": locale === "ja",
                   "2xl:left-[-38%] 2xl:top-[46%]": locale === "zh-cn",
                   "2xl:left-[-39%] 2xl:top-[45%]": locale === "zh-tw",
@@ -246,7 +246,7 @@ const EimiFukada = () => {
             >
               <h1
                 className={cn(
-                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs text-white uppercase leading-[86%]",
+                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs text-white uppercase leading-[86%] 4xl:text-custom-272!",
                   {
                     "2xl:text-custom-160 leading-[86%]": locale === "en",
                     "leading-[100%]": locale === "zh-cn" || locale === "zh-tw",
@@ -261,7 +261,7 @@ const EimiFukada = () => {
               </h1>
               <h1
                 className={cn(
-                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%]",
+                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] 4xl:text-custom-272!",
                   {
                     "2xl:text-custom-160 leading-[86%]": locale === "en",
                     "leading-[100%]": locale === "zh-cn" || locale === "zh-tw",
@@ -358,14 +358,14 @@ const EimiFukada = () => {
             <div className="relative flex items-end z-5 2xl:z-10">
               <div className="z-10 relative bottom-0 right-[-20%] sm:right-[-27%] 2xl:right-[-31%]">
                 <ImageAvatar48
-                  className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
+                  className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] 4xl:max-w-none! 4xl:w-[2030px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
                   lightURL={"/assets/eimi-bg-ai.webp"}
                   drakURL={"/assets/eimi-bg-ai.webp"}
                 ></ImageAvatar48>
               </div>
-              <div className="z-10 absolute bottom-0 left-[-42%] sm:left-[-44%] 2xl:left-[-51%]">
+              <div className="z-10 absolute bottom-0 left-[-42%] sm:left-[-44%] 2xl:left-[-51%] 4xl:left-[-21%]!">
                 <ImageAvatar48
-                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] max-h-dvh w-[432px] h-auto object-contain"
+                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[2030px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain"
                   lightURL={"/assets/eimi-bg.webp"}
                   drakURL={"/assets/eimi-bg.webp"}
                 ></ImageAvatar48>
