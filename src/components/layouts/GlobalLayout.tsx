@@ -12,7 +12,7 @@ import { AvatarLink } from "../AvatarLink";
 import BorderGradientWrapper from "../BorderGradientWrapper";
 import { useTheme } from "@/hooks/use-theme";
 import { useEffect, useState } from "react";
-import Loading from "../common/Loading";
+import { Loading } from "@/components/common";
 
 export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const t = useTranslations("LandingPage");
@@ -22,19 +22,19 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
 
   const { theme } = useTheme();
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+  // useEffect(() => {
+  //   // Simulate loading time
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
-  if (loading) {
-    return <Loading />; // or a loading spinner
-  }
+  //   return () => clearTimeout(timer);
+  // }, []);
+  // if (loading) {
+  //   return <Loading />; // or a loading spinner
+  // }
 
   return (
     <>

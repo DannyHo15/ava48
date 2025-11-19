@@ -1,5 +1,5 @@
 import "./loading.css";
-const Loading = () => {
+export const Loading = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-avatar-blue">
       <div className="loader">
@@ -11,5 +11,3 @@ const Loading = () => {
     </div>
   );
 };
-
-export default Loading;

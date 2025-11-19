@@ -2,6 +2,43 @@
 @import "../assets/fonts/index.css";
 
 @custom-variant dark (&:is(.violet-kiss-mode *));
+
+/* Skeleton Loading Animations */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(100%); }
+  50% { transform: translateY(-50%); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { transform: translateX(-100%) translateY(-100%); }
+  50% { transform: translateX(100%) translateY(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-opacity {
+  animation: pulse-opacity 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-wave {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 3s ease-in-out infinite;
+}
 /* Extend backdrop blur utilities */
 @source inline("{hover:,focus:,}backdrop-blur-{2xs,xs,sm,md,lg,xl,2xl,3xl}");
 @theme inline {

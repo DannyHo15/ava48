@@ -19,7 +19,7 @@ const FloatInformation = ({ content }: IFloatInformationProps) => {
       <div className="sm:hidden block relative z-999">
         <FloatButton
           position="bottom-right"
-          className="size-fit! sm:bottom-42.5 bottom-20 right-1.75"
+          className="size-fit! sm:bottom-42.5 bottom-40 right-1.75"
           onClick={() => setIsOpen(!isOpen)}
         >
           <BorderGradientWrapper
@@ -35,7 +35,7 @@ const FloatInformation = ({ content }: IFloatInformationProps) => {
           </BorderGradientWrapper>
         </FloatButton>
         {isOpen && (
-          <div className="fixed left-0 px-8 bottom-48.5 w-screen z-999!">
+          <div className="fixed left-0 px-3 bottom-48.5 w-screen z-999!">
             <div className="px-5 size-full min-h-36 backdrop-blur-sm py-4 rounded-lg bg-linear-to-b from-black/10 to-black/10 text-white flex-center text-base">
               {content}
             </div>
