@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, Suspense } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/Observer";
@@ -133,7 +133,7 @@ export default function Home() {
             "h-1/8": slidesLength === 8,
             "h-1/9": slidesLength === 9,
             "h-1/10": slidesLength === 10,
-          }
+          },
         )}
       ></div>
     </div>

@@ -20,7 +20,7 @@ const EimiFukada = () => {
       <div className="fixed inset-0 bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom mix-blend-plus-lighter bg-no-repeat hidden 2xl:block" />
       <div className="fixed hidden md:block lg:hidden h-full w-300 top-0 left-0 cs-radial-md" />
       <div className="fixed md:hidden h-full w-480 top-0 -right-64 cs-radial-sm" />
-      <div className="avatar-container relative" id="section-eimi">
+      <div className="avatar-container relative" id="section-eimi" suppressHydrationWarning>
         <div className="absolute  2xl:w-[1984px] 2xl:h-[794px] 2xl:right-[-22%] 2xl:bottom-[0%]  bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom mix-blend-plus-lighter z-10 bg-no-repeat max-h-dvh hidden 2xl:block" />
         <div className="flex items-end justify-center min-h-dvh">
           <div className="relative max-w-6xl flex justify-center mb-0 2xl:pt-[97px]">

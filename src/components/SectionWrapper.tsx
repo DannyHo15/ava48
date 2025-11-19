@@ -5,6 +5,10 @@ interface SectionWrapperProps {
   index?: number;
 }
 
-export function SectionWrapper({ children,  }: SectionWrapperProps) {
-  return <section className={cn("size-full overflow-hidden keen-slider__slide")}>{children}</section>;
+export function SectionWrapper({ children }: SectionWrapperProps) {
+  return (
+    <section className={cn("size-full overflow-hidden keen-slider__slide")}>
+      {children}
+    </section>
+  );
 }

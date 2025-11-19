@@ -11,6 +11,8 @@ import { cn } from "@/lib/utils";
 import { AvatarLink } from "../AvatarLink";
 import BorderGradientWrapper from "../BorderGradientWrapper";
 import { useTheme } from "@/hooks/use-theme";
+import { useEffect, useState } from "react";
+import Loading from "../common/Loading";
 
 export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const t = useTranslations("LandingPage");
@@ -20,6 +22,19 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://avatar48.ai";
 
   const { theme } = useTheme();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) {
+    return <Loading />; // or a loading spinner
+  }
 
   return (
     <>
@@ -42,7 +57,11 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           </Link>
           <Link href={`${baseUrl}/platform/${locale}/sentient?mode=${theme}`}>
             <Button className="bg-white text-black hover:opacity-80 cursor-pointer px-3 sm:px-2">
-              <CircleArrowRight size={24} strokeWidth={2} className="hidden sm:block" />
+              <CircleArrowRight
+                size={24}
+                strokeWidth={2}
+                className="hidden sm:block"
+              />
               {t("create_agent")}
             </Button>
           </Link>
@@ -58,7 +77,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
             "min-[500px]:flex md:flex-col-reverse 2xl:flex-row 2xl:items-center justify-between":
               pathname === `/${locale}`,
             "min-[500px]:flex flex-row items-center": pathname !== `/${locale}`,
-          }
+          },
         )}
       >
         <LanguageDrawer className="md:w-26.25 h-7 md:h-12.5 rounded-[0.625rem] px-2 md:px-6" />
@@ -68,7 +87,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
             "uppercase h-7 md:h-12.5 flex-center font-medium text-sm md:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md px-2 md:px-6",
             {
               "order-2 md:order-3 2xl:order-2": pathname === `/${locale}`,
-            }
+            },
           )}
         >
           {t("term_of_use")}
@@ -79,7 +98,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
             "uppercase h-7 md:h-12.5 flex-center font-medium text-sm md:text-xl rounded-[0.625rem] bg-white/10 backdrop-blur-md px-2 md:px-6",
             {
               "order-3 md:order-2 2xl:order-3": pathname === `/${locale}`,
-            }
+            },
           )}
         >
           {t("privacy_policy")}
@@ -90,7 +109,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
           "w-max fixed bottom-2.5 min-[500px]:bottom-19 md:bottom-15 lg:bottom-7.75 min-[2000px]:bottom-10! left-1/2 -translate-x-1/2 z-10",
           {
             hidden: pathname !== `/${locale}`,
-          }
+          },
         )}
       >
         <BorderGradientWrapper
@@ -116,7 +135,9 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
                 alt={"defaultImage"}
                 className="rounded-xl w-14.75 lg:w-31.25 h-14.75 lg:h-20.5 object-cover"
               />
-              <p className="font-medium text-white text-base md:text-xl">{t("chat_now")}</p>
+              <p className="font-medium text-white text-base md:text-xl">
+                {t("chat_now")}
+              </p>
             </Link>
           </BorderGradientWrapper>
         </BorderGradientWrapper>
