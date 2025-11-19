@@ -16,7 +16,7 @@ const Vision = () => {
       <div className="fixed inset-0 hidden sm:block min-[1025px]:hidden! bg-[url(/assets/bg-section-6-md-light.png)] dark:bg-[url(/assets/bg-section-6-md-dark.png)] bg-cover bg-center"/>
       <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-6-sm-light.png)] dark:bg-[url(/assets/bg-section-6-sm-dark.png)] bg-cover bg-center"/>
       <div className="h-full relative flex-center px-5.5 sm:px-0" id="section-platform">
-        <div className="w-85 prm:w-120 sm:w-full min-[1025px]:w-240 2xl:w-300 min-[2000px]:w-420! 4xl:w-520! min-[3200px]:w-640! max-h-160 sm:max-h-210 min-[1025px]:max-h-180! 2xl:max-h-210 min-[2000px]:max-h-220! 4xl:max-h-240! min-[3200px]:max-h-340! grid sm:grid-cols-9 gap-5 min-[2000px]:gap-10 min-[1025px]:gap-6 -mt-10 sm:-mt-20 sm:px-10 min-[1025px]:px-0">
+        <div className="w-85 prm:w-120 sm:w-full min-[1025px]:w-240! 2xl:w-300 min-[2000px]:w-420! 4xl:w-520! min-[3200px]:w-640! max-h-160 sm:max-h-210 min-[1025px]:max-h-180! 2xl:max-h-210 min-[2000px]:max-h-220! 4xl:max-h-240! min-[3200px]:max-h-340! grid sm:grid-cols-9 gap-5 min-[2000px]:gap-10 min-[1025px]:gap-6 -mt-10 sm:-mt-20 sm:px-10 min-[1025px]:px-0">
           <div className="col-span-1 sm:col-span-6 min-[1025px]:col-span-5! space-y-6">
             <ImageAvatar48
               className="w-50 sm:w-full h-auto ml-auto mb-3 sm:mb-6"
@@ -25,7 +25,7 @@ const Vision = () => {
             />
             {/* desktop */}
             <div className="hidden min-[1025px]:flex gap-6">
-              <div className="w-full text-right">
+              <div className="w-full">
                 <span className="text-white text-lg 2xl:text-xl min-[2000px]:text-2xl! min-[3200px]:text-3xl!">
                   {t("LandingPage.section_6.description")}
                 </span>
