@@ -20,14 +20,14 @@ const RiseTogether = () => {
       <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-5-light-sm.png)] dark:bg-[url(/assets/bg-section-5-dark-sm.png)] bg-cover bg-center" />{" "}
       <div className="fixed md:hidden h-full  top-0 -right-64 cs-radial-sm" />
       <div
-        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 lg:scale-100! xl:scale-100 2xl:scale-125 3xl:scale-130! 4xl:scale-150!"
+        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 lg:scale-100! xl:scale-100 2xl:scale-125! 3xl:scale-150! 4xl:scale-200!"
         id="section-rank48"
       >
         {/* SLOGAN */}
         <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center 3xl:justify-center-safe">
-          <div className="w-full lg:w-fit! lg:h-185! lg:items-start">
+          <div className="w-full lg:w-fit! lg:h-185! lg:items-start flex flex-col items-center sm:-mb-8">
             <OptimizedThemeImage
-              className="h-60 w-92.5 sm:w-130.5! sm:h-102! lg:max-w-178! lg:h-134! object-contain mx-auto"
+              className="h-60 w-92.5 sm:w-125! sm:h-95! lg:max-w-178! lg:h-134! object-contain mx-auto"
               lightURL={"/assets/rank48-light.png"}
               darkURL={"/assets/rank48-dark.png"}
               width={712} // Approximate max width (178 * 4)
@@ -39,9 +39,10 @@ const RiseTogether = () => {
             />
             <div
               className={clsx(
-                "relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-35.5 sm:-mt-48! z-20 lg:-bottom-20 mx-auto",
+                "relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-50! sm:-mt-30 z-20 lg:-bottom-20 mx-auto",
                 {
                   "": locale === "ja",
+                  "sm:-mt-18!": locale === "zh-cn" || locale === "zh-tw",
                 },
               )}
             >
@@ -57,7 +58,8 @@ const RiseTogether = () => {
                     "absolute sm:-left-2 sm:top-1 -left-8 -top-6 z-10 sm:scale-100 scale-75",
                     {
                       "lg:-top-6 sm:-top-9 -top-10": locale === "ja",
-                      "lg:-top-7": locale === "zh-cn" || locale === "zh-tw",
+                      "lg:-top-7 sm:-top-6":
+                        locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
                   strokeWidth={1}
@@ -73,8 +75,9 @@ const RiseTogether = () => {
                   className={clsx(
                     "text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina font-bold z-1",
                     {
-                      "text-custom-46! lg:text-custom-70!": locale === "ja",
-                      "sm:text-custom-90! xl:text-custom-125!":
+                      "text-custom-46 sm:text-custom-70! lg:text-custom-70!":
+                        locale === "ja",
+                      "sm:text-custom-90! lg:text-custom-110!":
                         locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
@@ -85,7 +88,7 @@ const RiseTogether = () => {
                   className={clsx(
                     "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold",
                     locale === "ja"
-                      ? "lg:text-custom-90! sm:text-custom-106! text-custom-62!"
+                      ? "lg:text-custom-90! sm:text-custom-90! text-custom-62!"
                       : "hidden",
                   )}
                 >
@@ -97,6 +100,8 @@ const RiseTogether = () => {
                     {
                       "sm:text-custom-62! lg:text-custom-70! text-custom-46! text-wrap!":
                         locale === "ja",
+                      "sm:text-custom-90! lg:text-custom-110!":
+                        locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
                 >
@@ -106,7 +111,7 @@ const RiseTogether = () => {
                 {/* Comma for 48 */}
                 <label
                   className={clsx(
-                    "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold",
+                    "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-110 font-bold",
                     locale === "ja" ? "hidden" : "",
                   )}
                 >
@@ -153,12 +158,12 @@ const RiseTogether = () => {
             <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-fit lg:size-fit size-full lg:max-h-full">
               <div className="flex justify-end gap-2 w-1/2 min-h-fit">
                 <OptimizedThemeImage
-                  className="max-w-full h-full object-contain"
+                  className="sm:max-w-full! max-w-fit  h-full object-contain"
                   lightURL={"/assets/aya-fujimoto-light.png"}
                   darkURL={"/assets/aya-fujimoto-dark.png"}
                   width={400}
                   height={500}
-                  quality={85}
+                  quality={100}
                   priority={false}
                   placeholder="blur"
                   alt="Aya Fujimoto"
@@ -166,12 +171,12 @@ const RiseTogether = () => {
               </div>
               <div className="flex-center justify-start gap-2 w-1/2">
                 <OptimizedThemeImage
-                  className="max-w-full h-full object-contain"
+                  className="sm:max-w-full! max-w-fit h-full object-contain"
                   lightURL={"/assets/eimi-fukada-light.png"}
                   darkURL={"/assets/eimi-fukada-dark.png"}
                   width={400}
                   height={500}
-                  quality={85}
+                  quality={100}
                   priority={false}
                   placeholder="blur"
                   alt="Eimi Fukada"
@@ -191,3 +196,4 @@ const RiseTogether = () => {
 };
 
 export default RiseTogether;
+
