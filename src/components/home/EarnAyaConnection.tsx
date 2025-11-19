@@ -16,13 +16,17 @@ const EarnAyaConnection = () => {
   return (
     <WrapperSectionPlayAndEarn>
       <div
-        className="h-[35%] md:hidden w-full flex flex-col items-center justify-end relative z-10 -mb-3 sm:-mb-6"
+        className="h-[30%] md:hidden w-full flex flex-col items-center justify-end relative z-10 -mb-3 sm:-mb-6"
         id="section-heart"
       >
         <div
           className={clsx(
             "absolute z-20 w-full sm:mx-0 max-w-[310px] flex flex-col gap-[3px]",
-            locale === "ja" && "max-w-[340px]"
+            {
+              "max-w-[310px]": locale === "en",
+              "max-w-[340px]": locale === "ja",
+              "max-w-[294px]": locale === "zh-cn" || locale === "zh-tw",
+            }
           )}
         >
           {/* Mobile shape left */}
@@ -60,11 +64,25 @@ const EarnAyaConnection = () => {
             strokeWidth={1}
             path="M 5,0 L 40,0 Q 42,0 43.5,1.5 L 62.5,18.5 Q 64,20 64,22 L 64,37 A 5,5 0,0,1 59,42 L 5,42 A 5,5 0,0,1 0,37 L 0,5 A 5,5 0,0,1 5,0 Z"
           />
-          <div className="relative w-fit flex flex-col items-end gap-2 whitespace-nowrap">
+          <div
+            className={clsx(
+              "relative w-fit flex flex-col items-end gap-2 whitespace-nowrap",
+              {
+                "gap-2": locale === "en",
+                "": locale === "ja",
+                "gap-4": locale === "zh-cn" || locale === "zh-tw",
+              }
+            )}
+          >
             <p
               className={clsx(
-                "text-custom-55 font-bold leading-[86%] tracking-[2%] font-karantina text-left w-full bg-linear-to-tr from-white via-white to-[#00D0F6] dark:to-[#D81DE2] text-gradient",
-                locale === "ja" && "text-custom-40!"
+                "font-bold tracking-[2%] font-karantina text-left w-full bg-linear-to-tr from-white via-white to-[#00D0F6] dark:to-[#D81DE2] text-gradient",
+                {
+                  "text-custom-55 leading-[86%]": locale === "en",
+                  "text-custom-40 leading-none": locale === "ja",
+                  "text-custom-55 tracking-[1.1pxpx] leading-none":
+                    locale === "zh-cn" || locale === "zh-tw",
+                }
               )}
             >
               {t("title")}
@@ -72,8 +90,14 @@ const EarnAyaConnection = () => {
           </div>
           <p
             className={clsx(
-              "text-white text-right uppercase font-bold leading-[86%] w-full text-custom-40 tracking-[2%] font-karantina",
-              locale === "ja" && "text-custom-40!"
+              "text-white text-right uppercase font-bold w-full tracking-[2%] font-karantina",
+              locale === "ja" && "text-custom-40!",
+              {
+                "text-custom-40 leading-[86%]": locale === "en",
+                "text-custom-40 leading-none": locale === "ja",
+                "text-custom-37 leading-none tracking-[0.74px]":
+                  locale === "zh-cn" || locale === "zh-tw",
+              }
             )}
           >
             {t("subtitle")}
@@ -82,24 +106,32 @@ const EarnAyaConnection = () => {
       </div>
       <div className="h-[50%] md:h-full w-full flex flex-col justify-center">
         <div className="h-full md:relative md:grid md:grid-cols-12 md:items-center md:justify-center md:px-10 xl:px-0 xl:max-w-[1176px] xl:mx-auto">
-          <div className="md:col-span-7 relative h-full md:h-auto flex items-center justify-center">
+          <div className="md:col-span-7 relative h-full md:h-auto flex items-center justify-center xl:scale-70 2xl:scale-100 3xl:scale-120 4xl:scale-140!">
             <div
               className={clsx(
-                "hidden md:flex w-[698px] flex-col gap-4 md:absolute z-0 lg:z-10 -top-30 left-2/2 -translate-x-5/9 lg:-translate-x-1/2 lg:left-205 lg:top-7",
-                locale === "ja" &&
-                  "-translate-x-[44%]! lg:gap-10 xl:-right-10 lg:left-193! lg:top-5! lg:w-[892px]",
-                (locale === "zh-cn" || locale === "zh-tw") &&
-                  "gap-8! w-[581px]! lg:gap-10 left-[115%]! -top-13! lg:left-205! lg:-top-2! lg:w-[563px]"
+                "hidden md:flex flex-col gap-4 md:absolute z-0 lg:z-10",
+                {
+                  "w-[698px] -top-30 left-2/2 -translate-x-5/9 lg:-translate-x-1/2 lg:left-205 lg:top-7":
+                    locale === "en",
+                  "-top-30 left-[95%] lg:-translate-x-1/2 -translate-x-[44%] lg:gap-10 xl:-right-10 xl:left-210 lg:top-5 w-[720px] lg:w-[892px]":
+                    locale === "ja",
+                  "-top-22 left-[110%] -translate-x-5/9 lg:-translate-x-1/2 gap-8 w-[581px] lg:gap-10 lg:left-205 lg:-top-2 lg:w-[563px]":
+                    locale === "zh-cn" || locale === "zh-tw",
+                }
               )}
             >
               <div className="relative w-fit flex flex-col items-end gap-2">
                 <p
                   className={clsx(
-                    "text-custom-120 xl:text-custom-125 leading-[86%] tracking-[2.4px] xl:tracking-[2.5px] font-bold font-karantina text-left w-full bg-linear-to-tr from-white via-white to-[#00D0F6] dark:to-[#D81DE2] text-gradient",
-                    locale === "ja" &&
-                      "md:text-custom-80 lg:text-custom-85! whitespace-nowrap leading-[100%] tracking-[2%]",
-                    (locale === "zh-cn" || locale === "zh-tw") &&
-                      "text-custom-110! lg:text-custom-120!"
+                    "tracking-[2.4px] xl:tracking-[2.5px] font-bold font-karantina text-left w-full bg-linear-to-tr from-white via-white to-[#00D0F6] dark:to-[#D81DE2] text-gradient",
+                    {
+                      "text-custom-120 xl:text-custom-125 leading-[86%]":
+                        locale === "en",
+                      "text-custom-80 lg:text-custom-85 whitespace-nowrap leading-none tracking-[1.64px]":
+                        locale === "ja",
+                      "text-custom-110 lg:text-custom-120 leading-none tracking-[2.2px]":
+                        locale === "zh-cn" || locale === "zh-tw",
+                    }
                   )}
                 >
                   {t("title")}
@@ -107,11 +139,15 @@ const EarnAyaConnection = () => {
               </div>
               <p
                 className={clsx(
-                  "text-right uppercase leading-[86%] w-full font-bold text-custom-82 font-karantina tracking-[1.64px] text-white",
-                  locale === "ja" &&
-                    "md:text-custom-70 lg:text-custom-72! whitespace-nowrap leading-[100%] tracking-[2%]",
-                  (locale === "zh-cn" || locale === "zh-tw") &&
-                    "text-custom-70! lg:text-custom-98! text-right lg:text-left!"
+                  "text-right uppercase leading-[86%] w-full font-bold font-karantina tracking-[1.64px] text-white",
+                  {
+                    "text-custom-82 whitespace-nowrap leading-[100%] tracking-[2%]":
+                      locale === "en",
+                    "text-custom-66 lg:text-custom-72 whitespace-nowrap leading-none tracking-[1.64px]":
+                      locale === "ja",
+                    "text-custom-70 lg:text-custom-98 whitespace-nowrap leading-none tracking-[1.396px]":
+                      locale === "zh-cn" || locale === "zh-tw",
+                  }
                 )}
               >
                 {t("subtitle")}
