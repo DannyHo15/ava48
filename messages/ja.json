@@ -70,14 +70,14 @@
     "section_aya": {
       "avatar_ultimate_top": "究極の",
       "ultimate_bottom": "",
-      "avatar_experience_top": "アバター",
-      "experience_bottom": "体験"
+      "avatar_experience_top": "アバター体験",
+      "experience_bottom": "開幕"
     },
     "section_eimi": {
       "name_top": "深田",
       "name_bottom": "えいみ",
-      "coming_soon_top": "AVATAR",
-      "coming_soon_bottom": "に登場"
+      "coming_soon_top": "ついに",
+      "coming_soon_bottom": "AVATAR"
     },
     "section_5": {
       "join": "に参加して",

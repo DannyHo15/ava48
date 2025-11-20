@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import OptimizedThemeImage from "../OptimizedThemeImage";
+import clsx from "clsx";
 
 const Aya = () => {
   const t = useTranslations("LandingPage.section_aya");
@@ -28,14 +29,20 @@ const Aya = () => {
                 locale === "en",
               "left-[3%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[4%] sm:top-[25.6%] 2xl:top-[35.5%] 2xl:left-[13.5%]":
                 locale === "zh-cn" || locale === "zh-tw",
-              "left-[3%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[3.5%] sm:top-[28%] 2xl:top-[37.6%] 2xl:left-[15%]":
+              "left-[9%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[3.5%] sm:top-[23%] lg:left-[18%] lg:top-[33%] 2xl:top-[37.6%] 2xl:left-[15%]":
                 locale === "ja",
             })}
           >
             <h1
-              className={
-                "font-karantina prm:text-custom-55 sm:text-custom-88 lg:text-custom-120 text-custom-40 font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15"
-              }
+              className={clsx(
+                "font-karantina prm:text-custom-55 font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15",
+                {
+                  "text-custom-40 lg:text-custom-120":
+                    locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+                  "text-custom-32 sm:text-custom-88 lg:text-custom-98":
+                    locale === "ja",
+                }
+              )}
               style={{
                 filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
               }}
@@ -76,7 +83,7 @@ const Aya = () => {
               className={cn("absolute", {
                 "sm:top-[75%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden":
                   locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                "sm:top-[59%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden":
+                "sm:top-[59%] 2xl:top-[72%] sm:left-[-16%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden":
                   locale === "ja",
               })}
               strokeColor={[
@@ -114,7 +121,7 @@ const Aya = () => {
               index={"hjklp"}
               shapeWidth={60}
               shapeHeight={31}
-              className="top-[72%] left-[-7%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
+              className="top-[58%] left-[-21%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
               strokeColor={[
                 { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                 { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -128,28 +135,25 @@ const Aya = () => {
           </div>
           <div className="relative max-w-6xl flex justify-center mb-0 pt-28 md:pt-[94px] sm:pt-[225px] 2xl:pt-[118px]">
             {/* <div className="absolute rounded-full w-[794.69px] prm:w-[1160px] 2xl:w-[1310px] h-[552px] prm:h-[807px] 2xl:h-[911px] top-[24%] prm:top-[38%] sm:w-[1657px] sm:h-[1153px] sm:top-[6%] 2xl:top-[21%] sm:left-[-60%] sm:opacity-[0.56] bg-linear-to-br from-avatar-blue-3 dark:from-[#f200ff] from-27% via-avatar-blue-5 to-avatar-blue-4 blur-[120px] -rotate-[4.54deg] opacity-60 mix-blend-screen"></div> */}
-            <ImageAvatar48
-              className="fixed left-0 bottom-0 z-0 opacity-80 hidden dark:2xl:block"
-              lightURL={"/assets/light-bot-left.png"}
-              drakURL={"/assets/light-bot-left.png"}
-            ></ImageAvatar48>
+
             <div
               className={cn("absolute hidden 2xl:block", {
                 "2xl:top-[29.5%] 2xl:left-[-23.5%]": locale === "en",
                 "2xl:top-[35.5%] 2xl:left-[-25.5%]": locale === "zh-cn",
                 "2xl:top-[35.4%] 2xl:left-[-25.5%]": locale === "zh-tw",
-                "2xl:top-[37.6%] 2xl:left-[-23%]": locale === "ja",
+                "2xl:top-[38.6%] 2xl:left-[-14%] 4xl:top-[40.6%]! 4xl:left-[-26%]!":
+                  locale === "ja",
               })}
             >
               <h1
                 className={cn(
-                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 4xl:text-custom-217! font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase z-15",
+                  "font-karantina text-custom-42 prm:text-custom-55 4xl:text-custom-217! font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(135deg,#FFFFFF_50%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase z-15",
                   {
-                    "relative dark:bg-[linear-gradient(158deg,#FFFFFF_64%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] leading-none":
-                      locale === "ja" ||
-                      locale === "zh-cn" ||
-                      locale === "zh-tw",
-                    "dark:bg-[linear-gradient(158deg,#FFFFFF_64%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] leading-[86%]":
+                    "relative dark:bg-[linear-gradient(158deg,#FFFFFF_64%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] leading-none sm:text-custom-120 ":
+                      locale === "zh-cn" || locale === "zh-tw",
+                    "relative dark:bg-[linear-gradient(158deg,#FFFFFF_64%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] leading-none sm:text-custom-98":
+                      locale === "ja",
+                    "dark:bg-[linear-gradient(158deg,#FFFFFF_64%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] sm:text-custom-120 leading-[86%]":
                       locale === "en",
                   }
                 )}
@@ -174,7 +178,7 @@ const Aya = () => {
                     locale === "zh-cn",
                   "sm:top-[80%] 2xl:top-[62%] 2xl:left-[-34%] 4xl:top-[68%]! 4xl:left-[-16%]! 4xl:scale-[1.5]! z-20 hidden 2xl:block":
                     locale === "zh-tw",
-                  "sm:top-[80%] 2xl:top-[59%] 2xl:left-[-19%] 4xl:scale-[1.5]! z-20 hidden 2xl:block":
+                  "sm:top-[80%] 2xl:top-[59%] 2xl:left-[-14%] 4xl:scale-[1.5]! z-20 hidden 2xl:block":
                     locale === "ja",
                 })}
                 strokeColor={[
@@ -252,7 +256,8 @@ const Aya = () => {
                 "absolute 2xl:bottom-[32%] 2xl:right-[-39%]": locale === "en",
                 "2xl:top-[35.5%] 2xl:right-[-46%] 4xl:right-[-50%]!":
                   locale === "zh-cn" || locale === "zh-tw",
-                "2xl:top-[37.6%] 2xl:right-[-38%] 4xl:right-[-44%]! 2xl:z-15": locale === "ja",
+                "2xl:top-[38.6%] 2xl:right-[-55%] 4xl:right-[-74%]! 4xl:top-[41.6%]! 2xl:z-15":
+                  locale === "ja",
               })}
             >
               <h2
@@ -261,7 +266,7 @@ const Aya = () => {
                     locale === "en",
                   "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold text-white uppercase leading-none text-right z-10 2xl:z-5 pb-9 4xl:pb-22 4xl:text-custom-217!":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold text-white uppercase leading-none text-right dark:sm:bg-[linear-gradient(160deg,#FFFFFF_55%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5 pb-4 4xl:pb-14 4xl:text-custom-217!":
+                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-98 font-bold text-white uppercase leading-none text-right dark:sm:bg-[linear-gradient(160deg,#FFFFFF_55%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5 pb-4 4xl:pb-14 4xl:text-custom-217!":
                     locale === "ja",
                 })}
                 style={{
@@ -272,12 +277,10 @@ const Aya = () => {
               </h2>
               <h2
                 className={cn("relative", {
-                  "font-karantina text-custom-58 prm:text-custom-70 sm:text-custom-160 font-bold bg-[linear-gradient(107deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15 4xl:text-custom-256!":
+                  "font-karantina text-custom-58 prm:text-custom-70 sm:text-custom-160 font-bold bg-[linear-gradient(107deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-[86%] text-left z-15 4xl:text-custom-256!":
                     locale === "en",
                   "font-karantina text-custom-58 prm:text-custom-70 sm:text-custom-180 font-bold bg-[linear-gradient(107deg,#00F6FF_0%,#FFFFFF_68%)] bg-clip-text text-transparent uppercase leading-none text-left z-20 4xl:text-custom-272!":
-                    locale === "zh-cn" || locale === "zh-tw",
-                  "font-karantina text-custom-58 prm:text-custom-70 sm:text-custom-180 font-bold bg-[linear-gradient(107deg,#00F6FF_0%,#FFFFFF_68%)] bg-clip-text text-transparent uppercase leading-none text-center z-20 4xl:text-custom-272!":
-                    locale === "ja",
+                    locale === "zh-cn" || locale === "zh-tw" || locale === "ja",
                 })}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -299,7 +302,7 @@ const Aya = () => {
                     locale === "zh-cn",
                   "sm:top-[62%] sm:right-[-44%] 2xl:top-[78%] 2xl:right-[-7%] 2xl:z-20 4xl:top-[85%]! 4xl:right-[17%]! 4xl:scale-[1.5]! z-15 hidden 2xl:block":
                     locale === "zh-tw",
-                  "sm:top-[62%] sm:right-[-45%] 2xl:top-[78%] 2xl:right-[-20%] 2xl:z-20 4xl:top-[84%]! 4xl:right-[-1%]! 4xl:scale-[1.5]! z-15 hidden 2xl:block":
+                  "sm:top-[62%] sm:right-[-45%] 2xl:top-[75%] 2xl:right-[2%] 2xl:z-20 4xl:top-[84%]! 4xl:right-[38%]! 4xl:scale-[1.5]! z-15 hidden 2xl:block":
                     locale === "ja",
                 })}
                 strokeColor={[
@@ -323,7 +326,7 @@ const Aya = () => {
                 className={cn("absolute", {
                   "sm:top-[36%] sm:right-[-21%] z-15 hidden":
                     locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                  "sm:top-[79%] sm:right-[-16%] z-15 hidden sm:block 2xl:hidden":
+                  "sm:top-[83%] sm:right-[-12%] lg:top-[79%] lg:right-[-16%] z-15 hidden sm:block 2xl:hidden":
                     locale === "ja",
                 })}
                 strokeColor={[
@@ -386,7 +389,7 @@ const Aya = () => {
                     locale === "zh-tw",
                   "sm:bottom-[-9%] sm:right-[77%] 2xl:bottom-[-1%] 2xl:right-[89.5%] 4xl:bottom-[-2%]! 4xl:right-[93%]! 4xl:z-20 4xl:scale-[1.5]! z-20 hidden sm:block":
                     locale === "zh-cn",
-                  "sm:bottom-[-9%] 2xl:bottom-[-3%] 2xl:right-[75%] sm:right-[77%] 4xl:bottom-[-3%]! 4xl:right-[76%]! 4xl:z-20 4xl:scale-[1.5]! z-20 hidden sm:block":
+                  "sm:bottom-[-9%] 2xl:bottom-[-3%] 2xl:right-[85%] sm:right-[77%] 4xl:bottom-[-3%]! 4xl:right-[91%]! 4xl:z-20 4xl:scale-[1.5]! z-20 hidden sm:block":
                     locale === "ja",
                 })}
                 strokeColor={[
@@ -423,7 +426,7 @@ const Aya = () => {
                   locale === "en",
                 "2xl:bottom-[43.5%] 2xl:right-[3.5%] 4xl:scale-[1.5]! z-0 hidden 2xl:block":
                   locale === "zh-cn" || locale === "zh-tw",
-                "2xl:bottom-[46%] 2xl:right-[1.5%] 4xl:scale-[1.5]! z-0 hidden 2xl:block":
+                "2xl:bottom-[48%] 2xl:right-[0.5%] 4xl:scale-[1.5]! z-0 hidden 2xl:block":
                   locale === "ja",
               })}
               strokeColor={[
@@ -446,7 +449,7 @@ const Aya = () => {
               shapeHeight={281}
               className={cn({
                 "sm:bottom-[38%] sm:right-[-1%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden":
-                  locale === "en",  
+                  locale === "en",
                 "sm:bottom-[39%] sm:right-[-4%] 2xl:bottom-[46.1%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden":
                   locale === "zh-cn" || locale === "zh-tw",
                 "sm:bottom-[38%] sm:right-[-3%] 2xl:bottom-[46.2%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden":
@@ -469,7 +472,7 @@ const Aya = () => {
                 locale === "en",
               "absolute right-7 prm:right-9 bottom-[32%] prm:bottom-[27%] sm:bottom-[20%] sm:right-[8%] md:bottom-[24%] md:right-[2%] lg:bottom-[22%] lg:right-[6%] 2xl:bottom-[32%] 2xl:right-[9%]":
                 locale === "zh-cn" || locale === "zh-tw",
-              "absolute right-7 prm:right-9 sm:right-[6%] bottom-[32%] prm:bottom-[27%] sm:bottom-[27%] lg:bottom-[19%] 2xl:bottom-[37.5%] 2xl:right-[14%]":
+              "absolute right-7 prm:right-9 sm:right-[6%] bottom-[32%] prm:bottom-[27%] sm:bottom-[27%] lg:bottom-[22%] 2xl:bottom-[37.5%] 2xl:right-[14%]":
                 locale === "ja",
             })}
           >
@@ -481,7 +484,7 @@ const Aya = () => {
                   locale === "zh-cn",
                 "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.2%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "zh-tw",
-                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.3%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_47%,#D81DE2_150%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-90 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right dark:sm:bg-[linear-gradient(170deg,#FFFFFF_47%,#D81DE2_150%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5 sm:pb-4":
                   locale === "ja",
               })}
               style={{
@@ -589,7 +592,7 @@ const Aya = () => {
                   locale === "zh-cn",
                 "bottom-[-31%] right-[-16%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 prm:hidden":
                   locale === "zh-tw",
-                "bottom-[-42%] right-[-15%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 prm:hidden":
+                "bottom-[-14%] right-[-10%] prm:top-[74%] prm:right-[-7%] sm:top-[36%] sm:right-[-21%] z-15 prm:hidden":
                   locale === "ja",
               })}
               strokeColor={[
@@ -612,7 +615,7 @@ const Aya = () => {
               className={cn("absolute", {
                 "sm:bottom-[-5%] sm:right-[87%] z-15 hidden sm:block":
                   locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                "sm:bottom-[-11%] sm:right-[86%] z-15 hidden sm:block":
+                "sm:bottom-[-11%] sm:right-[86%] lg:bottom-[-5%] lg:right-[57%] z-15 hidden sm:block":
                   locale === "ja",
               })}
               strokeColor={[
