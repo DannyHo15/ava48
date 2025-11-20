@@ -28,13 +28,13 @@ const EimiFukada = () => {
           <div className="relative max-w-6xl flex justify-center mb-0 xl:pt-[97px] 2xl:pt-[97px]">
             <div
               className={cn(
-                "absolute z-15  sm:z-5 xl:top-[41%] xl:left-[-35%] xl:z-10 2xl:z-20 2xl:hidden",
+                "absolute sm:z-5 xl:top-[41%] xl:left-[-35%] xl:z-10 2xl:z-20 2xl:hidden",
                 {
-                  "left-3 top-[-3%] sm:left-[-12%] sm:top-[-13%] lg:left-[-12%] lg:top-[-17%] 2xl:top-[38%] 2xl:left-[11%] leading-[75%]":
+                  "z-15 left-3 top-[-3%] sm:left-[-12%] sm:top-[-14%] lg:left-[-12%] lg:top-[-17%] 2xl:top-[38%] 2xl:left-[11%] leading-[75%]":
                     locale === "en",
-                  "left-4 top-[-1%] sm:left-[-15%] sm:top-[-16%]":
+                  "z-15 left-4 top-[-1%] sm:left-[-15%] sm:top-[-16%]":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "left-6 top-[-1%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
+                  "z-5 sm:z-15 left-6 top-[3%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
                     locale === "ja",
                 }
               )}
@@ -45,7 +45,7 @@ const EimiFukada = () => {
                   {
                     "text-custom-55 sm:text-custom-92 lg:text-custom-140 2xl:text-custom leading-none":
                       locale === "en",
-                    "text-custom-48 sm:text-custom-75 lg:text-custom-110 leading-[100%]":
+                    "text-custom-36 sm:text-custom-75 lg:text-custom-110 leading-[100%]":
                       locale === "ja",
                     "text-custom-48 sm:text-custom-92 lg:text-custom-120 leading-[100%]":
                       locale === "zh-cn" || locale === "zh-tw",
@@ -63,7 +63,7 @@ const EimiFukada = () => {
                   {
                     "text-custom-55 sm:text-custom-103 lg:text-custom-140 2xl:text-custom-160 leading-none":
                       locale === "en",
-                    "text-custom-48 sm:text-custom-75 lg:text-custom-110 leading-[110%]":
+                    "text-custom-36 sm:text-custom-75 lg:text-custom-110 leading-[110%]":
                       locale === "ja",
                     "text-custom-48 sm:text-custom-103 lg:text-custom-120 leading-[100%]":
                       locale === "zh-cn" || locale === "zh-tw",
@@ -99,7 +99,7 @@ const EimiFukada = () => {
                 index={"xedcr"}
                 shapeWidth={165}
                 shapeHeight={92}
-                className="sm:top-[68%] sm:left-[-6%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden"
+                className="sm:top-[73%] sm:left-[-22%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden"
                 strokeColor={[
                   { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                   { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -134,12 +134,12 @@ const EimiFukada = () => {
                 index={"vbgyn"}
                 shapeWidth={60}
                 shapeHeight={31}
-                className={cn(
-                  {
-                    "top-[72%] left-[-11%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden" : locale === "en" || locale === "ja",
-                    "top-[72%] left-[-9%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden" : locale === "zh-cn" || locale === "zh-tw",
-                  }
-                )}
+                className={cn({
+                  "top-[72%] left-[-11%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden":
+                    locale === "en" || locale === "ja",
+                  "top-[72%] left-[-9%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden":
+                    locale === "zh-cn" || locale === "zh-tw",
+                })}
                 strokeColor={[
                   { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                   { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -157,9 +157,9 @@ const EimiFukada = () => {
                 {
                   "right-[6%] bottom-[24%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-9%] lg:bottom-[27%] 2xl:bottom-[16%] 2xl:right-[-44%] leading-[86%]":
                     locale === "en",
-                  "bottom-[25%] right-[7%] sm:bottom-[23%] sm:right-[-16%] lg:bottom-[24%] lg:right-[-9%] 2xl:bottom-[17%] 2xl:right-[-27%]":
+                  "bottom-[25%] right-[7%] sm:bottom-[22%] sm:right-[-16%] lg:bottom-[24%] lg:right-[-9%] 2xl:bottom-[17%] 2xl:right-[-27%]":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "right-[7%] bottom-[24%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-14%] lg:bottom-[23%] 2xl:bottom-[12%] 2xl:right-[-27%]":
+                  "right-[7%] bottom-[30%] sm:right-[6%] sm:bottom-[24%] lg:right-[-13%] lg:bottom-[21%] 2xl:bottom-[17%] 2xl:right-[-27%]":
                     locale === "ja",
                 }
               )}
@@ -170,7 +170,7 @@ const EimiFukada = () => {
                   {
                     "text-custom-40 sm:text-custom-72 lg:text-custom-88 2xl:text-custom-120 4xl:text-custom-200! leading-[80%] lg:leading-[75%]":
                       locale === "en",
-                    "text-custom-40 sm:text-custom-72 lg:text-custom-120 2xl:text-custom-130 leading-none sm:leading-[100%] 2xl:leading-[100%] 4xl:text-custom-256!":
+                    "text-custom-30 sm:text-custom-56 lg:text-custom-60 2xl:text-custom-90 leading-none sm:leading-[100%] 2xl:leading-[100%] 4xl:text-custom-192!":
                       locale === "ja",
                     "text-custom-32 sm:text-custom-72 lg:text-custom-75 2xl:text-custom-90 leading-none sm:leading-none 4xl:text-custom-152!":
                       locale === "zh-cn" || locale === "zh-tw",
@@ -181,11 +181,6 @@ const EimiFukada = () => {
                 }}
               >
                 {t("coming_soon_top")}
-                {locale === "ja" ? (
-                  <span className="font-karantina text-custom-46 sm:text-custom-82 lg:text-custom-140 2xl:text-custom-151 font-bold leading-none sm:leading-[100%] 2xl:leading-[110%] 4xl:text-custom-288!">
-                    48
-                  </span>
-                ) : null}
               </h2>
               <h2
                 className={clsx(
@@ -193,7 +188,7 @@ const EimiFukada = () => {
                   {
                     "text-custom-54 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-none 4xl:text-custom-272! lg:leading-[75%]":
                       locale === "en",
-                    "text-custom-50 sm:text-custom-50 lg:text-custom-70 2xl:text-custom-100 leading-[110%] sm:leading-none 2xl:leading-none 4xl:text-custom-200!":
+                    "text-custom-38 sm:text-custom-82 lg:text-custom-100 2xl:text-custom-117 4xl:text-custom-248! leading-[110%] sm:leading-none 2xl:leading-[76%]":
                       locale === "ja",
                     "text-custom-50 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-[90%] sm:leading-[77%] 2xl:leading-[77%] 4xl:text-custom-272!":
                       locale === "zh-cn" || locale === "zh-tw",
@@ -204,21 +199,25 @@ const EimiFukada = () => {
                 }}
               >
                 {t("coming_soon_bottom")}
-                {locale === "ja" ? null : (
                   <span
                     className={cn(
-                      "font-karantina font-bold  4xl:text-custom-297!",
+                      "font-karantina font-bold",
                       {
-                        "text-custom-62 sm:text-custom-98 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%]":
+                        "text-custom-62 sm:text-custom-98 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%] 4xl:text-custom-297!":
                           locale === "en",
-                        "text-custom-58 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%]":
+                        "text-custom-58 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%] 4xl:text-custom-297!":
                           locale === "zh-cn" || locale === "zh-tw",
+                        "font-karantina text-custom-44 sm:text-custom-94 lg:text-custom-118 2xl:text-custom-138 font-bold leading-[90%] sm:leading-[80%] 2xl:leading-[76%] 4xl:text-custom-272!":
+                          locale === "ja",
                       }
-                    )}
-                  >
+                    )}>
                     48
                   </span>
-                )}
+                {locale === "ja" ? (
+                  <span className="font-karantina text-custom-30 sm:text-custom-56 lg:text-custom-60 2xl:text-custom-90 text-right font-bold leading-none sm:leading-[80%] 2xl:leading-[110%] 4xl:text-custom-192! pl-2 sm:pl-5 2xl:pl-8">
+                     へ！
+                  </span>
+                ) : null}
               </h2>
               {/* Laptop */}
               <ShapeGradientWrapper
@@ -272,7 +271,7 @@ const EimiFukada = () => {
                       locale === "en",
                     "leading-[100%] 4xl:text-custom-232!":
                       locale === "zh-cn" || locale === "zh-tw",
-                    "2xl:text-custom-130 leading-[100%] 4xl:text-custom-232!":
+                    "2xl:text-custom-120 leading-[100%] 4xl:text-custom-232!":
                       locale === "ja",
                   }
                 )}
@@ -290,7 +289,7 @@ const EimiFukada = () => {
                       locale === "en",
                     "leading-[100%] 4xl:text-custom-232!":
                       locale === "zh-cn" || locale === "zh-tw",
-                    "2xl:text-custom-130 leading-[100%] 4xl:text-custom-232!":
+                    "2xl:text-custom-120 leading-[100%] 4xl:text-custom-232!":
                       locale === "ja",
                   }
                 )}
@@ -411,11 +410,11 @@ const EimiFukada = () => {
               <div className="z-10 relative -bottom-2 right-[-20%] sm:right-[-27%] 2xl:right-[-31%] 4xl:right-[-36%]!">
                 <OptimizedThemeImage
                   className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] 4xl:max-w-none! 4xl:w-[1505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
-                  lightURL={"/assets/eimi-bg-ai.webp"}
-                  darkURL={"/assets/eimi-bg-ai.webp"}
+                  lightURL={"/assets/eimi-bg-ai.png"}
+                  darkURL={"/assets/eimi-bg-ai.png"}
                   width={1948}
                   height={974}
-                  quality={90}
+                  quality={100}
                   priority={true}
                   placeholder="blur"
                   alt="Aya Fujimoto"
