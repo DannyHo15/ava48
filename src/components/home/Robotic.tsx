@@ -30,13 +30,15 @@ const Robotic = () => {
             {/* Title Tablet */}
             <div className="hidden md:flex xl:hidden w-full flex-col gap-[17px] relative">
               <ShapeGradientWrapper
-                index="57307674538"
+                index="573076745678938-ipad"
                 blurSize="2xs"
-                shapeWidth={104}
-                shapeHeight={95}
+                shapeWidth={83}
+                shapeHeight={76}
                 className={clsx(
-                  "absolute z-50 top-8 left-10 -rotate-90",
-                  locale === "ja" && "top-5! left-15!"
+                  "absolute z-50 top-6 left-8 -rotate-90 xl:hidden",
+                  {
+                    "top-5 left-12": locale === "ja",
+                  }
                 )}
                 strokeColor={[
                   { offset: "0%", stopColor: "rgba(255, 255, 255, 0.3)" },
@@ -44,18 +46,18 @@ const Robotic = () => {
                 ]}
                 strokeDirection="to-b"
                 strokeWidth={1}
-                path="M 10,0 L 94,0 A 10,10 0,0,1 104,10 L 104,85 A 10,10 0,0,1 94,95 L 10,95 A 10,10 0,0,1 0,85 L 0,10 A 10,10 0,0,1 10,0 Z"
+                path="M 8,0 L 75.2,0 A 8,8 0,0,1 83.2,8 L 83.2,68 A 8,8 0,0,1 75.2,76 L 8,76 A 8,8 0,0,1 0,68 L 0,8 A 8,8 0,0,1 8,0 Z"
               />
               <ShapeGradientWrapper
-                index="8769045634"
+                index="8769045634534985"
                 blurSize="2xs"
-                shapeWidth={224}
-                shapeHeight={104}
-                className={clsx(
-                  "absolute z-50 top-8 right-70",
-                  locale === "ja" ||
-                    ((locale === "zh-cn" || locale === "zh-tw") && "hidden")
-                )}
+                shapeWidth={179}
+                shapeHeight={83}
+                className={clsx("absolute z-50 top-6", {
+                  "right-56 ": locale === "en",
+                  "right-24 lg:right-80 top-5": locale === "ja",
+                  hidden: locale === "zh-cn" || locale === "zh-tw",
+                })}
                 strokeColor={[
                   { offset: "0%", stopColor: "rgba(255, 255, 255, 1)" },
                   { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -63,13 +65,14 @@ const Robotic = () => {
                 strokeDirection="to-bl"
                 strokeWidth={1}
                 path={
-                  "M0.5 94L0.499996 10C0.5 4.7533 4.75329 0.5 10 0.5L166.081 0.499993C168.474 0.499993 170.78 1.4033 172.536 3.02929L220.454 47.3984C222.396 49.1964 223.5 51.7228 223.5 54.3691L223.5 94C223.5 99.2467 219.247 103.5 214 103.5L10 103.5C4.7533 103.5 0.5 99.2467 0.5 94Z"
+                  "M0.4 75.2L0.4 8C0.4 3.803 3.803 0.4 8 0.4L132.865 0.4C134.779 0.4 136.624 1.123 138.029 2.423L176.363 37.919C177.917 39.357 178.8 41.378 178.8 43.495L178.8 75.2C178.8 79.397 175.398 82.8 171.2 82.8L8 82.8C3.803 82.8 0.4 79.397 0.4 75.2Z"
                 }
               />
+
               <p
                 className={clsx(
                   "text-custom-90 leading-[86%] tracking-normal font-bold font-karantina text-left w-full bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)] text-gradient",
-                  locale === "ja" && "text-custom-75!"
+                  locale === "ja" && "text-custom-75! leading-none"
                 )}
               >
                 {t("title")}
@@ -78,15 +81,15 @@ const Robotic = () => {
               <p
                 className={clsx(
                   "text-white uppercase text-left font-bold text-custom-75 leading-[86%] tracking-[2%] font-karantina",
-                  locale === "ja" && "text-custom-46!"
+                  locale === "ja" && "text-custom-46! leading-none"
                 )}
               >
                 {t("subtitle")}
               </p>
             </div>
             {/* Summary Tablet */}
-            <div className="hidden md:block xl:hidden absolute left-0 top-1/2 -translate-y-1/2 z-10 px-10">
-              <div className="max-w-[301px] px-4.5 py-4 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)] text-white font-kanit flex-center text-lg leading-[135%]">
+            <div className="hidden md:block xl:hidden absolute left-0 top-1/2 -translate-y-1/2 z-10">
+              <div className="max-w-[301px] min-[1024px]:max-w-[325px] px-4.5 py-4 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)] text-white font-kanit flex-center text-lg leading-[135%]">
                 <p>
                   <span className="font-medium">AVATAR48</span> {t("content")}
                 </p>
@@ -156,7 +159,7 @@ const Robotic = () => {
             </div>
             {/* Tablet */}
             <ImageAvatar48
-              className="hidden md:block xl:hidden w-[88.2%] h-auto object-contain"
+              className="relative left-10 min-[1024px]:left-5 hidden md:block xl:hidden min-[1024px]:w-[88.2%] w-[83%] h-auto object-contain"
               lightURL="/assets/robotic-tablet-light.png"
               drakURL="/assets/robotic-tablet-dark.png"
             />
@@ -183,7 +186,7 @@ const Robotic = () => {
                   shapeHeight={95}
                   className={clsx("absolute z-50 -rotate-90", {
                     "top-15 left-82": locale === "en",
-                    "-left-5 top-18": locale === "ja",
+                    "-left-5 top-10": locale === "ja",
                     "top-17": locale === "zh-cn" || locale === "zh-tw",
                   })}
                   strokeColor={[
