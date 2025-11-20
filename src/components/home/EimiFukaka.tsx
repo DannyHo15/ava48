@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { useParams } from "next/navigation";
 import clsx from "clsx";
+import OptimizedThemeImage from "../OptimizedThemeImage";
 
 const EimiFukada = () => {
   const t = useTranslations("LandingPage.section_eimi");
@@ -18,18 +19,22 @@ const EimiFukada = () => {
       <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
       <div className="fixed inset-0 bg-[url(/assets/aya-laptop-bg.png)] dark:bg-[url(/assets/aya-laptop-bg-dark.png)] bg-cover bg-center z-0" />
       <div className="fixed inset-0 bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom mix-blend-plus-lighter bg-no-repeat hidden 2xl:block" />
-      <div className="avatar-container relative" id="section-eimi" suppressHydrationWarning>
+      <div
+        className="avatar-container relative"
+        id="section-eimi"
+        suppressHydrationWarning
+      >
         <div className="flex items-end justify-center min-h-dvh">
           <div className="relative max-w-6xl flex justify-center mb-0 xl:pt-[97px] 2xl:pt-[97px]">
             <div
               className={cn(
                 "absolute z-15  sm:z-5 xl:top-[41%] xl:left-[-35%] xl:z-10 2xl:z-20 2xl:hidden",
                 {
-                  "left-0 top-[-3%] sm:left-[-12%] sm:top-[-13%] lg:left-[-10%] lg:top-[-15%] 2xl:top-[38%] 2xl:left-[11%]":
+                  "left-3 top-[-3%] sm:left-[-12%] sm:top-[-13%] lg:left-[-12%] lg:top-[-17%] 2xl:top-[38%] 2xl:left-[11%] leading-[75%]":
                     locale === "en",
-                  "left-0 top-[-3%] sm:left-[-15%] sm:top-[-16%]":
+                  "left-4 top-[-1%] sm:left-[-15%] sm:top-[-16%]":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "left-0 top-[-3%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
+                  "left-6 top-[-1%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
                     locale === "ja",
                 }
               )}
@@ -129,7 +134,12 @@ const EimiFukada = () => {
                 index={"vbgyn"}
                 shapeWidth={60}
                 shapeHeight={31}
-                className="top-[72%] left-[-11%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
+                className={cn(
+                  {
+                    "top-[72%] left-[-11%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden" : locale === "en" || locale === "ja",
+                    "top-[72%] left-[-9%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden" : locale === "zh-cn" || locale === "zh-tw",
+                  }
+                )}
                 strokeColor={[
                   { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                   { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -145,11 +155,11 @@ const EimiFukada = () => {
               className={cn(
                 "absolute z-20 xl:right-[-34%] 4xl:right-[-60%]! 4xl:bottom-[18%]!",
                 {
-                  "right-[-1] bottom-[28%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-9%] lg:bottom-[26%] 2xl:bottom-[16%] 2xl:right-[-44%]":
+                  "right-[6%] bottom-[24%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-9%] lg:bottom-[27%] 2xl:bottom-[16%] 2xl:right-[-44%] leading-[86%]":
                     locale === "en",
-                  "bottom-[27%] right-[2%] sm:bottom-[23%] sm:right-[-16%] lg:bottom-[25%] lg:right-[-8%] 2xl:bottom-[19%] 2xl:right-[-27%]":
+                  "bottom-[25%] right-[7%] sm:bottom-[23%] sm:right-[-16%] lg:bottom-[24%] lg:right-[-9%] 2xl:bottom-[17%] 2xl:right-[-27%]":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "right-[2%] bottom-[26%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-14%] lg:bottom-[25%] 2xl:bottom-[16%] 2xl:right-[-27%]":
+                  "right-[7%] bottom-[24%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-14%] lg:bottom-[23%] 2xl:bottom-[12%] 2xl:right-[-27%]":
                     locale === "ja",
                 }
               )}
@@ -158,11 +168,11 @@ const EimiFukada = () => {
                 className={clsx(
                   "font-karantina font-bold bg-white dark:bg-[linear-gradient(160deg,#FFFFFF_70%,#D81DE2_200%)] bg-clip-text text-transparent uppercase text-right",
                   {
-                    "text-custom-40 sm:text-custom-72 lg:text-custom-88 2xl:text-custom-120 leading-none 4xl:text-custom-200!":
+                    "text-custom-40 sm:text-custom-72 lg:text-custom-88 2xl:text-custom-120 4xl:text-custom-200! leading-[80%] lg:leading-[75%]":
                       locale === "en",
-                    "text-custom-40 sm:text-custom-72 lg:text-custom-120 2xl:text-custom-130 leading-none sm:leading-[115%] 2xl:leading-[110%] 4xl:text-custom-256!":
+                    "text-custom-40 sm:text-custom-72 lg:text-custom-120 2xl:text-custom-130 leading-none sm:leading-[100%] 2xl:leading-[100%] 4xl:text-custom-256!":
                       locale === "ja",
-                    "text-custom-32 sm:text-custom-72 lg:text-custom-75 2xl:text-custom-90 leading-none sm:leading-none 2xl:leading-[77%] 4xl:text-custom-152!":
+                    "text-custom-32 sm:text-custom-72 lg:text-custom-75 2xl:text-custom-90 leading-none sm:leading-none 4xl:text-custom-152!":
                       locale === "zh-cn" || locale === "zh-tw",
                   }
                 )}
@@ -172,7 +182,7 @@ const EimiFukada = () => {
               >
                 {t("coming_soon_top")}
                 {locale === "ja" ? (
-                  <span className="font-karantina text-custom-46 sm:text-custom-82 lg:text-custom-140 2xl:text-custom-151 font-bold leading-none sm:leading-[115%] 2xl:leading-[110%] 4xl:text-custom-288!">
+                  <span className="font-karantina text-custom-46 sm:text-custom-82 lg:text-custom-140 2xl:text-custom-151 font-bold leading-none sm:leading-[100%] 2xl:leading-[110%] 4xl:text-custom-288!">
                     48
                   </span>
                 ) : null}
@@ -181,7 +191,7 @@ const EimiFukada = () => {
                 className={clsx(
                   "font-karantina font-bold bg-white dark:bg-[linear-gradient(165deg,#FFFFFF_34%,#D81DE2_185%)] bg-clip-text text-transparent uppercase text-right",
                   {
-                    "text-custom-54 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-none 4xl:text-custom-272!":
+                    "text-custom-54 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-none 4xl:text-custom-272! lg:leading-[75%]":
                       locale === "en",
                     "text-custom-50 sm:text-custom-50 lg:text-custom-70 2xl:text-custom-100 leading-[110%] sm:leading-none 2xl:leading-none 4xl:text-custom-200!":
                       locale === "ja",
@@ -199,7 +209,7 @@ const EimiFukada = () => {
                     className={cn(
                       "font-karantina font-bold  4xl:text-custom-297!",
                       {
-                        "text-custom-62 sm:text-custom-98 lg:text-custom-153 2xl:text-custom-185":
+                        "text-custom-62 sm:text-custom-98 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%]":
                           locale === "en",
                         "text-custom-58 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%]":
                           locale === "zh-cn" || locale === "zh-tw",
@@ -256,11 +266,14 @@ const EimiFukada = () => {
             >
               <h1
                 className={clsx(
-                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs text-white uppercase leading-none",
+                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs text-white uppercase",
                   {
-                    "2xl:text-custom-160 leading-none 4xl:text-custom-272!": locale === "en",
-                    "leading-[100%] 4xl:text-custom-232!": locale === "zh-cn" || locale === "zh-tw",
-                    "2xl:text-custom-130 leading-[100%] 4xl:text-custom-232!": locale === "ja",
+                    "2xl:text-custom-160 4xl:text-custom-272! leading-[86%]":
+                      locale === "en",
+                    "leading-[100%] 4xl:text-custom-232!":
+                      locale === "zh-cn" || locale === "zh-tw",
+                    "2xl:text-custom-130 leading-[100%] 4xl:text-custom-232!":
+                      locale === "ja",
                   }
                 )}
                 style={{
@@ -271,11 +284,14 @@ const EimiFukada = () => {
               </h1>
               <h1
                 className={cn(
-                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-none",
+                  "font-karantina text-custom-60 sm:text-custom-140 font-bold drop-shadow-amber-950 drop-shadow-xs bg-[linear-gradient(147deg,#FFFFFF_35%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase",
                   {
-                    "2xl:text-custom-160 leading-none 4xl:text-custom-272!": locale === "en",
-                    "leading-[100%] 4xl:text-custom-232!": locale === "zh-cn" || locale === "zh-tw",
-                    "2xl:text-custom-130 leading-[100%] 4xl:text-custom-232!": locale === "ja",
+                    "2xl:text-custom-160 leading-[86%] 4xl:text-custom-272!":
+                      locale === "en",
+                    "leading-[100%] 4xl:text-custom-232!":
+                      locale === "zh-cn" || locale === "zh-tw",
+                    "2xl:text-custom-130 leading-[100%] 4xl:text-custom-232!":
+                      locale === "ja",
                   }
                 )}
                 style={{
@@ -392,19 +408,31 @@ const EimiFukada = () => {
               />
             </div>
             <div className="relative flex items-end z-5 2xl:z-10">
-              <div className="z-10 relative bottom-0 right-[-20%] sm:right-[-27%] 2xl:right-[-31%] 4xl:right-[-36%]!">
-                <ImageAvatar48
+              <div className="z-10 relative -bottom-2 right-[-20%] sm:right-[-27%] 2xl:right-[-31%] 4xl:right-[-36%]!">
+                <OptimizedThemeImage
                   className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] 4xl:max-w-none! 4xl:w-[1505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
                   lightURL={"/assets/eimi-bg-ai.webp"}
-                  drakURL={"/assets/eimi-bg-ai.webp"}
-                ></ImageAvatar48>
+                  darkURL={"/assets/eimi-bg-ai.webp"}
+                  width={1948}
+                  height={974}
+                  quality={90}
+                  priority={true}
+                  placeholder="blur"
+                  alt="Aya Fujimoto"
+                ></OptimizedThemeImage>
               </div>
-              <div className="z-10 absolute bottom-0 left-[-42%] sm:left-[-44%] 2xl:left-[-51%] 4xl:left-[-45%]!">
-                <ImageAvatar48
+              <div className="z-10 absolute -bottom-2 left-[-31%] sm:left-[-44%] 2xl:left-[-51%] 4xl:left-[-45%]!">
+                <OptimizedThemeImage
                   className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain"
                   lightURL={"/assets/eimi-bg.webp"}
-                  drakURL={"/assets/eimi-bg.webp"}
-                ></ImageAvatar48>
+                  darkURL={"/assets/eimi-bg.webp"}
+                  width={1948}
+                  height={974}
+                  quality={90}
+                  priority={true}
+                  placeholder="blur"
+                  alt="Aya Fujimoto"
+                ></OptimizedThemeImage>
               </div>
             </div>
           </div>
