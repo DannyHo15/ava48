@@ -32,7 +32,7 @@ const EimiFukada = () => {
                 {
                   "z-15 left-3 top-[-3%] sm:left-[-12%] sm:top-[-14%] lg:left-[-12%] lg:top-[-17%] 2xl:top-[38%] 2xl:left-[11%] leading-[75%]":
                     locale === "en",
-                  "z-15 left-4 top-[-1%] sm:left-[-15%] sm:top-[-16%]":
+                  "z-15 left-4 top-[-1%] sm:left-[-15%] sm:top-[-17%]":
                     locale === "zh-cn" || locale === "zh-tw",
                   "z-5 sm:z-15 left-6 top-[3%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
                     locale === "ja",
@@ -47,7 +47,7 @@ const EimiFukada = () => {
                       locale === "en",
                     "text-custom-36 sm:text-custom-75 lg:text-custom-110 leading-[100%]":
                       locale === "ja",
-                    "text-custom-48 sm:text-custom-92 lg:text-custom-120 leading-[100%]":
+                    "text-custom-48 sm:text-custom-103 lg:text-custom-120 leading-[100%]":
                       locale === "zh-cn" || locale === "zh-tw",
                   }
                 )}
@@ -110,23 +110,6 @@ const EimiFukada = () => {
                   "M 165,9 A 8.705,9 0,0,0 156,0 L 44,0 A 8,9 0,0,0 35,4 L 4,45 A 17,19 0,0,0 0,54 L 0,82 A 8,9 0,0,0 8,92 L 156,92 A 8,9 0,0,0 165,82 Z"
                 }
               />
-              {/* Mobile */}
-              <ShapeGradientWrapper
-                blurSize="2xs"
-                index={"cfvtg"}
-                shapeWidth={80}
-                shapeHeight={40}
-                className="prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden prm:block sm:hidden"
-                strokeColor={[
-                  { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
-                  { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
-                ]}
-                strokeDirection="to-br"
-                strokeWidth={1}
-                path={
-                  "M 80,3 A 5,5 0,0,0 77,0 L 20,0 A 10,10 0,0,0 17,2 L 2,13 A 10,10 0,0,0 0,16 L 0,37 A 5,5 0,0,0 3,40 L 77,40 A 5,5 0,0,0 80,37 Z"
-                }
-              />
 
               {/* Mini Mobile */}
               <ShapeGradientWrapper
@@ -135,9 +118,9 @@ const EimiFukada = () => {
                 shapeWidth={60}
                 shapeHeight={31}
                 className={cn({
-                  "top-[72%] left-[-11%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden":
+                  "top-[72%] left-[-11%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 sm:hidden":
                     locale === "en" || locale === "ja",
-                  "top-[72%] left-[-9%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden":
+                  "top-[72%] left-[-9%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 sm:hidden":
                     locale === "zh-cn" || locale === "zh-tw",
                 })}
                 strokeColor={[
@@ -157,9 +140,9 @@ const EimiFukada = () => {
                 {
                   "right-[6%] bottom-[24%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-9%] lg:bottom-[27%] 2xl:bottom-[16%] 2xl:right-[-44%] leading-[86%]":
                     locale === "en",
-                  "bottom-[25%] right-[7%] sm:bottom-[22%] sm:right-[-16%] lg:bottom-[24%] lg:right-[-9%] 2xl:bottom-[17%] 2xl:right-[-27%]":
+                  "bottom-[25%] right-[7%] sm:bottom-[23%] sm:right-[-8%] lg:bottom-[24%] lg:right-[-9%] 2xl:bottom-[17%] 2xl:right-[-27%]":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "right-[7%] bottom-[30%] sm:right-[6%] sm:bottom-[24%] lg:right-[-13%] lg:bottom-[21%] 2xl:bottom-[17%] 2xl:right-[-27%]":
+                  "right-[7%] bottom-[30%] sm:right-[-18%] sm:bottom-[25%] lg:right-[-13%] lg:bottom-[21%] 2xl:bottom-[17%] 2xl:right-[-27%]":
                     locale === "ja",
                 }
               )}
@@ -168,7 +151,7 @@ const EimiFukada = () => {
                 className={clsx(
                   "font-karantina font-bold bg-white dark:bg-[linear-gradient(160deg,#FFFFFF_70%,#D81DE2_200%)] bg-clip-text text-transparent uppercase text-right",
                   {
-                    "text-custom-40 sm:text-custom-72 lg:text-custom-88 2xl:text-custom-120 4xl:text-custom-200! leading-[80%] lg:leading-[75%]":
+                    "text-custom-40 sm:text-custom-56 lg:text-custom-88 2xl:text-custom-120 4xl:text-custom-200! leading-[80%] lg:leading-[75%]":
                       locale === "en",
                     "text-custom-30 sm:text-custom-56 lg:text-custom-60 2xl:text-custom-90 leading-none sm:leading-[100%] 2xl:leading-[100%] 4xl:text-custom-192!":
                       locale === "ja",
@@ -203,9 +186,9 @@ const EimiFukada = () => {
                     className={cn(
                       "font-karantina font-bold",
                       {
-                        "text-custom-62 sm:text-custom-98 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%] 4xl:text-custom-297!":
+                        "text-custom-62 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%] 4xl:text-custom-297!":
                           locale === "en",
-                        "text-custom-58 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%] 4xl:text-custom-297!":
+                        "text-custom-58 sm:text-custom-110 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%] 4xl:text-custom-297!":
                           locale === "zh-cn" || locale === "zh-tw",
                         "font-karantina text-custom-44 sm:text-custom-94 lg:text-custom-118 2xl:text-custom-138 font-bold leading-[90%] sm:leading-[80%] 2xl:leading-[76%] 4xl:text-custom-272!":
                           locale === "ja",
@@ -243,7 +226,7 @@ const EimiFukada = () => {
               />
             </div>
             <ImageAvatar48
-              className="fixed left-0 bottom-0 z-0 opacity-80 hidden dark:2xl:block"
+              className="fixed left-0 bottom-0 z-0 opacity-80 hidden dark:2xl:block 4xl:hidden"
               lightURL={"/assets/light-bot-left.png"}
               drakURL={"/assets/light-bot-left.png"}
             ></ImageAvatar48>
@@ -308,9 +291,9 @@ const EimiFukada = () => {
                 className={cn({
                   "sm:top-[72%] sm:left-[-4%] 2xl:left-[-16%] 2xl:top-[75%] 4xl:left-[-22%] z-20 hidden 4xl:block!":
                     locale === "en",
-                  "sm:top-[72%] sm:left-[-4%] 2xl:left-[-11%] 2xl:top-[79%] 4xl:left-[-27%]! 4xl:top-[70%]! z-20 hidden 4xl:block!":
+                  "sm:top-[72%] sm:left-[-4%] 2xl:left-[-11%] 2xl:top-[79%] 4xl:left-[-32%]! 4xl:top-[72%]! z-20 hidden 4xl:block!":
                     locale === "zh-cn",
-                  "sm:top-[72%] sm:left-[-4%] 2xl:left-[-11%] 2xl:top-[80%] 4xl:left-[-27%]! 4xl:top-[70%]! z-20 hidden 4xl:block!":
+                  "sm:top-[72%] sm:left-[-4%] 2xl:left-[-11%] 2xl:top-[80%] 4xl:left-[-32%]! 4xl:top-[72%]! z-20 hidden 4xl:block!":
                     locale === "zh-tw",
                   "sm:top-[72%] sm:left-[-4%] 2xl:left-[-8%] 2xl:top-[73%] 4xl:left-[-22%] 4xl:top-[69%]! z-20 hidden 4xl:block!":
                     locale === "ja",
@@ -370,31 +353,13 @@ const EimiFukada = () => {
                 }
               />
 
-              {/* Mobile */}
-              <ShapeGradientWrapper
-                blurSize="2xs"
-                index={"plqaz"}
-                shapeWidth={80}
-                shapeHeight={40}
-                className="prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden prm:block sm:hidden"
-                strokeColor={[
-                  { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
-                  { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
-                ]}
-                strokeDirection="to-br"
-                strokeWidth={1}
-                path={
-                  "M 80,3 A 5,5 0,0,0 77,0 L 20,0 A 10,10 0,0,0 17,2 L 2,13 A 10,10 0,0,0 0,16 L 0,37 A 5,5 0,0,0 3,40 L 77,40 A 5,5 0,0,0 80,37 Z"
-                }
-              />
-
               {/* Mini Mobile */}
               <ShapeGradientWrapper
                 blurSize="2xs"
                 index={"okwsx"}
                 shapeWidth={60}
                 shapeHeight={31}
-                className="top-[72%] left-[-7%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
+                className="top-[72%] left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 sm:hidden"
                 strokeColor={[
                   { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                   { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
