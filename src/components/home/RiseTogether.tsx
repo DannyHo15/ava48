@@ -58,10 +58,11 @@ const RiseTogether = () => {
                   className={clsx(
                     "absolute sm:-left-7 sm:top-1 -left-8 -top-8 z-10 sm:scale-100 scale-60",
                     {
-                      "lg:-top-6 sm:left-8! sm:-top-2! -top-10":
+                      "lg:top-0! lg:left-18! sm:left-20! sm:-top-2! -top-8 left-2!":
                         locale === "ja",
                       "lg:top-2! lg:-left-2! sm:-top-10":
                         locale === "zh-cn" || locale === "zh-tw",
+                      "left-0! -top-10": locale === "zh-tw",
                     },
                   )}
                   strokeWidth={1}
@@ -127,7 +128,7 @@ const RiseTogether = () => {
                 className={clsx(
                   "relative text-custom-40 sm:text-custom-70 lg:text-custom-82 font-karantina text-center  w-full text-white font-bold",
                   {
-                    "lg:text-custom-70! sm:text-custom-82! text-custom-37!":
+                    "lg:text-custom-82! sm:text-custom-70! text-custom-37!":
                       locale === "ja",
                   },
                 )}
@@ -140,6 +141,7 @@ const RiseTogether = () => {
                       "lg:-bottom-16 lg:right-14 sm:right-16 sm:-bottom-12! right-0":
                         locale === "ja",
                       "lg:right-25": locale === "zh-cn" || locale === "zh-tw",
+                      "-bottom-14": locale === "zh-tw",
                     },
                   )}
                   strokeWidth={1}
