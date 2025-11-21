@@ -393,7 +393,7 @@ const Aya = () => {
               />
             </div>
             <OptimizedThemeImage
-              className="max-w-[107%] w-[331px] sm:w-[640px] 4xl:max-w-none! 4xl:w-[1150px]! 4xl:pt-[100px]! max-h-dvh prm:w-auto h-auto left-0 prm:left-2 object-contain z-10 relative"
+              className="max-w-[107%] sm:max-w-[90%] 2xl:max-w-[107%] w-[331px] sm:w-[640px] 4xl:max-w-none! 4xl:w-[1150px]! 4xl:pt-[100px]! max-h-dvh prm:w-auto h-auto left-0 prm:left-2 object-contain z-10 relative"
               lightURL={"/assets/aya-bg.webp"}
               darkURL={"/assets/aya-bg-dark.png"}
               width={1150}
@@ -437,11 +437,36 @@ const Aya = () => {
               shapeWidth={164}
               shapeHeight={281}
               className={cn({
-                "sm:bottom-[38%] sm:right-[-1%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden":
+                "sm:bottom-[37%] sm:right-[0%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden sm:block lg:hidden sm:scale-90":
                   locale === "en",
-                "sm:bottom-[39%] sm:right-[-4%] 2xl:bottom-[46.1%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden":
+                "sm:bottom-[36%] sm:right-[-3%] 2xl:bottom-[46.1%] 2xl:right-[7%] z-0 hidden sm:block lg:hidden sm:scale-90":
                   locale === "zh-cn" || locale === "zh-tw",
-                "sm:bottom-[38%] sm:right-[-3%] 2xl:bottom-[46.2%] 2xl:right-[7%] z-0 hidden sm:block 2xl:hidden":
+                "sm:bottom-[36%] sm:right-[4%] 2xl:bottom-[46.2%] 2xl:right-[7%] z-0 hidden sm:block lg:hidden sm:scale-90":
+                  locale === "ja",
+              })}
+              strokeColor={[
+                { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
+                { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
+              ]}
+              strokeDirection="to-br"
+              strokeWidth={1}
+              path={
+                "M 0,10 A 10,10 0,0,1 10,0 L 92,0 A 15,15 0,0,1 100,5 L 160,70 A 15,15 0,0,1 164,79 L 164,271 A 10,10 0,0,1 157,281 L 10,281 A 10,10 0,0,1 0,271 Z"
+              }
+            />
+
+            {/* Tablet */}
+            <ShapeGradientWrapper
+              blurSize={"2xs"}
+              index={"vbhyn"}
+              shapeWidth={164}
+              shapeHeight={281}
+              className={cn({
+                "sm:bottom-[38%] sm:right-[-1%] 2xl:bottom-[46%] 2xl:right-[7%] z-0 hidden lg:block 2xl:hidden":
+                  locale === "en",
+                "sm:bottom-[39%] sm:right-[-4%] 2xl:bottom-[46.1%] 2xl:right-[7%] z-0 hidden lg:block 2xl:hidden":
+                  locale === "zh-cn" || locale === "zh-tw",
+                "sm:bottom-[38%] sm:right-[-3%] 2xl:bottom-[46.2%] 2xl:right-[7%] z-0 hidden lg:block 2xl:hidden":
                   locale === "ja",
               })}
               strokeColor={[
@@ -526,16 +551,42 @@ const Aya = () => {
               }
             />
 
+            {/* Ipad Air */}
+            <ShapeGradientWrapper
+              index={"qamws"}
+              blurSize={"2xs"}
+              shapeWidth={153}
+              shapeHeight={78}
+              className={cn("absolute", {
+                "sm:top-[31%] sm:right-[-21%] z-15 hidden":
+                  locale === "en",
+                "sm:top-[67%] sm:right-[-31%] z-15 hidden sm:block lg:hidden":
+                  locale === "zh-cn" || locale === "zh-tw",
+                "sm:top-[82%] sm:right-[-13%] sm:scale-80 z-15 hidden sm:block lg:hidden":
+                  locale === "ja",
+              })}
+              strokeColor={[
+                { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
+                { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
+              ]}
+              strokeDirection="to-l"
+              bgColor="sm:bg-linear-to-b sm:from-white/50 sm:to-white/5 2xl:bg-white/0"
+              strokeWidth={1}
+              path={
+                "M 0,10 A 10,10 0,0,1 10,0 L 115,0 A 10,10 0,0,1 119,2 L 151,33 A 3,7 0,0,1 153,37 L 153,68 A 10,10 0,0,1 143,78 L 10,78 A 10,10 0,0,1 0,68 Z"
+              }
+            />
+
             {/* Tablet */}
             <ShapeGradientWrapper
-              index={"qazws"}
+              index={"qjzwy"}
               blurSize={"2xs"}
               shapeWidth={153}
               shapeHeight={78}
               className={cn("absolute", {
                 "sm:top-[36%] sm:right-[-21%] z-15 hidden":
                   locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                "sm:top-[79%] sm:right-[-16%] z-15 hidden sm:block 2xl:hidden":
+                "sm:top-[79%] sm:right-[-16%] z-15 hidden lg:block 2xl:hidden":
                   locale === "ja",
               })}
               strokeColor={[
