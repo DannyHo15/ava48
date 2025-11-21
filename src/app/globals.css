@@ -5,23 +5,42 @@
 
 /* Skeleton Loading Animations */
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes pulse-opacity {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.8; }
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 @keyframes wave {
-  0%, 100% { transform: translateY(100%); }
-  50% { transform: translateY(-50%); }
+  0%,
+  100% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
 }
 
 @keyframes gradient-shift {
-  0%, 100% { transform: translateX(-100%) translateY(-100%); }
-  50% { transform: translateX(100%) translateY(100%); }
+  0%,
+  100% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
 }
 
 .animate-shimmer {
@@ -109,6 +128,7 @@
   --text-custom-59: 3.6875rem;
   --text-custom-60: 3.75rem;
   --text-custom-62: 3.875rem;
+  --text-custom-64: 4rem;
   --text-custom-66: 4.125rem;
   --text-custom-70: 4.375rem;
   --text-custom-72: 4.5rem;
@@ -138,11 +158,13 @@
   --text-custom-130: 8.125rem;
   --text-custom-132: 8.25rem;
   --text-custom-138: 8.625rem;
+  --text-custom-136: 8.5rem;
   --text-custom-140: 8.75rem;
   --text-custom-145: 9.125rem;
   --text-custom-151: 9.4375rem;
   --text-custom-152: 9.5rem;
   --text-custom-153: 9.5625rem;
+  --text-custom-157: 9.8125rem;
   --text-custom-160: 10rem;
   --text-custom-176: 11rem;
   --text-custom-180: 11.25rem;
