@@ -71,8 +71,16 @@ const Robotic = () => {
 
               <p
                 className={clsx(
-                  "text-custom-90 leading-[86%] tracking-normal font-bold font-karantina text-left w-full bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)] text-gradient",
-                  locale === "ja" && "text-custom-75! leading-none"
+                  "text-custom-90 leading-[86%] tracking-normal font-bold font-karantina text-left w-full text-gradient",
+                  locale === "ja" && "text-custom-75! leading-none",
+                  {
+                    "leading-none! bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                      locale === "ja",
+                    "leading-none! bg-[linear-gradient(298.41deg,#FFFFFF_88.41%,#00D0F6_101.78%)] dark:bg-[linear-gradient(298.41deg,var(--color-white)_88.41%,var(--color-avatar-violet)_101.78%)]":
+                      locale === "zh-cn" || locale === "zh-tw",
+                    "bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                      locale === "en",
+                  }
                 )}
               >
                 {t("title")}
@@ -97,7 +105,16 @@ const Robotic = () => {
             </div>
 
             {/* Summary Desktop */}
-            <div className="xl:block text-white font-kanit flex-center text-sm 2xl:text-xl 3xl:text-2xl! 4xl:hidden! leading-[142%] absolute left-0 top-1/2 -translate-y-2/9 2xl:-translate-y-2/6 3xl:translate-y-[20%]! 4xl:-translate-y-1/12! z-10 hidden max-w-[485px] 3xl:max-w-[600px] px-4.5 py-3 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)]">
+            <div
+              className={clsx(
+                "xl:block text-white font-kanit flex-center  3xl:text-2xl! 4xl:hidden! leading-[142%] absolute left-0 top-1/2 -translate-y-2/9 2xl:-translate-y-2/6 3xl:translate-y-[20%]! 4xl:-translate-y-1/12! z-10 hidden 3xl:max-w-[570px] px-4.5 py-3 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)]",
+                {
+                  "max-w-[485px] text-sm 2xl:text-xl":
+                    locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+                  "max-w-[511px] text-lg whitespace-pre-line": locale === "ja",
+                }
+              )}
+            >
               <p className="">
                 <span className="font-medium">AVATAR48</span> {t("content")}
               </p>
@@ -119,7 +136,12 @@ const Robotic = () => {
                   shapeWidth={70}
                   shapeHeight={38.57}
                   blurSize="2xs"
-                  className="absolute md:hidden bottom-2.5 -right-3 z-10"
+                  className={clsx("absolute md:hidden z-10", {
+                    "bottom-2.5 -right-3": locale === "en",
+                    "-bottom-7 right-1":
+                      locale === "zh-cn" || locale === "zh-tw",
+                    "bottom-2 -right-3": locale === "ja",
+                  })}
                   strokeColor={[
                     { offset: "0%", stopColor: "rgba(255, 255, 255, 1)" },
                     { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -187,7 +209,7 @@ const Robotic = () => {
                   className={clsx("absolute z-50 -rotate-90", {
                     "top-15 left-82": locale === "en",
                     "-left-5 top-10": locale === "ja",
-                    "top-17": locale === "zh-cn" || locale === "zh-tw",
+                    "top-45 -left-12": locale === "zh-cn" || locale === "zh-tw",
                   })}
                   strokeColor={[
                     { offset: "0%", stopColor: "rgba(255, 255, 255, 0.3)" },
@@ -220,13 +242,13 @@ const Robotic = () => {
                 />
                 <p
                   className={clsx(
-                    "leading-[86%] tracking-[1.25px] font-bold font-karantina text-left w-full bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)] text-gradient",
+                    "leading-[86%] tracking-[1.25px] font-bold font-karantina text-left w-full text-gradient",
                     {
-                      "xl:text-custom-82 3xl:text-custom-123! 4xl:text-custom-145! leading-none!":
+                      "xl:text-custom-82 3xl:text-custom-123! 4xl:text-custom-145! leading-none! bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
                         locale === "ja",
-                      "leading-none! text-custom-130":
+                      "leading-none! text-custom-130 bg-[linear-gradient(298.41deg,#FFFFFF_88.41%,#00D0F6_101.78%)] dark:bg-[linear-gradient(298.41deg,var(--color-white)_88.41%,var(--color-avatar-violet)_101.78%)]":
                         locale === "zh-cn" || locale === "zh-tw",
-                      "text-custom-98 2xl:text-custom-125 3xl:text-custom-153!":
+                      "text-custom-98 2xl:text-custom-125 3xl:text-custom-153 bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
                         locale === "en",
                     }
                   )}
