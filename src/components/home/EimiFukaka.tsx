@@ -34,7 +34,7 @@ const EimiFukada = () => {
                     locale === "en",
                   "z-15 left-4 top-[-1%] sm:left-[-15%] sm:top-[-17%]":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "z-5 sm:z-15 left-6 top-[3%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
+                  "z-5 left-6 top-[3%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
                     locale === "ja",
                 }
               )}
@@ -93,13 +93,31 @@ const EimiFukada = () => {
                 }
               />
 
+              {/* Ipad Air */}
+              <ShapeGradientWrapper
+                blurSize="2xs"
+                index={"xodcr"}
+                shapeWidth={165}
+                shapeHeight={92}
+                className="sm:top-[69%] sm:left-[-15%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden sm:block lg:hidden sm:scale-78"
+                strokeColor={[
+                  { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
+                  { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
+                ]}
+                strokeDirection="to-br"
+                strokeWidth={1}
+                path={
+                  "M 165,9 A 8.705,9 0,0,0 156,0 L 44,0 A 8,9 0,0,0 35,4 L 4,45 A 17,19 0,0,0 0,54 L 0,82 A 8,9 0,0,0 8,92 L 156,92 A 8,9 0,0,0 165,82 Z"
+                }
+              />
+
               {/* Tablet */}
               <ShapeGradientWrapper
                 blurSize="2xs"
-                index={"xedcr"}
+                index={"nedcr"}
                 shapeWidth={165}
                 shapeHeight={92}
-                className="sm:top-[73%] sm:left-[-22%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden"
+                className="sm:top-[73%] sm:left-[-22%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden lg:block 2xl:hidden"
                 strokeColor={[
                   { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                   { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
