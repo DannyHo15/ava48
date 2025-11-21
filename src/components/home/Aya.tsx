@@ -35,11 +35,13 @@ const Aya = () => {
           >
             <h1
               className={clsx(
-                "font-karantina prm:text-custom-55 font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase leading-[86%] z-15",
+                "font-karantina font-bold drop-shadow-amber-950 drop-shadow-xs dark:bg-[linear-gradient(135deg,#FFFFFF_50%,#D81DE2_150%)] bg-[linear-gradient(158deg,#FFFFFF_64%,#3EF8FF_150%)] bg-clip-text text-transparent uppercase z-15",
                 {
-                  "text-custom-40 lg:text-custom-120":
-                    locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                  "text-custom-32 sm:text-custom-88 lg:text-custom-98":
+                  "text-custom-40 sm:text-custom-88 lg:text-custom-120 leading-[86%]":
+                    locale === "en",
+                  "text-custom-40 sm:text-custom-88 lg:text-custom-120 leading-none":
+                    locale === "zh-cn" || locale === "zh-tw",
+                  "text-custom-32 sm:text-custom-88 lg:text-custom-98 leading-none":
                     locale === "ja",
                 }
               )}
@@ -74,16 +76,39 @@ const Aya = () => {
               }
             />
 
-            {/* Tablet */}
+            {/* Ipad Air */}
             <ShapeGradientWrapper
               blurSize={"2xs"}
               index={"asdfg"}
               shapeWidth={195}
               shapeHeight={87}
               className={cn("absolute", {
-                "sm:top-[75%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden":
+                "sm:top-[75%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden sm:block lg:hidden":
                   locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                "sm:top-[59%] 2xl:top-[72%] sm:left-[-16%] 2xl:left-[-13%] z-20 hidden sm:block 2xl:hidden":
+                "sm:top-[59%] 2xl:top-[72%] sm:left-[-16%] 2xl:left-[-13%] z-20 hidden sm:block lg:hidden":
+                  locale === "ja",
+              })}
+              strokeColor={[
+                { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
+                { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
+              ]}
+              strokeDirection="to-br"
+              strokeWidth={1}
+              path={
+                "M 135,9 A 8.705,9 0,0,0 126,0 L 44,0 A 8,9 0,0,0 35,4 L 4,20 A 17,19 0,0,0 0,25 L 0,55 A 8,9 0,0,0 8,65 L 126,65 A 8,9 0,0,0 135,55 Z"
+              }
+            />
+
+            {/* Ipad */}
+            <ShapeGradientWrapper
+              blurSize={"2xs"}
+              index={"asdnd"}
+              shapeWidth={195}
+              shapeHeight={87}
+              className={cn("absolute", {
+                "sm:top-[75%] 2xl:top-[72%] sm:left-[-4%] 2xl:left-[-13%] z-20 hidden lg:block 2xl:hidden":
+                  locale === "en" || locale === "zh-cn" || locale === "zh-tw",
+                "sm:top-[59%] 2xl:top-[72%] sm:left-[-16%] 2xl:left-[-13%] z-20 hidden lg:block 2xl:hidden":
                   locale === "ja",
               })}
               strokeColor={[
@@ -94,24 +119,6 @@ const Aya = () => {
               strokeWidth={1}
               path={
                 "M 195,9 A 8.705,9 0,0,0 186,0 L 44,0 A 8,9 0,0,0 35,4 L 4,45 A 17,19 0,0,0 0,54 L 0,77 A 8,9 0,0,0 8,87 L 186,87 A 8,9 0,0,0 195,77 Z"
-              }
-            />
-
-            {/* Mobile */}
-            <ShapeGradientWrapper
-              blurSize={"2xs"}
-              index={"zxcvb"}
-              shapeWidth={80}
-              shapeHeight={40}
-              className="prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden prm:block sm:hidden"
-              strokeColor={[
-                { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
-                { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
-              ]}
-              strokeDirection="to-br"
-              strokeWidth={1}
-              path={
-                "M 80,3 A 5,5 0,0,0 77,0 L 20,0 A 10,10 0,0,0 17,2 L 2,13 A 10,10 0,0,0 0,16 L 0,37 A 5,5 0,0,0 3,40 L 77,40 A 5,5 0,0,0 80,37 Z"
               }
             />
 
@@ -215,31 +222,13 @@ const Aya = () => {
                 }
               />
 
-              {/* Mobile */}
-              <ShapeGradientWrapper
-                blurSize={"2xs"}
-                index={"lkjhg"}
-                shapeWidth={80}
-                shapeHeight={40}
-                className="prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 hidden prm:block sm:hidden"
-                strokeColor={[
-                  { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
-                  { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
-                ]}
-                strokeDirection="to-br"
-                strokeWidth={1}
-                path={
-                  "M 80,3 A 5,5 0,0,0 77,0 L 20,0 A 10,10 0,0,0 17,2 L 2,13 A 10,10 0,0,0 0,16 L 0,37 A 5,5 0,0,0 3,40 L 77,40 A 5,5 0,0,0 80,37 Z"
-                }
-              />
-
               {/* Mini Mobile */}
               <ShapeGradientWrapper
                 blurSize={"2xs"}
                 index={"poiuy"}
                 shapeWidth={60}
                 shapeHeight={31}
-                className="top-[72%] left-[-7%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 prm:hidden"
+                className="top-[72%] left-[-7%] prm:top-[73%] prm:left-[-7%] sm:top-[75%] sm:left-[-4%] 2xl:top-[72%] 2xl:left-[-13%] z-20 sm:hidden"
                 strokeColor={[
                   { offset: "20%", stopColor: "rgba(255, 255, 255, 1)" },
                   { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -480,9 +469,9 @@ const Aya = () => {
               className={cn("relative whitespace-nowrap", {
                 "font-karantina text-[55px] sm:text-custom-128 lg:text-custom-160 font-bold bg-[linear-gradient(127deg,#00F6FF_3%,#FFFFFF_73%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-10":
                   locale === "en",
-                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.1%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(320deg,#FFFFFF_24%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.1%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "zh-cn",
-                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.2%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(320deg,#FFFFFF_24%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.2%] right-[3%] dark:sm:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "zh-tw",
                 "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-90 font-bold bg-[linear-gradient(170deg,#FFFFFF_50%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right dark:sm:bg-[linear-gradient(170deg,#FFFFFF_47%,#D81DE2_150%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5 sm:pb-4":
                   locale === "ja",
@@ -495,7 +484,7 @@ const Aya = () => {
             </h2>
             <h2
               className={cn("relative", {
-                "font-karantina text-[58px] prm:text-custom-70 sm:text-custom-160 font-bold bg-[linear-gradient(127deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
+                "font-karantina text-[58px] prm:text-custom-70 sm:text-custom-128 lg:text-custom-160 font-bold bg-[linear-gradient(127deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15":
                   locale === "en",
                 "font-karantina text-[58px] prm:text-custom-70 sm:text-custom-128 lg:text-custom-160 font-bold bg-[linear-gradient(127deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-none text-right z-15":
                   locale === "zh-cn" || locale === "zh-tw",
@@ -615,7 +604,7 @@ const Aya = () => {
               className={cn("absolute", {
                 "sm:bottom-[-5%] sm:right-[87%] z-15 hidden sm:block":
                   locale === "en" || locale === "zh-cn" || locale === "zh-tw",
-                "sm:bottom-[-11%] sm:right-[86%] lg:bottom-[-5%] lg:right-[57%] z-15 hidden sm:block":
+                "sm:bottom-[-11%] sm:right-[43%] lg:bottom-[-5%] lg:right-[57%] z-15 hidden sm:block":
                   locale === "ja",
               })}
               strokeColor={[
