@@ -28,7 +28,7 @@ const Robotic = () => {
             )}
           >
             {/* Title Tablet */}
-            <div className="hidden md:flex xl:hidden w-full flex-col gap-[17px] relative">
+            <div className="hidden md:flex xl:hidden w-full flex-col gap-[17px] relative -top-6">
               <ShapeGradientWrapper
                 index="573076745678938-ipad"
                 blurSize="2xs"
