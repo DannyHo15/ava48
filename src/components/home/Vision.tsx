@@ -259,7 +259,7 @@ const Vision = () => {
                 </span>
               </div>
               <ImageAvatar48
-                className="w-43! h-auto opacity-70"
+                className="w-43! h-auto"
                 lightURL={"/assets/aya-swap-light.png"}
                 drakURL={"/assets/aya-swap-dark.png"}
               />
