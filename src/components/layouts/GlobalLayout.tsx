@@ -114,7 +114,7 @@ export function GlobalLayout({ children }: { children: React.ReactNode }) {
       >
         <BorderGradientWrapper
           gradientType="linear"
-          className="p-2 min-[500px]:p-2.5"
+          className="p-2 min-[500px]:p-2.25"
           rounded="25px"
           borderColor="--avatar-info-border"
           strokeWidth="3px"

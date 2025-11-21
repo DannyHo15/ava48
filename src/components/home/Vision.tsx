@@ -12,11 +12,11 @@ const Vision = () => {
   const { locale } = useParams();
   return (
     <SectionWrapper>
-      <div className="fixed inset-0 hidden min-[1025px]:block! bg-[url(/assets/bg-section-6-lg-light.png)] dark:bg-[url(/assets/bg-section-6-lg-dark.png)] bg-cover bg-center"/>
-      <div className="fixed inset-0 hidden sm:block min-[1025px]:hidden! bg-[url(/assets/bg-section-6-md-light.png)] dark:bg-[url(/assets/bg-section-6-md-dark.png)] bg-cover bg-center"/>
-      <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-6-sm-light.png)] dark:bg-[url(/assets/bg-section-6-sm-dark.png)] bg-cover bg-center"/>
+      <div className="fixed inset-0 hidden min-[1025px]:block! bg-[url(/assets/bg-section-6-lg-light.png)] dark:bg-[url(/assets/bg-section-6-lg-dark.png)] bg-cover bg-center" />
+      <div className="fixed inset-0 hidden sm:block min-[1025px]:hidden! bg-[url(/assets/bg-section-6-md-light.png)] dark:bg-[url(/assets/bg-section-6-md-dark.png)] bg-cover bg-center" />
+      <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-6-sm-light.png)] dark:bg-[url(/assets/bg-section-6-sm-dark.png)] bg-cover bg-center" />
       <div className="h-full relative flex-center px-5.5 sm:px-0" id="section-platform">
-        <div className="w-85 prm:w-120 sm:w-full min-[1025px]:w-240! 2xl:w-300 min-[2000px]:w-400! min-[2600px]:w-500! min-[3200px]:w-640! max-h-160 sm:max-h-210 min-[1025px]:max-h-180! 2xl:max-h-210 min-[2000px]:max-h-220! 4xl:max-h-240! min-[3200px]:max-h-340! grid sm:grid-cols-9 gap-5 min-[2000px]:gap-10 min-[1025px]:gap-6 -mt-10 sm:-mt-20 sm:px-10 min-[1025px]:px-0">
+        <div className="w-85 prm:w-120 sm:w-full min-[1025px]:w-240! min-[1536px]:w-300! min-[2000px]:w-400! min-[2600px]:w-500! min-[3200px]:w-640! max-h-160 sm:max-h-210 min-[1025px]:max-h-180! 2xl:max-h-210 min-[2000px]:max-h-220! 4xl:max-h-240! min-[3200px]:max-h-340! grid sm:grid-cols-9 gap-5 min-[2000px]:gap-10 min-[1025px]:gap-6 -mt-10 sm:-mt-20 sm:px-10 min-[1025px]:px-0!">
           <div className="col-span-1 sm:col-span-6 min-[1025px]:col-span-5! space-y-6">
             <ImageAvatar48
               className="w-50 sm:w-full h-auto ml-auto mb-3 sm:mb-6"
@@ -46,41 +46,56 @@ const Vision = () => {
               <div className="text-white font-karantina leading-none text-center">
                 <span
                   className={clsx(
-                    "bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet drop-shadow-text font-karantina font-bold tracking-[2%]",
+                    "relative z-5 bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet drop-shadow-text font-karantina font-bold tracking-[2%]",
                     locale === "ja"
-                      ? "text-custom-70 sm:text-custom-70 lg:text-custom-82 text-nowrap"
-                      : "text-custom-70 sm:text-custom-98 min-[850px]:text-custom-125! min-[1025px]:text-custom-98! 2xl:text-custom-125",
+                      ? "text-custom-70 sm:text-custom-70 min-[850px]:text-custom-75! text-nowrap"
+                      : "text-custom-70 sm:text-custom-98 min-[850px]:text-custom-125!",
                     "text-gradient"
                   )}
                 >
+                  <ShapeGradientWrapper
+                    index={"section6_token_10"}
+                    blurSize={"2xs"}
+                    className={clsx("absolute", {
+                      "-left-6 min-[850px]:-left-6 -top-12": locale === "ja",
+                      "-left-8 min-[850px]:-left-8 -top-7": locale !== "ja",
+                    })}
+                    strokeWidth={1}
+                    shapeWidth={142}
+                    shapeHeight={86}
+                    path={
+                      "M 0,43 A 15,15 0,0,1 5,33 L 45,5 A 15,15 0,0,1 55,0 L 130,0 A 16,16 0,0,1 142,12 L 142,74 A 16,16 0,0,1 130,86 L 12,86 A 15,15 0,0,1 0,74 Z"
+                    }
+                  />
                   {t("LandingPage.section_6.your_vision")}
                 </span>
               </div>
-              <div
-                className={clsx(
-                  "relative font-karantina text-custom-56 tracking-wide font-bold leading-none mt-2 drop-shadow-text text-right -mr-18",
-                  locale === "ja"
-                    ? "sm:text-custom-70 text-custom-59 text-nowrap"
-                    : "sm:text-custom-82",
-                  "text-white"
-                )}
-              >
-                <ShapeGradientWrapper
-                  index={"section6_token_1"}
-                  blurSize={"2xs"}
-                  className={clsx("absolute -bottom-10", {
-                    "left-126 min-[850px]:left-144": locale === "ja",
-                    "left-54 min-[850px]:left-82": locale !== "ja",
-                  })}
-                  strokeWidth={1}
-                  key={""}
-                  shapeWidth={142}
-                  shapeHeight={86}
-                  path={
-                    "M 0,10 A 10,10 0,0,1 10,0 L 80,0 A 10,10 0,0,1 86,6 L 102,30 A 10,10 0,0,1 108,36 L 108,47 A 10,10 0,0,1 98,57 L 10,57 A 10,10 0,0,1 0,47 Z"
-                  }
-                />
-                {t("LandingPage.section_6.your_token")}
+              <div className="text-right">
+                <span
+                  className={clsx(
+                    "relative z-5 font-karantina tracking-wide font-bold leading-none mt-2 drop-shadow-text text-right -mr-26",
+                    locale === "ja"
+                      ? "text-custom-56 min-[850px]:text-custom-55 text-nowrap"
+                      : "text-custom-56 sm:text-custom-82",
+                    "text-white"
+                  )}
+                >
+                  <ShapeGradientWrapper
+                    index={"section6_token_1"}
+                    blurSize={"2xs"}
+                    className={clsx("absolute", {
+                      "-bottom-6 right-40 min-[850px]:right-40": locale === "ja",
+                      "-bottom-5 right-60 min-[850px]:right-60": locale !== "ja",
+                    })}
+                    strokeWidth={1}
+                    shapeWidth={108}
+                    shapeHeight={57}
+                    path={
+                      "M 0,10 A 10,10 0,0,1 10,0 L 80,0 A 10,10 0,0,1 86,6 L 102,30 A 10,10 0,0,1 108,36 L 108,47 A 10,10 0,0,1 98,57 L 10,57 A 10,10 0,0,1 0,47 Z"
+                    }
+                  />
+                  {t("LandingPage.section_6.your_token")}
+                </span>
               </div>
             </div>
             {/* mobile */}
@@ -90,14 +105,16 @@ const Vision = () => {
                 lightURL={"/assets/aya-swap-light.png"}
                 drakURL={"/assets/aya-swap-dark.png"}
               />
-              <div className="text-white font-karantina leading-none text-right">
+              <div className={clsx("text-white font-karantina leading-none text-right", {
+                "pt-2": locale === "ja"
+              })}>
                 <span
                   className={clsx(
-                    "relative bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet drop-shadow-text font-karantina font-bold tracking-[2%] pr-12.5",
+                    "relative bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet drop-shadow-text font-karantina font-bold tracking-[2%]",
                     {
-                      "text-custom-40 sm:text-custom-70 lg:text-custom-82 text-nowrap":
+                      "text-custom-36 text-nowrap":
                         locale === "ja",
-                      "text-custom-55 sm:text-custom-98 2xl:text-custom-125": locale !== "ja",
+                      "text-custom-55": locale !== "ja",
                     },
                     "text-gradient"
                   )}
@@ -120,8 +137,8 @@ const Vision = () => {
                 className={clsx(
                   "relative font-karantina tracking-wide font-bold leading-none drop-shadow-text text-right",
                   locale === "ja"
-                    ? "text-custom-40 sm:text-custom-70 text-nowrap"
-                    : "text-custom-40 sm:text-custom-82",
+                    ? "text-custom-30 text-nowrap"
+                    : "text-custom-40",
                   "text-white"
                 )}
               >
@@ -149,16 +166,19 @@ const Vision = () => {
               <div className="text-white font-karantina leading-none pl-5">
                 <span
                   className={clsx(
-                    "relative bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet drop-shadow-text font-karantina font-bold tracking-[2%] text-nowrap",
+                    "relative bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet drop-shadow-text font-karantina font-bold text-nowrap",
                     locale === "ja"
-                      ? "text-custom-70 2xl:text-custom-82 min-[2000px]:text-custom-125! min-[3200px]:text-custom-176!"
-                      : "text-custom-70 sm:text-custom-98 xl:text-custom-125 min-[2000px]:text-custom-176! min-[3200px]:text-custom-208!",
+                      ? "tracking-normal text-custom-70 2xl:text-custom-82 min-[2000px]:text-custom-125! min-[3200px]:text-custom-176! -ml-52 min-[2000px]:-ml-88!"
+                      : "tracking-[2%] text-custom-70 sm:text-custom-98 xl:text-custom-125 min-[2000px]:text-custom-176! min-[3200px]:text-custom-208!",
                     "text-gradient"
                   )}
                 >
                   <ShapeGradientWrapper
                     index={"section6_vision_4"}
-                    className="absolute min-[3200px]:hidden! -left-8 -top-8 2xl:-top-5 z-10"
+                    className={clsx("absolute min-[3200px]:hidden! z-10", {
+                      "-top-8 lg:-top-12 left-40": locale === "ja",
+                      "-top-8 2xl:-top-5 -left-8": locale !== "ja",
+                    })}
                     strokeWidth={1}
                     blurSize={"2xs"}
                     shapeWidth={142}
@@ -169,7 +189,10 @@ const Vision = () => {
                   />
                   <ShapeGradientWrapper
                     index={"section6_vision_6"}
-                    className="absolute hidden min-[3200px]:block! -left-8 -top-16 z-10"
+                    className={clsx("absolute hidden min-[3200px]:block! z-10", {
+                      "-top-16 left-36": locale === "ja",
+                      "-top-8 2xl:-top-5 ": locale !== "ja",
+                    })}
                     strokeWidth={2}
                     blurSize={"2xs"}
                     shapeWidth={284}
@@ -185,7 +208,7 @@ const Vision = () => {
                 className={clsx(
                   "relative font-karantina text-custom-56 tracking-wide font-bold leading-none mt-2 drop-shadow-text pl-5",
                   locale === "ja"
-                    ? "sm:text-custom-59 min-[2000px]:text-custom-82! min-[3200px]:text-custom-120! text-nowrap"
+                    ? "sm:text-custom-59 min-[1025px]:text-custom-72! min-[2000px]:text-custom-82! min-[3200px]:text-custom-120! text-nowrap -ml-36 xl:-ml-12"
                     : "sm:text-custom-82 min-[2000px]:text-custom-120! min-[3200px]:text-custom-145!",
                   "text-white"
                 )}
@@ -193,9 +216,10 @@ const Vision = () => {
                 <ShapeGradientWrapper
                   index={"section6_token_5"}
                   blurSize={"2xs"}
-                  className={clsx("absolute min-[3200px]:hidden! -bottom-10", {
-                    "left-108 min-[2000px]:left-156": locale === "ja",
-                    "left-68 min-[2000px]:left-108": locale !== "ja",
+                  className={clsx("absolute min-[3200px]:hidden!", {
+                    "left-120 min-[2000px]:left-156 -bottom-16 min-[2000px]:-bottom-12":
+                      locale === "ja",
+                    "left-68 min-[2000px]:left-108 -bottom-10": locale !== "ja",
                   })}
                   strokeWidth={1}
                   shapeWidth={142}
@@ -222,7 +246,7 @@ const Vision = () => {
                 {t("LandingPage.section_6.your_token")}
               </div>
               <ImageAvatar48
-                className="w-114.5 min-[2000px]:w-164! h-auto mt-10 min-[2000px]:mt-16!"
+                className="w-114.5 min-[2000px]:w-164! min-[3200px]:w-224! h-auto mt-10 min-[2000px]:mt-16!"
                 lightURL={"/assets/ai-agent-list-light.png"}
                 drakURL={"/assets/ai-agent-list-dark.png"}
               />
@@ -241,9 +265,11 @@ const Vision = () => {
               />
             </div>
             {/* mobile */}
-            <div className="flex-center-x sm:hidden w-full">
+            <div className={clsx("flex-center-x sm:hidden w-full", {
+              "mt-4": locale === "ja",
+            })}>
               <ImageAvatar48
-                className="w-full h-auto"
+                className="w-65 h-auto mx-auto"
                 lightURL={"/assets/ai-agent-list-light.png"}
                 drakURL={"/assets/ai-agent-list-dark.png"}
               />
