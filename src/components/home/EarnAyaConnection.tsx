@@ -109,7 +109,7 @@ const EarnAyaConnection = () => {
           </div>
         </div>
         <div className="h-[50%] md:h-full w-full flex flex-col justify-center">
-          <div className="h-full md:relative md:grid md:grid-cols-12 md:items-center md:justify-center md:px-10 xl:px-0 xl:max-w-[1176px] xl:mx-auto">
+          <div className="h-full md:relative md:top-20 md:grid md:grid-cols-12 md:items-center md:justify-center md:px-10 xl:px-0 xl:max-w-[1176px] xl:mx-auto">
             <div className="md:col-span-6 relative h-full md:h-auto flex items-center justify-center xl:scale-70 2xl:scale-100 3xl:scale-120 4xl:scale-140!">
               <div
                 className={clsx(
