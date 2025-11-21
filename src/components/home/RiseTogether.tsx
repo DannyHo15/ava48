@@ -9,6 +9,7 @@ import ShapeGradientWrapper from "../ShapeGradientWrapper";
 import { cn } from "@/lib/utils";
 import { useParams } from "next/navigation";
 import clsx from "clsx";
+import CardAnimation from "../CardAnimation";
 
 const RiseTogether = () => {
   const t = useTranslations("LandingPage.section_5");
@@ -20,12 +21,12 @@ const RiseTogether = () => {
       <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-5-light-sm.png)] dark:bg-[url(/assets/bg-section-5-dark-sm.png)] bg-cover bg-center" />{" "}
       <div className="fixed md:hidden h-full  top-0 -right-64 cs-radial-sm" />
       <div
-        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 lg:scale-100! xl:scale-100 2xl:scale-125! 3xl:scale-150! 4xl:scale-200!"
+        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 lg:scale-100! xl:scale-120! 2xl:scale-130! 3xl:scale-150! 4xl:scale-200!"
         id="section-rank48"
       >
         {/* SLOGAN */}
         <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center 3xl:justify-center-safe">
-          <div className="w-full lg:w-fit! lg:h-185! lg:items-start flex flex-col items-center sm:-mb-8">
+          <div className="w-full lg:w-fit! lg:h-185! lg:items-start flex flex-col items-center sm:-mb-10">
             <OptimizedThemeImage
               className="h-60 w-92.5 sm:w-125! sm:h-95! lg:max-w-178! lg:h-134! object-contain mx-auto"
               lightURL={"/assets/rank48-light.png"}
@@ -48,17 +49,18 @@ const RiseTogether = () => {
             >
               <div
                 className={clsx(
-                  "w-full max-w-95 sm:max-w-130.5 lg:max-w-150.5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap",
+                  "w-full max-w-95 sm:max-w-130.5 lg:max-w-150.5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap text-center",
                   locale === "ja" ? "sm:max-w-130 lg:max-w-full" : "",
                 )}
               >
                 <ShapeGradientWrapper
                   index={"section5_rank48"}
                   className={clsx(
-                    "absolute sm:-left-2 sm:top-1 -left-8 -top-6 z-10 sm:scale-100 scale-75",
+                    "absolute sm:-left-7 sm:top-1 -left-8 -top-8 z-10 sm:scale-100 scale-60",
                     {
-                      "lg:-top-6 sm:-top-9 -top-10": locale === "ja",
-                      "lg:-top-7 sm:-top-6":
+                      "lg:-top-6 sm:left-8! sm:-top-2! -top-10":
+                        locale === "ja",
+                      "lg:top-2! lg:-left-2! sm:-top-10":
                         locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
@@ -73,65 +75,69 @@ const RiseTogether = () => {
                 ></ShapeGradientWrapper>
                 <span
                   className={clsx(
-                    "text-custom-56 sm:text-custom-70 lg:text-custom-82 font-karantina font-bold z-1",
+                    "text-custom-40 sm:text-custom-70 lg:text-custom-82 font-karantina font-bold z-1",
                     {
-                      "text-custom-46 sm:text-custom-70! lg:text-custom-70!":
+                      "text-custom-40! sm:text-custom-70! lg:text-custom-82!":
                         locale === "ja",
-                      "sm:text-custom-90! lg:text-custom-110!":
+                      "sm:text-custom-90! lg:text-custom-90!":
                         locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
                 >
-                  {t(locale === "ja" ? "rank" : "join")}{" "}
+                  {t("join")}{" "}
                 </span>
+                {/* <label */}
+                {/*   className={clsx( */}
+                {/*     "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold", */}
+                {/*     locale === "ja" */}
+                {/*       ? "lg:text-custom-90! sm:text-custom-90! text-custom-62!" */}
+                {/*       : "hidden", */}
+                {/*   )} */}
+                {/* > */}
+                {/*   48 */}
+                {/* </label> */}
                 <label
                   className={clsx(
-                    "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold",
-                    locale === "ja"
-                      ? "lg:text-custom-90! sm:text-custom-90! text-custom-62!"
-                      : "hidden",
-                  )}
-                >
-                  48
-                </label>
-                <label
-                  className={clsx(
-                    "font-karantina text-custom-70 sm:text-custom-106 lg:text-custom-125 font-bold",
+                    "font-karantina text-custom-55 sm:text-custom-106 lg:text-custom-125 font-bold",
                     {
-                      "sm:text-custom-62! lg:text-custom-70! text-custom-46! text-wrap!":
+                      "sm:text-custom-106! lg:text-custom-125! text-wrap!":
                         locale === "ja",
-                      "sm:text-custom-90! lg:text-custom-110!":
+                      "sm:text-custom-90! lg:text-custom-136!":
                         locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
                 >
-                  {t(locale === "ja" ? "join" : "rank")}
+                  {t("rank")}
                 </label>
 
                 {/* Comma for 48 */}
                 <label
                   className={clsx(
-                    "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-110 font-bold",
-                    locale === "ja" ? "hidden" : "",
+                    "font-karantina text-custom-64 lg:text-custom-145 sm:text-custom-123 font-bold",
+                    locale === "ja" ? "" : "",
+                    locale === "zh-cn" || locale === "zh-tw"
+                      ? "lg:text-custom-157!"
+                      : "",
                   )}
                 >
-                  48,
+                  48
                 </label>
               </div>
               <div
                 className={clsx(
                   "relative text-custom-40 sm:text-custom-70 lg:text-custom-82 font-karantina text-center  w-full text-white font-bold",
                   {
-                    "lg:text-custom-70! sm:text-custom-62!": locale === "ja",
+                    "lg:text-custom-70! sm:text-custom-82! text-custom-37!":
+                      locale === "ja",
                   },
                 )}
               >
                 <ShapeGradientWrapper
                   index={"section5_rise_together"}
                   className={clsx(
-                    "absolute lg:right-10 sm:right-9 -bottom-16 -right-9 z-10 scale-75 sm:scale-100",
+                    "absolute lg:right-10 sm:right-0 -bottom-16 -right-9 z-10 scale-65 sm:scale-100",
                     {
-                      "lg:-bottom-16 lg:right-14 sm:right-18 right-8":
+                      "lg:-bottom-16 lg:right-14 sm:right-16 sm:-bottom-12! right-0":
                         locale === "ja",
                       "lg:right-25": locale === "zh-cn" || locale === "zh-tw",
                     },
@@ -156,30 +162,41 @@ const RiseTogether = () => {
         <div className="size-full flex justify-center z-10 items-start lg:items-center lg:w-min">
           <div className="gap-8 sm:gap-2 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91! lg:max-h-fit! justify-center lg:min-w-fit! pt-5 lg:pt-20">
             <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-fit lg:size-fit size-full lg:max-h-full">
-              <div className="flex justify-end gap-2 w-1/2 min-h-fit">
+              <div className="relative flex justify-end gap-2 w-1/2">
                 <OptimizedThemeImage
-                  className="sm:max-w-full! max-w-fit  h-full object-contain"
+                  className="max-w-fit sm:max-w-full h-full object-contain"
                   lightURL={"/assets/aya-fujimoto-light.png"}
                   darkURL={"/assets/aya-fujimoto-dark.png"}
                   width={400}
                   height={500}
-                  quality={90}
+                  quality={100}
                   priority={false}
                   placeholder="blur"
                   alt="Aya Fujimoto"
                 />
+                <CardAnimation
+                  className="absolute inset-0 z-20 hidden lg:block"
+                  lightURL={"/assets/aya-fujimoto-light.png"}
+                  darkURL={"/assets/aya-fujimoto-dark.png"}
+                />
               </div>
-              <div className="flex-center justify-start gap-2 w-1/2">
+              <div className="relative flex-center justify-start gap-2 w-1/2">
                 <OptimizedThemeImage
-                  className="sm:max-w-full! max-w-fit h-full object-contain"
+                  className="max-w-fit sm:max-w-full h-full object-contain"
                   lightURL={"/assets/eimi-fukada-light.png"}
                   darkURL={"/assets/eimi-fukada-dark.png"}
                   width={400}
                   height={500}
-                  quality={90}
+                  quality={100}
+                  unoptimized
                   priority={false}
                   placeholder="blur"
                   alt="Eimi Fukada"
+                />
+                <CardAnimation
+                  className="absolute inset-0 z-20 hidden lg:block"
+                  lightURL={"/assets/eimi-fukada-light.png"}
+                  darkURL={"/assets/eimi-fukada-dark.png"}
                 />
               </div>
             </div>
