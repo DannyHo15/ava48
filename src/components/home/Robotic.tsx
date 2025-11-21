@@ -2,11 +2,11 @@ import { useState } from "react";
 import BorderGradientWrapper from "../BorderGradientWrapper";
 import { FloatButton } from "../ui/float-button";
 import { Info } from "lucide-react";
-import ImageAvatar48 from "../ImageAvatar48";
 import ShapeGradientWrapper from "../ShapeGradientWrapper";
 import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionWrapper } from "../SectionWrapper";
+import OptimizedThemeImage from "../OptimizedThemeImage";
 const Robotic = () => {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("LandingPage.section_robotic");
@@ -28,7 +28,7 @@ const Robotic = () => {
             )}
           >
             {/* Title Tablet */}
-            <div className="hidden md:flex xl:hidden w-full flex-col gap-[17px] relative -top-6">
+            <div className="hidden md:flex xl:hidden w-full flex-col gap-[17px] relative">
               <ShapeGradientWrapper
                 index="573076745678938-ipad"
                 blurSize="2xs"
@@ -121,11 +121,11 @@ const Robotic = () => {
             </div>
 
             {/* Mobile */}
-            <div className="md:hidden relative w-full h-auto">
+            <div className="md:hidden relative w-full h-auto flex flex-col items-center justify-end">
               {/* Title Mobile */}
               <div
                 className={clsx(
-                  "md:hidden absolute -top-2 left-1/2 -translate-x-1/2 max-w-[321px] w-full flex flex-col gap-1",
+                  "md:hidden absolute z-10 -top-2 left-1/2 -translate-x-1/2 max-w-[321px] w-full flex flex-col gap-1",
                   locale === "ja" && "max-w-[341px]!",
                   (locale === "zh-cn" || locale === "zh-tw") && "gap-3"
                 )}
@@ -173,17 +173,29 @@ const Robotic = () => {
                   {t("subtitle")}
                 </p>
               </div>
-              <ImageAvatar48
+              <OptimizedThemeImage
                 className="w-full h-auto object-contain"
                 lightURL="/assets/robotic-mobile-light.png"
-                drakURL="/assets/robotic-mobile-dark.png"
+                darkURL="/assets/robotic-mobile-dark.png"
+                width={375}
+                height={493}
+                quality={100}
+                priority={true}
+                placeholder="blur"
+                alt="Robotic"
               />
             </div>
             {/* Tablet */}
-            <ImageAvatar48
+            <OptimizedThemeImage
               className="relative left-10 min-[1024px]:left-5 hidden md:block xl:hidden min-[1024px]:w-[88.2%] w-[83%] h-auto object-contain"
               lightURL="/assets/robotic-tablet-light.png"
-              drakURL="/assets/robotic-tablet-dark.png"
+              darkURL="/assets/robotic-tablet-dark.png"
+              width={832}
+              height={926}
+              quality={100}
+              priority={true}
+              placeholder="blur"
+              alt="Robotic"
             />
 
             {/* Desktop title and image */}
@@ -197,7 +209,7 @@ const Robotic = () => {
 
               <div
                 className={clsx(
-                  "absolute top-7 left-0 w-full flex flex-col gap-1 2xl:gap-[15px]",
+                  "absolute top-7 z-10 left-0 w-full flex flex-col gap-1 2xl:gap-[15px]",
                   locale === "ja" && "gap-[31px]"
                 )}
               >
@@ -207,7 +219,7 @@ const Robotic = () => {
                   shapeWidth={104}
                   shapeHeight={95}
                   className={clsx("absolute z-50 -rotate-90", {
-                    "top-15 left-82": locale === "en",
+                    "top-37 left-82": locale === "en",
                     "-left-5 top-10": locale === "ja",
                     "top-45 -left-12": locale === "zh-cn" || locale === "zh-tw",
                   })}
@@ -227,7 +239,7 @@ const Robotic = () => {
                   className={clsx("absolute z-50", {
                     "top-10 right-55 3xl:right-80 3xl:top-15 4xl:right-70 4xl:top-15":
                       locale === "en",
-                    "right-100 top-10": locale === "ja",
+                    "right-100 top-20": locale === "ja",
                     "left-100 top-17": locale === "zh-cn" || locale === "zh-tw",
                   })}
                   strokeColor={[
@@ -272,10 +284,16 @@ const Robotic = () => {
                   {t("subtitle")}
                 </p>
               </div>
-              <ImageAvatar48
+              <OptimizedThemeImage
                 className="hidden xl:block w-auto h-full 3xl:h-auto 3xl:w-[918px] 4xl:w-[1024px] object-contain"
                 lightURL="/assets/robotic-desktop-light.png"
-                drakURL="/assets/robotic-desktop-dark.png"
+                darkURL="/assets/robotic-desktop-dark.png"
+                width={918}
+                height={950}
+                quality={100}
+                priority={true}
+                placeholder="blur"
+                alt="Robotic"
               />
             </div>
           </div>
