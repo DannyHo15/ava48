@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import OptimizedImage from './OptimizedImage';
-import { cn } from '@/lib/utils';
+import { useState, useEffect } from "react";
+import OptimizedImage from "./OptimizedImage";
+import { cn } from "@/lib/utils";
 
 interface OptimizedThemeImageProps {
   lightURL: string;
@@ -13,7 +13,8 @@ interface OptimizedThemeImageProps {
   fill?: boolean;
   quality?: number;
   priority?: boolean;
-  placeholder?: 'blur' | 'empty';
+  placeholder?: "blur" | "empty";
+  blurDataURL?: string;
   unoptimized?: boolean;
   style?: React.CSSProperties;
   sizes?: string;
@@ -31,13 +32,14 @@ const OptimizedThemeImage = ({
   fill = false,
   quality = 85,
   priority = false,
-  placeholder = 'empty',
+  placeholder = "empty",
   unoptimized = false,
   style,
   sizes,
   onLoad,
   onError,
-  alt = 'Theme-aware image',
+  blurDataURL,
+  alt = "Theme-aware image",
   ...props
 }: OptimizedThemeImageProps) => {
   const [isDark, setIsDark] = useState(false);
@@ -46,7 +48,8 @@ const OptimizedThemeImage = ({
   useEffect(() => {
     // Check initial theme
     const checkTheme = () => {
-      const hasDarkMode = document.documentElement.classList.contains('violet-kiss-mode');
+      const hasDarkMode =
+        document.documentElement.classList.contains("violet-kiss-mode");
       setIsDark(hasDarkMode);
     };
 
@@ -62,7 +65,7 @@ const OptimizedThemeImage = ({
     // Start observing
     observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ['class'],
+      attributeFilter: ["class"],
     });
 
     // Cleanup
@@ -87,15 +90,17 @@ const OptimizedThemeImage = ({
       quality={quality}
       priority={priority}
       placeholder={placeholder}
+      blurDataURL={blurDataURL}
       unoptimized={unoptimized}
       style={style}
       sizes={sizes}
       onLoad={onLoad}
       onError={onError}
-      className={cn('transition-opacity duration-300', className)}
+      className={cn("transition-opacity duration-300", className)}
       {...props}
     />
   );
 };
 
 export default OptimizedThemeImage;
+
