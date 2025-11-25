@@ -33,24 +33,6 @@ const EarnAyaConnection = () => {
               }
             )}
           >
-            {/* Mobile shape left */}
-            {/* <ShapeGradientWrapper
-              index="mobile-shape-left-3829"
-              shapeWidth={40}
-              shapeHeight={56}
-              blurSize="2xs"
-              className={clsx(
-                "md:hidden top-[20%] left-[14.5%] -rotate-90 z-10",
-                locale === "ja" && "hidden"
-              )}
-              strokeColor={[
-                { offset: "0%", stopColor: "rgba(255, 255, 255, 0.2)" },
-                { offset: "100%", stopColor: "rgba(255, 255, 255, 0.9)" },
-              ]}
-              strokeDirection="to-b"
-              strokeWidth={1}
-              path="M 3.2,0 L 36.8,0 A 3.2,3.2 0,0,1 40,3.2 L 40,52.8 A 3.2,3.2 0,0,1 36.8,56 L 3.2,56 A 3.2,3.2 0,0,1 0,52.8 L 0,3.2 A 3.2,3.2 0,0,1 3.2,0 Z"
-            /> */}
             <ShapeGradientWrapper
               index="mobile-shape-right-1273168"
               shapeWidth={65}
@@ -113,27 +95,31 @@ const EarnAyaConnection = () => {
             <div className="md:col-span-6 relative h-full md:h-auto flex items-center justify-center xl:scale-70 2xl:scale-100 3xl:scale-120 4xl:scale-140!">
               <div
                 className={clsx(
-                  "hidden md:flex flex-col min-[900px]:gap-4 gap-1 md:absolute z-0 lg:z-10",
+                  "hidden md:flex flex-col min-[900px]:gap-4 gap-1 md:absolute z-10",
                   {
                     "w-[698px] min-[900px]:-top-70 -top-65 left-[120%] -translate-x-5/9 lg:-translate-x-1/2 lg:left-[110%] xl:left-205 lg:-top-60 xl:-top-10":
                       locale === "en",
-                    "-top-55 min-[900px]:-top-65 left-[95%] lg:-translate-x-1/2 -translate-x-[44%] lg:gap-2 xl:gap-10 xl:-right-10 xl:left-201 lg:-top-62 xl:-top-10 w-[720px] min-[900px]:w-[880px] lg:w-[880px] xl:w-[1070px]":
+                    "-top-55 min-[900px]:-top-65 left-[95%] lg:-translate-x-1/2 -translate-x-[44%] lg:gap-2 xl:gap-5 xl:-right-10 xl:left-190 lg:-top-62 xl:-top-10 w-[720px] min-[900px]:w-[880px] lg:w-[880px] xl:w-[1070px]":
                       locale === "ja",
-                    "-top-50 left-[130%] -translate-x-5/9 lg:-translate-x-1/2 gap-8 w-[581px] lg:gap-10 lg:left-205 lg:-top-3 xl:-top-20 lg:w-[563px]":
+                    "max-w-[581px] -top-45 min-[900px]:-top-65 left-[120%] xl:-translate-x-1/2 -translate-x-[44%] lg:gap-2 xl:gap-10 xl:-right-10 xl:left-201 lg:-top-40 xl:-top-10 w-[720px] min-[900px]:w-[880px] lg:w-[880px] xl:w-[1070px]":
                       locale === "zh-cn" || locale === "zh-tw",
                   }
                 )}
               >
-                <div className="relative w-full xl:w-fit flex flex-col items-end gap-2">
+                <div
+                  className={clsx(
+                    "relative w-full xl:w-fit flex flex-col items-end gap-2"
+                  )}
+                >
                   <p
                     className={clsx(
-                      "tracking-[2.4px] xl:tracking-[2.5px] font-bold font-karantina text-left w-full bg-linear-to-tr from-white via-white to-[#00D0F6] dark:to-[#D81DE2] text-gradient",
+                      "tracking-[2.4px] xl:tracking-[2.5px] font-bold font-karantina text-left w-full text-gradient",
                       {
-                        "text-custom-120 xl:text-custom-125 leading-[86%]":
+                        "text-custom-120 xl:text-custom-125 leading-[86%] bg-[linear-gradient(22.02deg,#FFFFFF_52.09%,#00D0F6_100%)] dark:bg-[linear-gradient(22.02deg,#FFFFFF_52.09%,#D81DE2_100%)]":
                           locale === "en",
-                        "text-custom-62 min-[900px]:text-custom-80 lg:text-custom-85 whitespace-nowrap leading-none tracking-[1.64px]":
+                        "text-custom-62 min-[900px]:text-custom-80 xl:text-custom-85 whitespace-nowrap leading-none tracking-[1.64px] bg-[linear-gradient(10.02deg,#FFFFFF_47.09%,#00D0F6_88%)] dark:bg-[linear-gradient(10.02deg,#FFFFFF_47.09%,#D81DE2_88%)] xl:bg-[linear-gradient(22.02deg,#FFFFFF_52.09%,#00D0F6_100%)] xl:dark:bg-[linear-gradient(22.02deg,#FFFFFF_52.09%,#D81DE2_100%)]":
                           locale === "ja",
-                        "text-custom-110 lg:text-custom-120 leading-none tracking-[2.2px]":
+                        "text-custom-110 xl:text-custom-120 leading-none tracking-[1.396px] bg-[linear-gradient(22.02deg,#FFFFFF_37.09%,#00D0F6_65%)] dark:bg-[linear-gradient(22.02deg,#FFFFFF_37.09%,#D81DE2_65%)] xl:bg-[linear-gradient(23.02deg,#FFFFFF_47.09%,#00D0F6_97%)] xl:dark:bg-[linear-gradient(23.02deg,#FFFFFF_47.09%,#D81DE2_97%)]":
                           locale === "zh-cn" || locale === "zh-tw",
                       }
                     )}
@@ -147,9 +133,9 @@ const EarnAyaConnection = () => {
                     {
                       "text-custom-82 whitespace-nowrap leading-[100%] tracking-[2%]":
                         locale === "en",
-                      "text-custom-45 min-[900px]:text-custom-50 lg:text-custom-55 whitespace-nowrap leading-none tracking-[1.64px]":
+                      "text-custom-45 min-[900px]:text-custom-50 xl:text-custom-55 whitespace-nowrap leading-none tracking-[1.64px]":
                         locale === "ja",
-                      "text-custom-70 lg:text-custom-98 whitespace-nowrap leading-none tracking-[1.396px]":
+                      "text-custom-70 xl:text-custom-98 whitespace-nowrap leading-none tracking-[1.396px]":
                         locale === "zh-cn" || locale === "zh-tw",
                     }
                   )}
@@ -162,12 +148,13 @@ const EarnAyaConnection = () => {
                   blurSize="2xs"
                   shapeWidth={104}
                   shapeHeight={95}
-                  className={clsx(
-                    "hidden md:block z-50 top-[38%] left-[11%] xl:top-[38%] xl:left-[8.5%] -rotate-90",
-                    locale === "ja" && "-left-5! top-7! lg:left-80! lg:top-10!",
-                    (locale === "zh-cn" || locale === "zh-tw") &&
-                      "-left-10! top-10! lg:-left-[5%]! lg:top-[30%]!"
-                  )}
+                  className={clsx("hidden md:block z-50 -rotate-90", {
+                    "left-30 top-5 xl:left-80 xl:top-10": locale === "ja",
+                    "-left-10 top-10 lg:-left-[5%] lg:top-[30%]":
+                      locale === "zh-cn" || locale === "zh-tw",
+                    "top-[38%] left-[11%] xl:top-[38%] xl:left-[8.5%]":
+                      locale === "en",
+                  })}
                   strokeColor={[
                     { offset: "0%", stopColor: "rgba(255, 255, 255, 0.3)" },
                     { offset: "100%", stopColor: "rgba(255, 255, 255, 1)" },
@@ -182,13 +169,14 @@ const EarnAyaConnection = () => {
                   blurSize="2xs"
                   shapeWidth={224}
                   shapeHeight={104}
-                  className={clsx(
-                    "absolute z-50 hidden md:block bottom-[25%] -right-[8%] xl:bottom-[15%] xl:right-[1%]!",
-                    locale === "ja" &&
-                      "bottom-[15%] right-0 lg:bottom-[22%] lg:right-8!",
-                    (locale === "zh-cn" || locale === "zh-tw") &&
-                      "bottom-8 right-0 lg:bottom-[22%] lg:-right-12!"
-                  )}
+                  className={clsx("absolute z-50 hidden md:block", {
+                    "bottom-[100px] -right-[8%] xl:bottom-[40px] xl:-right-[99px]!":
+                      locale === "en",
+                    "bottom-[15%] right-0 lg:bottom-5 lg:-right-5":
+                      locale === "ja",
+                    "bottom-8 right-0 lg:bottom-[22%] lg:-right-12!":
+                      locale === "zh-cn" || locale === "zh-tw",
+                  })}
                   strokeColor={[
                     { offset: "0%", stopColor: "rgba(255, 255, 255, 1)" },
                     { offset: "100%", stopColor: "rgba(255, 255, 255, 0)" },
@@ -200,7 +188,6 @@ const EarnAyaConnection = () => {
                   }
                 />
               </div>
-              {/* <div className="hidden md:block absolute top-[65%] lg:top-[50%] w-[1310.69px] h-[911.807px] blur-[174.75px] -rotate-[16.775deg] rounded-[1310.69px] bg-[linear-gradient(144deg,rgba(0,131,245,0.5)_29.99%,rgba(73,255,240,0.5)_49.39%,rgba(29,78,216,0.5)_83.09%)] dark:bg-[linear-gradient(144deg,rgba(216,29,226,0.9)_29.99%,rgba(73,255,240,0.5)_49.39%,rgba(29,78,216,0.5)_83.09%)]" /> */}
               <ImageAvatar48
                 className="relative md:left-10 w-full h-auto object-contain scale-130 md:scale-[143%] xl:scale-100 2xl:scale-[114.7%] md:block md:w-auto md:h-full md:object-contain md:transform-gpu md:origin-center md:mx-auto"
                 lightURL="/assets/aya-heart-mobile-light.png"
