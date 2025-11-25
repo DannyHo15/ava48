@@ -16,12 +16,12 @@ import Robotic from "@/components/home/Robotic";
 gsap.registerPlugin(useGSAP, Observer);
 
 const sections = [
-  // { Component: Eimi },
-  // { Component: Aya },
-  // { Component: Robotic },
+  { Component: Eimi },
+  { Component: Aya },
+  { Component: Robotic },
   { Component: EarnAyaConnection },
-  // { Component: RiseTogether },
-  // { Component: Vision },
+  { Component: RiseTogether },
+  { Component: Vision },
 ];
 
 export default function Home() {
