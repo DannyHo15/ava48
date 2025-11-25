@@ -21,7 +21,7 @@ const RiseTogether = () => {
       <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-5-light-sm.png)] dark:bg-[url(/assets/bg-section-5-dark-sm.png)] bg-cover bg-center" />{" "}
       <div className="fixed md:hidden h-full  top-0 -right-64 cs-radial-sm" />
       <div
-        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 lg:scale-100! xl:scale-120! 2xl:scale-130! 3xl:scale-150! 4xl:scale-200!"
+        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 scale-100 lg:scale-100 3xl:scale-105! 4xl:scale-110!"
         id="section-rank48"
       >
         {/* SLOGAN */}
@@ -60,7 +60,7 @@ const RiseTogether = () => {
                     {
                       "lg:top-0! lg:left-18! sm:left-20! sm:-top-2! -top-8 left-2!":
                         locale === "ja",
-                      "lg:top-2! lg:-left-2! sm:-top-10":
+                      "lg:top-2! lg:left-4! sm:-top-10":
                         locale === "zh-cn" || locale === "zh-tw",
                       "left-0! -top-10": locale === "zh-tw",
                     },
