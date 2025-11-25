@@ -19,7 +19,7 @@ const Robotic = () => {
       <div className="size-full relative flex flex-col items-center justify-between">
         <div
           className="size-full md:px-10 flex flex-col justify-end"
-          id="section-heart"
+          id="section-robotic"
         >
           <div
             className={clsx(
