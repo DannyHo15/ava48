@@ -58,7 +58,8 @@ const Vision = () => {
                     blurSize={"2xs"}
                     className={clsx("absolute", {
                       "-left-6 min-[850px]:-left-6 -top-12": locale === "ja",
-                      "-left-8 min-[850px]:-left-8 -top-7": locale !== "en",
+                      "-left-8 min-[850px]:-left-8 -top-7": locale === "en",
+                      "-left-8 min-[850px]:-left-8 -top-9": locale === "zh-cn" || locale === "zh-tw",
                     })}
                     strokeWidth={1}
                     shapeWidth={142}
@@ -86,9 +87,9 @@ const Vision = () => {
                     index={"section6_token_1"}
                     blurSize={"2xs"}
                     className={clsx("absolute", {
-                      "-bottom-6 right-40 min-[850px]:right-40": locale === "ja",
+                      "-bottom-6 right-38 min-[850px]:right-38": locale === "ja",
                       "-bottom-5 right-60 min-[850px]:right-60": locale === "en",
-                      "-bottom-7 right-60 min-[850px]:right-16": locale === "zh-cn" || locale === "zh-tw",
+                      "-bottom-7 right-16 min-[850px]:right-16": locale === "zh-cn" || locale === "zh-tw",
                     })}
                     strokeWidth={1}
                     shapeWidth={108}
