@@ -36,7 +36,7 @@ const Vision = () => {
                 drakURL={"/assets/aya-swap-dark.png"}
               />
             </div>
-            {/* tablet */}9{" "}
+            {/* tablet */}
             <div className="relative hidden sm:block min-[1025px]:hidden! w-full">
               <ImageAvatar48
                 className={clsx(
