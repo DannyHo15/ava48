@@ -25,7 +25,7 @@ const EimiFukada = () => {
         suppressHydrationWarning
       >
         <div className="flex items-end justify-center min-h-dvh">
-          <div className="relative max-w-6xl flex justify-center mb-0 xl:pt-[97px] 2xl:pt-[97px]">
+          <div className="relative max-w-6xl flex justify-center mb-0 xl:pt-[97px] 2xl:pt-[75px]">
             <div
               className={cn(
                 "absolute sm:z-5 xl:top-[41%] xl:left-[-35%] xl:z-10 2xl:z-20 2xl:hidden",
@@ -156,11 +156,11 @@ const EimiFukada = () => {
               className={cn(
                 "absolute z-20 xl:right-[-34%] 4xl:right-[-60%]! 4xl:bottom-[18%]!",
                 {
-                  "right-[6%] bottom-[24%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-9%] lg:bottom-[27%] 2xl:bottom-[16%] 2xl:right-[-44%] leading-[86%]":
+                  "right-[6%] bottom-[24%] sm:right-[-11%] sm:bottom-[26%] lg:right-[-9%] lg:bottom-[27%] 2xl:bottom-[16%] 2xl:right-[-6%] leading-[86%]":
                     locale === "en",
-                  "bottom-[25%] right-[7%] sm:bottom-[23%] sm:right-[-8%] lg:bottom-[24%] lg:right-[-9%] 2xl:bottom-[17%] 2xl:right-[-27%]":
+                  "bottom-[25%] right-[7%] sm:bottom-[23%] sm:right-[-8%] lg:bottom-[24%] lg:right-[-9%] 2xl:bottom-[18%] 2xl:right-[-7%]":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "right-[7%] bottom-[30%] sm:right-[-18%] sm:bottom-[25%] lg:right-[-13%] lg:bottom-[21%] 2xl:bottom-[17%] 2xl:right-[-27%]":
+                  "right-[7%] bottom-[30%] sm:right-[-18%] sm:bottom-[25%] lg:right-[-13%] lg:bottom-[21%] 2xl:bottom-[17%] 2xl:right-[-6%]":
                     locale === "ja",
                 }
               )}
@@ -200,23 +200,21 @@ const EimiFukada = () => {
                 }}
               >
                 {t("coming_soon_bottom")}
-                  <span
-                    className={cn(
-                      "font-karantina font-bold",
-                      {
-                        "text-custom-62 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%] 4xl:text-custom-297!":
-                          locale === "en",
-                        "text-custom-58 sm:text-custom-110 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%] 4xl:text-custom-297!":
-                          locale === "zh-cn" || locale === "zh-tw",
-                        "font-karantina text-custom-44 sm:text-custom-94 lg:text-custom-118 2xl:text-custom-138 font-bold leading-[90%] sm:leading-[80%] 2xl:leading-[76%] 4xl:text-custom-272!":
-                          locale === "ja",
-                      }
-                    )}>
-                    48
-                  </span>
+                <span
+                  className={cn("font-karantina font-bold", {
+                    "text-custom-62 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%] 4xl:text-custom-297!":
+                      locale === "en",
+                    "text-custom-58 sm:text-custom-110 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%] 4xl:text-custom-297!":
+                      locale === "zh-cn" || locale === "zh-tw",
+                    "font-karantina text-custom-44 sm:text-custom-94 lg:text-custom-118 2xl:text-custom-138 font-bold leading-[90%] sm:leading-[80%] 2xl:leading-[76%] 4xl:text-custom-272!":
+                      locale === "ja",
+                  })}
+                >
+                  48
+                </span>
                 {locale === "ja" ? (
                   <span className="font-karantina text-custom-30 sm:text-custom-56 lg:text-custom-60 2xl:text-custom-90 text-right font-bold leading-none sm:leading-[80%] 2xl:leading-[110%] 4xl:text-custom-192! pl-2 sm:pl-5 2xl:pl-8">
-                     へ！
+                    へ！
                   </span>
                 ) : null}
               </h2>
@@ -253,13 +251,13 @@ const EimiFukada = () => {
               className={cn(
                 "absolute left-[9%] top-[50%] prm:left-[8%] prm:top-[54%] z-15 sm:left-[5%] sm:top-[49%] 2xl:top-[42%] 2xl:left-[-42%] sm:z-15 md:z-10 2xl:z-20 hidden 2xl:block",
                 {
-                  "2xl:left-[-34%] 2xl:top-[42%] 4xl:left-[-45%]! 4xl:top-[42%]!":
+                  "2xl:left-[2%] 2xl:top-[42%] 4xl:left-[-45%]! 4xl:top-[46%]!":
                     locale === "en",
-                  "2xl:left-[-35%] 2xl:top-[47%] 4xl:left-[-53%]! 4xl:top-[47%]!":
+                  "2xl:left-[1%] 2xl:top-[47%] 4xl:left-[-53%]! 4xl:top-[47%]!":
                     locale === "ja",
-                  "2xl:left-[-38%] 2xl:top-[46%] 4xl:left-[-54%]! 4xl:top-[46%]!":
+                  "2xl:left-[-3%] 2xl:top-[46%] 4xl:left-[-54%]! 4xl:top-[46%]!":
                     locale === "zh-cn",
-                  "2xl:left-[-39%] 2xl:top-[45%] 4xl:left-[-54%]! 4xl:top-[46%]!":
+                  "2xl:left-[-4%] 2xl:top-[45%] 4xl:left-[-54%]! 4xl:top-[46%]!":
                     locale === "zh-tw",
                 }
               )}
@@ -389,7 +387,8 @@ const EimiFukada = () => {
                 }
               />
             </div>
-            <div className="relative flex items-end z-5 2xl:z-10">
+            {/* 2k */}
+            <div className="relative flex items-end z-5 2xl:z-10 2xl:hidden">
               <div className="z-10 relative -bottom-2 right-[-20%] sm:right-[-27%] 2xl:right-[-31%] 4xl:right-[-36%]!">
                 <OptimizedThemeImage
                   className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] 4xl:max-w-none! 4xl:w-[1505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
@@ -405,7 +404,7 @@ const EimiFukada = () => {
               </div>
               <div className="z-10 absolute -bottom-2 left-[-31%] sm:left-[-44%] 2xl:left-[-51%] 4xl:left-[-45%]!">
                 <OptimizedThemeImage
-                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain"
+                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain" 
                   lightURL={"/assets/eimi-bg.webp"}
                   darkURL={"/assets/eimi-bg.webp"}
                   width={1948}
@@ -415,6 +414,24 @@ const EimiFukada = () => {
                   placeholder="blur"
                   alt="Aya Fujimoto"
                 ></OptimizedThemeImage>
+              </div>
+            </div>
+            <div className="relative flex items-end z-5 2xl:z-10 2xl:block hidden">
+              {/* 4K */}
+              <div className="relative flex items-end z-5 2xl:z-10 2xl:-bottom-2">
+                <div className="z-10 relative">
+                  <OptimizedThemeImage
+                    className="sm:w-[566px] lg:w-[737px] 2xl:w-[1369px] 4xl:max-w-none! 4xl:w-[4505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
+                    lightURL={"/assets/eimi-4k.png"}
+                    darkURL={"/assets/eimi-4k.png"}
+                    width={1948}
+                    height={974}
+                    quality={100}
+                    priority={true}
+                    placeholder="blur"
+                    alt="Aya Fujimoto"
+                  ></OptimizedThemeImage>
+                </div>
               </div>
             </div>
           </div>
