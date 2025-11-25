@@ -25,14 +25,14 @@ const RiseTogether = () => {
       <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-5-light-sm.png)] dark:bg-[url(/assets/bg-section-5-dark-sm.png)] bg-cover bg-center" />{" "}
       <div className="fixed md:hidden h-full  top-0 -right-64 cs-radial-sm" />
       <div
-        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 scale-100 lg:scale-100 3xl:scale-105! 4xl:scale-130! 5xl:scale-160!"
+        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 min-[1025px]:flex-center! min-[1025px]:flex! min-[1025px]:justify-center! min-[1025px]:w-fit! min-[1025px]:gap-10! sm:-mt-18 min-[1025px]:-mt-10! scale-100 min-[1025px]:scale-100! 3xl:scale-105! 4xl:scale-110!"
         id="section-rank48"
       >
         {/* SLOGAN */}
-        <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center 3xl:justify-center-safe">
-          <div className="w-full lg:w-fit! lg:h-185! lg:items-start flex flex-col items-center sm:-mb-10">
+        <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end min-[1025px]:justify-center! 3xl:justify-center-safe">
+          <div className="w-full min-[1025px]:w-fit! min-[1025px]:h-150! min-[1025px]:items-start! flex flex-col items-center sm:-mb-10">
             <OptimizedThemeImage
-              className="h-60 min-w-70 sm:w-125! sm:h-95! lg:max-w-178! lg:h-134! object-contain mx-auto"
+              className="h-60 min-w-70 sm:w-125! sm:h-95! min-[1025px]:w-180! min-[1025px]:h-140! object-contain mx-auto"
               lightURL={"/assets/rank48-light.png"}
               darkURL={"/assets/rank48-dark.png"}
               fill
@@ -46,17 +46,19 @@ const RiseTogether = () => {
             />
             <div
               className={clsx(
-                "relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 lg:-mt-50! sm:-mt-30 z-20 lg:-bottom-20 mx-auto",
+                "relative leading-none size-fit flex gap-0 flex-col items-center -mt-12.5 min-[1025px]:-mt-50! sm:-mt-30 z-20 min-[1025px]:-bottom-30 mx-auto",
                 {
                   "": locale === "ja",
-                  "sm:-mt-18!": locale === "zh-cn" || locale === "zh-tw",
+                  "": locale === "zh-cn" || locale === "zh-tw",
                 },
               )}
             >
               <div
                 className={clsx(
-                  "w-full max-w-95 sm:max-w-130.5 lg:max-w-150.5 bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap text-center",
-                  locale === "ja" ? "sm:max-w-130 lg:max-w-full" : "",
+                  "w-full max-w-95 sm:max-w-130.5 min-[1025px]:max-w-150.5! bg-linear-150 from-white via-white dark:to-avatar-violet to-avatar-primary text-gradient text-nowrap text-center",
+                  locale === "ja"
+                    ? "sm:max-w-130 min-[1025px]:max-w-full!"
+                    : "",
                 )}
               >
                 <ShapeGradientWrapper
@@ -64,9 +66,9 @@ const RiseTogether = () => {
                   className={clsx(
                     "absolute sm:-left-7 sm:top-1 -left-8 -top-8 z-10 sm:scale-100 scale-60",
                     {
-                      "lg:top-0! lg:left-18! sm:left-20! sm:-top-2! -top-8 left-2!":
+                      "min-[1025px]:top-0! min-[1025px]:left-18! sm:left-20! sm:-top-2! -top-8 left-2!":
                         locale === "ja",
-                      "lg:top-2! lg:left-4! sm:-top-10":
+                      "min-[1025px]:top-2! min-[1025px]:left-4! sm:-top-10":
                         locale === "zh-cn" || locale === "zh-tw",
                       "left-0! -top-10": locale === "zh-tw",
                     },
@@ -82,11 +84,11 @@ const RiseTogether = () => {
                 ></ShapeGradientWrapper>
                 <span
                   className={clsx(
-                    "text-custom-40 sm:text-custom-70 lg:text-custom-82 font-karantina font-bold z-1",
+                    "text-custom-40 sm:text-custom-70 min-[1025px]:text-custom-82! font-karantina font-bold z-1",
                     {
-                      "text-custom-40! sm:text-custom-70! lg:text-custom-82!":
+                      "text-custom-40 sm:text-custom-70 min-[1025px]:text-custom-82!":
                         locale === "ja",
-                      "sm:text-custom-90! lg:text-custom-90!":
+                      "sm:text-custom-90 min-[1025px]:text-custom-90!":
                         locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
@@ -95,9 +97,9 @@ const RiseTogether = () => {
                 </span>
                 {/* <label */}
                 {/*   className={clsx( */}
-                {/*     "font-karantina text-custom-82 lg:text-custom-145 sm:text-custom-123 font-bold", */}
+                {/*     "font-karantina text-custom-82 min-[1025px]:text-custom-145 sm:text-custom-123 font-bold", */}
                 {/*     locale === "ja" */}
-                {/*       ? "lg:text-custom-90! sm:text-custom-90! text-custom-62!" */}
+                {/*       ? "min-[1025px]:text-custom-90! sm:text-custom-90! text-custom-62!" */}
                 {/*       : "hidden", */}
                 {/*   )} */}
                 {/* > */}
@@ -105,11 +107,11 @@ const RiseTogether = () => {
                 {/* </label> */}
                 <label
                   className={clsx(
-                    "font-karantina text-custom-55 sm:text-custom-106 lg:text-custom-125 font-bold",
+                    "font-karantina text-custom-55 sm:text-custom-106 min-[1025px]:text-custom-125! font-bold",
                     {
-                      "sm:text-custom-106! lg:text-custom-125! text-wrap!":
+                      "sm:text-custom-106 min-[1025px]:text-custom-125! text-wrap!":
                         locale === "ja",
-                      "sm:text-custom-90! lg:text-custom-136!":
+                      "sm:text-custom-90 min-[1025px]:text-custom-136!":
                         locale === "zh-cn" || locale === "zh-tw",
                     },
                   )}
@@ -120,10 +122,10 @@ const RiseTogether = () => {
                 {/* Comma for 48 */}
                 <label
                   className={clsx(
-                    "font-karantina text-custom-64 lg:text-custom-145 sm:text-custom-123 font-bold",
+                    "font-karantina text-custom-64 min-[1025px]:text-custom-145! sm:text-custom-123 font-bold",
                     locale === "ja" ? "" : "",
                     locale === "zh-cn" || locale === "zh-tw"
-                      ? "lg:text-custom-157!"
+                      ? "min-[1025px]:text-custom-157!"
                       : "",
                   )}
                 >
@@ -132,9 +134,9 @@ const RiseTogether = () => {
               </div>
               <div
                 className={clsx(
-                  "relative text-custom-40 sm:text-custom-70 lg:text-custom-82 font-karantina text-center  w-full text-white font-bold",
+                  "relative text-custom-40 sm:text-custom-70 min-[1025px]:text-custom-82! font-karantina text-center  w-full text-white font-bold",
                   {
-                    "lg:text-custom-82! sm:text-custom-70! text-custom-37!":
+                    "min-[1025px]:text-custom-82! sm:text-custom-70! text-custom-37!":
                       locale === "ja",
                   },
                 )}
@@ -142,11 +144,12 @@ const RiseTogether = () => {
                 <ShapeGradientWrapper
                   index={"section5_rise_together"}
                   className={clsx(
-                    "absolute lg:right-10 sm:right-0 -bottom-16 -right-9 z-10 scale-65 sm:scale-100",
+                    "absolute min-[1025px]:right-10! sm:right-0 -bottom-16 -right-9 z-10 scale-65 sm:scale-100",
                     {
-                      "lg:-bottom-16 lg:right-14 sm:right-16 sm:-bottom-12! right-0":
+                      "min-[1025px]:-bottom-16! min-[1025px]:right-14! sm:right-16 sm:-bottom-12! right-0":
                         locale === "ja",
-                      "lg:right-25": locale === "zh-cn" || locale === "zh-tw",
+                      "min-[1025px]:right-25":
+                        locale === "zh-cn" || locale === "zh-tw",
                       "-bottom-14": locale === "zh-tw",
                     },
                   )}
@@ -167,12 +170,12 @@ const RiseTogether = () => {
           </div>
         </div>
         {/* Character */}
-        <div className="size-full flex justify-center z-10 items-start lg:items-center lg:w-min">
-          <div className="gap-8 sm:gap-2 size-full sm:flex lg:flex-col-reverse lg:items-center max-w-220 mx-auto max-h-52 sm:max-h-91! lg:max-h-fit! justify-center lg:min-w-fit! pt-5 lg:pt-20">
-            <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-fit lg:size-fit size-full lg:max-h-full">
-              <div className="relative flex justify-end gap-2 w-1/2">
+        <div className="size-full flex justify-center z-10 items-start min-[1025px]:items-center! min-[1025px]:w-min!">
+          <div className="gap-8 sm:gap-2 size-full sm:flex min-[1025px]:flex-col-reverse! min-[1025px]:items-center! max-w-220 mx-auto max-h-52 sm:max-h-91! min-[1025px]:max-h-fit! justify-center min-[1025px]:min-w-fit! pt-5 min-[1025px]:pt-20!">
+            <div className="flex justify-center sm:justify-between sm:w-3/5 sm:max-h-fit min-[1025px]:size-full! size-full min-[1025px]:max-h-full!">
+              <div className="relative flex justify-end gap-5 w-1/2">
                 <OptimizedThemeImage
-                  className="max-w-fit sm:max-w-full h-full object-contain"
+                  className="max-w-fit sm:max-w-full h-full w-auto object-contain min-[1025px]:opacity-0"
                   lightURL={"/assets/aya-fujimoto-light.png"}
                   darkURL={"/assets/aya-fujimoto-dark.png"}
                   width={400}
@@ -184,14 +187,14 @@ const RiseTogether = () => {
                   alt="Aya Fujimoto"
                 />
                 <CardAnimation
-                  className="absolute inset-0 z-20 hidden lg:block"
+                  className="absolute inset-0 z-20 hidden min-[1025px]:block!"
                   lightURL={"/assets/aya-fujimoto-light.png"}
                   darkURL={"/assets/aya-fujimoto-dark.png"}
                 />
               </div>
               <div className="relative flex-center justify-start gap-2 w-1/2">
                 <OptimizedThemeImage
-                  className="max-w-fit sm:max-w-full h-full object-contain"
+                  className="max-w-fit sm:max-w-full h-full w-auto object-contain min-[1025px]:opacity-0"
                   lightURL={"/assets/eimi-fukada-light.png"}
                   darkURL={"/assets/eimi-fukada-dark.png"}
                   width={400}
@@ -204,19 +207,19 @@ const RiseTogether = () => {
                   alt="Eimi Fukada"
                 />
                 <CardAnimation
-                  className="absolute inset-0 z-20 hidden lg:block"
+                  className="absolute inset-0 z-20 hidden min-[1025px]:block!"
                   lightURL={"/assets/eimi-fukada-light.png"}
                   darkURL={"/assets/eimi-fukada-dark.png"}
                 />
               </div>
             </div>
-            <div className="sm:w-2/5 w-0 flex-center z-50 lg:min-w-80! max-h-fit  2xl:min-w-130!">
+            <div className="sm:w-2/5 w-0 flex-center z-50 min-[1025px]:min-w-80! max-h-fit  2xl:min-w-130!">
               <FloatInformation content={t("description")} />
             </div>
           </div>
         </div>
         {/*Radient*/}
-        <div className="w-327.5 h-228 bg-radial-[100%_100%_at_50%_50%] from-avatar-blue-5/30 to-50% to-avatar-blue-4/5 absolute  -rotate-17 rounded-[100%] overflow-hidden -bottom-100 sm:left-20 lg:left-50 backdrop-blur-87.5"></div>
+        <div className="w-327.5 h-228 bg-radial-[100%_100%_at_50%_50%] from-avatar-blue-5/30 to-50% to-avatar-blue-4/5 absolute  -rotate-17 rounded-[100%] overflow-hidden -bottom-100 sm:left-20 min-[1025px]:left-50! backdrop-blur-87.5"></div>
       </div>
     </SectionWrapper>
   );
