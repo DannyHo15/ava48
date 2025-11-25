@@ -28,7 +28,7 @@ const RiseTogether = () => {
         <div className="relative size-full flex-col flex justify-end z-10 sm:justify-end lg:justify-center 3xl:justify-center-safe">
           <div className="w-full lg:w-fit! lg:h-185! lg:items-start flex flex-col items-center sm:-mb-10">
             <OptimizedThemeImage
-              className="h-60 w-92.5 sm:w-125! sm:h-95! lg:max-w-178! lg:h-134! object-contain mx-auto"
+              className="h-60 min-w-70 sm:w-125! sm:h-95! lg:max-w-178! lg:h-134! object-contain mx-auto"
               lightURL={"/assets/rank48-light.png"}
               darkURL={"/assets/rank48-dark.png"}
               width={712} // Approximate max width (178 * 4)
