@@ -23,8 +23,8 @@ const Robotic = () => {
         >
           <div
             className={clsx(
-              "relative size-full mx-auto flex flex-col items-end justify-end md:gap-9.5 xl:max-w-[1040px] 2xl:max-w-[1281px] xl:pt-[130px] 3xl:pt-0! 3xl:max-w-[1570px]! xl:mx-auto xl:flex-row xl:gap-0",
-              locale === "ja" && "md:gap-18!"
+              "relative size-full mx-auto flex flex-col items-end justify-end md:gap-[215px] min-[1023]:gap-[100px]! xl:max-w-[1040px] 2xl:max-w-[1281px] xl:pt-[130px] 3xl:pt-0! 3xl:max-w-[1570px]! xl:mx-auto xl:flex-row xl:gap-0",
+              locale === "ja" && "md:gap-[215px] min-[1023]:gap-[146px]!"
             )}
           >
             {/* Title Tablet */}
@@ -74,11 +74,11 @@ const Robotic = () => {
                   "text-custom-90 leading-[86%] tracking-normal font-bold font-karantina text-left w-full text-gradient",
                   locale === "ja" && "text-custom-75! leading-none",
                   {
-                    "leading-none! bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                    "leading-none! bg-[linear-gradient(322.61deg,#FFFFFF_77.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(322.41deg,var(--color-white)_77.41%,var(--color-avatar-violet)_103.78%)]":
                       locale === "ja",
                     "leading-none! bg-[linear-gradient(298.41deg,#FFFFFF_88.41%,#00D0F6_101.78%)] dark:bg-[linear-gradient(298.41deg,var(--color-white)_88.41%,var(--color-avatar-violet)_101.78%)]":
                       locale === "zh-cn" || locale === "zh-tw",
-                    "bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                    "bg-[linear-gradient(322.61deg,#FFFFFF_77.41%,#00D0F6_91.78%)] dark:bg-[linear-gradient(322.41deg,var(--color-white)_77.41%,var(--color-avatar-violet)_103%)]":
                       locale === "en",
                   }
                 )}
@@ -127,7 +127,7 @@ const Robotic = () => {
                 className={clsx(
                   "md:hidden absolute z-10 -top-2 left-1/2 -translate-x-1/2 max-w-[321px] w-full flex flex-col gap-1",
                   locale === "ja" && "max-w-[341px]!",
-                  (locale === "zh-cn" || locale === "zh-tw") && "gap-3"
+                  (locale === "zh-cn" || locale === "zh-tw") && "gap-1"
                 )}
               >
                 {/* Mobile shape right */}
@@ -138,7 +138,7 @@ const Robotic = () => {
                   blurSize="2xs"
                   className={clsx("absolute md:hidden z-10", {
                     "bottom-2.5 -right-3": locale === "en",
-                    "-bottom-7 right-1":
+                    "-bottom-5.5 right-1":
                       locale === "zh-cn" || locale === "zh-tw",
                     "bottom-2 -right-3": locale === "ja",
                   })}
@@ -152,10 +152,15 @@ const Robotic = () => {
                 />
                 <p
                   className={clsx(
-                    "text-custom-42 leading-[86%] tracking-normal font-bold font-karantina text-left w-full bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)] text-gradient",
-                    locale === "ja" && "text-custom-32!",
-                    (locale === "zh-cn" || locale === "zh-tw") &&
-                      "text-custom-33!"
+                    "leading-[86%] tracking-normal font-bold font-karantina text-left w-full text-gradient",
+                    {
+                      "text-custom-42! bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                        locale === "en",
+                      "leading-none text-custom-33! bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                        locale === "zh-tw" || locale === "zh-cn",
+                      "leading-none text-custom-32! bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                        locale === "ja",
+                    }
                   )}
                 >
                   {t("title")}
@@ -165,9 +170,9 @@ const Robotic = () => {
                   className={clsx(
                     "text-white uppercase text-left font-bold text-custom-32 leading-[86%] tracking-[0.64px] font-karantina",
                     locale === "ja" &&
-                      "text-custom-24! leading-[20.64px]! tracking-[0.48px]!",
+                      "text-custom-24! leading-none tracking-[0.48px]!",
                     (locale === "zh-cn" || locale === "zh-tw") &&
-                      "text-custom-42! leading-[20.64px]! tracking-[0.48px]!"
+                      "text-custom-42! tracking-[0.48px]! leading-none"
                   )}
                 >
                   {t("subtitle")}
@@ -220,7 +225,7 @@ const Robotic = () => {
                   shapeHeight={95}
                   className={clsx("absolute z-50 -rotate-90", {
                     "top-37 left-82": locale === "en",
-                    "-left-5 top-10": locale === "ja",
+                    "-left-5 top-10 3xl:top-18": locale === "ja",
                     "top-45 -left-12": locale === "zh-cn" || locale === "zh-tw",
                   })}
                   strokeColor={[
@@ -237,10 +242,12 @@ const Robotic = () => {
                   shapeWidth={224}
                   shapeHeight={104}
                   className={clsx("absolute z-50", {
-                    "top-10 right-55 3xl:right-80 3xl:top-15 4xl:right-70 4xl:top-15":
+                    "top-10 right-55 3xl:right-127 3xl:top-15 4xl:right-127 4xl:top-13":
                       locale === "en",
-                    "right-100 top-20": locale === "ja",
-                    "left-100 top-17": locale === "zh-cn" || locale === "zh-tw",
+                    "right-100 top-10 3xl:right-127 3xl:top-15 4xl:right-127 4xl:top-20":
+                      locale === "ja",
+                    "left-100 top-17 ":
+                      locale === "zh-cn" || locale === "zh-tw",
                   })}
                   strokeColor={[
                     { offset: "0%", stopColor: "rgba(255, 255, 255, 1)" },
@@ -256,11 +263,11 @@ const Robotic = () => {
                   className={clsx(
                     "leading-[86%] tracking-[1.25px] font-bold font-karantina text-left w-full text-gradient",
                     {
-                      "xl:text-custom-82 3xl:text-custom-123! 4xl:text-custom-145! leading-none! bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                      "xl:text-custom-82 3xl:text-custom-123! 4xl:text-custom-145! leading-none! bg-[linear-gradient(279.61deg,#FFFFFF_86.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_86.41%,var(--color-avatar-violet)_103.78%)]":
                         locale === "ja",
                       "leading-none! text-custom-130 bg-[linear-gradient(298.41deg,#FFFFFF_88.41%,#00D0F6_101.78%)] dark:bg-[linear-gradient(298.41deg,var(--color-white)_88.41%,var(--color-avatar-violet)_101.78%)]":
                         locale === "zh-cn" || locale === "zh-tw",
-                      "text-custom-98 2xl:text-custom-125 3xl:text-custom-153 bg-[linear-gradient(279.61deg,#FFFFFF_68.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_68.41%,var(--color-avatar-violet)_103.78%)]":
+                      "text-custom-98 2xl:text-custom-125 3xl:text-custom-153 bg-[linear-gradient(328.61deg,#FFFFFF_74.41%,#00D0F6_91.78%)] dark:bg-[linear-gradient(328.41deg,var(--color-white)_74.41%,var(--color-avatar-violet)_100.78%)]":
                         locale === "en",
                     }
                   )}
