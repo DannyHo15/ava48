@@ -217,15 +217,17 @@ const Vision = () => {
                   index={"section6_token_5"}
                   blurSize={"2xs"}
                   className={clsx("absolute min-[3200px]:hidden!", {
-                    "left-120 min-[2000px]:left-156 -bottom-16 min-[2000px]:-bottom-12":
+                    "left-116 min-[2000px]:left-156 -bottom-14 min-[2000px]:-bottom-12":
                       locale === "ja",
-                    "left-68 min-[2000px]:left-108 -bottom-10": locale !== "ja",
+                    "left-66 min-[2000px]:left-108 -bottom-10": locale === "en",
+                    "left-68 min-[2000px]:left-108 -bottom-11": locale === "zh-cn",
+                    "left-68 min-[2000px]:left-108 -bottom-12": locale === "zh-tw",
                   })}
                   strokeWidth={1}
                   shapeWidth={142}
                   shapeHeight={86}
                   path={
-                    "M 0,10 A 10,10 0,0,1 10,0 L 80,0 A 10,10 0,0,1 86,6 L 102,30 A 10,10 0,0,1 108,36 L 108,47 A 10,10 0,0,1 98,57 L 10,57 A 10,10 0,0,1 0,47 Z"
+                    "M 0,10 A 10,10 0,0,1 10,0 L 78,0 A 16,16 0,0,1 89,6 L 105,24 A 10,10 0,0,1 108,30 L 108,47 A 10,10 0,0,1 98,57 L 10,57 A 10,10 0,0,1 0,47 Z"
                   }
                 />
 
