@@ -58,7 +58,7 @@ const Vision = () => {
                     blurSize={"2xs"}
                     className={clsx("absolute", {
                       "-left-6 min-[850px]:-left-6 -top-12": locale === "ja",
-                      "-left-8 min-[850px]:-left-8 -top-7": locale !== "ja",
+                      "-left-8 min-[850px]:-left-8 -top-7": locale !== "en",
                     })}
                     strokeWidth={1}
                     shapeWidth={142}
@@ -74,9 +74,11 @@ const Vision = () => {
                 <span
                   className={clsx(
                     "relative z-5 font-karantina tracking-wide font-bold leading-none mt-2 drop-shadow-text text-right -mr-26",
-                    locale === "ja"
-                      ? "text-custom-56 min-[850px]:text-custom-55 text-nowrap"
-                      : "text-custom-56 sm:text-custom-82",
+                    {
+                      "text-custom-56 min-[850px]:text-custom-55 text-nowrap": locale === "ja",
+                      "text-custom-56 sm:text-custom-82": locale === "en",
+                      "text-custom-56 sm:text-custom-62": locale === "zh-cn" || locale === "zh-tw",
+                    },
                     "text-white"
                   )}
                 >
@@ -85,7 +87,8 @@ const Vision = () => {
                     blurSize={"2xs"}
                     className={clsx("absolute", {
                       "-bottom-6 right-40 min-[850px]:right-40": locale === "ja",
-                      "-bottom-5 right-60 min-[850px]:right-60": locale !== "ja",
+                      "-bottom-5 right-60 min-[850px]:right-60": locale === "en",
+                      "-bottom-7 right-60 min-[850px]:right-16": locale === "zh-cn" || locale === "zh-tw",
                     })}
                     strokeWidth={1}
                     shapeWidth={108}
@@ -105,15 +108,16 @@ const Vision = () => {
                 lightURL={"/assets/aya-swap-light.png"}
                 drakURL={"/assets/aya-swap-dark.png"}
               />
-              <div className={clsx("text-white font-karantina leading-none text-right", {
-                "pt-2": locale === "ja"
-              })}>
+              <div
+                className={clsx("text-white font-karantina leading-none text-right", {
+                  "pt-2": locale === "ja",
+                })}
+              >
                 <span
                   className={clsx(
                     "relative bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet drop-shadow-text font-karantina font-bold tracking-[2%]",
                     {
-                      "text-custom-36 text-nowrap":
-                        locale === "ja",
+                      "text-custom-36 text-nowrap": locale === "ja",
                       "text-custom-55": locale !== "ja",
                     },
                     "text-gradient"
@@ -136,9 +140,7 @@ const Vision = () => {
               <div
                 className={clsx(
                   "relative font-karantina tracking-wide font-bold leading-none drop-shadow-text text-right",
-                  locale === "ja"
-                    ? "text-custom-30 text-nowrap"
-                    : "text-custom-40",
+                  locale === "ja" ? "text-custom-30 text-nowrap" : "text-custom-40",
                   "text-white"
                 )}
               >
@@ -217,15 +219,17 @@ const Vision = () => {
                   index={"section6_token_5"}
                   blurSize={"2xs"}
                   className={clsx("absolute min-[3200px]:hidden!", {
-                    "left-120 min-[2000px]:left-156 -bottom-16 min-[2000px]:-bottom-12":
+                    "left-116 min-[2000px]:left-156 -bottom-14 min-[2000px]:-bottom-12":
                       locale === "ja",
-                    "left-68 min-[2000px]:left-108 -bottom-10": locale !== "ja",
+                    "left-66 min-[2000px]:left-108 -bottom-10": locale === "en",
+                    "left-68 min-[2000px]:left-108 -bottom-11": locale === "zh-cn",
+                    "left-68 min-[2000px]:left-108 -bottom-12": locale === "zh-tw",
                   })}
                   strokeWidth={1}
                   shapeWidth={142}
                   shapeHeight={86}
                   path={
-                    "M 0,10 A 10,10 0,0,1 10,0 L 80,0 A 10,10 0,0,1 86,6 L 102,30 A 10,10 0,0,1 108,36 L 108,47 A 10,10 0,0,1 98,57 L 10,57 A 10,10 0,0,1 0,47 Z"
+                    "M 0,10 A 10,10 0,0,1 10,0 L 78,0 A 16,16 0,0,1 89,6 L 105,24 A 10,10 0,0,1 108,30 L 108,47 A 10,10 0,0,1 98,57 L 10,57 A 10,10 0,0,1 0,47 Z"
                   }
                 />
 
@@ -265,9 +269,11 @@ const Vision = () => {
               />
             </div>
             {/* mobile */}
-            <div className={clsx("flex-center-x sm:hidden w-full", {
-              "mt-4": locale === "ja",
-            })}>
+            <div
+              className={clsx("flex-center-x sm:hidden w-full", {
+                "mt-4": locale === "ja",
+              })}
+            >
               <ImageAvatar48
                 className="w-65 h-auto mx-auto"
                 lightURL={"/assets/ai-agent-list-light.png"}
