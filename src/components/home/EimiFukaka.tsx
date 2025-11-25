@@ -394,8 +394,8 @@ const EimiFukada = () => {
                   className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] 4xl:max-w-none! 4xl:w-[1505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
                   lightURL={"/assets/eimi-bg-ai.png"}
                   darkURL={"/assets/eimi-bg-ai.png"}
-                  width={1948}
-                  height={974}
+                  width={753}
+                  height={999}
                   quality={100}
                   priority={true}
                   placeholder="blur"
@@ -407,25 +407,25 @@ const EimiFukada = () => {
                   className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain" 
                   lightURL={"/assets/eimi-bg.webp"}
                   darkURL={"/assets/eimi-bg.webp"}
-                  width={1948}
-                  height={974}
-                  quality={90}
+                  width={975}
+                  height={940}
+                  quality={100}
                   priority={true}
                   placeholder="blur"
                   alt="Aya Fujimoto"
                 ></OptimizedThemeImage>
               </div>
             </div>
+            {/* 4K */}
             <div className="relative flex items-end z-5 2xl:z-10 2xl:block hidden">
-              {/* 4K */}
               <div className="relative flex items-end z-5 2xl:z-10 2xl:-bottom-2">
                 <div className="z-10 relative">
                   <OptimizedThemeImage
                     className="sm:w-[566px] lg:w-[737px] 2xl:w-[1369px] 4xl:max-w-none! 4xl:w-[4505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
                     lightURL={"/assets/eimi-4k.png"}
                     darkURL={"/assets/eimi-4k.png"}
-                    width={1948}
-                    height={974}
+                    width={2739}
+                    height={1997}
                     quality={100}
                     priority={true}
                     placeholder="blur"
