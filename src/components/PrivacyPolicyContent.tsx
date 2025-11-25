@@ -186,7 +186,7 @@ const PrivacyPolicyContent = () => {
           {t("xpTPb3")}&nbsp;
           <a
             href={`mailto:${EMAIL_SUPPORT}`}
-            className="text-primary hover:underline"
+            className="text-avatar-primary hover:underline"
           >
             {EMAIL_SUPPORT}
           </a>
