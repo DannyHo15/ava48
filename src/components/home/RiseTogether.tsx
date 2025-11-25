@@ -11,6 +11,10 @@ import { useParams } from "next/navigation";
 import clsx from "clsx";
 import CardAnimation from "../CardAnimation";
 
+// Blur data URL for Next.js Image placeholder
+const blurDataURL =
+  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A8A";
+
 const RiseTogether = () => {
   const t = useTranslations("LandingPage.section_5");
   const { locale } = useParams();
@@ -21,7 +25,7 @@ const RiseTogether = () => {
       <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-5-light-sm.png)] dark:bg-[url(/assets/bg-section-5-dark-sm.png)] bg-cover bg-center" />{" "}
       <div className="fixed md:hidden h-full  top-0 -right-64 cs-radial-sm" />
       <div
-        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 scale-100 lg:scale-100 3xl:scale-105! 4xl:scale-110!"
+        className="max-w-5xl grid grid-cols-1 px-5 size-full mx-auto gap-4 sm:gap-8 lg:flex-center lg:flex lg:justify-center lg:w-fit lg:gap-10 sm:-mt-18 lg:-mt-10 scale-100 lg:scale-100 3xl:scale-105! 4xl:scale-130! 5xl:scale-160!"
         id="section-rank48"
       >
         {/* SLOGAN */}
@@ -31,11 +35,13 @@ const RiseTogether = () => {
               className="h-60 min-w-70 sm:w-125! sm:h-95! lg:max-w-178! lg:h-134! object-contain mx-auto"
               lightURL={"/assets/rank48-light.png"}
               darkURL={"/assets/rank48-dark.png"}
+              fill
               width={712} // Approximate max width (178 * 4)
               height={536} // Approximate max height (134 * 4)
               quality={90}
               priority={true} // Above fold content
               placeholder="blur"
+              blurDataURL={blurDataURL}
               alt="Rank 48 logo"
             />
             <div
@@ -174,6 +180,7 @@ const RiseTogether = () => {
                   quality={100}
                   priority={false}
                   placeholder="blur"
+                  blurDataURL={blurDataURL}
                   alt="Aya Fujimoto"
                 />
                 <CardAnimation
@@ -193,6 +200,7 @@ const RiseTogether = () => {
                   unoptimized
                   priority={false}
                   placeholder="blur"
+                  blurDataURL={blurDataURL}
                   alt="Eimi Fukada"
                 />
                 <CardAnimation

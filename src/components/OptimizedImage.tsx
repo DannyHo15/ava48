@@ -119,14 +119,13 @@ const OptimizedImage = ({
         height={height}
         className={cn("transition-opacity duration-300", className)}
       />
-      {isLoading && (
-        <div className="absolute inset-0 bg-gray-300/15 dark:bg-gray-300/15 rounded-xl flex-center">
-          <Spinner className="size-8 text-white" />
-        </div>
-      )}
+      {/* {isLoading && ( */}
+      {/*   <div className="absolute inset-0 bg-gray-300/15 dark:bg-gray-300/15 rounded-xl flex-center"> */}
+      {/*     <Spinner className="size-8 text-white" /> */}
+      {/*   </div> */}
+      {/* )} */}
     </div>
   );
 };
 
 export default OptimizedImage;
-
