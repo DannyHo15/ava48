@@ -418,12 +418,12 @@ const EimiFukada = () => {
               <div className="z-10 relative -bottom-2 right-[-20%] sm:right-[-27%] 2xl:right-[-31%] 4xl:right-[-36%]!">
                 <OptimizedThemeImage
                   className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] 4xl:max-w-none! 4xl:w-[1505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
-                  lightURL="/assets/eimi-bg-ai.webp"
-                  darkURL="/assets/eimi-bg-ai.webp"
-                  width={1948}
-                  height={974}
-                  quality={80}
-                  priority={false}
+                  lightURL={"/assets/eimi-bg-ai.png"}
+                  darkURL={"/assets/eimi-bg-ai.png"}
+                  width={753}
+                  height={999}
+                  quality={100}
+                  priority={true}
                   placeholder="blur"
                   sizes="(max-width: 640px) 450px, (max-width: 1024px) 737px, (max-width: 1536px) 752px, 1505px"
                   alt="Eimi AI Character"
@@ -431,29 +431,29 @@ const EimiFukada = () => {
               </div>
               <div className="z-10 absolute -bottom-2 left-[-31%] sm:left-[-44%] 2xl:left-[-51%] 4xl:left-[-45%]!">
                 <OptimizedThemeImage
-                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain"
-                  lightURL="/assets/eimi-bg.webp"
-                  darkURL="/assets/eimi-bg.webp"
-                  width={1948}
-                  height={974}
-                  quality={75}
-                  priority={false}
+                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain" 
+                  lightURL={"/assets/eimi-bg.webp"}
+                  darkURL={"/assets/eimi-bg.webp"}
+                  width={975}
+                  height={940}
+                  quality={100}
+                  priority={true}
                   placeholder="blur"
                   sizes="(max-width: 640px) 520px, (max-width: 1024px) 941px, (max-width: 1536px) 974px, 1948px"
                   alt="Eimi Character"
                 />
               </div>
             </div>
+            {/* 4K */}
             <div className="relative flex items-end z-5 2xl:z-10 2xl:block hidden">
-              {/* 4K */}
               <div className="relative flex items-end z-5 2xl:z-10 2xl:-bottom-2">
                 <div className="z-10 relative">
                   <OptimizedThemeImage
                     className="sm:w-[566px] lg:w-[737px] 2xl:w-[1369px] 4xl:max-w-none! 4xl:w-[4505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
                     lightURL={"/assets/eimi-4k.png"}
                     darkURL={"/assets/eimi-4k.png"}
-                    width={1948}
-                    height={974}
+                    width={2739}
+                    height={1997}
                     quality={100}
                     priority={true}
                     placeholder="blur"
