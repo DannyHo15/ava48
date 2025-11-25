@@ -255,9 +255,9 @@ const EimiFukada = () => {
                     locale === "en",
                   "2xl:left-[1%] 2xl:top-[47%] 4xl:left-[-53%]! 4xl:top-[47%]!":
                     locale === "ja",
-                  "2xl:left-[-3%] 2xl:top-[46%] 4xl:left-[-54%]! 4xl:top-[46%]!":
+                  "2xl:left-[-3%] 2xl:top-[46%] 4xl:left-[-45%]! 4xl:top-[46%]!":
                     locale === "zh-cn",
-                  "2xl:left-[-4%] 2xl:top-[45%] 4xl:left-[-54%]! 4xl:top-[46%]!":
+                  "2xl:left-[-4%] 2xl:top-[45%] 4xl:left-[-45%]! 4xl:top-[46%]!":
                     locale === "zh-tw",
                 }
               )}
