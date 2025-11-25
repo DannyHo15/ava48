@@ -6,7 +6,7 @@ const TitleCard = (props: React.HTMLAttributes<HTMLDivElement>) => {
     <div
       className={clsx(
         className,
-        "relative text-2xl md:text-7xl mobile:!text-2xl py-4 px-6 w-fit rounded-sm font-normal text-primary uppercase text-center bg-gradient-title"
+        "relative text-2xl md:text-7xl mobile:!text-2xl py-4 px-6 w-fit rounded-sm font-normal text-primary uppercase text-center bg-gradient-title",
       )}
       {...rest}
     >

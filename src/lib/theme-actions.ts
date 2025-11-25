@@ -7,12 +7,14 @@ export async function getThemeCookie() {
   return cookieStore.get("theme")?.value || null;
 }
 
-export async function setThemeCookie(theme: "royal-dark-mode" | "violet-kiss-mode") {
+export async function setThemeCookie(
+  theme: "royal-dark-mode" | "violet-kiss-mode",
+) {
   const cookieStore = await cookies();
   const currentTheme = cookieStore.get("theme")?.value || null;
   if (!currentTheme)
     cookieStore.set("theme", theme, {
-      maxAge: 60 * 60 * 24 * 7,
+      maxAge: 10,
       path: "/",
       sameSite: "lax",
     });

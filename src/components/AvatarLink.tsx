@@ -50,7 +50,7 @@ export const AvatarLink = () => {
   return (
     <div
       className={cn(
-        "fixed bottom-2.5 min-[500px]:bottom-6.5 md:bottom-15 lg:bottom-5 right-2.5 min-[500px]:right-5 md:right-10 lg:right-13.25 z-10 rounded-b-full min-[500px]:rounded-b-none space-y-px min-[500px]:space-y-0"
+        "fixed bottom-2.5 min-[500px]:bottom-6.5 md:bottom-10  min-[1025px]:bottom-5! min-[2000px]:bottom-10! right-3 min-[500px]:right-5 md:right-10  min-[1025px]:right-13.25! min-[2000px]:right-20! z-10 rounded-b-full min-[500px]:rounded-b-none space-y-px min-[500px]:space-y-0"
       )}
     >
       <div className="hidden min-[500px]:flex md:block gap-2 underline decoration-[0.5px] underline-offset-4 font-light text-white text-xl space-y-px min-[500px]:space-y-0 md:space-y-6 xl:space-y-3">

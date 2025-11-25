@@ -10,7 +10,7 @@ import { LanguageEnum } from "@/lib/types";
 import clsx from "clsx";
 import { ChevronDown } from "lucide-react";
 import { useParams } from "next/navigation";
-import { useTransition } from "react";
+import { useTransition, useEffect, useState } from "react";
 
 interface Props {
   className?: string;
@@ -22,6 +22,11 @@ const LanguageDrawer = (props: Props) => {
   const params = useParams();
   const { locale } = params;
   const [isPending, startTransition] = useTransition();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   function onSelectChange(value: LanguageEnum) {
     startTransition(() => {
@@ -30,13 +35,33 @@ const LanguageDrawer = (props: Props) => {
     });
   }
 
+  // Don't render interactive popover during SSR to avoid ID mismatches
+  if (!isMounted) {
+    return (
+      <Button
+        variant="rounded"
+        size={"small"}
+        className={clsx(
+          "flex-center gap-1 uppercase bg-avatar-primary text-white text-base sm:text-xl",
+          className,
+        )}
+      >
+        {locale}
+        <ChevronDown />
+      </Button>
+    );
+  }
+
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
           variant="rounded"
           size={"small"}
-          className={clsx("flex-center gap-1 uppercase bg-avatar-primary text-white text-base sm:text-xl", className)}
+          className={clsx(
+            "flex-center gap-1 uppercase bg-avatar-primary text-white text-base sm:text-xl",
+            className,
+          )}
         >
           {locale}
           <ChevronDown />
@@ -65,7 +90,7 @@ const LanguageDrawer = (props: Props) => {
             <button
               key={item.value}
               className={clsx(
-                locale === item.value ? "text-primary" : "",
+                locale === item.value ? "text-avatar-primary" : "",
                 "px-2 py-2"
               )}
               disabled={isPending}

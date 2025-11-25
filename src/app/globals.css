@@ -2,6 +2,62 @@
 @import "../assets/fonts/index.css";
 
 @custom-variant dark (&:is(.violet-kiss-mode *));
+
+/* Skeleton Loading Animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse-opacity {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-opacity {
+  animation: pulse-opacity 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-wave {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 3s ease-in-out infinite;
+}
 /* Extend backdrop blur utilities */
 @source inline("{hover:,focus:,}backdrop-blur-{2xs,xs,sm,md,lg,xl,2xl,3xl}");
 @theme inline {
@@ -22,7 +78,7 @@
   --breakpoint-xs: 320px;
   --breakpoint-pr: 375px;
   --breakpoint-prm: 400px;
-  --breakpoint-3xl: 1920px;
+  --breakpoint-3xl: 1921px;
   --breakpoint-4xl: 2560px;
   --breakpoint-5xl: 3840px;
 
@@ -39,26 +95,90 @@
   --max-screen-4xl: 2560px;
   --max-screen-5xl: 3840px;
 
+  /*Define container*/
+  --container-3xl: 1920px;
+  --container-4xl: 2560px;
+  --container-5xl: 3840px;
+
   /* Define font family */
   --font-kanit: "Kanit", sans-serif;
   --font-karantina: "Karantina", sans-serif;
   /* Font size */
   --text-xs: 0.75rem;
+  --text-custom-23: 1.4375rem;
+  --text-custom-24: 1.5rem;
+  --text-custom-30: 1.875rem;
+  --text-custom-32: 2rem;
+  --text-custom-33: 2.0625rem;
+  --text-custom-36: 2.25rem;
+  --text-custom-37: 2.3125rem;
+  --text-custom-38: 2.375rem;
+  --text-custom-42: 2.625rem;
+  --text-custom-40: 2.5rem;
+  --text-custom-42: 2.625rem;
+  --text-custom-44: 2.75rem;
+  --text-custom-45: 2.75rem;
   --text-custom-46: 2.875rem;
+  --text-custom-48: 3rem;
+  --text-custom-50: 3.125rem;
+  --text-custom-54: 3.375rem;
   --text-custom-55: 3.4375rem;
   --text-custom-56: 3.5rem;
+  --text-custom-58: 3.625rem;
   --text-custom-59: 3.6875rem;
+  --text-custom-60: 3.75rem;
+  --text-custom-62: 3.875rem;
+  --text-custom-64: 4rem;
+  --text-custom-66: 4.125rem;
   --text-custom-70: 4.375rem;
   --text-custom-72: 4.5rem;
+  --text-custom-75: 4.6875rem;
   --text-custom-82: 5.125rem;
+  --text-custom-80: 5rem;
+  --text-custom-82: 5.125rem;
+  --text-custom-85: 5.3125rem;
+  --text-custom-88: 5.5rem;
   --text-custom-90: 5.625rem;
+  --text-custom-92: 5.75rem;
+  --text-custom-94: 5.875rem;
+  --text-custom-98: 6.125rem;
+  --text-custom-100: 6.25rem;
+  --text-custom-103: 6.4375rem;
   --text-custom-110: 6.875rem;
+  --text-custom-114: 7.125rem;
+  --text-custom-118: 7.375rem;
+  --text-custom-117: 7.3125rem;
   --text-custom-120: 7.5rem;
   --text-custom-125: 7.8125rem;
   --text-custom-106: 6.625rem;
+  --text-custom-121: 7.5625rem;
   --text-custom-123: 7.688rem;
   --text-custom-125: 7.813rem;
+  --text-custom-128: 8rem;
+  --text-custom-130: 8.125rem;
+  --text-custom-132: 8.25rem;
+  --text-custom-138: 8.625rem;
+  --text-custom-136: 8.5rem;
+  --text-custom-140: 8.75rem;
   --text-custom-145: 9.125rem;
+  --text-custom-151: 9.4375rem;
+  --text-custom-152: 9.5rem;
+  --text-custom-153: 9.5625rem;
+  --text-custom-157: 9.8125rem;
+  --text-custom-160: 10rem;
+  --text-custom-176: 11rem;
+  --text-custom-180: 11.25rem;
+  --text-custom-185: 11.5625rem;
+  --text-custom-192: 12rem;
+  --text-custom-200: 12.5rem;
+  --text-custom-208: 13rem;
+  --text-custom-217: 13.5625rem;
+  --text-custom-232: 14.5rem;
+  --text-custom-248: 15rem;
+  --text-custom-256: 16rem;
+  --text-custom-272: 17rem;
+  --text-custom-288: 18rem;
+  --text-custom-297: 18.5625rem;
   /* Font Weight */ /* Letter space */
   /* Line height */ /* Border radius use by rounded-* */
   --radius-custom-20: 1.25rem;
@@ -70,6 +190,7 @@
   /* Back drop blur */
   --blur-cs-6: 6px;
   --blur-2xs: 2px;
+  --blur-4xs: 4px;
 }
 
 :root {
@@ -95,11 +216,17 @@
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 96.46%,
     rgba(216, 29, 226, 0.5) 99.22%;
   --avatar-chat-border:
-    #00d0f6 3.35%, rgba(81, 249, 255, 0) 33.5%,
-    rgba(81, 249, 255, 0) 80.85%, #00d0f6 91.75%;
+    #00d0f6 3.35%, rgba(81, 249, 255, 0) 33.5%, rgba(81, 249, 255, 0) 80.85%,
+    #00d0f6 91.75%;
   --avatar-info-border:
     #fff, rgba(255, 255, 255, 0) 33.5%, rgba(81, 249, 255, 0) 80.85%,
     #fff 122.75%;
+  --avatar-emi-radial: linear-gradient(
+    143.72deg,
+    #0083f5 29.99%,
+    #49fff0 49.39%,
+    #1d4ed8 83.09%
+  );
 }
 
 .violet-kiss-mode {
@@ -117,20 +244,37 @@
     90% 160% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 50%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 90%,
     rgba(216, 29, 226, 0.5) 99.22%;
+
+  --avatar-bg-filter-lg-earn-connection:
+    84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
+    rgba(216, 29, 226, 0.5) 99.22%;
   --avatar-bg-filter-md:
     76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
     rgba(216, 29, 226, 0.5) 99.22%;
+
+  --avatar-bg-filter-md-earn-connection:
+    76.46% 134.28% at 34.27% -2.68%, rgba(41, 41, 140, 0) 49.41%,
+    rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
+    rgba(216, 29, 226, 0.5) 99.22%;
+
   --avatar-bg-filter-sm:
     84.61% 152.04% at 34.27% -2.68%, rgba(41, 41, 140, 0.5) 49.41%,
     rgba(0, 147, 212, 0.5) 67.98%, rgba(143, 46, 189, 0.5) 88.4%,
     rgba(216, 29, 226, 0.5) 99.22%;
   --avatar-chat-border:
-    #ffffff 2.51%, rgba(255, 255, 255, 0) 37.74%,
-    rgba(255, 255, 255, 0) 85.25%, #ffffff 101.14%;
+    #ffffff 2.51%, rgba(255, 255, 255, 0) 37.74%, rgba(255, 255, 255, 0) 85.25%,
+    #ffffff 101.14%;
   --avatar-info-border:
     #fff, rgba(255, 255, 255, 0) 33.5%, rgba(81, 249, 255, 0) 80.85%,
     #fff 122.75%;
+  --avatar-emi-radial: linear-gradient(
+    143.72deg,
+    rgba(216, 29, 226, 0.71) 29.99%,
+    #49fff0 49.39%,
+    #1d4ed8 83.09%
+  );
 }
 
 @layer base {
@@ -204,6 +348,12 @@
   .cs-radial-sm {
     background: radial-gradient(var(--avatar-bg-filter-sm));
   }
+  .cs-radial-lg-earn-connection {
+    background: radial-gradient(var(--avatar-bg-filter-lg-earn-connection));
+  }
+  .cs-radial-md-earn-connection {
+    background: radial-gradient(var(--avatar-bg-filter-md-earn-connection));
+  }
 }
 
 .gradient-border {
@@ -242,7 +392,10 @@
   bottom: 0;
   border-radius: var(--before-rounded);
   padding: var(--before-stroke-width);
-  background: linear-gradient(var(--direction-linear), var(--before-stroke-color));
+  background: linear-gradient(
+    var(--direction-linear),
+    var(--before-stroke-color)
+  );
   mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -252,7 +405,7 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
-  animation: var(--rotate-duration) cs-border-rotate-linear  linear infinite;
+  animation: var(--rotate-duration) cs-border-rotate-linear linear infinite;
 }
 
 .border-gradient-border-radial::before {
@@ -264,7 +417,10 @@
   bottom: 0;
   border-radius: var(--before-rounded);
   padding: var(--before-stroke-width);
-  background: radial-gradient(var(--direction-linear), var(--before-stroke-color));
+  background: radial-gradient(
+    var(--direction-linear),
+    var(--before-stroke-color)
+  );
   mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -274,7 +430,7 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
-  animation: var(--rotate-duration) pan-radial  linear infinite;
+  animation: var(--rotate-duration) pan-radial linear infinite;
 }
 
 @keyframes cs-border-rotate-linear {
@@ -322,121 +478,3 @@
 .textShadow {
   text-shadow: 1.70285px 2.55428px 1.53257px rgba(0, 0, 0, 0.4);
 }
-
-.glasscard {
-  --border-size: 1px;
-  --chamfer-size: min(40px);
-  --box-border--border: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.85),
-    rgba(255, 255, 255, 0.25) 70%,
-    rgba(255, 255, 255, 0)
-  );
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smooth: always;
-  border-radius: 10px;
-  clip-path: polygon(
-    var(--chamfer-size) 0,
-    100% 0,
-    100% 100%,
-    0 100%,
-    0 var(--chamfer-size)
-  );
-}
-
-.glasscard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--chamfer-size);
-  height: var(--chamfer-size);
-  background: #fff;
-  pointer-events: none;
-  z-index: 1;
-
-  mask-image: linear-gradient(
-    to bottom right,
-    transparent calc(50% - var(--border-size) / 1.414),
-    black calc(50% - var(--border-size) / 1.414),
-    black calc(50% + var(--border-size) / 1.414),
-    transparent calc(50% + var(--border-size) / 1.414)
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom right,
-    transparent calc(50% - var(--border-size) / 1.414),
-    black calc(50% - var(--border-size) / 1.414),
-    black calc(50% + var(--border-size) / 1.414),
-    transparent calc(50% + var(--border-size) / 1.414)
-  );
-}
-
-.glasscard::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--box-border--border);
-  pointer-events: none;
-  z-index: 1;
-
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-
-  padding: var(--border-size);
-
-  clip-path: polygon(
-    var(--chamfer-size) 0,
-    100% 0,
-    100% 100%,
-    0 100%,
-    0 var(--chamfer-size),
-    var(--chamfer-size) 0
-  );
-}
-
-.glasscard-rectangle {
-  --border-size: 1px;
-  --chamfer-size: min(40px);
-  --box-border--border: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.85),
-    rgba(255, 255, 255, 0.25) 70%,
-    rgba(255, 255, 255, 0)
-  );
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smooth: always;
-  border-radius: 10px;
-}
-
-.glasscard-rectangle::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--box-border--border);
-  pointer-events: none;
-  z-index: 1;
-
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-
-  padding: var(--border-size);
-}
-
