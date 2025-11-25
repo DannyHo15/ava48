@@ -14,6 +14,7 @@ interface OptimizedThemeImageProps {
   quality?: number;
   priority?: boolean;
   placeholder?: "blur" | "empty";
+  blurDataURL?: string;
   unoptimized?: boolean;
   style?: React.CSSProperties;
   sizes?: string;
@@ -37,6 +38,7 @@ const OptimizedThemeImage = ({
   sizes,
   onLoad,
   onError,
+  blurDataURL,
   alt = "Theme-aware image",
   ...props
 }: OptimizedThemeImageProps) => {
@@ -88,6 +90,7 @@ const OptimizedThemeImage = ({
       quality={quality}
       priority={priority}
       placeholder={placeholder}
+      blurDataURL={blurDataURL}
       unoptimized={unoptimized}
       style={style}
       sizes={sizes}
