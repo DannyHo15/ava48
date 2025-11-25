@@ -36,7 +36,7 @@ const Vision = () => {
                 drakURL={"/assets/aya-swap-dark.png"}
               />
             </div>
-            {/* tablet */}
+            {/* tablet */}9{" "}
             <div className="relative hidden sm:block min-[1025px]:hidden! w-full">
               <ImageAvatar48
                 className="w-100 min-[850px]:w-114.5! h-auto ml-auto -mb-20 min-[850px]:-mb-26"
@@ -59,7 +59,8 @@ const Vision = () => {
                     className={clsx("absolute", {
                       "-left-6 min-[850px]:-left-6 -top-12": locale === "ja",
                       "-left-8 min-[850px]:-left-8 -top-7": locale === "en",
-                      "-left-8 min-[850px]:-left-8 -top-9": locale === "zh-cn" || locale === "zh-tw",
+                      "-left-8 min-[850px]:-left-8 -top-9":
+                        locale === "zh-cn" || locale === "zh-tw",
                     })}
                     strokeWidth={1}
                     shapeWidth={142}
@@ -89,7 +90,8 @@ const Vision = () => {
                     className={clsx("absolute", {
                       "-bottom-6 right-38 min-[850px]:right-38": locale === "ja",
                       "-bottom-5 right-60 min-[850px]:right-60": locale === "en",
-                      "-bottom-7 right-16 min-[850px]:right-16": locale === "zh-cn" || locale === "zh-tw",
+                      "-bottom-7 right-16 min-[850px]:right-16":
+                        locale === "zh-cn" || locale === "zh-tw",
                     })}
                     strokeWidth={1}
                     shapeWidth={108}
@@ -170,9 +172,14 @@ const Vision = () => {
                 <span
                   className={clsx(
                     "relative bg-linear-60 from-white via-white to-avatar-primary dark:to-avatar-violet drop-shadow-text font-karantina font-bold text-nowrap",
-                    locale === "ja"
-                      ? "tracking-normal text-custom-70 2xl:text-custom-82 min-[2000px]:text-custom-125! min-[3200px]:text-custom-176! -ml-52 min-[2000px]:-ml-88!"
-                      : "tracking-[2%] text-custom-70 sm:text-custom-98 xl:text-custom-125 min-[2000px]:text-custom-176! min-[3200px]:text-custom-208!",
+                    {
+                      "tracking-normal text-custom-70 2xl:text-custom-82 min-[2000px]:text-custom-125! min-[3200px]:text-custom-176! -ml-52 min-[2000px]:-ml-88!":
+                        locale === "ja",
+                      "tracking-[2%] text-custom-70 sm:text-custom-98 xl:text-custom-125 min-[2000px]:text-custom-176! min-[3200px]:text-custom-208!":
+                        locale === "en",
+                      "tracking-[2%] text-custom-70 sm:text-custom-98 xl:text-custom-110 min-[2000px]:text-custom-176! min-[3200px]:text-custom-208!":
+                        locale === "zh-cn" || locale === "zh-tw",
+                    },
                     "text-gradient"
                   )}
                 >
