@@ -206,7 +206,7 @@ const Robotic = () => {
             {/* Desktop title and image */}
             <div className="hidden xl:flex xl:items-end xl:justify-end relative size-full 3xl:w-full 3xl:h-auto">
               {/* Summary Desktop */}
-              <div className="hidden 4xl:block absolute text-white font-kanit flex-center text-2xl! leading-[142%] left-0 top-1/2 -translate-y-1/2 z-10 max-w-[600px] px-4.5 py-3 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)]">
+              <div className="hidden 4xl:block absolute text-white font-kanit flex-center text-2xl! leading-[142%] left-0 top-1/2 -translate-y-1/2 z-10 max-w-[600px] 4xl:max-w-[577px] px-4.5 py-3 rounded-t-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.30)_0%,rgba(255,255,255,0.00)_90%)]">
                 <p className="">
                   <span className="font-medium">AVATAR48</span> {t("content")}
                 </p>
@@ -224,9 +224,11 @@ const Robotic = () => {
                   shapeWidth={104}
                   shapeHeight={95}
                   className={clsx("absolute z-50 -rotate-90", {
-                    "top-37 left-82": locale === "en",
-                    "-left-5 top-10 3xl:top-18": locale === "ja",
-                    "top-45 -left-12": locale === "zh-cn" || locale === "zh-tw",
+                    "top-20 2xl:top-37 left-82 2xl:left-82": locale === "en",
+                    "-left-5 top-5 2xl:top-10 3xl:top-10 4xl:top-10":
+                      locale === "ja",
+                    "top-8 2xl:top-45 -left-12":
+                      locale === "zh-cn" || locale === "zh-tw",
                   })}
                   strokeColor={[
                     { offset: "0%", stopColor: "rgba(255, 255, 255, 0.3)" },
@@ -244,9 +246,9 @@ const Robotic = () => {
                   className={clsx("absolute z-50", {
                     "top-10 right-55 3xl:right-127 3xl:top-15 4xl:right-127 4xl:top-13":
                       locale === "en",
-                    "right-100 top-10 3xl:right-127 3xl:top-15 4xl:right-127 4xl:top-20":
+                    "right-100 top-5 2xl:top-10 3xl:right-127 3xl:top-10 4xl:right-127 4xl:top-10":
                       locale === "ja",
-                    "left-100 top-17 ":
+                    "left-100 top-8 2xl:top-17":
                       locale === "zh-cn" || locale === "zh-tw",
                   })}
                   strokeColor={[
@@ -263,9 +265,9 @@ const Robotic = () => {
                   className={clsx(
                     "leading-[86%] tracking-[1.25px] font-bold font-karantina text-left w-full text-gradient",
                     {
-                      "xl:text-custom-82 3xl:text-custom-123! 4xl:text-custom-145! leading-none! bg-[linear-gradient(279.61deg,#FFFFFF_86.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(325.41deg,var(--color-white)_86.41%,var(--color-avatar-violet)_103.78%)]":
+                      "text-custom-56 2xl:text-custom-82 3xl:text-custom-120 4xl:text-custom-145 leading-none! bg-[linear-gradient(279.61deg,#FFFFFF_86.41%,#00D0F6_100.78%)] dark:bg-[linear-gradient(279.41deg,var(--color-white)_86.41%,var(--color-avatar-violet)_100.78%)]":
                         locale === "ja",
-                      "leading-none! text-custom-130 bg-[linear-gradient(298.41deg,#FFFFFF_88.41%,#00D0F6_101.78%)] dark:bg-[linear-gradient(298.41deg,var(--color-white)_88.41%,var(--color-avatar-violet)_101.78%)]":
+                      "leading-none! text-custom-75 2xl:text-custom-130 bg-[linear-gradient(298.41deg,#FFFFFF_88.41%,#00D0F6_101.78%)] dark:bg-[linear-gradient(298.41deg,var(--color-white)_88.41%,var(--color-avatar-violet)_101.78%)]":
                         locale === "zh-cn" || locale === "zh-tw",
                       "text-custom-98 2xl:text-custom-125 3xl:text-custom-153 bg-[linear-gradient(328.61deg,#FFFFFF_74.41%,#00D0F6_91.78%)] dark:bg-[linear-gradient(328.41deg,var(--color-white)_74.41%,var(--color-avatar-violet)_100.78%)]":
                         locale === "en",
@@ -279,9 +281,9 @@ const Robotic = () => {
                   className={clsx(
                     "text-white uppercase text-left font-bold leading-[75%] tracking-[1.64px] font-karantina",
                     {
-                      "xl:text-custom-82 3xl:text-custom-110 4xl:text-custom-145 leading-none!":
+                      "text-custom-56 2xl:text-custom-82 3xl:text-custom-120 4xl:text-custom-145 leading-none!":
                         locale === "ja",
-                      "leading-none! xl:text-custom-85":
+                      "leading-none! text-custom-75 2xl:text-custom-85":
                         locale === "zh-cn" || locale === "zh-tw",
                       "text-custom-56 2xl:text-custom-82 3xl:text-custom-106 leading-[75%] tracking-[1.64px] font-karantina!":
                         locale === "en",
