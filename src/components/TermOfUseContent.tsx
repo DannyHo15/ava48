@@ -17,7 +17,7 @@ const TermOfUseContent = () => {
         <h1 className="text-xl sm:text-2xl font-bold">{t("B0MJ8Z")}</h1>
         <br />
         <p>{t("oRkimG")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("+y9dAj")}</li>
           <li>{t("sOo+A4")}</li>
           <li>{t("qjkBJv")}</li>
@@ -31,13 +31,13 @@ const TermOfUseContent = () => {
         <h1 className="text-xl sm:text-2xl font-bold">{t("6RppCv")}</h1>
         <br />
         <p>{t("WtCli0")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("8vNCgl")}</li>
           <li>{t("1ulQ3v")}</li>
           <li>{t("Ah/UBb")}</li>
         </ul>
         <p>{t("IcPz5Q")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("jnnAK1")}</li>
           <li>{t("H7Ybx9")}</li>
           <li>{t("aIU3hv")}</li>
@@ -52,7 +52,7 @@ const TermOfUseContent = () => {
         <p>{t("gLFmKi")}</p>
         <br />
         <p>{t("s1ukov")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("9Psbbm")}</li>
           <li>{t("8O1HYg")}</li>
           <li>{t("XcQoNx")}</li>
@@ -65,13 +65,13 @@ const TermOfUseContent = () => {
         <h1 className="text-xl sm:text-2xl font-bold">{t("pa4shm")}</h1>
         <br />
         <p>{t("71GZEs")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("h63LNS")}</li>
           <li>{t("Hie7ry")}</li>
           <li>{t("TGOYmE")}</li>
         </ul>
         <p>{t("oY7Xqy")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>
             <b>{t("3DKG5+")}</b>&nbsp;{t("wnQGH2")}
           </li>
@@ -98,7 +98,7 @@ const TermOfUseContent = () => {
         <br />
         <b>{t("YNDFee")}</b>
         <br />
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>
             <b>{t("gpbB1h")}</b>&nbsp;{t("lkfeUT")}
           </li>
@@ -110,7 +110,7 @@ const TermOfUseContent = () => {
           </li>
         </ul>
         <b>{t("XqeJaj")}</b>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("C7V4Y0")}</li>
           <li>{t("eYkBot")}</li>
           <li>{t("TmYmwK")}</li>
@@ -126,7 +126,7 @@ const TermOfUseContent = () => {
         <p>{t("9Xm5Ra")}</p>
         <br />
         <p>{t("s1ukov")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("KcZBKI")}</li>
           <li>{t("+pSWGy")}</li>
           <li>{t("KZdvvZ")}</li>
@@ -151,7 +151,7 @@ const TermOfUseContent = () => {
         </p>
         <br />
         <p>{t("bcWKMg")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>
             <b>{t("ZG6wMC")}</b>&nbsp;{t("mYC0Ye")}
           </li>
@@ -183,7 +183,7 @@ const TermOfUseContent = () => {
         <h1 className="text-xl sm:text-2xl font-bold">{t("CdZs5M")}</h1>
         <br />
         <p>{t("y/jFxo")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("NR/VJ7")}</li>
           <li>{t("IZqNfQ")}</li>
           <li>{t("+W0SyO")}</li>
@@ -198,7 +198,7 @@ const TermOfUseContent = () => {
         <br />
         <br />
         <p>{t("cU4qm/")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("gFDorx")}</li>
           <li>{t("1MuYMr")}</li>
           <li>{t("G0EKnf")}</li>
@@ -211,14 +211,14 @@ const TermOfUseContent = () => {
         <h1 className="text-xl sm:text-2xl font-bold">{t("Ezi0qh")}</h1>
         <br />
         <p>{t("n62Wph")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("VnPc2S")}</li>
           <li>{t("Fw74xw")}</li>
           <li>{t("HS7Qhj")}</li>
           <li>{t("HSSXzW")}</li>
         </ul>
         <p>{t("PeFoSG")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("sWJu/+")}</li>
           <li>{t("pFAD0k")}</li>
           <li>{t("bAvWya")}</li>
@@ -242,7 +242,7 @@ const TermOfUseContent = () => {
         <h2>{t("e3xbJ5")}</h2>
         <br />
         <p>{t("CKQP4J")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("gOyvrZ")}</li>
           <li>{t("kg5azw")}</li>
           <li>{t("u6PW3Y")}</li>
@@ -252,7 +252,7 @@ const TermOfUseContent = () => {
         <h2>{t("m9wIYN")}</h2>
         <br />
         <p>{t("Wh1F98")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("tO02lq")}</li>
           <li>{t("w7BoEk")}</li>
           <li>{t("tnoRLS")}</li>
@@ -271,7 +271,7 @@ const TermOfUseContent = () => {
         <br />
         <br />
         <p>{t("aEI9HX")}</p>
-        <ul>
+        <ul className="list-disc list-outside pl-10 sm:pl-14">
           <li>{t("d4lamv")}</li>
           <li>{t("zab0nc")}</li>
         </ul>
@@ -291,7 +291,7 @@ const TermOfUseContent = () => {
           {t("xpTPb3")}&nbsp;
           <a
             href={`mailto:${EMAIL_SUPPORT}`}
-            className="text-primary hover:underline"
+            className="text-avatar-primary hover:underline"
           >
             {EMAIL_SUPPORT}
           </a>
