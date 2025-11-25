@@ -18,7 +18,7 @@ const EarnAyaConnection = () => {
       <div className="md:hidden fixed inset-0 bg-[url(/assets/bg-aya-heart-mobile-light.png)] dark:bg-[url(/assets/bg-aya-heart-mobile-dark.png)] bg-cover bg-center" />
       <div className="hidden md:block fixed inset-0 bg-[url(/assets/bg-aya-heart-tablet-light.png)] dark:bg-[url(/assets/bg-aya-heart-tablet-dark.png)] bg-cover bg-center" />
       <div className="hidden xl:block fixed inset-0 bg-[url(/assets/bg-aya-heart-desktop-light.png)] dark:bg-[url(/assets/bg-aya-heart-desktop-dark.png)] bg-cover bg-center" />
-      <div className="size-full relative flex flex-col items-center justify-between">
+      <div className="size-full relative 2xl:-left-25 flex flex-col items-center justify-between">
         <div
           className="h-[30%] md:hidden w-full flex flex-col items-center justify-end relative z-10 -mb-3 sm:-mb-6"
           id="section-heart"
