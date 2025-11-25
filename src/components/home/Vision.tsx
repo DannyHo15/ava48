@@ -17,9 +17,9 @@ const Vision = () => {
       <div className="fixed inset-0 sm:hidden bg-[url(/assets/bg-section-6-sm-light.png)] dark:bg-[url(/assets/bg-section-6-sm-dark.png)] bg-cover bg-center" />
       <div className="h-full relative flex-center px-5.5 sm:px-0" id="section-platform">
         <div className="w-85 prm:w-120 sm:w-full min-[1025px]:w-240! min-[1536px]:w-300! min-[2000px]:w-400! min-[2600px]:w-500! min-[3200px]:w-640! max-h-160 sm:max-h-210 min-[1025px]:max-h-180! 2xl:max-h-210 min-[2000px]:max-h-220! 4xl:max-h-240! min-[3200px]:max-h-340! grid sm:grid-cols-9 gap-5 min-[2000px]:gap-10 min-[1025px]:gap-6 -mt-10 sm:-mt-20 sm:px-10 min-[1025px]:px-0!">
-          <div className="col-span-1 sm:col-span-6 min-[1025px]:col-span-5! space-y-6">
+          <div className="col-span-1 sm:col-span-6 min-[1025px]:col-span-5! space-y-3 xl:space-y-6">
             <ImageAvatar48
-              className="w-50 sm:w-full h-auto ml-auto mb-3 sm:mb-6"
+              className="w-50 sm:w-full h-auto ml-auto"
               lightURL={"/assets/aya-trading-chart-light.png"}
               drakURL={"/assets/aya-trading-chart-dark.png"}
             />
@@ -39,7 +39,10 @@ const Vision = () => {
             {/* tablet */}9{" "}
             <div className="relative hidden sm:block min-[1025px]:hidden! w-full">
               <ImageAvatar48
-                className="w-100 min-[850px]:w-114.5! h-auto ml-auto -mb-20 min-[850px]:-mb-26"
+                className={clsx(
+                  "w-100 min-[850px]:w-114.5! h-auto ml-auto",
+                  locale === "ja" ? "mb-5" : "-mb-20 min-[850px]:-mb-26"
+                )}
                 lightURL={"/assets/ai-agent-list-light.png"}
                 drakURL={"/assets/ai-agent-list-dark.png"}
               />
@@ -266,7 +269,7 @@ const Vision = () => {
             {/* tablet */}
             <div className="hidden sm:block min-[1025px]:hidden!">
               <div className="w-full mb-6">
-                <span className="text-white text-base min-[850px]:text-lg!">
+                <span className="text-white text-base xl:text-lg">
                   {t("LandingPage.section_6.description")}
                 </span>
               </div>
