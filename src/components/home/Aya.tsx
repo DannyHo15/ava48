@@ -27,7 +27,7 @@ const Aya = () => {
             className={cn("absolute 2xl:hidden", {
               "left-[3%] top-[37%] prm:top-[32%] z-5 sm:left-[3%] sm:top-[21%] lg:left-[4%] lg:top-[20.2%] 2xl:top-[29.5%] 2xl:left-[14.5%]":
                 locale === "en",
-              "left-[3%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[4%] sm:top-[25.6%] 2xl:top-[35.5%] 2xl:left-[13.5%]":
+              "left-[3%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[3%] sm:top-[34.6%] lg:left-[4%] lg:top-[25.6%] 2xl:top-[35.5%] 2xl:left-[13.5%]":
                 locale === "zh-cn" || locale === "zh-tw",
               "left-[9%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[3.5%] sm:top-[23%] lg:left-[10%] lg:top-[39.5%] 2xl:top-[37.6%] 2xl:left-[15%]":
                 locale === "ja",
