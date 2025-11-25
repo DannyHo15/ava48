@@ -29,7 +29,7 @@ const Aya = () => {
                 locale === "en",
               "left-[3%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[4%] sm:top-[25.6%] 2xl:top-[35.5%] 2xl:left-[13.5%]":
                 locale === "zh-cn" || locale === "zh-tw",
-              "left-[9%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[3.5%] sm:top-[23%] lg:left-[10%] lg:top-[39.5%] 2xl:top-[37.6%] 2xl:left-[15%]":
+              "left-[9%] prm:left-[4%] top-[40%] prm:top-[39%] z-5 sm:left-[6.5%] sm:top-[33%] lg:left-[9%] lg:top-[28.5%] 2xl:top-[37.6%] 2xl:left-[15%]":
                 locale === "ja",
             })}
           >
@@ -41,7 +41,7 @@ const Aya = () => {
                     locale === "en",
                   "text-custom-40 sm:text-custom-88 lg:text-custom-120 leading-none":
                     locale === "zh-cn" || locale === "zh-tw",
-                  "text-custom-32 sm:text-custom-88 lg:text-custom-98 leading-none":
+                  "text-custom-32 sm:text-custom-72 lg:text-custom-98 leading-none":
                     locale === "ja",
                 }
               )}
@@ -253,7 +253,7 @@ const Aya = () => {
                 className={clsx("relative whitespace-nowrap", {
                   "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-160 font-bold bg-[linear-gradient(107deg,#00F6FF_17%,#FFFFFF_66%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-15 4xl:text-custom-256!":
                     locale === "en",
-                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold bg-[linear-gradient(117.84deg,#FFFFFF_62.61%,#00F6FF_125.5%)] uppercase dark:sm:bg-[linear-gradient(117.84deg,#FFFFFF_62.61%,#D81DE2_125.5%)] bg-clip-text text-transparent text-right z-10 2xl:z-5 leading-none pb-9 4xl:pb-22 4xl:text-custom-217!":
+                  "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-120 font-bold bg-[linear-gradient(117.84deg,#FFFFFF_62.61%,#00F6FF_125.5%)] 2xl:bg-[linear-gradient(164deg,#FFFFFF_55%,#00F6FF_90%)] uppercase dark:sm:bg-[linear-gradient(117.84deg,#FFFFFF_62.61%,#D81DE2_125.5%)] 2xl:dark:sm:bg-[linear-gradient(164deg,#FFFFFF_60%,#D81DE2_100%)] bg-clip-text text-transparent text-right z-10 2xl:z-5 leading-none pb-9 4xl:pb-22 4xl:text-custom-217!":
                     locale === "zh-cn" || locale === "zh-tw",
                   "font-karantina text-custom-42 prm:text-custom-55 sm:text-custom-98 font-bold text-white uppercase leading-none text-right bg-[linear-gradient(169deg,#FFFFFF_62.61%,#00F6FF_95.5%)] dark:sm:bg-[linear-gradient(169deg,#FFFFFF_62%,#D81DE2_95%)] sm:bg-clip-text sm:text-transparent z-10 2xl:z-5 pb-4 4xl:pb-8 4xl:text-custom-176!":
                     locale === "ja",
@@ -496,11 +496,11 @@ const Aya = () => {
               className={cn("relative whitespace-nowrap", {
                 "font-karantina text-[55px] sm:text-custom-128 lg:text-custom-160 font-bold bg-[linear-gradient(127deg,#00F6FF_3%,#FFFFFF_73%)] bg-clip-text text-transparent uppercase leading-[86%] text-right z-10":
                   locale === "en",
-                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(320deg,#FFFFFF_24%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.1%] right-[3%] dark:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(163deg,#FFFFFF_68%,#00F6FF_137%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.1%] right-[3%] dark:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "zh-cn",
-                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(320deg,#FFFFFF_24%,#00F6FF_150%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.2%] right-[3%] dark:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
+                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-120 font-bold bg-[linear-gradient(163deg,#FFFFFF_68%,#00F6FF_137%)] bg-clip-text text-transparent uppercase leading-none text-right absolute top-[-87.2%] right-[3%] dark:bg-[linear-gradient(170deg,#FFFFFF_65%,#D81DE2_200%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5":
                   locale === "zh-tw",
-                "font-karantina text-[42px] sm:text-custom-88 lg:text-custom-90 font-bold bg-[linear-gradient(170deg,#FFFFFF_57%,#00F6FF_150%)] dark:bg-[linear-gradient(173deg,#FFFFFF_55%,#D81DE2_150%)] bg-clip-text text-transparent uppercase leading-none text-right dark:sm:bg-[linear-gradient(170deg,#FFFFFF_47%,#D81DE2_150%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5 sm:pb-4":
+                "font-karantina text-[42px] sm:text-custom-72 lg:text-custom-90 font-bold bg-[linear-gradient(175deg,#FFFFFF_47%,#00F6FF_97%)] dark:bg-[linear-gradient(173deg,#FFFFFF_55%,#D81DE2_150%)] bg-clip-text text-transparent uppercase leading-none text-right dark:sm:bg-[linear-gradient(170deg,#FFFFFF_47%,#D81DE2_150%)] dark:sm:bg-clip-text dark:sm:text-transparent z-10 2xl:z-5 sm:pb-4":
                   locale === "ja",
               })}
               style={{
@@ -515,7 +515,7 @@ const Aya = () => {
                   locale === "en",
                 "font-karantina text-[58px] prm:text-custom-70 sm:text-custom-128 lg:text-custom-160 font-bold bg-[linear-gradient(127deg,#00F6FF_10%,#FFFFFF_60%)] bg-clip-text text-transparent uppercase leading-none text-right z-15":
                   locale === "zh-cn" || locale === "zh-tw",
-                "font-karantina text-[58px] prm:text-custom-70 sm:text-custom-132 lg:text-custom-180 font-bold bg-[linear-gradient(92deg,#00F6FF_20%,#FFFFFF_92%)] bg-clip-text text-transparent uppercase leading-none text-right z-15":
+                "font-karantina text-[58px] prm:text-custom-70 sm:text-custom-132 lg:text-custom-180 font-bold bg-[linear-gradient(100deg,#00F6FF_46%,#FFFFFF_86%)] bg-clip-text text-transparent uppercase leading-none text-right z-15":
                   locale === "ja",
               })}
               style={{
@@ -562,7 +562,7 @@ const Aya = () => {
               className={cn("absolute", {
                 "sm:top-[31%] sm:right-[-21%] z-15 hidden":
                   locale === "en",
-                "sm:top-[67%] sm:right-[-31%] z-15 hidden sm:block lg:hidden":
+                "sm:top-[67%] sm:right-[-31%] lg:top-[73%] lg:right-[-20%] z-15 hidden sm:block 2xl:hidden":
                   locale === "zh-cn" || locale === "zh-tw",
                 "sm:top-[82%] sm:right-[-13%] sm:scale-80 z-15 hidden sm:block lg:hidden":
                   locale === "ja",

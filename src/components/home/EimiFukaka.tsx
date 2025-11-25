@@ -242,7 +242,7 @@ const EimiFukada = () => {
               />
             </div>
             <ImageAvatar48
-              className="fixed left-0 bottom-0 z-0 opacity-80 hidden dark:2xl:block 4xl:hidden"
+              className="fixed left-0 bottom-0 z-0 opacity-80 hidden dark:2xl:block 4xl:hidden!"
               lightURL={"/assets/light-bot-left.png"}
               drakURL={"/assets/light-bot-left.png"}
             ></ImageAvatar48>
