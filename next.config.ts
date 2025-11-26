@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 
     // Configure quality settings for different use cases
-    qualities: [25, 50, 75, 90, 100],
+    qualities: [],
 
     // Set minimum cache TTL for optimized images
     minimumCacheTTL: ONE_WEEK_IN_SECONDS, // 1 week
