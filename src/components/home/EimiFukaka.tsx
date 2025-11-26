@@ -431,12 +431,13 @@ const EimiFukada = () => {
               </div>
               <div className="z-10 absolute -bottom-2 left-[-31%] sm:left-[-44%] 2xl:left-[-51%] 4xl:left-[-45%]!">
                 <OptimizedThemeImage
-                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain" 
+                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain"
                   lightURL={"/assets/eimi-bg.webp"}
                   darkURL={"/assets/eimi-bg.webp"}
                   width={975}
                   height={940}
                   quality={100}
+                  unoptimized
                   priority={true}
                   placeholder="blur"
                   sizes="(max-width: 640px) 520px, (max-width: 1024px) 941px, (max-width: 1536px) 974px, 1948px"
@@ -455,6 +456,7 @@ const EimiFukada = () => {
                     width={2739}
                     height={1997}
                     quality={100}
+                    unoptimized
                     priority={true}
                     placeholder="blur"
                     alt="Aya Fujimoto"
