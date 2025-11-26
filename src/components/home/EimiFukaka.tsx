@@ -36,7 +36,7 @@ const EimiFukada = () => {
                     locale === "zh-cn" || locale === "zh-tw",
                   "z-5 left-6 top-[3%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
                     locale === "ja",
-                }
+                },
               )}
             >
               <h1
@@ -49,7 +49,7 @@ const EimiFukada = () => {
                       locale === "ja",
                     "text-custom-48 sm:text-custom-103 lg:text-custom-120 leading-[100%]":
                       locale === "zh-cn" || locale === "zh-tw",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -67,7 +67,7 @@ const EimiFukada = () => {
                       locale === "ja",
                     "text-custom-48 sm:text-custom-103 lg:text-custom-120 leading-[100%]":
                       locale === "zh-cn" || locale === "zh-tw",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -162,7 +162,7 @@ const EimiFukada = () => {
                     locale === "zh-cn" || locale === "zh-tw",
                   "right-[7%] bottom-[30%] sm:right-[-18%] sm:bottom-[25%] lg:right-[-13%] lg:bottom-[21%] 2xl:bottom-[17%] 2xl:right-[-6%]":
                     locale === "ja",
-                }
+                },
               )}
             >
               <h2
@@ -175,7 +175,7 @@ const EimiFukada = () => {
                       locale === "ja",
                     "text-custom-32 sm:text-custom-72 lg:text-custom-75 2xl:text-custom-90 leading-none sm:leading-none 4xl:text-custom-152!":
                       locale === "zh-cn" || locale === "zh-tw",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -193,7 +193,7 @@ const EimiFukada = () => {
                       locale === "ja",
                     "text-custom-50 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-[90%] sm:leading-[77%] 2xl:leading-[77%] 4xl:text-custom-272!":
                       locale === "zh-cn" || locale === "zh-tw",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -259,7 +259,7 @@ const EimiFukada = () => {
                     locale === "zh-cn",
                   "2xl:left-[-4%] 2xl:top-[45%] 4xl:left-[-45%]! 4xl:top-[46%]!":
                     locale === "zh-tw",
-                }
+                },
               )}
             >
               <h1
@@ -272,7 +272,7 @@ const EimiFukada = () => {
                       locale === "zh-cn" || locale === "zh-tw",
                     "2xl:text-custom-120 leading-[100%] 4xl:text-custom-232!":
                       locale === "ja",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -290,7 +290,7 @@ const EimiFukada = () => {
                       locale === "zh-cn" || locale === "zh-tw",
                     "2xl:text-custom-120 leading-[100%] 4xl:text-custom-232!":
                       locale === "ja",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -404,12 +404,13 @@ const EimiFukada = () => {
               </div>
               <div className="z-10 absolute -bottom-2 left-[-31%] sm:left-[-44%] 2xl:left-[-51%] 4xl:left-[-45%]!">
                 <OptimizedThemeImage
-                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain" 
+                  className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain"
                   lightURL={"/assets/eimi-bg.webp"}
                   darkURL={"/assets/eimi-bg.webp"}
                   width={975}
                   height={940}
                   quality={100}
+                  unoptimized
                   priority={true}
                   placeholder="blur"
                   alt="Aya Fujimoto"
@@ -427,6 +428,7 @@ const EimiFukada = () => {
                     width={2739}
                     height={1997}
                     quality={100}
+                    unoptimized
                     priority={true}
                     placeholder="blur"
                     alt="Aya Fujimoto"
