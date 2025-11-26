@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { useParams } from "next/navigation";
 import clsx from "clsx";
 import OptimizedThemeImage from "../OptimizedThemeImage";
+import Image from "next/image";
 
 const EimiFukada = () => {
   const t = useTranslations("LandingPage.section_eimi");
@@ -15,10 +16,35 @@ const EimiFukada = () => {
 
   return (
     <SectionWrapper>
-      <div className="fixed inset-0 bg-avatar-black" />
-      <div className="fixed hidden lg:block inset-0 cs-radial-lg" />
-      <div className="fixed inset-0 bg-[url(/assets/aya-laptop-bg.png)] dark:bg-[url(/assets/aya-laptop-bg-dark.png)] bg-cover bg-center z-0" />
-      <div className="fixed inset-0 bg-[url(/assets/bg-texture.webp)] bg-contain bg-bottom mix-blend-plus-lighter bg-no-repeat hidden 2xl:block" />
+      <div className="fixed inset-0 z-0">
+        <div className="relative size-full">
+          <OptimizedThemeImage
+            lightURL="/assets/aya-laptop-bg.webp"
+            darkURL="/assets/aya-laptop-bg-dark.webp"
+            alt="Laptop background"
+            fill={true}
+            className="object-cover w-full h-full"
+            unoptimized
+            quality={100}
+            priority={false}
+            placeholder="blur"
+          />
+        </div>
+      </div>
+      {/* Background texture - optimized for 2xl+ screens only */}
+      <div className="fixed inset-0 hidden 2xl:block z-0">
+        <Image
+          src="/assets/bg-texture.webp"
+          alt="Background texture"
+          fill
+          className="object-contain object-bottom mix-blend-plus-lighter"
+          sizes="100vw"
+          unoptimized
+          quality={90}
+          priority={false}
+          placeholder="empty"
+        />
+      </div>
       <div
         className="avatar-container relative"
         id="section-eimi"
@@ -36,7 +62,7 @@ const EimiFukada = () => {
                     locale === "zh-cn" || locale === "zh-tw",
                   "z-5 left-6 top-[3%] sm:left-[-13%] sm:top-[-13%] lg:left-[-9%] lg:top-[-15%]":
                     locale === "ja",
-                }
+                },
               )}
             >
               <h1
@@ -49,7 +75,7 @@ const EimiFukada = () => {
                       locale === "ja",
                     "text-custom-48 sm:text-custom-103 lg:text-custom-120 leading-[100%]":
                       locale === "zh-cn" || locale === "zh-tw",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -67,7 +93,7 @@ const EimiFukada = () => {
                       locale === "ja",
                     "text-custom-48 sm:text-custom-103 lg:text-custom-120 leading-[100%]":
                       locale === "zh-cn" || locale === "zh-tw",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -162,7 +188,7 @@ const EimiFukada = () => {
                     locale === "zh-cn" || locale === "zh-tw",
                   "right-[7%] bottom-[30%] sm:right-[-18%] sm:bottom-[25%] lg:right-[-13%] lg:bottom-[21%] 2xl:bottom-[17%] 2xl:right-[-27%]":
                     locale === "ja",
-                }
+                },
               )}
             >
               <h2
@@ -175,7 +201,7 @@ const EimiFukada = () => {
                       locale === "ja",
                     "text-custom-32 sm:text-custom-72 lg:text-custom-75 2xl:text-custom-90 leading-none sm:leading-none 4xl:text-custom-152!":
                       locale === "zh-cn" || locale === "zh-tw",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -193,30 +219,28 @@ const EimiFukada = () => {
                       locale === "ja",
                     "text-custom-50 sm:text-custom-98 lg:text-custom-130 2xl:text-custom-160 leading-[90%] sm:leading-[77%] 2xl:leading-[77%] 4xl:text-custom-272!":
                       locale === "zh-cn" || locale === "zh-tw",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
                 }}
               >
                 {t("coming_soon_bottom")}
-                  <span
-                    className={cn(
-                      "font-karantina font-bold",
-                      {
-                        "text-custom-62 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%] 4xl:text-custom-297!":
-                          locale === "en",
-                        "text-custom-58 sm:text-custom-110 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%] 4xl:text-custom-297!":
-                          locale === "zh-cn" || locale === "zh-tw",
-                        "font-karantina text-custom-44 sm:text-custom-94 lg:text-custom-118 2xl:text-custom-138 font-bold leading-[90%] sm:leading-[80%] 2xl:leading-[76%] 4xl:text-custom-272!":
-                          locale === "ja",
-                      }
-                    )}>
-                    48
-                  </span>
+                <span
+                  className={cn("font-karantina font-bold", {
+                    "text-custom-62 sm:text-custom-121 lg:text-custom-153 2xl:text-custom-185 lg:leading-[75%] 4xl:text-custom-297!":
+                      locale === "en",
+                    "text-custom-58 sm:text-custom-110 lg:text-custom-153 2xl:text-custom-185 leading-[90%] sm:leading-[77%] 4xl:text-custom-297!":
+                      locale === "zh-cn" || locale === "zh-tw",
+                    "font-karantina text-custom-44 sm:text-custom-94 lg:text-custom-118 2xl:text-custom-138 font-bold leading-[90%] sm:leading-[80%] 2xl:leading-[76%] 4xl:text-custom-272!":
+                      locale === "ja",
+                  })}
+                >
+                  48
+                </span>
                 {locale === "ja" ? (
                   <span className="font-karantina text-custom-30 sm:text-custom-56 lg:text-custom-60 2xl:text-custom-90 text-right font-bold leading-none sm:leading-[80%] 2xl:leading-[110%] 4xl:text-custom-192! pl-2 sm:pl-5 2xl:pl-8">
-                     へ！
+                    へ！
                   </span>
                 ) : null}
               </h2>
@@ -261,7 +285,7 @@ const EimiFukada = () => {
                     locale === "zh-cn",
                   "2xl:left-[-39%] 2xl:top-[45%] 4xl:left-[-54%]! 4xl:top-[46%]!":
                     locale === "zh-tw",
-                }
+                },
               )}
             >
               <h1
@@ -274,7 +298,7 @@ const EimiFukada = () => {
                       locale === "zh-cn" || locale === "zh-tw",
                     "2xl:text-custom-120 leading-[100%] 4xl:text-custom-232!":
                       locale === "ja",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -292,7 +316,7 @@ const EimiFukada = () => {
                       locale === "zh-cn" || locale === "zh-tw",
                     "2xl:text-custom-120 leading-[100%] 4xl:text-custom-232!":
                       locale === "ja",
-                  }
+                  },
                 )}
                 style={{
                   filter: "drop-shadow(1.7px 2.55px 1.53px rgba(0, 0, 0, 0.4))",
@@ -393,28 +417,30 @@ const EimiFukada = () => {
               <div className="z-10 relative -bottom-2 right-[-20%] sm:right-[-27%] 2xl:right-[-31%] 4xl:right-[-36%]!">
                 <OptimizedThemeImage
                   className="sm:w-[566px] lg:w-[737px] 2xl:w-[752px] 4xl:max-w-none! 4xl:w-[1505px]! 4xl:pt-[100px]! max-h-dvh w-[375px] max-w-[120%] h-auto object-contain"
-                  lightURL={"/assets/eimi-bg-ai.png"}
-                  darkURL={"/assets/eimi-bg-ai.png"}
+                  lightURL="/assets/eimi-bg-ai.webp"
+                  darkURL="/assets/eimi-bg-ai.webp"
                   width={1948}
                   height={974}
-                  quality={100}
-                  priority={true}
+                  quality={80}
+                  priority={false}
                   placeholder="blur"
-                  alt="Aya Fujimoto"
-                ></OptimizedThemeImage>
+                  sizes="(max-width: 640px) 450px, (max-width: 1024px) 737px, (max-width: 1536px) 752px, 1505px"
+                  alt="Eimi AI Character"
+                />
               </div>
               <div className="z-10 absolute -bottom-2 left-[-31%] sm:left-[-44%] 2xl:left-[-51%] 4xl:left-[-45%]!">
                 <OptimizedThemeImage
                   className="sm:w-[721px] lg:w-[941px] 2xl:w-[974px] 4xl:max-w-none! 4xl:w-[1948px]! 4xl:pt-[100px]! max-h-dvh w-[432px] h-auto object-contain"
-                  lightURL={"/assets/eimi-bg.webp"}
-                  darkURL={"/assets/eimi-bg.webp"}
+                  lightURL="/assets/eimi-bg.webp"
+                  darkURL="/assets/eimi-bg.webp"
                   width={1948}
                   height={974}
-                  quality={90}
-                  priority={true}
+                  quality={75}
+                  priority={false}
                   placeholder="blur"
-                  alt="Aya Fujimoto"
-                ></OptimizedThemeImage>
+                  sizes="(max-width: 640px) 520px, (max-width: 1024px) 941px, (max-width: 1536px) 974px, 1948px"
+                  alt="Eimi Character"
+                />
               </div>
             </div>
           </div>
@@ -425,3 +451,4 @@ const EimiFukada = () => {
 };
 
 export default EimiFukada;
+
