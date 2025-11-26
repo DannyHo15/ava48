@@ -17,11 +17,11 @@ gsap.registerPlugin(useGSAP, Observer);
 
 const sections = [
   { Component: Eimi },
-  { Component: Aya },
-  { Component: Robotic },
-  { Component: EarnAyaConnection },
-  { Component: RiseTogether },
-  { Component: Vision },
+  // { Component: Aya },
+  // { Component: Robotic },
+  // { Component: EarnAyaConnection },
+  // { Component: RiseTogether },
+  // { Component: Vision },
 ];
 
 export default function Home() {
